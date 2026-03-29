@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Nuget">
+    <PackageId>tryAGI.Weave</PackageId>
     <Description>C# SDK for the W&amp;B Weave API -- LLM observability with traces, evaluations, and datasets.</Description>
     <PackageTags>csharp;dotnet;sdk;ai;autosdk;openapi;wandb;weave;observability;tracing</PackageTags>
   </PropertyGroup>
