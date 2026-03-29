@@ -1,0 +1,33 @@
+#nullable enable
+
+namespace Weave
+{
+    public partial interface IAnnotationQueuesClient
+    {
+        /// <summary>
+        /// Annotation Queues Stats<br/>
+        /// Get stats for multiple annotation queues.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Weave.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.AnnotationQueuesStatsRes> AnnotationQueuesStatsAnnotationQueuesStatsPostAsync(
+
+            global::Weave.AnnotationQueuesStatsReq request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Annotation Queues Stats<br/>
+        /// Get stats for multiple annotation queues.
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="queueIds">
+        /// List of queue IDs to get stats for
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.AnnotationQueuesStatsRes> AnnotationQueuesStatsAnnotationQueuesStatsPostAsync(
+            string projectId,
+            global::System.Collections.Generic.IList<string> queueIds,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

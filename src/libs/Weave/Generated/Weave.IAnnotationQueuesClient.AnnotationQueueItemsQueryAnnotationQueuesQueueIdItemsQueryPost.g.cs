@@ -1,0 +1,50 @@
+#nullable enable
+
+namespace Weave
+{
+    public partial interface IAnnotationQueuesClient
+    {
+        /// <summary>
+        /// Annotation Queue Items Query<br/>
+        /// Query items in an annotation queue with pagination and sorting.
+        /// </summary>
+        /// <param name="queueId"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Weave.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.AnnotationQueueItemsQueryRes> AnnotationQueueItemsQueryAnnotationQueuesQueueIdItemsQueryPostAsync(
+            string queueId,
+
+            global::Weave.AnnotationQueueItemsQueryBody request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Annotation Queue Items Query<br/>
+        /// Query items in an annotation queue with pagination and sorting.
+        /// </summary>
+        /// <param name="queueId"></param>
+        /// <param name="projectId"></param>
+        /// <param name="filter">
+        /// Filter queue items by call metadata and annotation state
+        /// </param>
+        /// <param name="sortBy">
+        /// Sort by multiple fields (e.g., created_at, updated_at)
+        /// </param>
+        /// <param name="limit"></param>
+        /// <param name="offset"></param>
+        /// <param name="includePosition">
+        /// Include position_in_queue field (1-based index in full queue)<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.AnnotationQueueItemsQueryRes> AnnotationQueueItemsQueryAnnotationQueuesQueueIdItemsQueryPostAsync(
+            string queueId,
+            string projectId,
+            global::Weave.AnnotationQueueItemsFilter? filter = default,
+            global::System.Collections.Generic.IList<global::Weave.SortBy>? sortBy = default,
+            int? limit = default,
+            int? offset = default,
+            bool? includePosition = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

@@ -1,0 +1,35 @@
+#nullable enable
+
+namespace Weave
+{
+    public partial interface IEvaluationsClient
+    {
+        /// <summary>
+        /// Evaluate Model
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Weave.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.EvaluateModelRes> EvaluateModelEvaluationsEvaluateModelPostAsync(
+
+            global::Weave.EvaluateModelReq request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Evaluate Model
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="evaluationRef"></param>
+        /// <param name="modelRef"></param>
+        /// <param name="wbUserId">
+        /// Do not set directly. Server will automatically populate this field.
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.EvaluateModelRes> EvaluateModelEvaluationsEvaluateModelPostAsync(
+            string projectId,
+            string evaluationRef,
+            string modelRef,
+            string? wbUserId = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

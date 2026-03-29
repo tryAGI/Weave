@@ -1,0 +1,18 @@
+
+#nullable enable
+
+namespace Weave
+{
+    /// <summary>
+    /// Bucket size in seconds. If omitted, auto-selected based on time range.
+    /// </summary>
+    public sealed partial class FeedbackStatsReqGranularity
+    {
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+    }
+}

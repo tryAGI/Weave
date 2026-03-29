@@ -1,0 +1,22 @@
+#nullable enable
+
+namespace Weave
+{
+    public partial interface IPredictionsClient
+    {
+        /// <summary>
+        /// Prediction Read<br/>
+        /// Read a prediction.
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="project"></param>
+        /// <param name="predictionId"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Weave.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.PredictionReadRes> PredictionReadV2EntityProjectPredictionsPredictionIdGetAsync(
+            string entity,
+            string project,
+            string predictionId,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}
