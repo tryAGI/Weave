@@ -40,16 +40,9 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("input_cache_reads")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_cache_read")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string InputCacheReads { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("input_cache_writes")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string InputCacheWrites { get; set; }
+        public required string InputCacheRead { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -64,8 +57,7 @@ namespace Weave
         /// <param name="completion"></param>
         /// <param name="image"></param>
         /// <param name="request"></param>
-        /// <param name="inputCacheReads"></param>
-        /// <param name="inputCacheWrites"></param>
+        /// <param name="inputCacheRead"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -74,15 +66,13 @@ namespace Weave
             string completion,
             string image,
             string request,
-            string inputCacheReads,
-            string inputCacheWrites)
+            string inputCacheRead)
         {
             this.Prompt = prompt ?? throw new global::System.ArgumentNullException(nameof(prompt));
             this.Completion = completion ?? throw new global::System.ArgumentNullException(nameof(completion));
             this.Image = image ?? throw new global::System.ArgumentNullException(nameof(image));
             this.Request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-            this.InputCacheReads = inputCacheReads ?? throw new global::System.ArgumentNullException(nameof(inputCacheReads));
-            this.InputCacheWrites = inputCacheWrites ?? throw new global::System.ArgumentNullException(nameof(inputCacheWrites));
+            this.InputCacheRead = inputCacheRead ?? throw new global::System.ArgumentNullException(nameof(inputCacheRead));
         }
 
         /// <summary>

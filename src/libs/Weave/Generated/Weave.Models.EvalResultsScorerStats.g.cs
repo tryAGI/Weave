@@ -22,7 +22,7 @@ namespace Weave
         public string? Path { get; set; }
 
         /// <summary>
-        /// Type of the leaf value: binary (bool) or continuous (number).
+        /// Type of the leaf value: binary (bool), continuous (number), or text (string).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value_type")]
         public global::Weave.EvalResultsScorerStatsValueType2? ValueType { get; set; }
@@ -83,7 +83,7 @@ namespace Weave
         /// Dot-joined subpath for nested dimensions, e.g. 'passed' for token_distance.passed. None for root-level scalar scorers.
         /// </param>
         /// <param name="valueType">
-        /// Type of the leaf value: binary (bool) or continuous (number).
+        /// Type of the leaf value: binary (bool), continuous (number), or text (string).
         /// </param>
         /// <param name="trialCount">
         /// Default Value: 0

@@ -16,6 +16,10 @@ namespace Weave
         /// 
         /// </summary>
         Continuous,
+        /// <summary>
+        /// 
+        /// </summary>
+        Text,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace Weave
             {
                 EvalResultsScorerStatsValueType2.Binary => "binary",
                 EvalResultsScorerStatsValueType2.Continuous => "continuous",
+                EvalResultsScorerStatsValueType2.Text => "text",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace Weave
             {
                 "binary" => EvalResultsScorerStatsValueType2.Binary,
                 "continuous" => EvalResultsScorerStatsValueType2.Continuous,
+                "text" => EvalResultsScorerStatsValueType2.Text,
                 _ => null,
             };
         }
