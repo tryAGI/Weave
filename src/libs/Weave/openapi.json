@@ -8640,7 +8640,8 @@
                 "type": "string",
                 "enum": [
                   "binary",
-                  "continuous"
+                  "continuous",
+                  "text"
                 ]
               },
               {
@@ -8648,7 +8649,7 @@
               }
             ],
             "title": "Value Type",
-            "description": "Type of the leaf value: binary (bool) or continuous (number)."
+            "description": "Type of the leaf value: binary (bool), continuous (number), or text (string)."
           },
           "trial_count": {
             "type": "integer",
@@ -12580,13 +12581,9 @@
             "type": "string",
             "title": "Request"
           },
-          "input_cache_reads": {
+          "input_cache_read": {
             "type": "string",
-            "title": "Input Cache Reads"
-          },
-          "input_cache_writes": {
-            "type": "string",
-            "title": "Input Cache Writes"
+            "title": "Input Cache Read"
           }
         },
         "type": "object",
@@ -12595,8 +12592,7 @@
           "completion",
           "image",
           "request",
-          "input_cache_reads",
-          "input_cache_writes"
+          "input_cache_read"
         ],
         "title": "Pricing",
         "description": "All pricing values are in USD per 1 token.\n\nPricing fields are in string format to avoid floating point precision issues."

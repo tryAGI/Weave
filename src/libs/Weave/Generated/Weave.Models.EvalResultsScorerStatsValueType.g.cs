@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// Type of the leaf value: binary (bool) or continuous (number).
+    /// Type of the leaf value: binary (bool), continuous (number), or text (string).
     /// </summary>
     public sealed partial class EvalResultsScorerStatsValueType
     {
