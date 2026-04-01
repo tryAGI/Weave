@@ -239,6 +239,7 @@ namespace Weave
             bool? includeStorageSize = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Weave.TableQueryStatsBatchReq
             {
                 ProjectId = projectId,

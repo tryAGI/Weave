@@ -227,6 +227,7 @@ namespace Weave
             global::System.Collections.Generic.IList<string> refs,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Weave.RefsReadBatchReq
             {
                 Refs = refs,
