@@ -229,7 +229,6 @@ namespace Weave
             string callId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.EvaluationStatusReq
             {
                 ProjectId = projectId,

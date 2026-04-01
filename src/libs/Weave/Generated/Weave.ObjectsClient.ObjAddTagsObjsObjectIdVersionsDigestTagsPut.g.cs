@@ -247,7 +247,6 @@ namespace Weave
             global::System.Collections.Generic.IList<string> tags,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.ObjTagsBody
             {
                 ProjectId = projectId,

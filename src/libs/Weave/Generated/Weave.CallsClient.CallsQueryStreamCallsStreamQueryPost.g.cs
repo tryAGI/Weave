@@ -287,7 +287,6 @@ namespace Weave
             bool? returnExpandedColumnValues = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.CallsQueryReq
             {
                 ProjectId = projectId,

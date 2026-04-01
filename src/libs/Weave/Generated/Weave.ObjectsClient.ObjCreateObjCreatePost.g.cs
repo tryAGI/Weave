@@ -227,7 +227,6 @@ namespace Weave
             global::Weave.ObjSchemaForInsert obj,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.ObjCreateReq
             {
                 Obj = obj,

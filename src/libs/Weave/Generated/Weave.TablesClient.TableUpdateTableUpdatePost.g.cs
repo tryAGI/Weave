@@ -231,7 +231,6 @@ namespace Weave
             global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>> updates,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.TableUpdateReq
             {
                 ProjectId = projectId,

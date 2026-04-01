@@ -258,7 +258,6 @@ namespace Weave
             global::System.Collections.Generic.IList<global::Weave.FeedbackMetricSpec>? metrics = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.FeedbackStatsReq
             {
                 ProjectId = projectId,
