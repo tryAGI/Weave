@@ -227,6 +227,7 @@ namespace Weave
             global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.CallBatchStartMode, global::Weave.CallBatchEndMode>> batch,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Weave.CallCreateBatchReq
             {
                 Batch = batch,
