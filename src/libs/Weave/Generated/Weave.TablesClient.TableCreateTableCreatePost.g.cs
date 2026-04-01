@@ -227,7 +227,6 @@ namespace Weave
             global::Weave.TableSchemaForInsert table,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.TableCreateReq
             {
                 Table = table,

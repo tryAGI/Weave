@@ -241,7 +241,6 @@ namespace Weave
             global::System.Collections.Generic.IList<string>? expandColumns = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.CallsQueryStatsReq
             {
                 ProjectId = projectId,

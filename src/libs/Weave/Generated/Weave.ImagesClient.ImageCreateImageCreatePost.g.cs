@@ -238,7 +238,6 @@ namespace Weave
             bool? trackLlmCall = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.ImageGenerationCreateReq
             {
                 ProjectId = projectId,

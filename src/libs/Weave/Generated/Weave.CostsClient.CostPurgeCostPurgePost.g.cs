@@ -229,7 +229,6 @@ namespace Weave
             global::Weave.Query query,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Weave.CostPurgeReq
             {
                 ProjectId = projectId,
