@@ -103,7 +103,7 @@ namespace Weave
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Weave.RouterOpenRouterModelsRes.FromJson(__content, JsonSerializerContext) ??
+                        global::Weave.RouterOpenRouterModelsRes.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -134,7 +134,7 @@ namespace Weave
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Weave.RouterOpenRouterModelsRes.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Weave.RouterOpenRouterModelsRes.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
