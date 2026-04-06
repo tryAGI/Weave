@@ -34,57 +34,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        #pragma warning disable CS0618 // Type or member is obsolete
-        public global::System.Text.Json.JsonSerializerOptions JsonSerializerOptions { get; set; } = new global::System.Text.Json.JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true,
-                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-                Converters =
-                {
-                    new global::Weave.JsonConverters.AggregationTypeJsonConverter(),
-                    new global::Weave.JsonConverters.AggregationTypeNullableJsonConverter(),
-                    new global::Weave.JsonConverters.AnnotationQueueItemSchemaAnnotationStateJsonConverter(),
-                    new global::Weave.JsonConverters.AnnotationQueueItemSchemaAnnotationStateNullableJsonConverter(),
-                    new global::Weave.JsonConverters.AnnotationQueueItemsFilterAnnotationStatesVariant1ItemJsonConverter(),
-                    new global::Weave.JsonConverters.AnnotationQueueItemsFilterAnnotationStatesVariant1ItemNullableJsonConverter(),
-                    new global::Weave.JsonConverters.CallMetricSpecMetricJsonConverter(),
-                    new global::Weave.JsonConverters.CallMetricSpecMetricNullableJsonConverter(),
-                    new global::Weave.JsonConverters.ConvertSpecToJsonConverter(),
-                    new global::Weave.JsonConverters.ConvertSpecToNullableJsonConverter(),
-                    new global::Weave.JsonConverters.EvalResultsScorerStatsValueType2JsonConverter(),
-                    new global::Weave.JsonConverters.EvalResultsScorerStatsValueType2NullableJsonConverter(),
-                    new global::Weave.JsonConverters.FeedbackMetricSpecValueTypeJsonConverter(),
-                    new global::Weave.JsonConverters.FeedbackMetricSpecValueTypeNullableJsonConverter(),
-                    new global::Weave.JsonConverters.FeedbackPayloadPathValueTypeJsonConverter(),
-                    new global::Weave.JsonConverters.FeedbackPayloadPathValueTypeNullableJsonConverter(),
-                    new global::Weave.JsonConverters.RouterOpenRouterModelQuantizationJsonConverter(),
-                    new global::Weave.JsonConverters.RouterOpenRouterModelQuantizationNullableJsonConverter(),
-                    new global::Weave.JsonConverters.RouterOpenRouterModelSupportedSamplingParameterJsonConverter(),
-                    new global::Weave.JsonConverters.RouterOpenRouterModelSupportedSamplingParameterNullableJsonConverter(),
-                    new global::Weave.JsonConverters.RouterOpenRouterModelSupportedFeatureJsonConverter(),
-                    new global::Weave.JsonConverters.RouterOpenRouterModelSupportedFeatureNullableJsonConverter(),
-                    new global::Weave.JsonConverters.SortByDirectionJsonConverter(),
-                    new global::Weave.JsonConverters.SortByDirectionNullableJsonConverter(),
-                    new global::Weave.JsonConverters.TraceStatusJsonConverter(),
-                    new global::Weave.JsonConverters.TraceStatusNullableJsonConverter(),
-                    new global::Weave.JsonConverters.UsageMetricSpecMetricJsonConverter(),
-                    new global::Weave.JsonConverters.UsageMetricSpecMetricNullableJsonConverter(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.CallBatchStartMode, global::Weave.CallBatchEndMode>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.CallStartRes, global::Weave.CallEndRes>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.EvaluationStatusNotFound, global::Weave.EvaluationStatusRunning, global::Weave.EvaluationStatusFailed, global::Weave.EvaluationStatusComplete>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.IList<global::Weave.LiteralOperation>, object>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>(),
-                    new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?>(),
-                    new global::Weave.JsonConverters.UnixTimestampJsonConverter(),
-                }
-            };
-        #pragma warning restore CS0618 // Type or member is obsolete
+        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; } = global::Weave.SourceGenerationContext.Default;
 
 
         /// <summary>
@@ -93,7 +43,7 @@ namespace Weave
         public AnnotationQueuesClient AnnotationQueues => new AnnotationQueuesClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -102,7 +52,7 @@ namespace Weave
         public CallsClient Calls => new CallsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -111,7 +61,7 @@ namespace Weave
         public CostsClient Costs => new CostsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -120,7 +70,7 @@ namespace Weave
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -129,7 +79,7 @@ namespace Weave
         public EvalResultsClient EvalResults => new EvalResultsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -138,7 +88,7 @@ namespace Weave
         public EvaluationRunsClient EvaluationRuns => new EvaluationRunsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -147,7 +97,7 @@ namespace Weave
         public EvaluationsClient Evaluations => new EvaluationsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -156,7 +106,7 @@ namespace Weave
         public FeedbackClient Feedback => new FeedbackClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -165,7 +115,7 @@ namespace Weave
         public FilesClient Files => new FilesClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -174,7 +124,7 @@ namespace Weave
         public ImagesClient Images => new ImagesClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -183,7 +133,7 @@ namespace Weave
         public InferenceClient Inference => new InferenceClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -192,7 +142,7 @@ namespace Weave
         public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -201,7 +151,7 @@ namespace Weave
         public ObjectsClient Objects => new ObjectsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -210,7 +160,7 @@ namespace Weave
         public OpenTelemetryClient OpenTelemetry => new OpenTelemetryClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -219,7 +169,7 @@ namespace Weave
         public OpsClient Ops => new OpsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -228,7 +178,7 @@ namespace Weave
         public PredictionsClient Predictions => new PredictionsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -237,7 +187,7 @@ namespace Weave
         public RefsClient Refs => new RefsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -246,7 +196,7 @@ namespace Weave
         public ScorersClient Scorers => new ScorersClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -255,7 +205,7 @@ namespace Weave
         public ScoresClient Scores => new ScoresClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -264,7 +214,7 @@ namespace Weave
         public ServiceClient Service => new ServiceClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -273,7 +223,7 @@ namespace Weave
         public TablesClient Tables => new TablesClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
@@ -282,7 +232,7 @@ namespace Weave
         public ThreadsClient Threads => new ThreadsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerOptions = JsonSerializerOptions,
+            JsonSerializerContext = JsonSerializerContext,
         };
 
         /// <summary>
