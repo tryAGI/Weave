@@ -54,6 +54,10 @@ namespace Weave
         /// <param name="summaryRequireIntersection">
         /// Optional intersection behavior for the summary section. When null, the value of `require_intersection` is used.
         /// </param>
+        /// <param name="includePredictAndScoreChildren">
+        /// When true (default), fetch child calls (predict/score) of each predict_and_score call to populate predict_call_id, scorer_call_ids, and more precise latency/token data. When false, these fields are derived from the predict_and_score call itself (predict_call_id and scorer_call_ids will be null/empty).<br/>
+        /// Default Value: true
+        /// </param>
         /// <param name="limit">
         /// Optional row-level page size applied after grouping and intersection.
         /// </param>
@@ -74,6 +78,7 @@ namespace Weave
             bool? includeRows = default,
             bool? includeSummary = default,
             bool? summaryRequireIntersection = default,
+            bool? includePredictAndScoreChildren = default,
             int? limit = default,
             int? offset = default,
             global::System.Threading.CancellationToken cancellationToken = default);

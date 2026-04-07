@@ -45,6 +45,18 @@ namespace Weave
         public int? TotalTokens { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_input_tokens")]
+        public int? CacheCreationInputTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_input_tokens")]
+        public int? CacheReadInputTokens { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -59,6 +71,8 @@ namespace Weave
         /// <param name="outputTokens"></param>
         /// <param name="requests"></param>
         /// <param name="totalTokens"></param>
+        /// <param name="cacheCreationInputTokens"></param>
+        /// <param name="cacheReadInputTokens"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -68,7 +82,9 @@ namespace Weave
             int? completionTokens,
             int? outputTokens,
             int? requests,
-            int? totalTokens)
+            int? totalTokens,
+            int? cacheCreationInputTokens,
+            int? cacheReadInputTokens)
         {
             this.PromptTokens = promptTokens;
             this.InputTokens = inputTokens;
@@ -76,6 +92,8 @@ namespace Weave
             this.OutputTokens = outputTokens;
             this.Requests = requests;
             this.TotalTokens = totalTokens;
+            this.CacheCreationInputTokens = cacheCreationInputTokens;
+            this.CacheReadInputTokens = cacheReadInputTokens;
         }
 
         /// <summary>

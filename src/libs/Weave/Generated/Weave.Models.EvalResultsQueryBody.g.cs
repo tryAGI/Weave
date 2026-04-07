@@ -62,6 +62,13 @@ namespace Weave
         public bool? SummaryRequireIntersection { get; set; }
 
         /// <summary>
+        /// When true (default), fetch child calls (predict/score) of each predict_and_score call to populate predict_call_id, scorer_call_ids, and more precise latency/token data. When false, these fields are derived from the predict_and_score call itself (predict_call_id and scorer_call_ids will be null/empty).<br/>
+        /// Default Value: true
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_predict_and_score_children")]
+        public bool? IncludePredictAndScoreChildren { get; set; }
+
+        /// <summary>
         /// Optional row-level page size applied after grouping and intersection.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("limit")]
@@ -112,6 +119,10 @@ namespace Weave
         /// <param name="summaryRequireIntersection">
         /// Optional intersection behavior for the summary section. When null, the value of `require_intersection` is used.
         /// </param>
+        /// <param name="includePredictAndScoreChildren">
+        /// When true (default), fetch child calls (predict/score) of each predict_and_score call to populate predict_call_id, scorer_call_ids, and more precise latency/token data. When false, these fields are derived from the predict_and_score call itself (predict_call_id and scorer_call_ids will be null/empty).<br/>
+        /// Default Value: true
+        /// </param>
         /// <param name="limit">
         /// Optional row-level page size applied after grouping and intersection.
         /// </param>
@@ -131,6 +142,7 @@ namespace Weave
             bool? includeRows,
             bool? includeSummary,
             bool? summaryRequireIntersection,
+            bool? includePredictAndScoreChildren,
             int? limit,
             int? offset)
         {
@@ -142,6 +154,7 @@ namespace Weave
             this.IncludeRows = includeRows;
             this.IncludeSummary = includeSummary;
             this.SummaryRequireIntersection = summaryRequireIntersection;
+            this.IncludePredictAndScoreChildren = includePredictAndScoreChildren;
             this.Limit = limit;
             this.Offset = offset;
         }
