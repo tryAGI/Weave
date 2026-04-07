@@ -8505,6 +8505,12 @@
             "title": "Summary Require Intersection",
             "description": "Optional intersection behavior for the summary section. When null, the value of `require_intersection` is used."
           },
+          "include_predict_and_score_children": {
+            "type": "boolean",
+            "title": "Include Predict And Score Children",
+            "description": "When true (default), fetch child calls (predict/score) of each predict_and_score call to populate predict_call_id, scorer_call_ids, and more precise latency/token data. When false, these fields are derived from the predict_and_score call itself (predict_call_id and scorer_call_ids will be null/empty).",
+            "default": true
+          },
           "limit": {
             "anyOf": [
               {
@@ -10926,6 +10932,28 @@
               }
             ],
             "title": "Total Tokens"
+          },
+          "cache_creation_input_tokens": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cache Creation Input Tokens"
+          },
+          "cache_read_input_tokens": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cache Read Input Tokens"
           }
         },
         "additionalProperties": true,
