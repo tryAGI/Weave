@@ -432,7 +432,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<byte[]>? Type101 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>? Type101 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -1229,7 +1229,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<byte[]>? ListType12 { get; set; }
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>? ListType12 { get; set; }
         /// <summary>
         /// 
         /// </summary>
