@@ -5,6 +5,25 @@ namespace Weave
 {
     public partial class EvaluationRunsClient
     {
+
+
+        private static readonly global::Weave.EndPointSecurityRequirement s_EvaluationRunCreateV2EntityProjectEvaluationRunsPostSecurityRequirement0 =
+            new global::Weave.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Weave.EndPointAuthorizationRequirement[]
+                {                    new global::Weave.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Weave.EndPointSecurityRequirement[] s_EvaluationRunCreateV2EntityProjectEvaluationRunsPostSecurityRequirements =
+            new global::Weave.EndPointSecurityRequirement[]
+            {                s_EvaluationRunCreateV2EntityProjectEvaluationRunsPostSecurityRequirement0,
+            };
         partial void PrepareEvaluationRunCreateV2EntityProjectEvaluationRunsPostArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string entity,
@@ -51,9 +70,15 @@ namespace Weave
                 project: ref project,
                 request: request);
 
+
+            var __authorizations = global::Weave.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EvaluationRunCreateV2EntityProjectEvaluationRunsPostSecurityRequirements,
+                operationName: "EvaluationRunCreateV2EntityProjectEvaluationRunsPostAsync");
+
             var __pathBuilder = new global::Weave.PathBuilder(
                 path: $"/v2/{entity}/{project}/evaluation_runs",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -63,7 +88,7 @@ namespace Weave
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

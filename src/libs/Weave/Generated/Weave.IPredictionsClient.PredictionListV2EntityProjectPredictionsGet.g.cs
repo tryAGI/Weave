@@ -21,7 +21,7 @@ namespace Weave
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Weave.PredictionReadRes>> PredictionListV2EntityProjectPredictionsGetAsync(
+        global::System.Collections.Generic.IAsyncEnumerable<global::Weave.PredictionReadRes> PredictionListV2EntityProjectPredictionsGetAsync(
             string entity,
             string project,
             string? evaluationRunId = default,

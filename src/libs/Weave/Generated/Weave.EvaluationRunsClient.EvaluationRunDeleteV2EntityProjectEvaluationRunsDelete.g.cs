@@ -5,6 +5,25 @@ namespace Weave
 {
     public partial class EvaluationRunsClient
     {
+
+
+        private static readonly global::Weave.EndPointSecurityRequirement s_EvaluationRunDeleteV2EntityProjectEvaluationRunsDeleteSecurityRequirement0 =
+            new global::Weave.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Weave.EndPointAuthorizationRequirement[]
+                {                    new global::Weave.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Weave.EndPointSecurityRequirement[] s_EvaluationRunDeleteV2EntityProjectEvaluationRunsDeleteSecurityRequirements =
+            new global::Weave.EndPointSecurityRequirement[]
+            {                s_EvaluationRunDeleteV2EntityProjectEvaluationRunsDeleteSecurityRequirement0,
+            };
         partial void PrepareEvaluationRunDeleteV2EntityProjectEvaluationRunsDeleteArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string entity,
@@ -50,12 +69,18 @@ namespace Weave
                 project: ref project,
                 evaluationRunIds: evaluationRunIds);
 
+
+            var __authorizations = global::Weave.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EvaluationRunDeleteV2EntityProjectEvaluationRunsDeleteSecurityRequirements,
+                operationName: "EvaluationRunDeleteV2EntityProjectEvaluationRunsDeleteAsync");
+
             var __pathBuilder = new global::Weave.PathBuilder(
                 path: $"/v2/{entity}/{project}/evaluation_runs",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("evaluation_run_ids", evaluationRunIds, delimiter: ",", explode: true) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -65,7 +90,7 @@ namespace Weave
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace Weave
 {
     public partial class EvaluationRunsClient
     {
+
+
+        private static readonly global::Weave.EndPointSecurityRequirement s_EvaluationRunFinishV2EntityProjectEvaluationRunsEvaluationRunIdFinishPostSecurityRequirement0 =
+            new global::Weave.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Weave.EndPointAuthorizationRequirement[]
+                {                    new global::Weave.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Weave.EndPointSecurityRequirement[] s_EvaluationRunFinishV2EntityProjectEvaluationRunsEvaluationRunIdFinishPostSecurityRequirements =
+            new global::Weave.EndPointSecurityRequirement[]
+            {                s_EvaluationRunFinishV2EntityProjectEvaluationRunsEvaluationRunIdFinishPostSecurityRequirement0,
+            };
         partial void PrepareEvaluationRunFinishV2EntityProjectEvaluationRunsEvaluationRunIdFinishPostArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string entity,
@@ -56,9 +75,15 @@ namespace Weave
                 evaluationRunId: ref evaluationRunId,
                 request: request);
 
+
+            var __authorizations = global::Weave.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EvaluationRunFinishV2EntityProjectEvaluationRunsEvaluationRunIdFinishPostSecurityRequirements,
+                operationName: "EvaluationRunFinishV2EntityProjectEvaluationRunsEvaluationRunIdFinishPostAsync");
+
             var __pathBuilder = new global::Weave.PathBuilder(
                 path: $"/v2/{entity}/{project}/evaluation_runs/{evaluationRunId}/finish",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -68,7 +93,7 @@ namespace Weave
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
