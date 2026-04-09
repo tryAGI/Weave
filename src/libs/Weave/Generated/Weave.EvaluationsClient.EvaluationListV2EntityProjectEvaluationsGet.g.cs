@@ -5,6 +5,25 @@ namespace Weave
 {
     public partial class EvaluationsClient
     {
+
+
+        private static readonly global::Weave.EndPointSecurityRequirement s_EvaluationListV2EntityProjectEvaluationsGetSecurityRequirement0 =
+            new global::Weave.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Weave.EndPointAuthorizationRequirement[]
+                {                    new global::Weave.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Weave.EndPointSecurityRequirement[] s_EvaluationListV2EntityProjectEvaluationsGetSecurityRequirements =
+            new global::Weave.EndPointSecurityRequirement[]
+            {                s_EvaluationListV2EntityProjectEvaluationsGetSecurityRequirement0,
+            };
         partial void PrepareEvaluationListV2EntityProjectEvaluationsGetArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string entity,
@@ -43,9 +62,15 @@ namespace Weave
                 entity: ref entity,
                 project: ref project);
 
+
+            var __authorizations = global::Weave.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EvaluationListV2EntityProjectEvaluationsGetSecurityRequirements,
+                operationName: "EvaluationListV2EntityProjectEvaluationsGetAsync");
+
             var __pathBuilder = new global::Weave.PathBuilder(
                 path: $"/v2/{entity}/{project}/evaluations",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -55,7 +80,7 @@ namespace Weave
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

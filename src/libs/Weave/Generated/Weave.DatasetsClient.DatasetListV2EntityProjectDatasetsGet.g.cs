@@ -5,6 +5,25 @@ namespace Weave
 {
     public partial class DatasetsClient
     {
+
+
+        private static readonly global::Weave.EndPointSecurityRequirement s_DatasetListV2EntityProjectDatasetsGetSecurityRequirement0 =
+            new global::Weave.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Weave.EndPointAuthorizationRequirement[]
+                {                    new global::Weave.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Weave.EndPointSecurityRequirement[] s_DatasetListV2EntityProjectDatasetsGetSecurityRequirements =
+            new global::Weave.EndPointSecurityRequirement[]
+            {                s_DatasetListV2EntityProjectDatasetsGetSecurityRequirement0,
+            };
         partial void PrepareDatasetListV2EntityProjectDatasetsGetArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string entity,
@@ -57,13 +76,19 @@ namespace Weave
                 limit: limit,
                 offset: offset);
 
+
+            var __authorizations = global::Weave.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DatasetListV2EntityProjectDatasetsGetSecurityRequirements,
+                operationName: "DatasetListV2EntityProjectDatasetsGetAsync");
+
             var __pathBuilder = new global::Weave.PathBuilder(
                 path: $"/v2/{entity}/{project}/datasets",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("limit", limit?.ToString())
                 .AddOptionalParameter("offset", offset?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -73,7 +98,7 @@ namespace Weave
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

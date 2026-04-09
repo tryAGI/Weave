@@ -5,6 +5,25 @@ namespace Weave
 {
     public partial class OpsClient
     {
+
+
+        private static readonly global::Weave.EndPointSecurityRequirement s_OpDeleteV2EntityProjectOpsObjectIdDeleteSecurityRequirement0 =
+            new global::Weave.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Weave.EndPointAuthorizationRequirement[]
+                {                    new global::Weave.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Weave.EndPointSecurityRequirement[] s_OpDeleteV2EntityProjectOpsObjectIdDeleteSecurityRequirements =
+            new global::Weave.EndPointSecurityRequirement[]
+            {                s_OpDeleteV2EntityProjectOpsObjectIdDeleteSecurityRequirement0,
+            };
         partial void PrepareOpDeleteV2EntityProjectOpsObjectIdDeleteArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string entity,
@@ -55,12 +74,18 @@ namespace Weave
                 objectId: ref objectId,
                 digests: digests);
 
+
+            var __authorizations = global::Weave.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_OpDeleteV2EntityProjectOpsObjectIdDeleteSecurityRequirements,
+                operationName: "OpDeleteV2EntityProjectOpsObjectIdDeleteAsync");
+
             var __pathBuilder = new global::Weave.PathBuilder(
                 path: $"/v2/{entity}/{project}/ops/{objectId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("digests", digests?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -70,7 +95,7 @@ namespace Weave
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace Weave
 {
     public partial class ScoresClient
     {
+
+
+        private static readonly global::Weave.EndPointSecurityRequirement s_CallsScoreCallsScorePostSecurityRequirement0 =
+            new global::Weave.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Weave.EndPointAuthorizationRequirement[]
+                {                    new global::Weave.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Weave.EndPointSecurityRequirement[] s_CallsScoreCallsScorePostSecurityRequirements =
+            new global::Weave.EndPointSecurityRequirement[]
+            {                s_CallsScoreCallsScorePostSecurityRequirement0,
+            };
         partial void PrepareCallsScoreCallsScorePostArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Weave.CallsScoreReq request);
@@ -40,9 +59,15 @@ namespace Weave
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Weave.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CallsScoreCallsScorePostSecurityRequirements,
+                operationName: "CallsScoreCallsScorePostAsync");
+
             var __pathBuilder = new global::Weave.PathBuilder(
                 path: "/calls/score",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -52,7 +77,7 @@ namespace Weave
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
