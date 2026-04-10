@@ -11,6 +11,14 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        CacheCreationInputTokens,
+        /// <summary>
+        /// 
+        /// </summary>
+        CacheReadInputTokens,
+        /// <summary>
+        /// 
+        /// </summary>
         InputCost,
         /// <summary>
         /// 
@@ -46,6 +54,8 @@ namespace Weave
         {
             return value switch
             {
+                UsageMetricSpecMetric.CacheCreationInputTokens => "cache_creation_input_tokens",
+                UsageMetricSpecMetric.CacheReadInputTokens => "cache_read_input_tokens",
                 UsageMetricSpecMetric.InputCost => "input_cost",
                 UsageMetricSpecMetric.InputTokens => "input_tokens",
                 UsageMetricSpecMetric.OutputCost => "output_cost",
@@ -62,6 +72,8 @@ namespace Weave
         {
             return value switch
             {
+                "cache_creation_input_tokens" => UsageMetricSpecMetric.CacheCreationInputTokens,
+                "cache_read_input_tokens" => UsageMetricSpecMetric.CacheReadInputTokens,
                 "input_cost" => UsageMetricSpecMetric.InputCost,
                 "input_tokens" => UsageMetricSpecMetric.InputTokens,
                 "output_cost" => UsageMetricSpecMetric.OutputCost,
