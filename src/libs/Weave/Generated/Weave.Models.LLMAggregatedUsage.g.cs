@@ -33,6 +33,18 @@ namespace Weave
         public int? TotalTokens { get; set; }
 
         /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_input_tokens")]
+        public int? CacheReadInputTokens { get; set; }
+
+        /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_input_tokens")]
+        public int? CacheCreationInputTokens { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt_tokens_total_cost")]
@@ -43,6 +55,18 @@ namespace Weave
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completion_tokens_total_cost")]
         public double? CompletionTokensTotalCost { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_input_tokens_total_cost")]
+        public double? CacheReadInputTokensTotalCost { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_input_tokens_total_cost")]
+        public double? CacheCreationInputTokensTotalCost { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -65,8 +89,16 @@ namespace Weave
         /// <param name="totalTokens">
         /// Default Value: 0
         /// </param>
+        /// <param name="cacheReadInputTokens">
+        /// Default Value: 0
+        /// </param>
+        /// <param name="cacheCreationInputTokens">
+        /// Default Value: 0
+        /// </param>
         /// <param name="promptTokensTotalCost"></param>
         /// <param name="completionTokensTotalCost"></param>
+        /// <param name="cacheReadInputTokensTotalCost"></param>
+        /// <param name="cacheCreationInputTokensTotalCost"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -75,15 +107,23 @@ namespace Weave
             int? promptTokens,
             int? completionTokens,
             int? totalTokens,
+            int? cacheReadInputTokens,
+            int? cacheCreationInputTokens,
             double? promptTokensTotalCost,
-            double? completionTokensTotalCost)
+            double? completionTokensTotalCost,
+            double? cacheReadInputTokensTotalCost,
+            double? cacheCreationInputTokensTotalCost)
         {
             this.Requests = requests;
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;
             this.TotalTokens = totalTokens;
+            this.CacheReadInputTokens = cacheReadInputTokens;
+            this.CacheCreationInputTokens = cacheCreationInputTokens;
             this.PromptTokensTotalCost = promptTokensTotalCost;
             this.CompletionTokensTotalCost = completionTokensTotalCost;
+            this.CacheReadInputTokensTotalCost = cacheReadInputTokensTotalCost;
+            this.CacheCreationInputTokensTotalCost = cacheCreationInputTokensTotalCost;
         }
 
         /// <summary>

@@ -23,6 +23,18 @@ namespace Weave
         public required double CompletionTokenCost { get; set; }
 
         /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_input_token_cost")]
+        public double? CacheReadInputTokenCost { get; set; }
+
+        /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_input_token_cost")]
+        public double? CacheCreationInputTokenCost { get; set; }
+
+        /// <summary>
         /// The unit of the cost for the prompt tokens<br/>
         /// Default Value: USD
         /// </summary>
@@ -59,6 +71,12 @@ namespace Weave
         /// </summary>
         /// <param name="promptTokenCost"></param>
         /// <param name="completionTokenCost"></param>
+        /// <param name="cacheReadInputTokenCost">
+        /// Default Value: 0
+        /// </param>
+        /// <param name="cacheCreationInputTokenCost">
+        /// Default Value: 0
+        /// </param>
         /// <param name="promptTokenCostUnit">
         /// The unit of the cost for the prompt tokens<br/>
         /// Default Value: USD
@@ -79,6 +97,8 @@ namespace Weave
         public CostCreateInput(
             double promptTokenCost,
             double completionTokenCost,
+            double? cacheReadInputTokenCost,
+            double? cacheCreationInputTokenCost,
             string? promptTokenCostUnit,
             string? completionTokenCostUnit,
             global::System.DateTime? effectiveDate,
@@ -86,6 +106,8 @@ namespace Weave
         {
             this.PromptTokenCost = promptTokenCost;
             this.CompletionTokenCost = completionTokenCost;
+            this.CacheReadInputTokenCost = cacheReadInputTokenCost;
+            this.CacheCreationInputTokenCost = cacheCreationInputTokenCost;
             this.PromptTokenCostUnit = promptTokenCostUnit;
             this.CompletionTokenCostUnit = completionTokenCostUnit;
             this.EffectiveDate = effectiveDate;
