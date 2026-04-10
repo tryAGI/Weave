@@ -9,11 +9,13 @@ namespace Weave
         /// Add feedback to a call or object.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.FeedbackCreateRes> FeedbackCreateFeedbackCreatePostAsync(
 
             global::Weave.FeedbackCreateReq request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Feedback Create<br/>
@@ -37,6 +39,7 @@ namespace Weave
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.FeedbackCreateRes> FeedbackCreateFeedbackCreatePostAsync(
@@ -52,6 +55,7 @@ namespace Weave
             string? triggerRef = default,
             string? queueId = default,
             string? wbUserId = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -11,6 +11,7 @@ namespace Weave
         /// <param name="entity"></param>
         /// <param name="project"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.EvaluationRunCreateRes> EvaluationRunCreateV2EntityProjectEvaluationRunsPostAsync(
@@ -18,6 +19,7 @@ namespace Weave
             string project,
 
             global::Weave.EvaluationRunCreateBody request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Evaluation Run Create<br/>
@@ -31,6 +33,7 @@ namespace Weave
         /// <param name="model">
         /// Reference to the model (weave:// URI)
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.EvaluationRunCreateRes> EvaluationRunCreateV2EntityProjectEvaluationRunsPostAsync(
@@ -38,6 +41,7 @@ namespace Weave
             string project,
             string evaluation,
             string model,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

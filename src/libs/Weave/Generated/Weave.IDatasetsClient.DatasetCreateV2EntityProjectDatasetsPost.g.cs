@@ -11,6 +11,7 @@ namespace Weave
         /// <param name="entity"></param>
         /// <param name="project"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.DatasetCreateRes> DatasetCreateV2EntityProjectDatasetsPostAsync(
@@ -18,6 +19,7 @@ namespace Weave
             string project,
 
             global::Weave.DatasetCreateBody request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Dataset Create<br/>
@@ -34,6 +36,7 @@ namespace Weave
         /// <param name="rows">
         /// Dataset rows
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.DatasetCreateRes> DatasetCreateV2EntityProjectDatasetsPostAsync(
@@ -42,6 +45,7 @@ namespace Weave
             global::System.Collections.Generic.IList<object> rows,
             string? name = default,
             string? description = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

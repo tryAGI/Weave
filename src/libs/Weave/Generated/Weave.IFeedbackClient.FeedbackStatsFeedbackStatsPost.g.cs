@@ -9,11 +9,13 @@ namespace Weave
         /// Return aggregated feedback statistics over time buckets.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.FeedbackStatsRes> FeedbackStatsFeedbackStatsPostAsync(
 
             global::Weave.FeedbackStatsReq request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Feedback Stats<br/>
@@ -42,6 +44,7 @@ namespace Weave
         /// <param name="metrics">
         /// Metrics to aggregate from payload_dump.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.FeedbackStatsRes> FeedbackStatsFeedbackStatsPostAsync(
@@ -53,6 +56,7 @@ namespace Weave
             int? granularity = default,
             string? timezone = default,
             global::System.Collections.Generic.IList<global::Weave.FeedbackMetricSpec>? metrics = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
