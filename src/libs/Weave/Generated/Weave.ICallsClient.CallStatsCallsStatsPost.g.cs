@@ -8,11 +8,13 @@ namespace Weave
         /// Call Stats
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.CallStatsRes> CallStatsCallsStatsPostAsync(
 
             global::Weave.CallStatsReq request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Call Stats
@@ -38,6 +40,7 @@ namespace Weave
         /// IANA timezone for bucket alignment (e.g., 'America/New_York')<br/>
         /// Default Value: UTC
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.CallStatsRes> CallStatsCallsStatsPostAsync(
@@ -49,6 +52,7 @@ namespace Weave
             global::System.Collections.Generic.IList<global::Weave.CallMetricSpec>? callMetrics = default,
             global::Weave.CallsFilter? filter = default,
             string? timezone = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

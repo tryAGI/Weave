@@ -31,6 +31,9 @@ namespace Weave
 #if DEBUG
             = true;
 #endif
+
+        /// <inheritdoc/>
+        public global::Weave.AutoSDKClientOptions Options { get; }
         /// <summary>
         /// 
         /// </summary>
@@ -40,7 +43,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public AnnotationQueuesClient AnnotationQueues => new AnnotationQueuesClient(HttpClient, authorizations: Authorizations)
+        public AnnotationQueuesClient AnnotationQueues => new AnnotationQueuesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -49,7 +52,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public CallsClient Calls => new CallsClient(HttpClient, authorizations: Authorizations)
+        public CallsClient Calls => new CallsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -58,7 +61,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public CostsClient Costs => new CostsClient(HttpClient, authorizations: Authorizations)
+        public CostsClient Costs => new CostsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -67,7 +70,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations)
+        public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -76,7 +79,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public EvalResultsClient EvalResults => new EvalResultsClient(HttpClient, authorizations: Authorizations)
+        public EvalResultsClient EvalResults => new EvalResultsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -85,7 +88,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public EvaluationRunsClient EvaluationRuns => new EvaluationRunsClient(HttpClient, authorizations: Authorizations)
+        public EvaluationRunsClient EvaluationRuns => new EvaluationRunsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -94,7 +97,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public EvaluationsClient Evaluations => new EvaluationsClient(HttpClient, authorizations: Authorizations)
+        public EvaluationsClient Evaluations => new EvaluationsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -103,7 +106,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public FeedbackClient Feedback => new FeedbackClient(HttpClient, authorizations: Authorizations)
+        public FeedbackClient Feedback => new FeedbackClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -112,7 +115,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public FilesClient Files => new FilesClient(HttpClient, authorizations: Authorizations)
+        public FilesClient Files => new FilesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -121,7 +124,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public ImagesClient Images => new ImagesClient(HttpClient, authorizations: Authorizations)
+        public ImagesClient Images => new ImagesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -130,7 +133,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public InferenceClient Inference => new InferenceClient(HttpClient, authorizations: Authorizations)
+        public InferenceClient Inference => new InferenceClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -139,7 +142,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations)
+        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -148,7 +151,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public ObjectsClient Objects => new ObjectsClient(HttpClient, authorizations: Authorizations)
+        public ObjectsClient Objects => new ObjectsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -157,7 +160,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public OpenTelemetryClient OpenTelemetry => new OpenTelemetryClient(HttpClient, authorizations: Authorizations)
+        public OpenTelemetryClient OpenTelemetry => new OpenTelemetryClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -166,7 +169,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public OpsClient Ops => new OpsClient(HttpClient, authorizations: Authorizations)
+        public OpsClient Ops => new OpsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -175,7 +178,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public PredictionsClient Predictions => new PredictionsClient(HttpClient, authorizations: Authorizations)
+        public PredictionsClient Predictions => new PredictionsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -184,7 +187,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public RefsClient Refs => new RefsClient(HttpClient, authorizations: Authorizations)
+        public RefsClient Refs => new RefsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -193,7 +196,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public ScorersClient Scorers => new ScorersClient(HttpClient, authorizations: Authorizations)
+        public ScorersClient Scorers => new ScorersClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -202,7 +205,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public ScoresClient Scores => new ScoresClient(HttpClient, authorizations: Authorizations)
+        public ScoresClient Scores => new ScoresClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -211,7 +214,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public ServiceClient Service => new ServiceClient(HttpClient, authorizations: Authorizations)
+        public ServiceClient Service => new ServiceClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -220,7 +223,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public TablesClient Tables => new TablesClient(HttpClient, authorizations: Authorizations)
+        public TablesClient Tables => new TablesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -229,7 +232,7 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public ThreadsClient Threads => new ThreadsClient(HttpClient, authorizations: Authorizations)
+        public ThreadsClient Threads => new ThreadsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -248,11 +251,37 @@ namespace Weave
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::Weave.EndPointAuthorization>? authorizations = null,
+            bool disposeHttpClient = true) : this(
+                httpClient,
+                baseUri,
+                authorizations,
+                options: null,
+                disposeHttpClient: disposeHttpClient)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new instance of the WeaveClient.
+        /// If no httpClient is provided, a new one will be created.
+        /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
+        /// </summary>
+        /// <param name="httpClient">The HttpClient instance. If not provided, a new one will be created.</param>
+        /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
+        /// <param name="authorizations">The authorizations to use for the requests.</param>
+        /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
+        /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
+        public WeaveClient(
+            global::System.Net.Http.HttpClient? httpClient = null,
+            global::System.Uri? baseUri = null,
+            global::System.Collections.Generic.List<global::Weave.EndPointAuthorization>? authorizations = null,
+            global::Weave.AutoSDKClientOptions? options = null,
             bool disposeHttpClient = true)
         {
+
             HttpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             HttpClient.BaseAddress ??= baseUri ?? new global::System.Uri(DefaultBaseUrl);
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Weave.EndPointAuthorization>();
+            Options = options ?? new global::Weave.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
 
             Initialized(HttpClient);

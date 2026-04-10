@@ -9,11 +9,13 @@ namespace Weave
         /// Query for feedback.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.FeedbackQueryRes> FeedbackQueryFeedbackQueryPostAsync(
 
             global::Weave.FeedbackQueryReq request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Feedback Query<br/>
@@ -25,6 +27,7 @@ namespace Weave
         /// <param name="sortBy"></param>
         /// <param name="limit"></param>
         /// <param name="offset"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.FeedbackQueryRes> FeedbackQueryFeedbackQueryPostAsync(
@@ -34,6 +37,7 @@ namespace Weave
             global::System.Collections.Generic.IList<global::Weave.SortBy>? sortBy = default,
             int? limit = default,
             int? offset = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

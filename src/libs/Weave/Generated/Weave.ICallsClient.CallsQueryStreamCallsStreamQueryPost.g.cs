@@ -11,12 +11,14 @@ namespace Weave
         /// Default Value: application/jsonl
         /// </param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         global::System.Threading.Tasks.Task<string> CallsQueryStreamCallsStreamQueryPostAsync(
 
             global::Weave.CallsQueryReq request,
             string? accept = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Calls Query Stream
@@ -58,6 +60,7 @@ namespace Weave
         /// If true, the response will include raw values for expanded columns. If false, the response expand_columns will only be used for filtering and ordering. This is useful for clients that want to resolve refs themselves, e.g. for performance reasons.<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<string> CallsQueryStreamCallsStreamQueryPostAsync(
@@ -76,6 +79,7 @@ namespace Weave
             global::System.Collections.Generic.IList<string>? columns = default,
             global::System.Collections.Generic.IList<string>? expandColumns = default,
             bool? returnExpandedColumnValues = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

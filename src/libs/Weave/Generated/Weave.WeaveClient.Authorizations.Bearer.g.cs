@@ -25,6 +25,7 @@ namespace Weave
             Authorizations.Add(new global::Weave.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HTTPBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

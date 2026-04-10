@@ -11,6 +11,7 @@ namespace Weave
         /// <param name="entity"></param>
         /// <param name="project"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.ScorerCreateRes> ScorerCreateV2EntityProjectScorersPostAsync(
@@ -18,6 +19,7 @@ namespace Weave
             string project,
 
             global::Weave.ScorerCreateBody request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Scorer Create<br/>
@@ -34,6 +36,7 @@ namespace Weave
         /// <param name="opSourceCode">
         /// Complete source code for the Scorer.score op including imports
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.ScorerCreateRes> ScorerCreateV2EntityProjectScorersPostAsync(
@@ -42,6 +45,7 @@ namespace Weave
             string name,
             string opSourceCode,
             string? description = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

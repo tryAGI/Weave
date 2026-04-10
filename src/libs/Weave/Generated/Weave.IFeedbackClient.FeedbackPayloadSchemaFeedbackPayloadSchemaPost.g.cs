@@ -9,11 +9,13 @@ namespace Weave
         /// Discover feedback payload schema (paths and types) from sample rows.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.FeedbackPayloadSchemaRes> FeedbackPayloadSchemaFeedbackPayloadSchemaPostAsync(
 
             global::Weave.FeedbackPayloadSchemaReq request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Feedback Payload Schema<br/>
@@ -36,6 +38,7 @@ namespace Weave
         /// Max distinct trigger_refs to sample when discovering the payload schema. Each distinct trigger_ref (monitor/source) typically has a fixed payload structure, so sampling one payload per ref is usually enough to see the full schema. 2 000 covers virtually all real-world projects while keeping the query fast; the hard cap of 5 000 prevents runaway scans.<br/>
         /// Default Value: 2000
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.FeedbackPayloadSchemaRes> FeedbackPayloadSchemaFeedbackPayloadSchemaPostAsync(
@@ -45,6 +48,7 @@ namespace Weave
             string? feedbackType = default,
             string? triggerRef = default,
             int? sampleLimit = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
