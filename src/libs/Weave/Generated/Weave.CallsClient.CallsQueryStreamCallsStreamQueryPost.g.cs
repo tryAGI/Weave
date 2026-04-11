@@ -124,10 +124,10 @@ namespace Weave
                 } 
             }
 
-                if (accept != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("accept", accept.ToString());
-                }
+            if (accept != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("accept", accept.ToString());
+            }
 
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
