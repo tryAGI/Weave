@@ -2691,6 +2691,47 @@
         }
       }
     },
+    "/link_to_registry": {
+      "post": {
+        "tags": [
+          "Registry"
+        ],
+        "summary": "Link To Registry",
+        "operationId": "link_to_registry_link_to_registry_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAndLinkPayload"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateAndLinkWeaveAssetRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v2/{entity}/{project}/ops": {
       "post": {
         "tags": [
@@ -8045,6 +8086,75 @@
           "results"
         ],
         "title": "CostQueryRes"
+      },
+      "CreateAndLinkPayload": {
+        "properties": {
+          "ref": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Ref"
+          },
+          "target": {
+            "$ref": "#/components/schemas/CreateAndLinkTarget"
+          },
+          "aliases": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Aliases",
+            "default": []
+          }
+        },
+        "type": "object",
+        "required": [
+          "ref",
+          "target"
+        ],
+        "title": "CreateAndLinkPayload"
+      },
+      "CreateAndLinkTarget": {
+        "properties": {
+          "portfolio_name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Portfolio Name"
+          },
+          "entity_name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Entity Name"
+          },
+          "project_name": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Project Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "portfolio_name",
+          "entity_name",
+          "project_name"
+        ],
+        "title": "CreateAndLinkTarget"
+      },
+      "CreateAndLinkWeaveAssetRes": {
+        "properties": {
+          "version_index": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Version Index"
+          }
+        },
+        "type": "object",
+        "title": "CreateAndLinkWeaveAssetRes"
       },
       "Datacenter": {
         "properties": {

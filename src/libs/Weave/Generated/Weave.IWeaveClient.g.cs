@@ -133,6 +133,11 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public RegistryClient Registry { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ScorersClient Scorers { get; }
 
         /// <summary>
