@@ -196,6 +196,15 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public RegistryClient Registry => new RegistryClient(HttpClient, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ScorersClient Scorers => new ScorersClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
