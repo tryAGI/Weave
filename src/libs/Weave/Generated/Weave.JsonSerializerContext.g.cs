@@ -37,6 +37,14 @@ namespace Weave
 
             typeof(global::Weave.JsonConverters.EvalResultsScorerStatsValueType2NullableJsonConverter),
 
+            typeof(global::Weave.JsonConverters.EvalResultsSortByDirectionJsonConverter),
+
+            typeof(global::Weave.JsonConverters.EvalResultsSortByDirectionNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.EvalResultsSortByModeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.EvalResultsSortByModeNullableJsonConverter),
+
             typeof(global::Weave.JsonConverters.FeedbackMetricSpecValueTypeJsonConverter),
 
             typeof(global::Weave.JsonConverters.FeedbackMetricSpecValueTypeNullableJsonConverter),
@@ -246,7 +254,11 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsEvaluationSummary))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsScorerStats))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsFilter))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsQueryBody))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvalResultsSortBy>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortBy))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvalResultsFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsQueryRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvalResultsRow>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsRow))]
@@ -256,6 +268,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvalResultsTrial>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsTrial))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsScorerStatsValueType2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortByDirection), TypeInfoPropertyName = "EvalResultsSortByDirection2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortByMode), TypeInfoPropertyName = "EvalResultsSortByMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvaluateModelReq))]
@@ -436,6 +450,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.CostQueryOutput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsScorerStats>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsSortBy>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsRow>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsRowEvaluation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsTrial>))]

@@ -8551,6 +8551,33 @@
         ],
         "title": "EvalResultsEvaluationSummary"
       },
+      "EvalResultsFilter": {
+        "properties": {
+          "evaluation_call_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evaluation Call Id",
+            "description": "When set, filter fields are scoped to this evaluation's data."
+          },
+          "query": {
+            "$ref": "#/components/schemas/Query",
+            "description": "Filter expression. Supported field prefixes: scores.<name>, inputs.<path>, outputs.<path>."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "title": "EvalResultsFilter",
+        "description": "A filter scoped to an optional evaluation."
+      },
       "EvalResultsQueryBody": {
         "properties": {
           "evaluation_call_ids": {
@@ -8630,6 +8657,36 @@
             "title": "Include Predict And Score Children",
             "description": "When true (default), fetch child calls (predict/score) of each predict_and_score call to populate predict_call_id, scorer_call_ids, and more precise latency/token data. When false, these fields are derived from the predict_and_score call itself (predict_call_id and scorer_call_ids will be null/empty).",
             "default": true
+          },
+          "sort_by": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/EvalResultsSortBy"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort By",
+            "description": "Sort specification for result rows. Supported field prefixes: scores.<name>, inputs.<path>, outputs.<path>. When null, rows are sorted by row_digest ASC."
+          },
+          "filters": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/EvalResultsFilter"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Filters",
+            "description": "Filters applied to grouped rows. Multiple filters are AND'd together."
           },
           "limit": {
             "anyOf": [
@@ -8837,6 +8894,52 @@
         ],
         "title": "EvalResultsScorerStats",
         "description": "Stats for a single flattened score dimension (scorer_key or scorer_key.path.to.leaf)."
+      },
+      "EvalResultsSortBy": {
+        "properties": {
+          "field": {
+            "type": "string",
+            "title": "Field"
+          },
+          "direction": {
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ],
+            "title": "Direction"
+          },
+          "evaluation_call_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evaluation Call Id",
+            "description": "Scope the sort to a specific evaluation's scores."
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "value",
+              "difference"
+            ],
+            "title": "Mode",
+            "description": "When 'value', sort by the field value for the specified evaluation. When 'difference', sort by max-min spread of the field across all evaluations (evaluation_call_id is ignored).",
+            "default": "value"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "field",
+          "direction"
+        ],
+        "title": "EvalResultsSortBy",
+        "description": "Sort specification for evaluation results, extending SortBy"
       },
       "EvalResultsSummaryRes": {
         "properties": {
