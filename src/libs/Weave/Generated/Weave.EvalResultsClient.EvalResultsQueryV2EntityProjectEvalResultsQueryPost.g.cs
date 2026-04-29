@@ -144,8 +144,8 @@ namespace Weave
                 PrepareEvalResultsQueryV2EntityProjectEvalResultsQueryPostRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
+                    entity: entity!,
+                    project: project!,
                     request: request);
 
                 return __httpRequest;

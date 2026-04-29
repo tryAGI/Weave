@@ -130,8 +130,8 @@ namespace Weave
                 PrepareScorerListV2EntityProjectScorersGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project);
+                    entity: entity!,
+                    project: project!);
 
                 return __httpRequest;
             }

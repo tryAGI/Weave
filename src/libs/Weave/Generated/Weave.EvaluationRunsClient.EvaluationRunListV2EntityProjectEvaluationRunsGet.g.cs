@@ -167,8 +167,8 @@ namespace Weave
                 PrepareEvaluationRunListV2EntityProjectEvaluationRunsGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
+                    entity: entity!,
+                    project: project!,
                     evaluations: evaluations,
                     models: models,
                     evaluationRunIds: evaluationRunIds,

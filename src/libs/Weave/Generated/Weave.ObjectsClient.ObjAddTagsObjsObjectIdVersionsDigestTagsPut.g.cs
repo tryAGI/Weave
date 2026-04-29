@@ -144,8 +144,8 @@ namespace Weave
                 PrepareObjAddTagsObjsObjectIdVersionsDigestTagsPutRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    objectId: objectId,
-                    digest: digest,
+                    objectId: objectId!,
+                    digest: digest!,
                     request: request);
 
                 return __httpRequest;

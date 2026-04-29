@@ -139,7 +139,7 @@ namespace Weave
                 PrepareObjSetAliasesObjsObjectIdAliasesPutRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    objectId: objectId,
+                    objectId: objectId!,
                     request: request);
 
                 return __httpRequest;

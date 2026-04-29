@@ -140,10 +140,10 @@ namespace Weave
                 PrepareEvaluationReadV2EntityProjectEvaluationsObjectIdVersionsDigestGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
-                    objectId: objectId,
-                    digest: digest);
+                    entity: entity!,
+                    project: project!,
+                    objectId: objectId!,
+                    digest: digest!);
 
                 return __httpRequest;
             }

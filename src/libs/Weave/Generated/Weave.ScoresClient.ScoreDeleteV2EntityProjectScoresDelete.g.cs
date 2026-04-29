@@ -140,9 +140,9 @@ namespace Weave
                 PrepareScoreDeleteV2EntityProjectScoresDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
-                    scoreIds: scoreIds);
+                    entity: entity!,
+                    project: project!,
+                    scoreIds: scoreIds!);
 
                 return __httpRequest;
             }

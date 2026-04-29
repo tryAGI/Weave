@@ -144,8 +144,8 @@ namespace Weave
                 PrepareScoreCreateV2EntityProjectScoresPostRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
+                    entity: entity!,
+                    project: project!,
                     request: request);
 
                 return __httpRequest;

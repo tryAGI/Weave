@@ -149,9 +149,9 @@ namespace Weave
                 PrepareEvaluationRunFinishV2EntityProjectEvaluationRunsEvaluationRunIdFinishPostRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
-                    evaluationRunId: evaluationRunId,
+                    entity: entity!,
+                    project: project!,
+                    evaluationRunId: evaluationRunId!,
                     request: request);
 
                 return __httpRequest;

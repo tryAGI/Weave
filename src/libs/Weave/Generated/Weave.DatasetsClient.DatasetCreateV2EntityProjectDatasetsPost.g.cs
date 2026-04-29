@@ -144,8 +144,8 @@ namespace Weave
                 PrepareDatasetCreateV2EntityProjectDatasetsPostRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
+                    entity: entity!,
+                    project: project!,
                     request: request);
 
                 return __httpRequest;
