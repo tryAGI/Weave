@@ -140,9 +140,9 @@ namespace Weave
                 PrepareEvaluationRunDeleteV2EntityProjectEvaluationRunsDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
-                    evaluationRunIds: evaluationRunIds);
+                    entity: entity!,
+                    project: project!,
+                    evaluationRunIds: evaluationRunIds!);
 
                 return __httpRequest;
             }

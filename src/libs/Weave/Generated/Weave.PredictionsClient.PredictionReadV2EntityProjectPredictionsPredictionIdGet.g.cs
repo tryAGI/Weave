@@ -135,9 +135,9 @@ namespace Weave
                 PreparePredictionReadV2EntityProjectPredictionsPredictionIdGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
-                    predictionId: predictionId);
+                    entity: entity!,
+                    project: project!,
+                    predictionId: predictionId!);
 
                 return __httpRequest;
             }

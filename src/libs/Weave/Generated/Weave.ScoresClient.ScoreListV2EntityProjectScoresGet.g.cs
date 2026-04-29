@@ -151,8 +151,8 @@ namespace Weave
                 PrepareScoreListV2EntityProjectScoresGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
+                    entity: entity!,
+                    project: project!,
                     evaluationRunId: evaluationRunId,
                     limit: limit,
                     offset: offset);

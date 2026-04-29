@@ -140,9 +140,9 @@ namespace Weave
                 PreparePredictionDeleteV2EntityProjectPredictionsDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
-                    predictionIds: predictionIds);
+                    entity: entity!,
+                    project: project!,
+                    predictionIds: predictionIds!);
 
                 return __httpRequest;
             }

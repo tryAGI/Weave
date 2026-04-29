@@ -151,8 +151,8 @@ namespace Weave
                 PreparePredictionListV2EntityProjectPredictionsGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
+                    entity: entity!,
+                    project: project!,
                     evaluationRunId: evaluationRunId,
                     limit: limit,
                     offset: offset);

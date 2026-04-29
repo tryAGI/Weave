@@ -144,8 +144,8 @@ namespace Weave
                 PrepareAnnotationQueueItemProgressUpdateAnnotationQueuesQueueIdItemsItemIdProgressPostRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    queueId: queueId,
-                    itemId: itemId,
+                    queueId: queueId!,
+                    itemId: itemId!,
                     request: request);
 
                 return __httpRequest;

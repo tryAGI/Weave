@@ -132,7 +132,7 @@ namespace Weave
                 PrepareNvidiaHardwareInferenceNvidiaV2HardwareGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    model: model);
+                    model: model!);
 
                 return __httpRequest;
             }

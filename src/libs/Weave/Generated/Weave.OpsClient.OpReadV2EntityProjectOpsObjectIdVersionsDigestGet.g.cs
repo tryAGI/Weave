@@ -151,10 +151,10 @@ namespace Weave
                 PrepareOpReadV2EntityProjectOpsObjectIdVersionsDigestGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
-                    objectId: objectId,
-                    digest: digest,
+                    entity: entity!,
+                    project: project!,
+                    objectId: objectId!,
+                    digest: digest!,
                     eager: eager);
 
                 return __httpRequest;

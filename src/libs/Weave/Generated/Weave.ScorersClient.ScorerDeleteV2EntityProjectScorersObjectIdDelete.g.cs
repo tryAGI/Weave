@@ -145,9 +145,9 @@ namespace Weave
                 PrepareScorerDeleteV2EntityProjectScorersObjectIdDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
-                    objectId: objectId,
+                    entity: entity!,
+                    project: project!,
+                    objectId: objectId!,
                     digests: digests);
 
                 return __httpRequest;

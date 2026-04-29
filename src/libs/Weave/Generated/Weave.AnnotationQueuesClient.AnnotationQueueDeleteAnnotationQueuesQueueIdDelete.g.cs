@@ -133,8 +133,8 @@ namespace Weave
                 PrepareAnnotationQueueDeleteAnnotationQueuesQueueIdDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    queueId: queueId,
-                    projectId: projectId);
+                    queueId: queueId!,
+                    projectId: projectId!);
 
                 return __httpRequest;
             }

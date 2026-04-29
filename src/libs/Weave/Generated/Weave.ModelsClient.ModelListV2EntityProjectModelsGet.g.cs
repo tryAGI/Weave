@@ -148,8 +148,8 @@ namespace Weave
                 PrepareModelListV2EntityProjectModelsGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
+                    entity: entity!,
+                    project: project!,
                     limit: limit,
                     offset: offset);
 

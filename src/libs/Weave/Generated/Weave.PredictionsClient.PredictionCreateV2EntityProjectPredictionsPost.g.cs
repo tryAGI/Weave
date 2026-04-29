@@ -144,8 +144,8 @@ namespace Weave
                 PreparePredictionCreateV2EntityProjectPredictionsPostRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
+                    entity: entity!,
+                    project: project!,
                     request: request);
 
                 return __httpRequest;

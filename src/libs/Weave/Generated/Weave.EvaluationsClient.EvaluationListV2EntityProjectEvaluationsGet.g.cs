@@ -130,8 +130,8 @@ namespace Weave
                 PrepareEvaluationListV2EntityProjectEvaluationsGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project);
+                    entity: entity!,
+                    project: project!);
 
                 return __httpRequest;
             }

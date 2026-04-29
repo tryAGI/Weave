@@ -135,9 +135,9 @@ namespace Weave
                 PrepareScoreReadV2EntityProjectScoresScoreIdGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entity: entity,
-                    project: project,
-                    scoreId: scoreId);
+                    entity: entity!,
+                    project: project!,
+                    scoreId: scoreId!);
 
                 return __httpRequest;
             }
