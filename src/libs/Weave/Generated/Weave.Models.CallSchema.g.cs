@@ -142,6 +142,12 @@ namespace Weave
         public global::System.DateTime? DeletedAt { get; set; }
 
         /// <summary>
+        /// Expiration timestamp for this call. None = no TTL configured for the project (the row will not be expired).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expire_at")]
+        public global::System.DateTime? ExpireAt { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("storage_size_bytes")]
@@ -183,6 +189,9 @@ namespace Weave
         /// <param name="wbRunStep"></param>
         /// <param name="wbRunStepEnd"></param>
         /// <param name="deletedAt"></param>
+        /// <param name="expireAt">
+        /// Expiration timestamp for this call. None = no TTL configured for the project (the row will not be expired).
+        /// </param>
         /// <param name="storageSizeBytes"></param>
         /// <param name="totalStorageSizeBytes"></param>
 #if NET7_0_OR_GREATER
@@ -210,6 +219,7 @@ namespace Weave
             int? wbRunStep,
             int? wbRunStepEnd,
             global::System.DateTime? deletedAt,
+            global::System.DateTime? expireAt,
             long? storageSizeBytes,
             long? totalStorageSizeBytes)
         {
@@ -234,6 +244,7 @@ namespace Weave
             this.WbRunStep = wbRunStep;
             this.WbRunStepEnd = wbRunStepEnd;
             this.DeletedAt = deletedAt;
+            this.ExpireAt = expireAt;
             this.StorageSizeBytes = storageSizeBytes;
             this.TotalStorageSizeBytes = totalStorageSizeBytes;
         }
