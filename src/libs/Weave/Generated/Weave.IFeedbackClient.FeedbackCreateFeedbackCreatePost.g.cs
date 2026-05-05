@@ -21,6 +21,19 @@ namespace Weave
         /// Feedback Create<br/>
         /// Add feedback to a call or object.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Weave.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.AutoSDKHttpResponse<global::Weave.FeedbackCreateRes>> FeedbackCreateFeedbackCreatePostAsResponseAsync(
+
+            global::Weave.FeedbackCreateReq request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Feedback Create<br/>
+        /// Add feedback to a call or object.
+        /// </summary>
         /// <param name="id">
         /// If provided by the client, this ID will be used for the feedback row instead of a server-generated one.
         /// </param>

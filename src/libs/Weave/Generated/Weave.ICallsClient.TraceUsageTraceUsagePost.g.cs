@@ -21,6 +21,19 @@ namespace Weave
         /// Trace Usage<br/>
         /// Compute per-call usage for a trace, with descendant rollup.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Weave.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.AutoSDKHttpResponse<global::Weave.TraceUsageRes>> TraceUsageTraceUsagePostAsResponseAsync(
+
+            global::Weave.TraceUsageReq request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Trace Usage<br/>
+        /// Compute per-call usage for a trace, with descendant rollup.
+        /// </summary>
         /// <param name="projectId"></param>
         /// <param name="filter">
         /// Filter to select calls. Typically use trace_ids to get all calls in a trace.
