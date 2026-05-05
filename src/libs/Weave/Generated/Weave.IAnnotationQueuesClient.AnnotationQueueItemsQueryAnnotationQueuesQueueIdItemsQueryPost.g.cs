@@ -24,6 +24,21 @@ namespace Weave
         /// Query items in an annotation queue with pagination and sorting.
         /// </summary>
         /// <param name="queueId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Weave.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.AutoSDKHttpResponse<global::Weave.AnnotationQueueItemsQueryRes>> AnnotationQueueItemsQueryAnnotationQueuesQueueIdItemsQueryPostAsResponseAsync(
+            string queueId,
+
+            global::Weave.AnnotationQueueItemsQueryBody request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Annotation Queue Items Query<br/>
+        /// Query items in an annotation queue with pagination and sorting.
+        /// </summary>
+        /// <param name="queueId"></param>
         /// <param name="projectId"></param>
         /// <param name="filter">
         /// Filter queue items by call metadata and annotation state

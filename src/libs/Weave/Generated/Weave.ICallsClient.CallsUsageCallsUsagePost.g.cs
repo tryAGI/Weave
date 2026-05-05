@@ -21,6 +21,19 @@ namespace Weave
         /// Calls Usage<br/>
         /// Compute aggregated usage for multiple root calls, with descendant rollup.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Weave.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.AutoSDKHttpResponse<global::Weave.CallsUsageRes>> CallsUsageCallsUsagePostAsResponseAsync(
+
+            global::Weave.CallsUsageReq request,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Calls Usage<br/>
+        /// Compute aggregated usage for multiple root calls, with descendant rollup.
+        /// </summary>
         /// <param name="projectId"></param>
         /// <param name="callIds">
         /// Root call IDs to aggregate. Each result key corresponds to one input call ID.

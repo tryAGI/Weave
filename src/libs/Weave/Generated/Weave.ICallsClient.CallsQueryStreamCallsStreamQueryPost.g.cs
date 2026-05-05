@@ -26,6 +26,22 @@ namespace Weave
         /// <param name="accept">
         /// Default Value: application/jsonl
         /// </param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Weave.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Weave.AutoSDKHttpResponse<string>> CallsQueryStreamCallsStreamQueryPostAsResponseAsync(
+
+            global::Weave.CallsQueryReq request,
+            string? accept = default,
+            global::Weave.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Calls Query Stream
+        /// </summary>
+        /// <param name="accept">
+        /// Default Value: application/jsonl
+        /// </param>
         /// <param name="projectId"></param>
         /// <param name="filter"></param>
         /// <param name="limit"></param>
