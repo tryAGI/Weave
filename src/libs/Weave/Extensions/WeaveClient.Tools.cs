@@ -65,10 +65,10 @@ public static class WeaveToolExtensions
                 var call = response.Call;
                 if (call is null)
                 {
-                    return "Call not found.";
+                    return (object)"Call not found.";
                 }
 
-                return JsonSerializer.Serialize(new
+                return (object)new
                 {
                     id = call.Id,
                     op_name = call.OpName,
@@ -79,7 +79,7 @@ public static class WeaveToolExtensions
                     ended_at = call.EndedAt,
                     exception = call.Exception,
                     summary = call.Summary,
-                });
+                };
             },
             name: "GetCall",
             description: "Reads a specific traced call/span by ID from W&B Weave. Returns the call's operation name, timestamps, trace ID, parent ID, and summary. Provide projectId (entity/project format) and callId.");
@@ -119,7 +119,7 @@ public static class WeaveToolExtensions
                     metadataOnly: true,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(response.Objs.Select(o => new
+                return response.Objs.Select(o => new
                 {
                     object_id = o.ObjectId,
                     kind = o.Kind,
@@ -127,7 +127,7 @@ public static class WeaveToolExtensions
                     created_at = o.CreatedAt,
                     version_index = o.VersionIndex,
                     digest = o.Digest,
-                }));
+                });
             },
             name: "ListObjects",
             description: "Lists tracked objects (models, datasets, evaluations, scorers, etc.) in a W&B Weave project. Optionally filter by baseObjectClass (e.g., 'Model', 'Dataset', 'Evaluation'). Returns object IDs, kinds, versions, and digests.");
@@ -155,11 +155,11 @@ public static class WeaveToolExtensions
                     limit: limit,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(response.Rows.Select(r => new
+                return response.Rows.Select(r => new
                 {
                     digest = r.Digest,
                     val = r.Val,
-                }));
+                });
             },
             name: "QueryTable",
             description: "Queries rows from a W&B Weave table by its digest. Tables store dataset rows and evaluation results. Provide projectId (entity/project format) and the table digest hash. Returns row digests and values.");
@@ -178,7 +178,7 @@ public static class WeaveToolExtensions
         return AIFunctionFactory.Create(
             async (string projectId, string weaveRef, string feedbackType, string payload, CancellationToken cancellationToken) =>
             {
-                var payloadObj = JsonSerializer.Deserialize<Dictionary<string, object>>(payload) ?? new();
+                var payloadObj = ParseJsonObject(payload);
 
                 var response = await client.Feedback.FeedbackCreateFeedbackCreatePostAsync(
                     request: new FeedbackCreateReq
@@ -190,12 +190,12 @@ public static class WeaveToolExtensions
                     },
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     id = response.Id,
                     created_at = response.CreatedAt,
                     wb_user_id = response.WbUserId,
-                });
+                };
             },
             name: "AddFeedback",
             description: "Adds feedback or a score to a traced call in W&B Weave. Provide projectId, weaveRef (the call reference), feedbackType (e.g., 'thumbs_up', 'score'), and payload as a JSON string with the feedback data.");
@@ -229,12 +229,29 @@ public static class WeaveToolExtensions
                     },
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     count = response.Count,
-                });
+                };
             },
             name: "GetCallStats",
             description: "Gets call statistics (count, storage) for a W&B Weave project. Optionally filter by opName. Useful for understanding usage volume and patterns.");
+    }
+
+    private static Dictionary<string, object> ParseJsonObject(string json)
+    {
+        using var document = JsonDocument.Parse(json);
+        if (document.RootElement.ValueKind != JsonValueKind.Object)
+        {
+            throw new ArgumentException("Expected a JSON object.", nameof(json));
+        }
+
+        var result = new Dictionary<string, object>(StringComparer.Ordinal);
+        foreach (var property in document.RootElement.EnumerateObject())
+        {
+            result[property.Name] = property.Value.Clone();
+        }
+
+        return result;
     }
 }
