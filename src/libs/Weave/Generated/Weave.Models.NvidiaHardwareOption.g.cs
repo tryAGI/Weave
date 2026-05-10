@@ -79,5 +79,6 @@ namespace Weave
         public NvidiaHardwareOption()
         {
         }
+
     }
 }

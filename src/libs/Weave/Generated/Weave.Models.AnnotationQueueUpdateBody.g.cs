@@ -68,5 +68,6 @@ namespace Weave
         public AnnotationQueueUpdateBody()
         {
         }
+
     }
 }

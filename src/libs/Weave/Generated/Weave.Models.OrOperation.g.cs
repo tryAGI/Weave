@@ -49,5 +49,6 @@ namespace Weave
         public OrOperation()
         {
         }
+
     }
 }

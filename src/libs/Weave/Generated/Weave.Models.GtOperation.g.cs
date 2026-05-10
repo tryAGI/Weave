@@ -46,5 +46,6 @@ namespace Weave
         public GtOperation()
         {
         }
+
     }
 }

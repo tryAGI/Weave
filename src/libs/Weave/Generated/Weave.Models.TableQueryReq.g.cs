@@ -98,5 +98,6 @@ namespace Weave
         public TableQueryReq()
         {
         }
+
     }
 }
