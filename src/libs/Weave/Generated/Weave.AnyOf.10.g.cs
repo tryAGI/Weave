@@ -328,6 +328,11 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue1(T1? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T2 value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>((T2?)value);
 
         /// <summary>
@@ -342,6 +347,11 @@ namespace Weave
         {
             Value2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue2(T2? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
 
         /// <summary>
         /// 
@@ -364,6 +374,11 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue3(T3? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T4 value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>((T4?)value);
 
         /// <summary>
@@ -378,6 +393,11 @@ namespace Weave
         {
             Value4 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue4(T4? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
 
         /// <summary>
         /// 
@@ -400,6 +420,11 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue5(T5? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T6 value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>((T6?)value);
 
         /// <summary>
@@ -414,6 +439,11 @@ namespace Weave
         {
             Value6 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue6(T6? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
 
         /// <summary>
         /// 
@@ -436,6 +466,11 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue7(T7? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T8 value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>((T8?)value);
 
         /// <summary>
@@ -450,6 +485,11 @@ namespace Weave
         {
             Value8 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue8(T8? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
 
         /// <summary>
         /// 
@@ -472,6 +512,11 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue9(T9? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T10 value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>((T10?)value);
 
         /// <summary>
@@ -486,6 +531,11 @@ namespace Weave
         {
             Value10 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> FromValue10(T10? value) => new AnyOf<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(value);
 
         /// <summary>
         /// 
