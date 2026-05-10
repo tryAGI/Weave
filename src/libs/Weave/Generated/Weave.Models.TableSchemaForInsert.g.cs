@@ -61,5 +61,6 @@ namespace Weave
         public TableSchemaForInsert()
         {
         }
+
     }
 }

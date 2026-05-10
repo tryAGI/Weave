@@ -52,5 +52,6 @@ namespace Weave
         public AnnotationQueuesStatsReq()
         {
         }
+
     }
 }

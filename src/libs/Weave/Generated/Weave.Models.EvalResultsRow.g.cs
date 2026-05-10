@@ -58,5 +58,6 @@ namespace Weave
         public EvalResultsRow()
         {
         }
+
     }
 }

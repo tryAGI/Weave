@@ -119,5 +119,6 @@ namespace Weave
         public AnnotationQueueSchema()
         {
         }
+
     }
 }

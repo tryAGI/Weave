@@ -93,5 +93,6 @@ namespace Weave
         public AnnotationQueueItemsQueryBody()
         {
         }
+
     }
 }

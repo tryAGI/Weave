@@ -53,5 +53,6 @@ namespace Weave
         public AnnotationQueueItemProgressUpdateBody()
         {
         }
+
     }
 }

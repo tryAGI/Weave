@@ -59,5 +59,6 @@ namespace Weave
         public TableStatsRow()
         {
         }
+
     }
 }

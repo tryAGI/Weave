@@ -102,5 +102,6 @@ namespace Weave
         public CostQueryOutput()
         {
         }
+
     }
 }

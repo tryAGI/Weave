@@ -120,5 +120,6 @@ namespace Weave
         public CostCreateInput()
         {
         }
+
     }
 }

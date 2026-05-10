@@ -40,5 +40,6 @@ namespace Weave
         public FilesStatsRes()
         {
         }
+
     }
 }
