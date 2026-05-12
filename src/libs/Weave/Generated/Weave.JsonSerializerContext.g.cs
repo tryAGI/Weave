@@ -272,6 +272,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortByMode), TypeInfoPropertyName = "EvalResultsSortByMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.GenAISpanRef))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvaluateModelReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvaluateModelRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvaluationCreateBody))]
