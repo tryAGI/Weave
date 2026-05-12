@@ -9031,6 +9031,16 @@
             },
             "type": "object",
             "title": "Scorer Call Ids"
+          },
+          "genai_span_ref": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GenAISpanRef"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "type": "object",
@@ -10526,6 +10536,24 @@
           "total_size_bytes"
         ],
         "title": "FilesStatsRes"
+      },
+      "GenAISpanRef": {
+        "properties": {
+          "trace_id": {
+            "type": "string",
+            "title": "Trace Id"
+          },
+          "span_id": {
+            "type": "string",
+            "title": "Span Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "trace_id",
+          "span_id"
+        ],
+        "title": "GenAISpanRef"
       },
       "Geolocation": {
         "properties": {
@@ -12750,6 +12778,17 @@
             ],
             "title": "Evaluation Run Id",
             "description": "Optional evaluation run ID to link this prediction as a child call"
+          },
+          "genai_span_ref": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/GenAISpanRef"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Optional GenAI span reference produced by this prediction."
           }
         },
         "type": "object",
