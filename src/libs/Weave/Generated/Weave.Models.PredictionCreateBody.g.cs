@@ -37,10 +37,10 @@ namespace Weave
         public string? EvaluationRunId { get; set; }
 
         /// <summary>
-        /// Optional GenAI span reference produced by this prediction.
+        /// Optional GenAI span reference(s) produced by this prediction.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("genai_span_ref")]
-        public global::Weave.GenAISpanRef? GenaiSpanRef { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? GenaiSpanRef { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -64,7 +64,7 @@ namespace Weave
         /// Optional evaluation run ID to link this prediction as a child call
         /// </param>
         /// <param name="genaiSpanRef">
-        /// Optional GenAI span reference produced by this prediction.
+        /// Optional GenAI span reference(s) produced by this prediction.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -74,7 +74,7 @@ namespace Weave
             object inputs,
             object output,
             string? evaluationRunId,
-            global::Weave.GenAISpanRef? genaiSpanRef)
+            global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? genaiSpanRef)
         {
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Inputs = inputs ?? throw new global::System.ArgumentNullException(nameof(inputs));

@@ -55,7 +55,7 @@ namespace Weave
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("genai_span_ref")]
-        public global::Weave.GenAISpanRef? GenaiSpanRef { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? GenaiSpanRef { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -85,7 +85,7 @@ namespace Weave
             double? modelLatencySeconds,
             int? totalTokens,
             global::System.Collections.Generic.Dictionary<string, string>? scorerCallIds,
-            global::Weave.GenAISpanRef? genaiSpanRef)
+            global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? genaiSpanRef)
         {
             this.PredictAndScoreCallId = predictAndScoreCallId ?? throw new global::System.ArgumentNullException(nameof(predictAndScoreCallId));
             this.PredictCallId = predictCallId;
