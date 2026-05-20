@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// Optional GenAI span reference produced by this prediction.
+    /// Optional GenAI span reference(s) produced by this prediction.
     /// </summary>
     public sealed partial class PredictionCreateBodyGenaiSpanRef
     {

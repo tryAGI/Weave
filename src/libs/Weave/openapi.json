@@ -7369,6 +7369,11 @@
             "type": "integer",
             "title": "Count"
           },
+          "has_more": {
+            "type": "boolean",
+            "title": "Has More",
+            "default": false
+          },
           "total_storage_size_bytes": {
             "anyOf": [
               {
@@ -9035,12 +9040,16 @@
           "genai_span_ref": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/GenAISpanRef"
+                "items": {
+                  "$ref": "#/components/schemas/GenAISpanRef"
+                },
+                "type": "array"
               },
               {
                 "type": "null"
               }
-            ]
+            ],
+            "title": "Genai Span Ref"
           }
         },
         "type": "object",
@@ -12782,13 +12791,17 @@
           "genai_span_ref": {
             "anyOf": [
               {
-                "$ref": "#/components/schemas/GenAISpanRef"
+                "items": {
+                  "$ref": "#/components/schemas/GenAISpanRef"
+                },
+                "type": "array"
               },
               {
                 "type": "null"
               }
             ],
-            "description": "Optional GenAI span reference produced by this prediction."
+            "title": "Genai Span Ref",
+            "description": "Optional GenAI span reference(s) produced by this prediction."
           }
         },
         "type": "object",
