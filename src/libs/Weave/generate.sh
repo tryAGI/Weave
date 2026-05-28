@@ -37,4 +37,9 @@ autosdk generate openapi.json \
   --clientClassName WeaveClient \
   --targetFramework net10.0 \
   --output Generated \
+  --auth-env-var WEAVE_API_KEY \
+  --auth-env-var WANDB_API_KEY \
+  --generate-prompt-template-helpers \
+  --generate-observability-lifecycle-helpers \
+  --generate-evaluation-workflow-helpers \
   --exclude-deprecated-operations
