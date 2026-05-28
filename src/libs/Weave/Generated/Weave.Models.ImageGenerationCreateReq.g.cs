@@ -74,5 +74,6 @@ namespace Weave
         public ImageGenerationCreateReq()
         {
         }
+
     }
 }

@@ -16,6 +16,12 @@ namespace Weave
         public required int Count { get; set; }
 
         /// <summary>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("has_more")]
+        public bool? HasMore { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_storage_size_bytes")]
@@ -31,15 +37,20 @@ namespace Weave
         /// Initializes a new instance of the <see cref="CallsQueryStatsRes" /> class.
         /// </summary>
         /// <param name="count"></param>
+        /// <param name="hasMore">
+        /// Default Value: false
+        /// </param>
         /// <param name="totalStorageSizeBytes"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CallsQueryStatsRes(
             int count,
+            bool? hasMore,
             long? totalStorageSizeBytes)
         {
             this.Count = count;
+            this.HasMore = hasMore;
             this.TotalStorageSizeBytes = totalStorageSizeBytes;
         }
 
@@ -49,5 +60,6 @@ namespace Weave
         public CallsQueryStatsRes()
         {
         }
+
     }
 }

@@ -52,6 +52,12 @@ namespace Weave
         public global::System.Collections.Generic.Dictionary<string, string>? ScorerCallIds { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("genai_span_ref")]
+        public global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? GenaiSpanRef { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -67,6 +73,7 @@ namespace Weave
         /// <param name="modelLatencySeconds"></param>
         /// <param name="totalTokens"></param>
         /// <param name="scorerCallIds"></param>
+        /// <param name="genaiSpanRef"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -77,7 +84,8 @@ namespace Weave
             object? scores,
             double? modelLatencySeconds,
             int? totalTokens,
-            global::System.Collections.Generic.Dictionary<string, string>? scorerCallIds)
+            global::System.Collections.Generic.Dictionary<string, string>? scorerCallIds,
+            global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? genaiSpanRef)
         {
             this.PredictAndScoreCallId = predictAndScoreCallId ?? throw new global::System.ArgumentNullException(nameof(predictAndScoreCallId));
             this.PredictCallId = predictCallId;
@@ -86,6 +94,7 @@ namespace Weave
             this.ModelLatencySeconds = modelLatencySeconds;
             this.TotalTokens = totalTokens;
             this.ScorerCallIds = scorerCallIds;
+            this.GenaiSpanRef = genaiSpanRef;
         }
 
         /// <summary>
@@ -94,5 +103,6 @@ namespace Weave
         public EvalResultsTrial()
         {
         }
+
     }
 }

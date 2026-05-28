@@ -88,5 +88,6 @@ namespace Weave
         public ScoreReadRes()
         {
         }
+
     }
 }

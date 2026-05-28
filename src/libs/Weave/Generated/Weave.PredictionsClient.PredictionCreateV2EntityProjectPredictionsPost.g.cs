@@ -380,18 +380,17 @@ namespace Weave
                                     __exception_422 = __ex;
                                 }
 
-                                throw new global::Weave.ApiException<global::Weave.HTTPValidationError>(
+
+                                throw global::Weave.ApiException<global::Weave.HTTPValidationError>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_422,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_422,
-                                    ResponseObject = __value_422,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_422,
+                                    responseObject: __value_422,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             if (__effectiveReadResponseAsString)
@@ -425,17 +424,15 @@ namespace Weave
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::Weave.ApiException(
+                                    throw global::Weave.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -472,17 +469,15 @@ namespace Weave
                                     {
                                     }
 
-                                    throw new global::Weave.ApiException(
+                                    throw global::Weave.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 
@@ -511,6 +506,9 @@ namespace Weave
         /// <param name="evaluationRunId">
         /// Optional evaluation run ID to link this prediction as a child call
         /// </param>
+        /// <param name="genaiSpanRef">
+        /// Optional GenAI span reference(s) produced by this prediction.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -521,6 +519,7 @@ namespace Weave
             object inputs,
             object output,
             string? evaluationRunId = default,
+            global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? genaiSpanRef = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -530,6 +529,7 @@ namespace Weave
                 Inputs = inputs,
                 Output = output,
                 EvaluationRunId = evaluationRunId,
+                GenaiSpanRef = genaiSpanRef,
             };
 
             return await PredictionCreateV2EntityProjectPredictionsPostAsync(

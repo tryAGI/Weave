@@ -54,5 +54,6 @@ namespace Weave
         public ProjectsInfoRes()
         {
         }
+
     }
 }

@@ -48,5 +48,6 @@ namespace Weave
         public NotOperation()
         {
         }
+
     }
 }

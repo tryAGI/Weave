@@ -113,5 +113,6 @@ namespace Weave
         public Geolocation()
         {
         }
+
     }
 }

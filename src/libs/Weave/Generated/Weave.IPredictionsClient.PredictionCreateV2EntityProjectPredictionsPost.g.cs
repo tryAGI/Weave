@@ -56,6 +56,9 @@ namespace Weave
         /// <param name="evaluationRunId">
         /// Optional evaluation run ID to link this prediction as a child call
         /// </param>
+        /// <param name="genaiSpanRef">
+        /// Optional GenAI span reference(s) produced by this prediction.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -66,6 +69,7 @@ namespace Weave
             object inputs,
             object output,
             string? evaluationRunId = default,
+            global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? genaiSpanRef = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
