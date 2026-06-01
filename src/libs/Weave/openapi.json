@@ -8341,6 +8341,18 @@
             "format": "date-time",
             "title": "Ended At"
           },
+          "started_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Started At"
+          },
           "exception": {
             "anyOf": [
               {
@@ -9362,6 +9374,18 @@
             "type": "string",
             "title": "Model",
             "description": "Reference to the model (weave:// URI)"
+          },
+          "source_evaluation_run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Evaluation Run Id",
+            "description": "Source evaluation run ID if this run was created by rescoring — provenance link"
           }
         },
         "type": "object",
@@ -9500,6 +9524,18 @@
             ],
             "title": "Summary",
             "description": "Summary data for the evaluation run"
+          },
+          "source_evaluation_run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Evaluation Run Id",
+            "description": "Source evaluation run ID if this run was created by rescoring"
           }
         },
         "type": "object",
@@ -13215,9 +13251,8 @@
             "description": "The scorer reference (weave:// URI)"
           },
           "value": {
-            "type": "number",
             "title": "Value",
-            "description": "The value of the score"
+            "description": "The raw output of the scorer"
           },
           "evaluation_run_id": {
             "anyOf": [
@@ -13282,9 +13317,8 @@
             "description": "The scorer reference (weave:// URI)"
           },
           "value": {
-            "type": "number",
             "title": "Value",
-            "description": "The value of the score"
+            "description": "The raw output of the scorer"
           },
           "evaluation_run_id": {
             "anyOf": [

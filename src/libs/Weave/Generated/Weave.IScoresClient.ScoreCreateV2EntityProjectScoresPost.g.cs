@@ -51,7 +51,7 @@ namespace Weave
         /// The scorer reference (weave:// URI)
         /// </param>
         /// <param name="value">
-        /// The value of the score
+        /// The raw output of the scorer
         /// </param>
         /// <param name="evaluationRunId">
         /// Optional evaluation run ID to link this score as a child call
@@ -64,7 +64,7 @@ namespace Weave
             string project,
             string predictionId,
             string scorer,
-            double value,
+            object value,
             string? evaluationRunId = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

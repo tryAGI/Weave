@@ -54,6 +54,12 @@ namespace Weave
         public object? Summary { get; set; }
 
         /// <summary>
+        /// Source evaluation run ID if this run was created by rescoring
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_evaluation_run_id")]
+        public string? SourceEvaluationRunId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -83,6 +89,9 @@ namespace Weave
         /// <param name="summary">
         /// Summary data for the evaluation run
         /// </param>
+        /// <param name="sourceEvaluationRunId">
+        /// Source evaluation run ID if this run was created by rescoring
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -93,7 +102,8 @@ namespace Weave
             string? status,
             global::System.DateTime? startedAt,
             global::System.DateTime? finishedAt,
-            object? summary)
+            object? summary,
+            string? sourceEvaluationRunId)
         {
             this.EvaluationRunId = evaluationRunId ?? throw new global::System.ArgumentNullException(nameof(evaluationRunId));
             this.Evaluation = evaluation ?? throw new global::System.ArgumentNullException(nameof(evaluation));
@@ -102,6 +112,7 @@ namespace Weave
             this.StartedAt = startedAt;
             this.FinishedAt = finishedAt;
             this.Summary = summary;
+            this.SourceEvaluationRunId = sourceEvaluationRunId;
         }
 
         /// <summary>
