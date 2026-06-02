@@ -79,6 +79,42 @@ namespace Weave
         public string? QueueId { get; set; }
 
         /// <summary>
+        /// Tags applied to the ref by a scorer
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scorer_tags")]
+        public global::System.Collections.Generic.IList<string>? ScorerTags { get; set; }
+
+        /// <summary>
+        /// reason text per tag, keyed by tag name
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scorer_tag_reasons")]
+        public global::System.Collections.Generic.Dictionary<string, string>? ScorerTagReasons { get; set; }
+
+        /// <summary>
+        /// confidence (0-1) per tag, keyed by tag name
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scorer_tag_confidences")]
+        public global::System.Collections.Generic.Dictionary<string, double>? ScorerTagConfidences { get; set; }
+
+        /// <summary>
+        /// numeric ratings (0-1) keyed by rating name
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scorer_ratings")]
+        public global::System.Collections.Generic.Dictionary<string, double>? ScorerRatings { get; set; }
+
+        /// <summary>
+        /// reason text per rating, keyed by rating name
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scorer_rating_reasons")]
+        public global::System.Collections.Generic.Dictionary<string, string>? ScorerRatingReasons { get; set; }
+
+        /// <summary>
+        /// confidence (0-1) per rating, keyed by rating name
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scorer_rating_confidences")]
+        public global::System.Collections.Generic.Dictionary<string, double>? ScorerRatingConfidences { get; set; }
+
+        /// <summary>
         /// Do not set directly. Server will automatically populate this field.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("wb_user_id")]
@@ -108,6 +144,24 @@ namespace Weave
         /// <param name="queueId">
         /// The annotation queue ID this feedback was created from. References annotation_queues.id. NULL when feedback is created outside of queues.
         /// </param>
+        /// <param name="scorerTags">
+        /// Tags applied to the ref by a scorer
+        /// </param>
+        /// <param name="scorerTagReasons">
+        /// reason text per tag, keyed by tag name
+        /// </param>
+        /// <param name="scorerTagConfidences">
+        /// confidence (0-1) per tag, keyed by tag name
+        /// </param>
+        /// <param name="scorerRatings">
+        /// numeric ratings (0-1) keyed by rating name
+        /// </param>
+        /// <param name="scorerRatingReasons">
+        /// reason text per rating, keyed by rating name
+        /// </param>
+        /// <param name="scorerRatingConfidences">
+        /// confidence (0-1) per rating, keyed by rating name
+        /// </param>
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
@@ -126,6 +180,12 @@ namespace Weave
             string? callRef,
             string? triggerRef,
             string? queueId,
+            global::System.Collections.Generic.IList<string>? scorerTags,
+            global::System.Collections.Generic.Dictionary<string, string>? scorerTagReasons,
+            global::System.Collections.Generic.Dictionary<string, double>? scorerTagConfidences,
+            global::System.Collections.Generic.Dictionary<string, double>? scorerRatings,
+            global::System.Collections.Generic.Dictionary<string, string>? scorerRatingReasons,
+            global::System.Collections.Generic.Dictionary<string, double>? scorerRatingConfidences,
             string? wbUserId)
         {
             this.Id = id;
@@ -139,6 +199,12 @@ namespace Weave
             this.CallRef = callRef;
             this.TriggerRef = triggerRef;
             this.QueueId = queueId;
+            this.ScorerTags = scorerTags;
+            this.ScorerTagReasons = scorerTagReasons;
+            this.ScorerTagConfidences = scorerTagConfidences;
+            this.ScorerRatings = scorerRatings;
+            this.ScorerRatingReasons = scorerRatingReasons;
+            this.ScorerRatingConfidences = scorerRatingConfidences;
             this.WbUserId = wbUserId;
         }
 
