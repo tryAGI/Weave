@@ -2609,6 +2609,48 @@
         }
       }
     },
+    "/evaluations/rescore": {
+      "post": {
+        "tags": [
+          "Evaluations"
+        ],
+        "summary": "Rescore Evaluation",
+        "description": "Rescore an existing evaluation run with different scorer(s).\n\nApplies the provided scorer(s) to the predictions from source_evaluation_run_id\nand returns a new evaluation_run_id. Original prediction call IDs are preserved.",
+        "operationId": "rescore_evaluation_evaluations_rescore_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RescoreReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RescoreRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/calls/score": {
       "post": {
         "tags": [
@@ -13258,6 +13300,69 @@
           "vals"
         ],
         "title": "RefsReadBatchRes"
+      },
+      "RescoreReq": {
+        "properties": {
+          "source_evaluation_run_id": {
+            "type": "string",
+            "title": "Source Evaluation Run Id",
+            "description": "The evaluation run whose predictions will be rescored"
+          },
+          "scorer_refs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "minItems": 1,
+            "title": "Scorer Refs",
+            "description": "Scorer references (weave:// URIs) to apply; must be non-empty"
+          },
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "wb_user_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wb User Id",
+            "description": "Do not set directly. Server will automatically populate this field."
+          }
+        },
+        "type": "object",
+        "required": [
+          "source_evaluation_run_id",
+          "scorer_refs",
+          "project_id"
+        ],
+        "title": "RescoreReq",
+        "description": "Full rescore request including server-set fields."
+      },
+      "RescoreRes": {
+        "properties": {
+          "call_id": {
+            "type": "string",
+            "title": "Call Id",
+            "description": "Call ID for /evaluations/status polling"
+          },
+          "evaluation_run_id": {
+            "type": "string",
+            "title": "Evaluation Run Id",
+            "description": "The newly created EvaluationRun ID"
+          }
+        },
+        "type": "object",
+        "required": [
+          "call_id",
+          "evaluation_run_id"
+        ],
+        "title": "RescoreRes",
+        "description": "Response for a rescore request."
       },
       "RouterOpenRouterModel": {
         "properties": {
