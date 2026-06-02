@@ -377,6 +377,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>), TypeInfoPropertyName = "ContainsOperation_b519b0000bd0c5bf")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RefsReadBatchReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RefsReadBatchRes))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RescoreReq))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RescoreRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RouterOpenRouterModel))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RouterOpenRouterModelQuantization), TypeInfoPropertyName = "RouterOpenRouterModelQuantization2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.RouterOpenRouterModelSupportedSamplingParameter>))]
