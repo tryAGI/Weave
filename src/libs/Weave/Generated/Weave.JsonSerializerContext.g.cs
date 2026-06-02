@@ -299,6 +299,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackCreateBatchRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.FeedbackCreateRes>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackCreateRes))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, double>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackMetricSpec))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackMetricSpecValueType), TypeInfoPropertyName = "FeedbackMetricSpecValueType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackPayloadPath))]

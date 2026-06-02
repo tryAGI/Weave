@@ -486,6 +486,24 @@ namespace Weave
         /// <param name="queueId">
         /// The annotation queue ID this feedback was created from. References annotation_queues.id. NULL when feedback is created outside of queues.
         /// </param>
+        /// <param name="scorerTags">
+        /// Tags applied to the ref by a scorer
+        /// </param>
+        /// <param name="scorerTagReasons">
+        /// reason text per tag, keyed by tag name
+        /// </param>
+        /// <param name="scorerTagConfidences">
+        /// confidence (0-1) per tag, keyed by tag name
+        /// </param>
+        /// <param name="scorerRatings">
+        /// numeric ratings (0-1) keyed by rating name
+        /// </param>
+        /// <param name="scorerRatingReasons">
+        /// reason text per rating, keyed by rating name
+        /// </param>
+        /// <param name="scorerRatingConfidences">
+        /// confidence (0-1) per rating, keyed by rating name
+        /// </param>
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
@@ -506,6 +524,12 @@ namespace Weave
             string? callRef = default,
             string? triggerRef = default,
             string? queueId = default,
+            global::System.Collections.Generic.IList<string>? scorerTags = default,
+            global::System.Collections.Generic.Dictionary<string, string>? scorerTagReasons = default,
+            global::System.Collections.Generic.Dictionary<string, double>? scorerTagConfidences = default,
+            global::System.Collections.Generic.Dictionary<string, double>? scorerRatings = default,
+            global::System.Collections.Generic.Dictionary<string, string>? scorerRatingReasons = default,
+            global::System.Collections.Generic.Dictionary<string, double>? scorerRatingConfidences = default,
             string? wbUserId = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -523,6 +547,12 @@ namespace Weave
                 CallRef = callRef,
                 TriggerRef = triggerRef,
                 QueueId = queueId,
+                ScorerTags = scorerTags,
+                ScorerTagReasons = scorerTagReasons,
+                ScorerTagConfidences = scorerTagConfidences,
+                ScorerRatings = scorerRatings,
+                ScorerRatingReasons = scorerRatingReasons,
+                ScorerRatingConfidences = scorerRatingConfidences,
                 WbUserId = wbUserId,
                 FeedbackId = feedbackId,
             };
