@@ -18,6 +18,13 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hugging_face_id")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string HuggingFaceId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -110,6 +117,7 @@ namespace Weave
         /// Initializes a new instance of the <see cref="RouterOpenRouterModel" /> class.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="huggingFaceId"></param>
         /// <param name="name"></param>
         /// <param name="created"></param>
         /// <param name="inputModalities"></param>
@@ -132,6 +140,7 @@ namespace Weave
 #endif
         public RouterOpenRouterModel(
             string id,
+            string huggingFaceId,
             string name,
             int created,
             global::System.Collections.Generic.IList<string> inputModalities,
@@ -146,6 +155,7 @@ namespace Weave
             string? deprecationDate)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.HuggingFaceId = huggingFaceId ?? throw new global::System.ArgumentNullException(nameof(huggingFaceId));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Created = created;
             this.InputModalities = inputModalities ?? throw new global::System.ArgumentNullException(nameof(inputModalities));
