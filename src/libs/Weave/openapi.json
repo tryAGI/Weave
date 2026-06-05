@@ -13370,6 +13370,10 @@
             "type": "string",
             "title": "Id"
           },
+          "hugging_face_id": {
+            "type": "string",
+            "title": "Hugging Face Id"
+          },
           "name": {
             "type": "string",
             "title": "Name"
@@ -13471,6 +13475,7 @@
         "type": "object",
         "required": [
           "id",
+          "hugging_face_id",
           "name",
           "created",
           "input_modalities",
