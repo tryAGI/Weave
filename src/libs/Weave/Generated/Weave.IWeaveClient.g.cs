@@ -48,6 +48,11 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public AgentsClient Agents { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public AnnotationQueuesClient AnnotationQueues { get; }
 
         /// <summary>
