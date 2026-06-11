@@ -13436,6 +13436,33 @@
               }
             ]
           },
+          "span_agent_name": {
+            "type": "string",
+            "title": "Span Agent Name",
+            "description": "Display name of the scored agent (from spans.agent_name)",
+            "default": "",
+            "examples": [
+              "midi-generator"
+            ]
+          },
+          "span_agent_version": {
+            "type": "string",
+            "title": "Span Agent Version",
+            "description": "Version of the scored agent (from spans.agent_version)",
+            "default": "",
+            "examples": [
+              "1.2.0"
+            ]
+          },
+          "span_status_code": {
+            "type": "string",
+            "title": "Span Status Code",
+            "description": "Status of the scored turn (from spans.status_code)",
+            "default": "UNSET",
+            "examples": [
+              "SUCCESS"
+            ]
+          },
           "wb_user_id": {
             "anyOf": [
               {
@@ -13984,6 +14011,33 @@
               {
                 "_rating_": 0.92
               }
+            ]
+          },
+          "span_agent_name": {
+            "type": "string",
+            "title": "Span Agent Name",
+            "description": "Display name of the scored agent (from spans.agent_name)",
+            "default": "",
+            "examples": [
+              "midi-generator"
+            ]
+          },
+          "span_agent_version": {
+            "type": "string",
+            "title": "Span Agent Version",
+            "description": "Version of the scored agent (from spans.agent_version)",
+            "default": "",
+            "examples": [
+              "1.2.0"
+            ]
+          },
+          "span_status_code": {
+            "type": "string",
+            "title": "Span Status Code",
+            "description": "Status of the scored turn (from spans.status_code)",
+            "default": "UNSET",
+            "examples": [
+              "SUCCESS"
             ]
           },
           "wb_user_id": {
