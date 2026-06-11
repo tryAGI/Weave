@@ -67,6 +67,16 @@ namespace Weave
         /// <param name="scorerRatingConfidences">
         /// confidence (0-1) per rating, keyed by rating name
         /// </param>
+        /// <param name="spanAgentName">
+        /// Display name of the scored agent (from spans.agent_name)
+        /// </param>
+        /// <param name="spanAgentVersion">
+        /// Version of the scored agent (from spans.agent_version)
+        /// </param>
+        /// <param name="spanStatusCode">
+        /// Status of the scored turn (from spans.status_code)<br/>
+        /// Default Value: UNSET
+        /// </param>
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
@@ -91,6 +101,9 @@ namespace Weave
             global::System.Collections.Generic.Dictionary<string, double>? scorerRatings = default,
             global::System.Collections.Generic.Dictionary<string, string>? scorerRatingReasons = default,
             global::System.Collections.Generic.Dictionary<string, double>? scorerRatingConfidences = default,
+            string? spanAgentName = default,
+            string? spanAgentVersion = default,
+            string? spanStatusCode = default,
             string? wbUserId = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

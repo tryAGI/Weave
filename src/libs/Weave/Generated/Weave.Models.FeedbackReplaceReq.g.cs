@@ -115,6 +115,25 @@ namespace Weave
         public global::System.Collections.Generic.Dictionary<string, double>? ScorerRatingConfidences { get; set; }
 
         /// <summary>
+        /// Display name of the scored agent (from spans.agent_name)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("span_agent_name")]
+        public string? SpanAgentName { get; set; }
+
+        /// <summary>
+        /// Version of the scored agent (from spans.agent_version)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("span_agent_version")]
+        public string? SpanAgentVersion { get; set; }
+
+        /// <summary>
+        /// Status of the scored turn (from spans.status_code)<br/>
+        /// Default Value: UNSET
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("span_status_code")]
+        public string? SpanStatusCode { get; set; }
+
+        /// <summary>
         /// Do not set directly. Server will automatically populate this field.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("wb_user_id")]
@@ -170,6 +189,16 @@ namespace Weave
         /// <param name="scorerRatingConfidences">
         /// confidence (0-1) per rating, keyed by rating name
         /// </param>
+        /// <param name="spanAgentName">
+        /// Display name of the scored agent (from spans.agent_name)
+        /// </param>
+        /// <param name="spanAgentVersion">
+        /// Version of the scored agent (from spans.agent_version)
+        /// </param>
+        /// <param name="spanStatusCode">
+        /// Status of the scored turn (from spans.status_code)<br/>
+        /// Default Value: UNSET
+        /// </param>
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
@@ -195,6 +224,9 @@ namespace Weave
             global::System.Collections.Generic.Dictionary<string, double>? scorerRatings,
             global::System.Collections.Generic.Dictionary<string, string>? scorerRatingReasons,
             global::System.Collections.Generic.Dictionary<string, double>? scorerRatingConfidences,
+            string? spanAgentName,
+            string? spanAgentVersion,
+            string? spanStatusCode,
             string? wbUserId)
         {
             this.Id = id;
@@ -214,6 +246,9 @@ namespace Weave
             this.ScorerRatings = scorerRatings;
             this.ScorerRatingReasons = scorerRatingReasons;
             this.ScorerRatingConfidences = scorerRatingConfidences;
+            this.SpanAgentName = spanAgentName;
+            this.SpanAgentVersion = spanAgentVersion;
+            this.SpanStatusCode = spanStatusCode;
             this.WbUserId = wbUserId;
             this.FeedbackId = feedbackId ?? throw new global::System.ArgumentNullException(nameof(feedbackId));
         }
