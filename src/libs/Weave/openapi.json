@@ -805,6 +805,33 @@
         "x-exclude": true
       }
     },
+    "/inference/modelsdev/models": {
+      "get": {
+        "tags": [
+          "Inference"
+        ],
+        "summary": "Inference Modelsdev Models",
+        "description": "Returns the available models in the models.dev `api.json` schema.\n\nThis API is available without authentication.",
+        "operationId": "inference_modelsdev_models_inference_modelsdev_models_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/ModelsDevProvider"
+                  },
+                  "type": "object",
+                  "title": "Response Inference Modelsdev Models Inference Modelsdev Models Get"
+                }
+              }
+            }
+          }
+        },
+        "x-exclude": true
+      }
+    },
     "/inference/nvidia/v2/hardware": {
       "get": {
         "tags": [
@@ -11223,6 +11250,87 @@
         "title": "ConvertSpec",
         "description": "Specifies conversion details for `$convert`.\n\n- `input`: The operand to convert.\n- `to`: The type to convert to."
       },
+      "Cost": {
+        "properties": {
+          "input": {
+            "type": "number",
+            "title": "Input",
+            "description": "Cost per million input tokens (USD)."
+          },
+          "output": {
+            "type": "number",
+            "title": "Output",
+            "description": "Cost per million output tokens (USD)."
+          },
+          "reasoning": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reasoning",
+            "description": "Cost per million reasoning tokens (USD)."
+          },
+          "cache_read": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cache Read",
+            "description": "Cost per million cached read tokens (USD)."
+          },
+          "cache_write": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cache Write",
+            "description": "Cost per million cached write tokens (USD)."
+          },
+          "input_audio": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Input Audio",
+            "description": "Cost per million audio input tokens (USD)."
+          },
+          "output_audio": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Output Audio",
+            "description": "Cost per million audio output tokens (USD)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "input",
+          "output"
+        ],
+        "title": "Cost",
+        "description": "Costs are expressed in USD per million tokens."
+      },
       "CostCreateInput": {
         "properties": {
           "prompt_token_cost": {
@@ -14854,6 +14962,25 @@
         "title": "InOperation",
         "description": "Membership check.\n\nReturns true if the left operand is in the list provided as the second operand.\n\nExample:\n    ```\n    {\n        \"$in\": [\n            {\"$getField\": \"op_name\"},\n            [{\"$literal\": \"predict\"}, {\"$literal\": \"generate\"}]\n        ]\n    }\n    ```"
       },
+      "Interleaved": {
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "reasoning_content",
+              "reasoning_details"
+            ],
+            "title": "Field",
+            "description": "Format identifier for interleaved reasoning."
+          }
+        },
+        "type": "object",
+        "required": [
+          "field"
+        ],
+        "title": "Interleaved",
+        "description": "Reasoning interleaving support details."
+      },
       "LLMAggregatedUsage": {
         "properties": {
           "requests": {
@@ -15246,6 +15373,33 @@
         "type": "object",
         "title": "LLMUsageSchema"
       },
+      "Limit": {
+        "properties": {
+          "context": {
+            "type": "integer",
+            "title": "Context",
+            "description": "Maximum context window in tokens."
+          },
+          "input": {
+            "type": "integer",
+            "title": "Input",
+            "description": "Maximum input tokens."
+          },
+          "output": {
+            "type": "integer",
+            "title": "Output",
+            "description": "Maximum output tokens."
+          }
+        },
+        "type": "object",
+        "required": [
+          "context",
+          "input",
+          "output"
+        ],
+        "title": "Limit",
+        "description": "Token limits for a model."
+      },
       "LiteralOperation": {
         "properties": {
           "$literal": {
@@ -15496,6 +15650,33 @@
         "title": "LteOperation",
         "description": "Less than or equal comparison.\n\nExample:\n    ```\n    {\n        \"$lte\": [{\"$getField\": \"summary.usage.tokens\"}, {\"$literal\": 100}]\n    }\n    ```"
       },
+      "Modalities": {
+        "properties": {
+          "input": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Input",
+            "description": "Supported input types (e.g. text, image, audio, video, pdf)."
+          },
+          "output": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Output",
+            "description": "Supported output types."
+          }
+        },
+        "type": "object",
+        "required": [
+          "input",
+          "output"
+        ],
+        "title": "Modalities",
+        "description": "Supported input and output modalities."
+      },
       "ModelCreateBody": {
         "properties": {
           "name": {
@@ -15656,6 +15837,226 @@
           "source_code"
         ],
         "title": "ModelReadRes"
+      },
+      "ModelsDevModel": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Model identifier used by the AI SDK."
+          },
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Display name."
+          },
+          "attachment": {
+            "type": "boolean",
+            "title": "Attachment",
+            "description": "File attachment support."
+          },
+          "reasoning": {
+            "type": "boolean",
+            "title": "Reasoning",
+            "description": "Chain-of-thought reasoning support."
+          },
+          "tool_call": {
+            "type": "boolean",
+            "title": "Tool Call",
+            "description": "Tool calling support."
+          },
+          "structured_output": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Structured Output",
+            "description": "Dedicated structured output feature."
+          },
+          "temperature": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Temperature",
+            "description": "Temperature control support."
+          },
+          "knowledge": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Knowledge",
+            "description": "Knowledge cutoff in YYYY-MM or YYYY-MM-DD format."
+          },
+          "release_date": {
+            "type": "string",
+            "title": "Release Date",
+            "description": "First public release date (YYYY-MM-DD)."
+          },
+          "last_updated": {
+            "type": "string",
+            "title": "Last Updated",
+            "description": "Most recent update date (YYYY-MM-DD)."
+          },
+          "open_weights": {
+            "type": "boolean",
+            "title": "Open Weights",
+            "description": "Public weights availability."
+          },
+          "status": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "alpha",
+                  "beta",
+                  "deprecated"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status",
+            "description": "Lifecycle status of the model."
+          },
+          "interleaved": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "$ref": "#/components/schemas/Interleaved"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Interleaved",
+            "description": "Reasoning interleaving support."
+          },
+          "cost": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Cost"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Pricing information."
+          },
+          "limit": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Limit"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Token limits."
+          },
+          "modalities": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Modalities"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Supported input and output modalities."
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "attachment",
+          "reasoning",
+          "tool_call",
+          "release_date",
+          "last_updated",
+          "open_weights"
+        ],
+        "title": "ModelsDevModel",
+        "description": "A single model entry in the models.dev schema."
+      },
+      "ModelsDevProvider": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Provider identifier, derived from the folder name."
+          },
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Display name of the provider."
+          },
+          "npm": {
+            "type": "string",
+            "title": "Npm",
+            "description": "AI SDK package name."
+          },
+          "env": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Env",
+            "description": "Environment variable keys for authentication."
+          },
+          "doc": {
+            "type": "string",
+            "title": "Doc",
+            "description": "Link to provider documentation."
+          },
+          "api": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Api",
+            "description": "OpenAI-compatible API endpoint. Required only when using @ai-sdk/openai-compatible."
+          },
+          "models": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ModelsDevModel"
+            },
+            "type": "object",
+            "title": "Models",
+            "description": "Mapping of model id -> model."
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "npm",
+          "env",
+          "doc"
+        ],
+        "title": "ModelsDevProvider",
+        "description": "A provider entry in the models.dev schema."
       },
       "NormalizedMessage": {
         "properties": {
