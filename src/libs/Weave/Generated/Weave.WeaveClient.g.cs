@@ -43,6 +43,15 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public AgentsClient Agents => new AgentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
         public AnnotationQueuesClient AnnotationQueues => new AnnotationQueuesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,

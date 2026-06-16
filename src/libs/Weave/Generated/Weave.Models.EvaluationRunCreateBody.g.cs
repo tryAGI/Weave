@@ -23,6 +23,12 @@ namespace Weave
         public required string Model { get; set; }
 
         /// <summary>
+        /// Source evaluation run ID if this run was created by rescoring — provenance link
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_evaluation_run_id")]
+        public string? SourceEvaluationRunId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -37,15 +43,20 @@ namespace Weave
         /// <param name="model">
         /// Reference to the model (weave:// URI)
         /// </param>
+        /// <param name="sourceEvaluationRunId">
+        /// Source evaluation run ID if this run was created by rescoring — provenance link
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EvaluationRunCreateBody(
             string evaluation,
-            string model)
+            string model,
+            string? sourceEvaluationRunId)
         {
             this.Evaluation = evaluation ?? throw new global::System.ArgumentNullException(nameof(evaluation));
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
+            this.SourceEvaluationRunId = sourceEvaluationRunId;
         }
 
         /// <summary>

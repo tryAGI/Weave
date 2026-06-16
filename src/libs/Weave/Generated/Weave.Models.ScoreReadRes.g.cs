@@ -23,11 +23,11 @@ namespace Weave
         public required string Scorer { get; set; }
 
         /// <summary>
-        /// The value of the score
+        /// The raw output of the scorer
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Value { get; set; }
+        public required object Value { get; set; }
 
         /// <summary>
         /// Evaluation run ID if this score is linked to one
@@ -57,7 +57,7 @@ namespace Weave
         /// The scorer reference (weave:// URI)
         /// </param>
         /// <param name="value">
-        /// The value of the score
+        /// The raw output of the scorer
         /// </param>
         /// <param name="evaluationRunId">
         /// Evaluation run ID if this score is linked to one
@@ -71,13 +71,13 @@ namespace Weave
         public ScoreReadRes(
             string scoreId,
             string scorer,
-            double value,
+            object value,
             string? evaluationRunId,
             string? wbUserId)
         {
             this.ScoreId = scoreId ?? throw new global::System.ArgumentNullException(nameof(scoreId));
             this.Scorer = scorer ?? throw new global::System.ArgumentNullException(nameof(scorer));
-            this.Value = value;
+            this.Value = value ?? throw new global::System.ArgumentNullException(nameof(value));
             this.EvaluationRunId = evaluationRunId;
             this.WbUserId = wbUserId;
         }

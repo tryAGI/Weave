@@ -25,9 +25,21 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trace_id")]
+        public string? TraceId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ended_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime EndedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("started_at")]
+        public global::System.DateTime? StartedAt { get; set; }
 
         /// <summary>
         /// 
@@ -67,6 +79,8 @@ namespace Weave
         /// <param name="id"></param>
         /// <param name="endedAt"></param>
         /// <param name="summary"></param>
+        /// <param name="traceId"></param>
+        /// <param name="startedAt"></param>
         /// <param name="exception"></param>
         /// <param name="output"></param>
         /// <param name="wbRunStepEnd"></param>
@@ -78,13 +92,17 @@ namespace Weave
             string id,
             global::System.DateTime endedAt,
             global::Weave.SummaryInsertMap summary,
+            string? traceId,
+            global::System.DateTime? startedAt,
             string? exception,
             object? output,
             int? wbRunStepEnd)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.TraceId = traceId;
             this.EndedAt = endedAt;
+            this.StartedAt = startedAt;
             this.Exception = exception;
             this.Output = output;
             this.Summary = summary ?? throw new global::System.ArgumentNullException(nameof(summary));
