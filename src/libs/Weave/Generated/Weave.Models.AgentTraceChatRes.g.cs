@@ -25,6 +25,24 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agent_name")]
+        public string? AgentName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agent_version")]
+        public string? AgentVersion { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status_code")]
+        public global::Weave.AgentTraceChatResStatusCode2? StatusCode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
         public string? Provider { get; set; }
 
@@ -57,6 +75,9 @@ namespace Weave
         /// </summary>
         /// <param name="traceId"></param>
         /// <param name="rootSpanName"></param>
+        /// <param name="agentName"></param>
+        /// <param name="agentVersion"></param>
+        /// <param name="statusCode"></param>
         /// <param name="provider"></param>
         /// <param name="totalDurationMs">
         /// Wall-clock duration of the trace root span in milliseconds. This is not a sum of child span durations.
@@ -69,6 +90,9 @@ namespace Weave
         public AgentTraceChatRes(
             string traceId,
             string? rootSpanName,
+            string? agentName,
+            string? agentVersion,
+            global::Weave.AgentTraceChatResStatusCode2? statusCode,
             string? provider,
             int? totalDurationMs,
             global::System.Collections.Generic.IList<global::Weave.AgentChatMessage>? messages,
@@ -76,6 +100,9 @@ namespace Weave
         {
             this.TraceId = traceId ?? throw new global::System.ArgumentNullException(nameof(traceId));
             this.RootSpanName = rootSpanName;
+            this.AgentName = agentName;
+            this.AgentVersion = agentVersion;
+            this.StatusCode = statusCode;
             this.Provider = provider;
             this.TotalDurationMs = totalDurationMs;
             this.Messages = messages;

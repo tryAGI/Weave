@@ -2316,6 +2316,48 @@
         }
       }
     },
+    "/feedback/aggregate": {
+      "post": {
+        "tags": [
+          "Feedback"
+        ],
+        "summary": "Feedback Aggregate",
+        "description": "Aggregate typed scorer feedback (tags, ratings) over time buckets.",
+        "operationId": "feedback_aggregate_feedback_aggregate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeedbackAggregateReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeedbackAggregateRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/feedback/payload_schema": {
       "post": {
         "tags": [
@@ -5970,6 +6012,33 @@
             ],
             "title": "Agent Name"
           },
+          "agent_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agent Version"
+          },
+          "status_code": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "UNSET",
+                  "OK",
+                  "ERROR"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Code"
+          },
           "started_at": {
             "anyOf": [
               {
@@ -8521,6 +8590,44 @@
               }
             ],
             "title": "Root Span Name"
+          },
+          "agent_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agent Name"
+          },
+          "agent_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Agent Version"
+          },
+          "status_code": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "UNSET",
+                  "OK",
+                  "ERROR"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Code"
           },
           "provider": {
             "anyOf": [
@@ -11961,6 +12068,17 @@
             "type": "string",
             "title": "Id"
           },
+          "trace_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Trace Id"
+          },
           "ended_at": {
             "type": "string",
             "format": "date-time",
@@ -13298,6 +13416,250 @@
           "total_rows"
         ],
         "title": "EvaluationStatusRunning"
+      },
+      "FeedbackAggregateBucket": {
+        "properties": {
+          "time_bucket_start_ms": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Time Bucket Start Ms",
+            "description": "Time bucket start, unix epoch ms (UTC). None when unbucketed."
+          },
+          "group": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Group",
+            "description": "Group-by dimension values for this row (e.g. {'scorer_id': '...'})."
+          },
+          "total_count": {
+            "type": "integer",
+            "title": "Total Count",
+            "description": "Number of feedback rows in this bucket/group."
+          },
+          "scored_count": {
+            "type": "integer",
+            "title": "Scored Count",
+            "description": "Rows that emitted a score (at least one tag or rating). Excludes agent-monitor rows that scored nothing — use this for score volume."
+          },
+          "tag_counts": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Tag Counts",
+            "description": "Count of each scorer tag."
+          },
+          "rating_counts": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Rating Counts",
+            "description": "Number of rows carrying each rating key (e.g. '_rating_')."
+          },
+          "rating_sums": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Rating Sums",
+            "description": "Sum of each rating key's values; client derives avg = sum/count."
+          }
+        },
+        "type": "object",
+        "required": [
+          "total_count",
+          "scored_count"
+        ],
+        "title": "FeedbackAggregateBucket",
+        "description": "One (time bucket, group) row of aggregated scorer feedback."
+      },
+      "FeedbackAggregateReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id",
+            "examples": [
+              "entity/project"
+            ]
+          },
+          "after_ms": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "After Ms",
+            "description": "Inclusive lower bound on created_at (milliseconds since epoch)."
+          },
+          "before_ms": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Before Ms",
+            "description": "Exclusive upper bound on created_at (milliseconds since epoch)."
+          },
+          "time_bucket_seconds": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Time Bucket Seconds",
+            "description": "Time bucket size in seconds, e.g. 3600 for 1h buckets"
+          },
+          "feedback_types": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Feedback Types",
+            "description": "Filter on feedback_type by prefix"
+          },
+          "tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Tags",
+            "description": "Filter to feedback that includes any of the given tags"
+          },
+          "rating_min": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rating Min",
+            "description": "Include only rows with a rating >= this value"
+          },
+          "rating_max": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rating Max",
+            "description": "Include only rows with a rating <= this value"
+          },
+          "monitor_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Monitor Ids",
+            "description": "Filter to these monitor ids (exact match; suffix with '*' for prefix match)."
+          },
+          "scorer_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Scorer Ids",
+            "description": "Filter to these scorer ids (exact match; suffix with '*' for prefix match)."
+          },
+          "span_agent_names": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Span Agent Names",
+            "description": "Filter to feedback whose span_agent_name matches any of these (exact)."
+          },
+          "span_types": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "agent_turn",
+                "agent_conversation"
+              ]
+            },
+            "type": "array",
+            "title": "Span Types",
+            "description": "Filter by span type (turn vs conversation)."
+          },
+          "group_by": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "scorer_id",
+                "span_agent_name",
+                "span_agent_version",
+                "span_status_code"
+              ]
+            },
+            "type": "array",
+            "title": "Group By",
+            "description": "Allowed: ['scorer_id', 'span_agent_name', 'span_agent_version', 'span_status_code']."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "project_id",
+          "after_ms",
+          "before_ms"
+        ],
+        "title": "FeedbackAggregateReq",
+        "description": "Query for aggregate scores by time bucket and dimension."
+      },
+      "FeedbackAggregateRes": {
+        "properties": {
+          "time_bucket_seconds": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Time Bucket Seconds",
+            "description": "Time bucket size used (seconds). None when unbucketed."
+          },
+          "after_ms": {
+            "type": "integer",
+            "title": "After Ms",
+            "description": "Resolved inclusive lower bound, unix epoch ms (UTC)."
+          },
+          "before_ms": {
+            "type": "integer",
+            "title": "Before Ms",
+            "description": "Resolved exclusive upper bound, unix epoch ms (UTC)."
+          },
+          "buckets": {
+            "items": {
+              "$ref": "#/components/schemas/FeedbackAggregateBucket"
+            },
+            "type": "array",
+            "title": "Buckets"
+          }
+        },
+        "type": "object",
+        "required": [
+          "after_ms",
+          "before_ms"
+        ],
+        "title": "FeedbackAggregateRes",
+        "description": "Sparse time-series of aggregated scorer feedback (empty buckets omitted)."
       },
       "FeedbackCreateBatchReq": {
         "properties": {
