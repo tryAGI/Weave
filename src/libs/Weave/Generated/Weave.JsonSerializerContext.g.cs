@@ -25,6 +25,10 @@ namespace Weave
 
             typeof(global::Weave.JsonConverters.AgentChatMessageTypeNullableJsonConverter),
 
+            typeof(global::Weave.JsonConverters.AgentChatMessageStatusCode2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatMessageStatusCode2NullableJsonConverter),
+
             typeof(global::Weave.JsonConverters.AgentChatToolCallStatus2JsonConverter),
 
             typeof(global::Weave.JsonConverters.AgentChatToolCallStatus2NullableJsonConverter),
@@ -105,6 +109,10 @@ namespace Weave
 
             typeof(global::Weave.JsonConverters.AgentSpanValueRefSourceNullableJsonConverter),
 
+            typeof(global::Weave.JsonConverters.AgentTraceChatResStatusCode2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentTraceChatResStatusCode2NullableJsonConverter),
+
             typeof(global::Weave.JsonConverters.AggregationTypeJsonConverter),
 
             typeof(global::Weave.JsonConverters.AggregationTypeNullableJsonConverter),
@@ -136,6 +144,14 @@ namespace Weave
             typeof(global::Weave.JsonConverters.EvalResultsSortByModeJsonConverter),
 
             typeof(global::Weave.JsonConverters.EvalResultsSortByModeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackAggregateReqSpanTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackAggregateReqSpanTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackAggregateReqGroupByItemJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackAggregateReqGroupByItemNullableJsonConverter),
 
             typeof(global::Weave.JsonConverters.FeedbackMetricSpecValueTypeJsonConverter),
 
@@ -257,6 +273,17 @@ namespace Weave
 
             typeof(global::Weave.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_179074160b8e7669")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>), TypeInfoPropertyName = "ContainsOperation_e36a77c4746492b2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_d224c796101edc12")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_9f2e53bde2b7df10")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>), TypeInfoPropertyName = "ContainsOperation_b519b0000bd0c5bf")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?), TypeInfoPropertyName = "ContainsOperation_cacc07f640474c92")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>?), TypeInfoPropertyName = "ContainsOperation_41ee95c2de4ff4d2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?), TypeInfoPropertyName = "ContainsOperation_c0feb72d6a19828a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_f91d53025cea92a6")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_29ccdc77e8195b38")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_e672610a6ad136fe")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.JsonSerializerContextTypes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAgentHandoff))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAgentStart))]
@@ -270,6 +297,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatContextCompacted))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessageType), TypeInfoPropertyName = "AgentChatMessageType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessageStatusCode2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatUserMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatToolCall))]
@@ -360,6 +388,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanSchema>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupRow>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentTraceChatReq))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentTraceChatResStatusCode2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentChatMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentVersionSchema))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentVersionsQueryReq))]
@@ -372,8 +401,6 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AggregationType), TypeInfoPropertyName = "AggregationType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AliasesListRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AndOperation))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_179074160b8e7669")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>), TypeInfoPropertyName = "ContainsOperation_e36a77c4746492b2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LiteralOperation))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.GetFieldOperator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ConvertOperation))]
@@ -523,6 +550,14 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvaluationStatusRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.EvaluationStatusNotFound, global::Weave.EvaluationStatusRunning, global::Weave.EvaluationStatusFailed, global::Weave.EvaluationStatusComplete>), TypeInfoPropertyName = "AnyOfEvaluationStatusNotFoundEvaluationStatusRunningEvaluationStatusFailedEvaluationStatusComplete2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvaluationStatusRunning))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackAggregateBucket))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackAggregateReq))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateReqSpanType>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackAggregateReqSpanType), TypeInfoPropertyName = "FeedbackAggregateReqSpanType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateReqGroupByItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackAggregateReqGroupByItem), TypeInfoPropertyName = "FeedbackAggregateReqGroupByItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackAggregateRes))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateBucket>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackCreateBatchReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.FeedbackCreateReq>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackCreateReq))]
@@ -558,8 +593,6 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ImageGenerationCreateReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ImageGenerationRequestInputs))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ImageGenerationCreateRes))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_d224c796101edc12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_9f2e53bde2b7df10")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.Interleaved))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.InterleavedField), TypeInfoPropertyName = "InterleavedField2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsLifecycleStage), TypeInfoPropertyName = "LLMModelDetailsLifecycleStage2")]
@@ -616,7 +649,6 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.Pricing))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectsInfoReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectsInfoRes))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>), TypeInfoPropertyName = "ContainsOperation_b519b0000bd0c5bf")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RefsReadBatchReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RefsReadBatchRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RescoreReq))]
@@ -681,9 +713,6 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvaluationRunReadRes>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.PredictionReadRes>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.ScoreReadRes>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?), TypeInfoPropertyName = "ContainsOperation_cacc07f640474c92")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>?), TypeInfoPropertyName = "ContainsOperation_41ee95c2de4ff4d2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?), TypeInfoPropertyName = "ContainsOperation_c0feb72d6a19828a")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentTraceChatRes>))]
@@ -709,7 +738,6 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentChatMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentVersionSchema>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentSchema>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_f91d53025cea92a6")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnnotationQueueItemsFilterAnnotationStatesVariant1Item>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.SortBy>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnnotationQueueItemSchema>))]
@@ -730,13 +758,14 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsTrial>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsEvaluationSummary>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.GenAISpanRef>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackAggregateReqSpanType>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackAggregateReqGroupByItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackAggregateBucket>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackCreateReq>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackCreateRes>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackPayloadPath>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackMetricSpec>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.ValidationError>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_29ccdc77e8195b38")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_e672610a6ad136fe")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.LLMModelDetailsAvailableInItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.List<global::Weave.LiteralOperation>, object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.LiteralOperation>))]
@@ -744,6 +773,288 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.ObjSchema>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModelSupportedSamplingParameter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModelSupportedFeature>))]
+    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+            typeof(global::Weave.JsonConverters.AgentChatAgentStartStatus2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatAgentStartStatus2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatAssistantMessageStatus2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatAssistantMessageStatus2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatMessageTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatMessageTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatMessageStatusCode2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatMessageStatusCode2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatToolCallStatus2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentChatToolCallStatus2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentCustomAttrSchemaItemSourceJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentCustomAttrSchemaItemSourceNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentCustomAttrSchemaItemValueTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentCustomAttrSchemaItemValueTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentGroupByRefSourceJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentGroupByRefSourceNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSearchMatchedMessageRoleJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSearchMatchedMessageRoleNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSearchReqRolesVariant1ItemJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSearchReqRolesVariant1ItemNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSortByDirectionJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSortByDirectionNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanGroupDistributionItemSourceJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanGroupDistributionItemSourceNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanGroupDistributionItemValueTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanGroupDistributionItemValueTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanMeasureSpecAggregationJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanMeasureSpecAggregationNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanMeasureSpecValueType2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanMeasureSpecValueType2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanSchemaSpanKind2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanSchemaSpanKind2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanSchemaStatusCode2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanSchemaStatusCode2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsColumnRoleJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsColumnRoleNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsColumnValueTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsColumnValueTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsMetricSpecValueTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsMetricSpecValueTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsMetricSpecAggregationJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsMetricSpecAggregationNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsReqBucketByVariant1DiscriminatorTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsReqBucketByVariant1DiscriminatorTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsResBucketTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanStatsResBucketTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanValueRefSourceJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentSpanValueRefSourceNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentTraceChatResStatusCode2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AgentTraceChatResStatusCode2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AggregationTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AggregationTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AnnotationQueueItemSchemaAnnotationStateJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AnnotationQueueItemSchemaAnnotationStateNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AnnotationQueueItemsFilterAnnotationStatesVariant1ItemJsonConverter),
+
+            typeof(global::Weave.JsonConverters.AnnotationQueueItemsFilterAnnotationStatesVariant1ItemNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.CallMetricSpecMetricJsonConverter),
+
+            typeof(global::Weave.JsonConverters.CallMetricSpecMetricNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.ConvertSpecToJsonConverter),
+
+            typeof(global::Weave.JsonConverters.ConvertSpecToNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.EvalResultsScorerStatsValueType2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.EvalResultsScorerStatsValueType2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.EvalResultsSortByDirectionJsonConverter),
+
+            typeof(global::Weave.JsonConverters.EvalResultsSortByDirectionNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.EvalResultsSortByModeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.EvalResultsSortByModeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackAggregateReqSpanTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackAggregateReqSpanTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackAggregateReqGroupByItemJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackAggregateReqGroupByItemNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackMetricSpecValueTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackMetricSpecValueTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackPayloadPathValueTypeJsonConverter),
+
+            typeof(global::Weave.JsonConverters.FeedbackPayloadPathValueTypeNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.InterleavedFieldJsonConverter),
+
+            typeof(global::Weave.JsonConverters.InterleavedFieldNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsLifecycleStageJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsLifecycleStageNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsAvailableInItemJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsAvailableInItemNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsQuantizationJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsQuantizationNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.ModelsDevModelStatus2JsonConverter),
+
+            typeof(global::Weave.JsonConverters.ModelsDevModelStatus2NullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.RouterOpenRouterModelQuantizationJsonConverter),
+
+            typeof(global::Weave.JsonConverters.RouterOpenRouterModelQuantizationNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.RouterOpenRouterModelSupportedSamplingParameterJsonConverter),
+
+            typeof(global::Weave.JsonConverters.RouterOpenRouterModelSupportedSamplingParameterNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.RouterOpenRouterModelSupportedFeatureJsonConverter),
+
+            typeof(global::Weave.JsonConverters.RouterOpenRouterModelSupportedFeatureNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.SortByDirectionJsonConverter),
+
+            typeof(global::Weave.JsonConverters.SortByDirectionNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.TraceStatusJsonConverter),
+
+            typeof(global::Weave.JsonConverters.TraceStatusNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.UsageMetricSpecMetricJsonConverter),
+
+            typeof(global::Weave.JsonConverters.UsageMetricSpecMetricNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.BucketByVariant1JsonConverter),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<string, int?, double?, bool?, object>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?, object>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?, object>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.CallBatchStartMode, global::Weave.CallBatchEndMode>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.CallStartRes, global::Weave.CallEndRes>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.EvaluationStatusNotFound, global::Weave.EvaluationStatusRunning, global::Weave.EvaluationStatusFailed, global::Weave.EvaluationStatusComplete>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.IList<global::Weave.LiteralOperation>, object>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<bool?, global::Weave.Interleaved, object>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>),
+
+            typeof(global::Weave.JsonConverters.AnyOfJsonConverter<string, int?>),
+
+            typeof(global::Weave.JsonConverters.UnixTimestampJsonConverter),
+        })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_179074160b8e7669")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>), TypeInfoPropertyName = "ContainsOperation_e36a77c4746492b2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_d224c796101edc12")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_9f2e53bde2b7df10")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>), TypeInfoPropertyName = "ContainsOperation_b519b0000bd0c5bf")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?), TypeInfoPropertyName = "ContainsOperation_cacc07f640474c92")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>?), TypeInfoPropertyName = "ContainsOperation_41ee95c2de4ff4d2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?), TypeInfoPropertyName = "ContainsOperation_c0feb72d6a19828a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_f91d53025cea92a6")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_29ccdc77e8195b38")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_e672610a6ad136fe")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.Datacenter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModel>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.TableRowSchema>))]
@@ -754,7 +1065,180 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvaluationRunReadRes>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.PredictionReadRes>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.ScoreReadRes>))]
+    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+    /// <summary>
+    /// 
+    /// </summary>
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
+        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = global::System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.Combine(
+            SourceGenerationContextChunk0.Default,
+
+            SourceGenerationContextChunk1.Default
+            );
+
+        private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SourceGenerationContext Default { get; } = new(DefaultOptions);
+
+        private SourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+            : base(options)
+        {
+        }
+
+        /// <inheritdoc />
+        protected override global::System.Text.Json.JsonSerializerOptions? GeneratedSerializerOptions => DefaultOptions;
+
+        /// <inheritdoc />
+        public override global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(global::System.Type type)
+        {
+            return Resolver.GetTypeInfo(type, Options);
+        }
+
+        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+        {
+            var options = new global::System.Text.Json.JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+                TypeInfoResolver = Resolver,
+            };
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatAgentStartStatus2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatAgentStartStatus2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatAssistantMessageStatus2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatAssistantMessageStatus2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatMessageTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatMessageTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatMessageStatusCode2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatMessageStatusCode2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatToolCallStatus2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentChatToolCallStatus2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentCustomAttrSchemaItemSourceJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentCustomAttrSchemaItemSourceNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentCustomAttrSchemaItemValueTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentCustomAttrSchemaItemValueTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentGroupByRefSourceJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentGroupByRefSourceNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSearchMatchedMessageRoleJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSearchMatchedMessageRoleNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSearchReqRolesVariant1ItemJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSearchReqRolesVariant1ItemNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSortByDirectionJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSortByDirectionNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanGroupDistributionItemSourceJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanGroupDistributionItemSourceNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanGroupDistributionItemValueTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanGroupDistributionItemValueTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanMeasureSpecAggregationJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanMeasureSpecAggregationNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanMeasureSpecValueType2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanMeasureSpecValueType2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanSchemaSpanKind2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanSchemaSpanKind2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanSchemaStatusCode2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanSchemaStatusCode2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsColumnRoleJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsColumnRoleNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsColumnValueTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsColumnValueTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsMetricSpecValueTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsMetricSpecValueTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsMetricSpecAggregationJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsMetricSpecAggregationNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsReqBucketByVariant1DiscriminatorTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsReqBucketByVariant1DiscriminatorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsResBucketTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanStatsResBucketTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanValueRefSourceJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentSpanValueRefSourceNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentTraceChatResStatusCode2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AgentTraceChatResStatusCode2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AggregationTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AggregationTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AnnotationQueueItemSchemaAnnotationStateJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AnnotationQueueItemSchemaAnnotationStateNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AnnotationQueueItemsFilterAnnotationStatesVariant1ItemJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AnnotationQueueItemsFilterAnnotationStatesVariant1ItemNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.CallMetricSpecMetricJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.CallMetricSpecMetricNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.ConvertSpecToJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.ConvertSpecToNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.EvalResultsScorerStatsValueType2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.EvalResultsScorerStatsValueType2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.EvalResultsSortByDirectionJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.EvalResultsSortByDirectionNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.EvalResultsSortByModeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.EvalResultsSortByModeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.FeedbackAggregateReqSpanTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.FeedbackAggregateReqSpanTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.FeedbackAggregateReqGroupByItemJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.FeedbackAggregateReqGroupByItemNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.FeedbackMetricSpecValueTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.FeedbackMetricSpecValueTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.FeedbackPayloadPathValueTypeJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.FeedbackPayloadPathValueTypeNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.InterleavedFieldJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.InterleavedFieldNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsLifecycleStageJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsLifecycleStageNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsAvailableInItemJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsAvailableInItemNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsQuantizationJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsQuantizationNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.ModelsDevModelStatus2JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.ModelsDevModelStatus2NullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.RouterOpenRouterModelQuantizationJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.RouterOpenRouterModelQuantizationNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.RouterOpenRouterModelSupportedSamplingParameterJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.RouterOpenRouterModelSupportedSamplingParameterNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.RouterOpenRouterModelSupportedFeatureJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.RouterOpenRouterModelSupportedFeatureNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.SortByDirectionJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.SortByDirectionNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.TraceStatusJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.TraceStatusNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.UsageMetricSpecMetricJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.UsageMetricSpecMetricNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.BucketByVariant1JsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?, double?, bool?, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.CallBatchStartMode, global::Weave.CallBatchEndMode>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.CallStartRes, global::Weave.CallEndRes>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.EvaluationStatusNotFound, global::Weave.EvaluationStatusRunning, global::Weave.EvaluationStatusFailed, global::Weave.EvaluationStatusComplete>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.IList<global::Weave.LiteralOperation>, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<bool?, global::Weave.Interleaved, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?>());
+            options.Converters.Add(new global::Weave.JsonConverters.UnixTimestampJsonConverter());
+
+            return options;
+        }
     }
 }
