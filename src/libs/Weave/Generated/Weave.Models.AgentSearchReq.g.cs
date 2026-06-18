@@ -4,10 +4,12 @@
 namespace Weave
 {
     /// <summary>
-    /// Full-text search across message content and span metadata.<br/>
-    /// Scans the `messages` table (one row per message occurrence, populated<br/>
-    /// by an MV from spans) and returns matching span-level hits. The caller<br/>
-    /// groups by conversation for the response shape.
+    /// Query the `messages` table by content and/or span-level filters.<br/>
+    /// Scans the `messages` table (one row per message occurrence, populated by an<br/>
+    /// MV from spans) and returns matching span-level hits. Full-text search sets<br/>
+    /// `query`; structured retrieval (e.g. all messages in a trace) leaves `query`<br/>
+    /// empty and uses the filters below. The caller groups by conversation for the<br/>
+    /// response shape.
     /// </summary>
     public sealed partial class AgentSearchReq
     {
@@ -22,8 +24,13 @@ namespace Weave
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("query")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Query { get; set; }
+        public string? Query { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trace_id")]
+        public string? TraceId { get; set; }
 
         /// <summary>
         /// 
@@ -54,6 +61,12 @@ namespace Weave
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_model")]
         public string? RequestModel { get; set; }
+
+        /// <summary>
+        /// Default Value: true
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("truncate_content")]
+        public bool? TruncateContent { get; set; }
 
         /// <summary>
         /// 
@@ -90,11 +103,15 @@ namespace Weave
         /// </summary>
         /// <param name="projectId"></param>
         /// <param name="query"></param>
+        /// <param name="traceId"></param>
         /// <param name="roles"></param>
         /// <param name="conversationId"></param>
         /// <param name="agentName"></param>
         /// <param name="providerName"></param>
         /// <param name="requestModel"></param>
+        /// <param name="truncateContent">
+        /// Default Value: true
+        /// </param>
         /// <param name="startedAfter"></param>
         /// <param name="startedBefore"></param>
         /// <param name="limit">
@@ -108,24 +125,28 @@ namespace Weave
 #endif
         public AgentSearchReq(
             string projectId,
-            string query,
+            string? query,
+            string? traceId,
             global::System.Collections.Generic.IList<global::Weave.AgentSearchReqRolesVariant1Item>? roles,
             string? conversationId,
             string? agentName,
             string? providerName,
             string? requestModel,
+            bool? truncateContent,
             global::System.DateTime? startedAfter,
             global::System.DateTime? startedBefore,
             int? limit,
             int? offset)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
-            this.Query = query ?? throw new global::System.ArgumentNullException(nameof(query));
+            this.Query = query;
+            this.TraceId = traceId;
             this.Roles = roles;
             this.ConversationId = conversationId;
             this.AgentName = agentName;
             this.ProviderName = providerName;
             this.RequestModel = requestModel;
+            this.TruncateContent = truncateContent;
             this.StartedAfter = startedAfter;
             this.StartedBefore = startedBefore;
             this.Limit = limit;

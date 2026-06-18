@@ -33,11 +33,15 @@ namespace Weave
         /// </summary>
         /// <param name="projectId"></param>
         /// <param name="query"></param>
+        /// <param name="traceId"></param>
         /// <param name="roles"></param>
         /// <param name="conversationId"></param>
         /// <param name="agentName"></param>
         /// <param name="providerName"></param>
         /// <param name="requestModel"></param>
+        /// <param name="truncateContent">
+        /// Default Value: true
+        /// </param>
         /// <param name="startedAfter"></param>
         /// <param name="startedBefore"></param>
         /// <param name="limit">
@@ -51,12 +55,14 @@ namespace Weave
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Weave.AgentSearchRes> GenaiSearchAgentsSearchPostAsync(
             string projectId,
-            string query,
+            string? query = default,
+            string? traceId = default,
             global::System.Collections.Generic.IList<global::Weave.AgentSearchReqRolesVariant1Item>? roles = default,
             string? conversationId = default,
             string? agentName = default,
             string? providerName = default,
             string? requestModel = default,
+            bool? truncateContent = default,
             global::System.DateTime? startedAfter = default,
             global::System.DateTime? startedBefore = default,
             int? limit = default,
