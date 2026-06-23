@@ -40,6 +40,12 @@ namespace Weave
         public int? Offset { get; set; }
 
         /// <summary>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_costs")]
+        public bool? IncludeCosts { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -57,6 +63,9 @@ namespace Weave
         /// <param name="offset">
         /// Default Value: 0
         /// </param>
+        /// <param name="includeCosts">
+        /// Default Value: false
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -65,13 +74,15 @@ namespace Weave
             global::Weave.AgentsQueryFilters? filters,
             global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? sortBy,
             int? limit,
-            int? offset)
+            int? offset,
+            bool? includeCosts)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Filters = filters;
             this.SortBy = sortBy;
             this.Limit = limit;
             this.Offset = offset;
+            this.IncludeCosts = includeCosts;
         }
 
         /// <summary>

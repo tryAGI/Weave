@@ -53,6 +53,12 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_cost_usd")]
+        public double? TotalCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback")]
         public global::System.Collections.Generic.IList<object>? Feedback { get; set; }
 
@@ -79,6 +85,7 @@ namespace Weave
         /// <param name="offset">
         /// Default Value: 0
         /// </param>
+        /// <param name="totalCostUsd"></param>
         /// <param name="feedback"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -90,6 +97,7 @@ namespace Weave
             bool? hasMore,
             int? limit,
             int? offset,
+            double? totalCostUsd,
             global::System.Collections.Generic.IList<object>? feedback)
         {
             this.ConversationId = conversationId ?? throw new global::System.ArgumentNullException(nameof(conversationId));
@@ -98,6 +106,7 @@ namespace Weave
             this.HasMore = hasMore;
             this.Limit = limit;
             this.Offset = offset;
+            this.TotalCostUsd = totalCostUsd;
             this.Feedback = feedback;
         }
 

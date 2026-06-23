@@ -158,6 +158,36 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_cost_usd")]
+        public double? InputCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("output_cost_usd")]
+        public double? OutputCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_cost_usd")]
+        public double? CacheReadCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_cost_usd")]
+        public double? CacheCreationCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_cost_usd")]
+        public double? TotalCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reasoning_content")]
         public string? ReasoningContent { get; set; }
 
@@ -434,6 +464,11 @@ namespace Weave
         /// <param name="reasoningTokens"></param>
         /// <param name="cacheCreationInputTokens"></param>
         /// <param name="cacheReadInputTokens"></param>
+        /// <param name="inputCostUsd"></param>
+        /// <param name="outputCostUsd"></param>
+        /// <param name="cacheReadCostUsd"></param>
+        /// <param name="cacheCreationCostUsd"></param>
+        /// <param name="totalCostUsd"></param>
         /// <param name="reasoningContent"></param>
         /// <param name="conversationId"></param>
         /// <param name="conversationName"></param>
@@ -503,6 +538,11 @@ namespace Weave
             int? reasoningTokens,
             int? cacheCreationInputTokens,
             int? cacheReadInputTokens,
+            double? inputCostUsd,
+            double? outputCostUsd,
+            double? cacheReadCostUsd,
+            double? cacheCreationCostUsd,
+            double? totalCostUsd,
             string? reasoningContent,
             string? conversationId,
             string? conversationName,
@@ -569,6 +609,11 @@ namespace Weave
             this.ReasoningTokens = reasoningTokens;
             this.CacheCreationInputTokens = cacheCreationInputTokens;
             this.CacheReadInputTokens = cacheReadInputTokens;
+            this.InputCostUsd = inputCostUsd;
+            this.OutputCostUsd = outputCostUsd;
+            this.CacheReadCostUsd = cacheReadCostUsd;
+            this.CacheCreationCostUsd = cacheCreationCostUsd;
+            this.TotalCostUsd = totalCostUsd;
             this.ReasoningContent = reasoningContent;
             this.ConversationId = conversationId;
             this.ConversationName = conversationName;

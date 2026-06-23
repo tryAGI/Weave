@@ -48,6 +48,24 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_cost_usd")]
+        public double? InputCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("output_cost_usd")]
+        public double? OutputCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_cost_usd")]
+        public double? TotalCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duration_ms")]
         public int? DurationMs { get; set; }
 
@@ -78,6 +96,9 @@ namespace Weave
         /// <param name="reasoningTokens"></param>
         /// <param name="inputTokens"></param>
         /// <param name="outputTokens"></param>
+        /// <param name="inputCostUsd"></param>
+        /// <param name="outputCostUsd"></param>
+        /// <param name="totalCostUsd"></param>
         /// <param name="durationMs"></param>
         /// <param name="status"></param>
         /// <param name="contentRefs"></param>
@@ -91,6 +112,9 @@ namespace Weave
             int? reasoningTokens,
             int? inputTokens,
             int? outputTokens,
+            double? inputCostUsd,
+            double? outputCostUsd,
+            double? totalCostUsd,
             int? durationMs,
             global::Weave.AgentChatAssistantMessageStatus2? status,
             global::System.Collections.Generic.IList<string>? contentRefs)
@@ -101,6 +125,9 @@ namespace Weave
             this.ReasoningTokens = reasoningTokens;
             this.InputTokens = inputTokens;
             this.OutputTokens = outputTokens;
+            this.InputCostUsd = inputCostUsd;
+            this.OutputCostUsd = outputCostUsd;
+            this.TotalCostUsd = totalCostUsd;
             this.DurationMs = durationMs;
             this.Status = status;
             this.ContentRefs = contentRefs;

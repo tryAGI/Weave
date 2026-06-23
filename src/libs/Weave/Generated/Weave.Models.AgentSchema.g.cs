@@ -77,6 +77,12 @@ namespace Weave
         public global::System.DateTime? LastSeen { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_cost_usd")]
+        public double? TotalCostUsd { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -95,6 +101,7 @@ namespace Weave
         /// <param name="errorCount"></param>
         /// <param name="firstSeen"></param>
         /// <param name="lastSeen"></param>
+        /// <param name="totalCostUsd"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -108,7 +115,8 @@ namespace Weave
             int totalDurationMs,
             int errorCount,
             global::System.DateTime? firstSeen,
-            global::System.DateTime? lastSeen)
+            global::System.DateTime? lastSeen,
+            double? totalCostUsd)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.AgentName = agentName ?? throw new global::System.ArgumentNullException(nameof(agentName));
@@ -120,6 +128,7 @@ namespace Weave
             this.ErrorCount = errorCount;
             this.FirstSeen = firstSeen;
             this.LastSeen = lastSeen;
+            this.TotalCostUsd = totalCostUsd;
         }
 
         /// <summary>

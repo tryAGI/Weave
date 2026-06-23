@@ -5894,6 +5894,39 @@
             ],
             "title": "Output Tokens"
           },
+          "input_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Input Cost Usd"
+          },
+          "output_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Output Cost Usd"
+          },
+          "total_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Cost Usd"
+          },
           "duration_ms": {
             "anyOf": [
               {
@@ -6301,6 +6334,17 @@
             "title": "Offset",
             "default": 0
           },
+          "total_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Cost Usd"
+          },
           "feedback": {
             "anyOf": [
               {
@@ -6567,6 +6611,17 @@
               }
             ],
             "title": "Last Seen"
+          },
+          "total_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Cost Usd"
           }
         },
         "type": "object",
@@ -7137,6 +7192,39 @@
             "title": "Error Count",
             "default": 0
           },
+          "total_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Cost Usd"
+          },
+          "total_input_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Input Cost Usd"
+          },
+          "total_output_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Output Cost Usd"
+          },
           "agent_names": {
             "items": {
               "type": "string"
@@ -7581,6 +7669,61 @@
               }
             ],
             "title": "Cache Read Input Tokens"
+          },
+          "input_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Input Cost Usd"
+          },
+          "output_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Output Cost Usd"
+          },
+          "cache_read_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cache Read Cost Usd"
+          },
+          "cache_creation_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cache Creation Cost Usd"
+          },
+          "total_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Cost Usd"
           },
           "reasoning_content": {
             "anyOf": [
@@ -8481,6 +8624,11 @@
             "title": "Include Details",
             "default": false
           },
+          "include_costs": {
+            "type": "boolean",
+            "title": "Include Costs",
+            "default": false
+          },
           "sort_by": {
             "anyOf": [
               {
@@ -8668,6 +8816,17 @@
             "title": "Total Duration Ms",
             "description": "Wall-clock duration of the trace root span in milliseconds. This is not a sum of child span durations."
           },
+          "total_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Cost Usd"
+          },
           "messages": {
             "items": {
               "$ref": "#/components/schemas/AgentChatMessage"
@@ -8756,6 +8915,17 @@
             ],
             "title": "Last Seen"
           },
+          "total_cost_usd": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Cost Usd"
+          },
           "agent_version": {
             "type": "string",
             "title": "Agent Version"
@@ -8814,6 +8984,11 @@
             "minimum": 0.0,
             "title": "Offset",
             "default": 0
+          },
+          "include_costs": {
+            "type": "boolean",
+            "title": "Include Costs",
+            "default": false
           }
         },
         "type": "object",
@@ -8906,6 +9081,11 @@
             "minimum": 0.0,
             "title": "Offset",
             "default": 0
+          },
+          "include_costs": {
+            "type": "boolean",
+            "title": "Include Costs",
+            "default": false
           }
         },
         "type": "object",
@@ -12476,6 +12656,16 @@
             ],
             "title": "Filters",
             "description": "Filters applied to grouped rows. Multiple filters are AND'd together."
+          },
+          "filter_logic_operator": {
+            "type": "string",
+            "enum": [
+              "and",
+              "or"
+            ],
+            "title": "Filter Logic Operator",
+            "description": "How to combine filters across evaluations: 'and' (Match All - row must match in ALL evals) or 'or' (Match Any - row must match in ANY eval). Defaults to 'or' (Match Any).",
+            "default": "or"
           },
           "limit": {
             "anyOf": [
