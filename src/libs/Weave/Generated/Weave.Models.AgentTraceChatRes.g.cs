@@ -55,6 +55,12 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_cost_usd")]
+        public double? TotalCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
         public global::System.Collections.Generic.IList<global::Weave.AgentChatMessage>? Messages { get; set; }
 
@@ -82,6 +88,7 @@ namespace Weave
         /// <param name="totalDurationMs">
         /// Wall-clock duration of the trace root span in milliseconds. This is not a sum of child span durations.
         /// </param>
+        /// <param name="totalCostUsd"></param>
         /// <param name="messages"></param>
         /// <param name="feedback"></param>
 #if NET7_0_OR_GREATER
@@ -95,6 +102,7 @@ namespace Weave
             global::Weave.AgentTraceChatResStatusCode2? statusCode,
             string? provider,
             int? totalDurationMs,
+            double? totalCostUsd,
             global::System.Collections.Generic.IList<global::Weave.AgentChatMessage>? messages,
             global::System.Collections.Generic.IList<object>? feedback)
         {
@@ -105,6 +113,7 @@ namespace Weave
             this.StatusCode = statusCode;
             this.Provider = provider;
             this.TotalDurationMs = totalDurationMs;
+            this.TotalCostUsd = totalCostUsd;
             this.Messages = messages;
             this.Feedback = feedback;
         }

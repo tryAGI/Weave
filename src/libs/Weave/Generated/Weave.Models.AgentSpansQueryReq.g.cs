@@ -61,6 +61,12 @@ namespace Weave
         public bool? IncludeDetails { get; set; }
 
         /// <summary>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_costs")]
+        public bool? IncludeCosts { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sort_by")]
@@ -109,6 +115,9 @@ namespace Weave
         /// <param name="includeDetails">
         /// Default Value: false
         /// </param>
+        /// <param name="includeCosts">
+        /// Default Value: false
+        /// </param>
         /// <param name="sortBy"></param>
         /// <param name="limit">
         /// Default Value: 100
@@ -130,6 +139,7 @@ namespace Weave
             global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionSpec>? groupDistributions,
             global::System.Collections.Generic.IList<global::Weave.AgentSpanValueRef>? customAttrColumns,
             bool? includeDetails,
+            bool? includeCosts,
             global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? sortBy,
             int? limit,
             int? offset,
@@ -144,6 +154,7 @@ namespace Weave
             this.GroupDistributions = groupDistributions;
             this.CustomAttrColumns = customAttrColumns;
             this.IncludeDetails = includeDetails;
+            this.IncludeCosts = includeCosts;
             this.SortBy = sortBy;
             this.Limit = limit;
             this.Offset = offset;

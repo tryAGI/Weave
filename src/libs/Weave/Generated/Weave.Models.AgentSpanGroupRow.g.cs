@@ -79,6 +79,24 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_cost_usd")]
+        public double? TotalCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_input_cost_usd")]
+        public double? TotalInputCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_output_cost_usd")]
+        public double? TotalOutputCostUsd { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agent_names")]
         public global::System.Collections.Generic.IList<string>? AgentNames { get; set; }
 
@@ -182,6 +200,9 @@ namespace Weave
         /// <param name="errorCount">
         /// Default Value: 0
         /// </param>
+        /// <param name="totalCostUsd"></param>
+        /// <param name="totalInputCostUsd"></param>
+        /// <param name="totalOutputCostUsd"></param>
         /// <param name="agentNames"></param>
         /// <param name="agentVersions"></param>
         /// <param name="providerNames"></param>
@@ -208,6 +229,9 @@ namespace Weave
             int? totalReasoningTokens,
             int? totalDurationMs,
             int? errorCount,
+            double? totalCostUsd,
+            double? totalInputCostUsd,
+            double? totalOutputCostUsd,
             global::System.Collections.Generic.IList<string>? agentNames,
             global::System.Collections.Generic.IList<string>? agentVersions,
             global::System.Collections.Generic.IList<string>? providerNames,
@@ -231,6 +255,9 @@ namespace Weave
             this.TotalReasoningTokens = totalReasoningTokens;
             this.TotalDurationMs = totalDurationMs;
             this.ErrorCount = errorCount;
+            this.TotalCostUsd = totalCostUsd;
+            this.TotalInputCostUsd = totalInputCostUsd;
+            this.TotalOutputCostUsd = totalOutputCostUsd;
             this.AgentNames = agentNames;
             this.AgentVersions = agentVersions;
             this.ProviderNames = providerNames;

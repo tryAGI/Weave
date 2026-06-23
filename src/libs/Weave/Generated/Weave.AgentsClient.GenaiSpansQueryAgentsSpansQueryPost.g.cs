@@ -484,6 +484,9 @@ namespace Weave
         /// <param name="includeDetails">
         /// Default Value: false
         /// </param>
+        /// <param name="includeCosts">
+        /// Default Value: false
+        /// </param>
         /// <param name="sortBy"></param>
         /// <param name="limit">
         /// Default Value: 100
@@ -505,6 +508,7 @@ namespace Weave
             global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionSpec>? groupDistributions = default,
             global::System.Collections.Generic.IList<global::Weave.AgentSpanValueRef>? customAttrColumns = default,
             bool? includeDetails = default,
+            bool? includeCosts = default,
             global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? sortBy = default,
             int? limit = default,
             int? offset = default,
@@ -523,6 +527,7 @@ namespace Weave
                 GroupDistributions = groupDistributions,
                 CustomAttrColumns = customAttrColumns,
                 IncludeDetails = includeDetails,
+                IncludeCosts = includeCosts,
                 SortBy = sortBy,
                 Limit = limit,
                 Offset = offset,

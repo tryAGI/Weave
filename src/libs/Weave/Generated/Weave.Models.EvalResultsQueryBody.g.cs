@@ -81,6 +81,14 @@ namespace Weave
         public global::System.Collections.Generic.IList<global::Weave.EvalResultsFilter>? Filters { get; set; }
 
         /// <summary>
+        /// How to combine filters across evaluations: 'and' (Match All - row must match in ALL evals) or 'or' (Match Any - row must match in ANY eval). Defaults to 'or' (Match Any).<br/>
+        /// Default Value: or
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("filter_logic_operator")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.EvalResultsQueryBodyFilterLogicOperatorJsonConverter))]
+        public global::Weave.EvalResultsQueryBodyFilterLogicOperator? FilterLogicOperator { get; set; }
+
+        /// <summary>
         /// Optional row-level page size applied after grouping and intersection.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("limit")]
@@ -141,6 +149,10 @@ namespace Weave
         /// <param name="filters">
         /// Filters applied to grouped rows. Multiple filters are AND'd together.
         /// </param>
+        /// <param name="filterLogicOperator">
+        /// How to combine filters across evaluations: 'and' (Match All - row must match in ALL evals) or 'or' (Match Any - row must match in ANY eval). Defaults to 'or' (Match Any).<br/>
+        /// Default Value: or
+        /// </param>
         /// <param name="limit">
         /// Optional row-level page size applied after grouping and intersection.
         /// </param>
@@ -163,6 +175,7 @@ namespace Weave
             bool? includePredictAndScoreChildren,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsSortBy>? sortBy,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsFilter>? filters,
+            global::Weave.EvalResultsQueryBodyFilterLogicOperator? filterLogicOperator,
             int? limit,
             int? offset)
         {
@@ -177,6 +190,7 @@ namespace Weave
             this.IncludePredictAndScoreChildren = includePredictAndScoreChildren;
             this.SortBy = sortBy;
             this.Filters = filters;
+            this.FilterLogicOperator = filterLogicOperator;
             this.Limit = limit;
             this.Offset = offset;
         }

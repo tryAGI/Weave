@@ -83,6 +83,10 @@ namespace Weave
         /// <param name="filters">
         /// Filters applied to grouped rows. Multiple filters are AND'd together.
         /// </param>
+        /// <param name="filterLogicOperator">
+        /// How to combine filters across evaluations: 'and' (Match All - row must match in ALL evals) or 'or' (Match Any - row must match in ANY eval). Defaults to 'or' (Match Any).<br/>
+        /// Default Value: or
+        /// </param>
         /// <param name="limit">
         /// Optional row-level page size applied after grouping and intersection.
         /// </param>
@@ -107,6 +111,7 @@ namespace Weave
             bool? includePredictAndScoreChildren = default,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsSortBy>? sortBy = default,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsFilter>? filters = default,
+            global::Weave.EvalResultsQueryBodyFilterLogicOperator? filterLogicOperator = default,
             int? limit = default,
             int? offset = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
