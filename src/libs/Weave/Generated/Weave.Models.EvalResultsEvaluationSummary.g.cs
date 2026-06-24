@@ -28,6 +28,12 @@ namespace Weave
         public global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats>? ScorerStats { get; set; }
 
         /// <summary>
+        /// Sum of per-trial predict-only token usage for this evaluation (the model's predict() tokens only, excluding LLM-as-a-judge scorer usage); None when no trial reports usage.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("predict_total_tokens")]
+        public int? PredictTotalTokens { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluation_ref")]
@@ -71,6 +77,9 @@ namespace Weave
         /// Default Value: 0
         /// </param>
         /// <param name="scorerStats"></param>
+        /// <param name="predictTotalTokens">
+        /// Sum of per-trial predict-only token usage for this evaluation (the model's predict() tokens only, excluding LLM-as-a-judge scorer usage); None when no trial reports usage.
+        /// </param>
         /// <param name="evaluationRef"></param>
         /// <param name="modelRef"></param>
         /// <param name="displayName"></param>
@@ -83,6 +92,7 @@ namespace Weave
             string evaluationCallId,
             int? trialCount,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats>? scorerStats,
+            int? predictTotalTokens,
             string? evaluationRef,
             string? modelRef,
             string? displayName,
@@ -92,6 +102,7 @@ namespace Weave
             this.EvaluationCallId = evaluationCallId ?? throw new global::System.ArgumentNullException(nameof(evaluationCallId));
             this.TrialCount = trialCount;
             this.ScorerStats = scorerStats;
+            this.PredictTotalTokens = predictTotalTokens;
             this.EvaluationRef = evaluationRef;
             this.ModelRef = modelRef;
             this.DisplayName = displayName;
