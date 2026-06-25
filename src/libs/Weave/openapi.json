@@ -10113,6 +10113,17 @@
             "type": "string",
             "format": "binary",
             "title": "File"
+          },
+          "expected_digest": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Digest"
           }
         },
         "type": "object",
@@ -12537,6 +12548,17 @@
               }
             ],
             "title": "Trace Id"
+          },
+          "is_eval": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Eval"
           },
           "ended_at": {
             "type": "string",
