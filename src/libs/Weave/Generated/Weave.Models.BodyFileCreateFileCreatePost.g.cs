@@ -30,6 +30,12 @@ namespace Weave
         public required string Filename { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expected_digest")]
+        public string? ExpectedDigest { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -41,17 +47,20 @@ namespace Weave
         /// <param name="projectId"></param>
         /// <param name="file"></param>
         /// <param name="filename"></param>
+        /// <param name="expectedDigest"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public BodyFileCreateFileCreatePost(
             string projectId,
             byte[] file,
-            string filename)
+            string filename,
+            string? expectedDigest)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.File = file ?? throw new global::System.ArgumentNullException(nameof(file));
             this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
+            this.ExpectedDigest = expectedDigest;
         }
 
         /// <summary>
