@@ -490,6 +490,47 @@
         }
       }
     },
+    "/agents/conversations/spans": {
+      "post": {
+        "tags": [
+          "Agents"
+        ],
+        "summary": "Genai Conversation Spans",
+        "operationId": "genai_conversation_spans_agents_conversations_spans_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AgentConversationSpansReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgentConversationSpansRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/call/start": {
       "post": {
         "tags": [
@@ -6446,6 +6487,227 @@
         "type": "object",
         "title": "AgentConversationMessagePreview",
         "description": "A truncated first/last message snippet for a grouped conversation row.\n\n`role` is the chat-timeline message type (e.g. \"user_message\",\n\"assistant_message\") so clients can style it consistently with the full\nchat view; `text` is the trimmed, length-capped preview content."
+      },
+      "AgentConversationSpan": {
+        "properties": {
+          "operation_name": {
+            "type": "string",
+            "title": "Operation Name"
+          },
+          "trace_id": {
+            "type": "string",
+            "title": "Trace Id"
+          },
+          "span_id": {
+            "type": "string",
+            "title": "Span Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "UNSET",
+              "OK",
+              "ERROR"
+            ],
+            "title": "Status"
+          },
+          "duration_ms": {
+            "type": "integer",
+            "title": "Duration Ms"
+          }
+        },
+        "type": "object",
+        "required": [
+          "operation_name",
+          "trace_id",
+          "span_id",
+          "status",
+          "duration_ms"
+        ],
+        "title": "AgentConversationSpan",
+        "description": "One span in a conversation's trace.\n\nReturned by `agent_conversation_spans`, which reads span scalar columns\nonly (no message bodies). Spans are ordered by `started_at`, which\napproximates — but does not exactly match — the detail chat view's\nparent/child tree-walk order. `operation_name` is the raw OTel value; the\nclient maps it to a display category."
+      },
+      "AgentConversationSpanFeedback": {
+        "properties": {
+          "trace_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Trace Id",
+            "description": "The turn this feedback is anchored to; None for conversation-level."
+          },
+          "feedback_type": {
+            "type": "string",
+            "enum": [
+              "wandb.agent_user_feedback",
+              "wandb.agent_monitor"
+            ],
+            "title": "Feedback Type"
+          },
+          "tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Tags",
+            "description": "Arbitrary descriptive tags applied to this feedback.",
+            "examples": [
+              [
+                "👍",
+                "needs-review"
+              ]
+            ]
+          },
+          "ratings": {
+            "items": {
+              "$ref": "#/components/schemas/AgentConversationSpanRating"
+            },
+            "type": "array",
+            "title": "Ratings",
+            "description": "Numeric scorer ratings applied to this feedback."
+          }
+        },
+        "type": "object",
+        "required": [
+          "trace_id",
+          "feedback_type"
+        ],
+        "title": "AgentConversationSpanFeedback",
+        "description": "Tags and ratings applied to a conversation's turn (or the conversation).\n\nPositioned client-side by matching `trace_id` (turn) against the spans;\n`trace_id` is None for conversation-level feedback."
+      },
+      "AgentConversationSpanRating": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "confidence": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Confidence"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "value"
+        ],
+        "title": "AgentConversationSpanRating",
+        "description": "One numeric rating (a scorer score) applied to a turn or conversation."
+      },
+      "AgentConversationSpans": {
+        "properties": {
+          "conversation_id": {
+            "type": "string",
+            "title": "Conversation Id"
+          },
+          "spans": {
+            "items": {
+              "$ref": "#/components/schemas/AgentConversationSpan"
+            },
+            "type": "array",
+            "title": "Spans"
+          },
+          "spans_feedback": {
+            "items": {
+              "$ref": "#/components/schemas/AgentConversationSpanFeedback"
+            },
+            "type": "array",
+            "title": "Spans Feedback"
+          }
+        },
+        "type": "object",
+        "required": [
+          "conversation_id"
+        ],
+        "title": "AgentConversationSpans",
+        "description": "One conversation's span sequence and its feedback markers."
+      },
+      "AgentConversationSpansReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "conversation_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 10000,
+            "title": "Conversation Ids"
+          },
+          "started_after": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Started After"
+          },
+          "started_before": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Started Before"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id"
+        ],
+        "title": "AgentConversationSpansReq",
+        "description": "Request the span sequences for an explicit set of conversations.\n\nReads span scalar columns only (no message bodies) for the given\n`conversation_ids`. Powers the conversations-list spans minimap."
+      },
+      "AgentConversationSpansRes": {
+        "properties": {
+          "conversations": {
+            "items": {
+              "$ref": "#/components/schemas/AgentConversationSpans"
+            },
+            "type": "array",
+            "title": "Conversations"
+          }
+        },
+        "type": "object",
+        "title": "AgentConversationSpansRes",
+        "description": "Span sequences + feedback markers, one entry per requested conversation."
       },
       "AgentCustomAttrSchemaItem": {
         "properties": {
