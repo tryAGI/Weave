@@ -16999,6 +16999,31 @@
             "title": "Reasoning",
             "description": "Chain-of-thought reasoning support."
           },
+          "reasoning_options": {
+            "anyOf": [
+              {
+                "items": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ReasoningToggle"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ReasoningEffortOption"
+                    },
+                    {
+                      "$ref": "#/components/schemas/ReasoningBudgetTokens"
+                    }
+                  ]
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reasoning Options",
+            "description": "How reasoning is controlled. Set (possibly to an empty list, meaning always-on) when reasoning is supported; omitted otherwise."
+          },
           "tool_call": {
             "type": "boolean",
             "title": "Tool Call",
@@ -18578,6 +18603,97 @@
           "$expr"
         ],
         "title": "Query"
+      },
+      "ReasoningBudgetTokens": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "budget_tokens",
+            "title": "Type",
+            "default": "budget_tokens"
+          },
+          "min": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min",
+            "description": "Minimum reasoning budget."
+          },
+          "max": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max",
+            "description": "Maximum reasoning budget."
+          }
+        },
+        "type": "object",
+        "title": "ReasoningBudgetTokens",
+        "description": "Reasoning is controlled via a token budget."
+      },
+      "ReasoningEffortOption": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "effort",
+            "title": "Type",
+            "default": "effort"
+          },
+          "values": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "minimal",
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "default"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Values",
+            "description": "Accepted effort levels (null denotes an implicit default)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "values"
+        ],
+        "title": "ReasoningEffortOption",
+        "description": "Reasoning effort can be selected from a set of levels."
+      },
+      "ReasoningToggle": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "toggle",
+            "title": "Type",
+            "default": "toggle"
+          }
+        },
+        "type": "object",
+        "title": "ReasoningToggle",
+        "description": "Reasoning can be turned on or off."
       },
       "RefsReadBatchReq": {
         "properties": {
