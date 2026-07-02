@@ -23,6 +23,12 @@ namespace Weave
         public required string Name { get; set; }
 
         /// <summary>
+        /// Human-readable description of the model.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
         /// File attachment support.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attachment")]
@@ -146,6 +152,9 @@ namespace Weave
         /// <param name="openWeights">
         /// Public weights availability.
         /// </param>
+        /// <param name="description">
+        /// Human-readable description of the model.
+        /// </param>
         /// <param name="structuredOutput">
         /// Dedicated structured output feature.
         /// </param>
@@ -182,6 +191,7 @@ namespace Weave
             string releaseDate,
             string lastUpdated,
             bool openWeights,
+            string? description,
             bool? structuredOutput,
             bool? temperature,
             string? knowledge,
@@ -193,6 +203,7 @@ namespace Weave
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Description = description;
             this.Attachment = attachment;
             this.Reasoning = reasoning;
             this.ToolCall = toolCall;
