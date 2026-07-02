@@ -43,6 +43,12 @@ namespace Weave
         public required bool Reasoning { get; set; }
 
         /// <summary>
+        /// How reasoning is controlled. Set (possibly to an empty list, meaning always-on) when reasoning is supported; omitted otherwise.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoning_options")]
+        public global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>>? ReasoningOptions { get; set; }
+
+        /// <summary>
         /// Tool calling support.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tool_call")]
@@ -155,6 +161,9 @@ namespace Weave
         /// <param name="description">
         /// Human-readable description of the model.
         /// </param>
+        /// <param name="reasoningOptions">
+        /// How reasoning is controlled. Set (possibly to an empty list, meaning always-on) when reasoning is supported; omitted otherwise.
+        /// </param>
         /// <param name="structuredOutput">
         /// Dedicated structured output feature.
         /// </param>
@@ -192,6 +201,7 @@ namespace Weave
             string lastUpdated,
             bool openWeights,
             string? description,
+            global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>>? reasoningOptions,
             bool? structuredOutput,
             bool? temperature,
             string? knowledge,
@@ -206,6 +216,7 @@ namespace Weave
             this.Description = description;
             this.Attachment = attachment;
             this.Reasoning = reasoning;
+            this.ReasoningOptions = reasoningOptions;
             this.ToolCall = toolCall;
             this.StructuredOutput = structuredOutput;
             this.Temperature = temperature;
