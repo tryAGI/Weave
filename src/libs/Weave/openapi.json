@@ -16977,6 +16977,18 @@
             "title": "Name",
             "description": "Display name."
           },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description",
+            "description": "Human-readable description of the model."
+          },
           "attachment": {
             "type": "boolean",
             "title": "Attachment",
