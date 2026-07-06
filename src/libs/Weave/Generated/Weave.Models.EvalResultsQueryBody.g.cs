@@ -69,6 +69,13 @@ namespace Weave
         public bool? IncludePredictAndScoreChildren { get; set; }
 
         /// <summary>
+        /// When true, enrich the predict-and-score child calls with cost so the summary can report predict-only `predict_total_cost`. Opt-in: other callers skip the cost computation.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_costs")]
+        public bool? IncludeCosts { get; set; }
+
+        /// <summary>
         /// Sort specification for result rows. Supported field prefixes: scores.&lt;name&gt;, inputs.&lt;path&gt;, outputs.&lt;path&gt;. When null, rows are sorted by row_digest ASC.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sort_by")]
@@ -143,6 +150,10 @@ namespace Weave
         /// When true (default), fetch child calls (predict/score) of each predict_and_score call to populate predict_call_id, scorer_call_ids, and more precise latency/token data. When false, these fields are derived from the predict_and_score call itself (predict_call_id and scorer_call_ids will be null/empty).<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="includeCosts">
+        /// When true, enrich the predict-and-score child calls with cost so the summary can report predict-only `predict_total_cost`. Opt-in: other callers skip the cost computation.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="sortBy">
         /// Sort specification for result rows. Supported field prefixes: scores.&lt;name&gt;, inputs.&lt;path&gt;, outputs.&lt;path&gt;. When null, rows are sorted by row_digest ASC.
         /// </param>
@@ -173,6 +184,7 @@ namespace Weave
             bool? includeSummary,
             bool? summaryRequireIntersection,
             bool? includePredictAndScoreChildren,
+            bool? includeCosts,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsSortBy>? sortBy,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsFilter>? filters,
             global::Weave.EvalResultsQueryBodyFilterLogicOperator? filterLogicOperator,
@@ -188,6 +200,7 @@ namespace Weave
             this.IncludeSummary = includeSummary;
             this.SummaryRequireIntersection = summaryRequireIntersection;
             this.IncludePredictAndScoreChildren = includePredictAndScoreChildren;
+            this.IncludeCosts = includeCosts;
             this.SortBy = sortBy;
             this.Filters = filters;
             this.FilterLogicOperator = filterLogicOperator;

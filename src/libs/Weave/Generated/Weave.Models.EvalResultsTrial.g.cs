@@ -48,6 +48,12 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_cost")]
+        public double? TotalCost { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scorer_call_ids")]
         public global::System.Collections.Generic.Dictionary<string, string>? ScorerCallIds { get; set; }
 
@@ -72,6 +78,7 @@ namespace Weave
         /// <param name="scores"></param>
         /// <param name="modelLatencySeconds"></param>
         /// <param name="totalTokens"></param>
+        /// <param name="totalCost"></param>
         /// <param name="scorerCallIds"></param>
         /// <param name="genaiSpanRef"></param>
 #if NET7_0_OR_GREATER
@@ -84,6 +91,7 @@ namespace Weave
             object? scores,
             double? modelLatencySeconds,
             int? totalTokens,
+            double? totalCost,
             global::System.Collections.Generic.Dictionary<string, string>? scorerCallIds,
             global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? genaiSpanRef)
         {
@@ -93,6 +101,7 @@ namespace Weave
             this.Scores = scores;
             this.ModelLatencySeconds = modelLatencySeconds;
             this.TotalTokens = totalTokens;
+            this.TotalCost = totalCost;
             this.ScorerCallIds = scorerCallIds;
             this.GenaiSpanRef = genaiSpanRef;
         }
