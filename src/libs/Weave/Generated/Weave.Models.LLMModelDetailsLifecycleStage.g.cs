@@ -11,6 +11,10 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        Deprecated,
+        /// <summary>
+        /// 
+        /// </summary>
         Experimental,
         /// <summary>
         /// 
@@ -34,6 +38,7 @@ namespace Weave
         {
             return value switch
             {
+                LLMModelDetailsLifecycleStage.Deprecated => "deprecated",
                 LLMModelDetailsLifecycleStage.Experimental => "experimental",
                 LLMModelDetailsLifecycleStage.GeneralAvailability => "general-availability",
                 LLMModelDetailsLifecycleStage.Retired => "retired",
@@ -47,6 +52,7 @@ namespace Weave
         {
             return value switch
             {
+                "deprecated" => LLMModelDetailsLifecycleStage.Deprecated,
                 "experimental" => LLMModelDetailsLifecycleStage.Experimental,
                 "general-availability" => LLMModelDetailsLifecycleStage.GeneralAvailability,
                 "retired" => LLMModelDetailsLifecycleStage.Retired,

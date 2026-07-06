@@ -77,6 +77,10 @@ namespace Weave
         /// When true (default), fetch child calls (predict/score) of each predict_and_score call to populate predict_call_id, scorer_call_ids, and more precise latency/token data. When false, these fields are derived from the predict_and_score call itself (predict_call_id and scorer_call_ids will be null/empty).<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="includeCosts">
+        /// When true, enrich the predict-and-score child calls with cost so the summary can report predict-only `predict_total_cost`. Opt-in: other callers skip the cost computation.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="sortBy">
         /// Sort specification for result rows. Supported field prefixes: scores.&lt;name&gt;, inputs.&lt;path&gt;, outputs.&lt;path&gt;. When null, rows are sorted by row_digest ASC.
         /// </param>
@@ -109,6 +113,7 @@ namespace Weave
             bool? includeSummary = default,
             bool? summaryRequireIntersection = default,
             bool? includePredictAndScoreChildren = default,
+            bool? includeCosts = default,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsSortBy>? sortBy = default,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsFilter>? filters = default,
             global::Weave.EvalResultsQueryBodyFilterLogicOperator? filterLogicOperator = default,

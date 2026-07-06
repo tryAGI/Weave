@@ -34,6 +34,12 @@ namespace Weave
         public int? PredictTotalTokens { get; set; }
 
         /// <summary>
+        /// Sum of per-trial predict-only cost for this evaluation (the model's predict() cost only, excluding LLM-as-a-judge scorer cost); None when no trial reports cost.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("predict_total_cost")]
+        public double? PredictTotalCost { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluation_ref")]
@@ -80,6 +86,9 @@ namespace Weave
         /// <param name="predictTotalTokens">
         /// Sum of per-trial predict-only token usage for this evaluation (the model's predict() tokens only, excluding LLM-as-a-judge scorer usage); None when no trial reports usage.
         /// </param>
+        /// <param name="predictTotalCost">
+        /// Sum of per-trial predict-only cost for this evaluation (the model's predict() cost only, excluding LLM-as-a-judge scorer cost); None when no trial reports cost.
+        /// </param>
         /// <param name="evaluationRef"></param>
         /// <param name="modelRef"></param>
         /// <param name="displayName"></param>
@@ -93,6 +102,7 @@ namespace Weave
             int? trialCount,
             global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats>? scorerStats,
             int? predictTotalTokens,
+            double? predictTotalCost,
             string? evaluationRef,
             string? modelRef,
             string? displayName,
@@ -103,6 +113,7 @@ namespace Weave
             this.TrialCount = trialCount;
             this.ScorerStats = scorerStats;
             this.PredictTotalTokens = predictTotalTokens;
+            this.PredictTotalCost = predictTotalCost;
             this.EvaluationRef = evaluationRef;
             this.ModelRef = modelRef;
             this.DisplayName = displayName;
