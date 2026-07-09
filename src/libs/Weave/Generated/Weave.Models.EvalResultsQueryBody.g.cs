@@ -69,7 +69,7 @@ namespace Weave
         public bool? IncludePredictAndScoreChildren { get; set; }
 
         /// <summary>
-        /// When true, enrich the predict-and-score child calls with cost so the summary can report predict-only `predict_total_cost`. Opt-in: other callers skip the cost computation.<br/>
+        /// When true, price each trial's predict call so rows and summary report predict-only cost (`total_cost` / `predict_total_cost`); scorer costs are excluded. Opt-in: other callers skip the cost computation.<br/>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("include_costs")]
@@ -151,7 +151,7 @@ namespace Weave
         /// Default Value: true
         /// </param>
         /// <param name="includeCosts">
-        /// When true, enrich the predict-and-score child calls with cost so the summary can report predict-only `predict_total_cost`. Opt-in: other callers skip the cost computation.<br/>
+        /// When true, price each trial's predict call so rows and summary report predict-only cost (`total_cost` / `predict_total_cost`); scorer costs are excluded. Opt-in: other callers skip the cost computation.<br/>
         /// Default Value: false
         /// </param>
         /// <param name="sortBy">
