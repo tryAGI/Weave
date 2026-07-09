@@ -988,851 +988,859 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsEvaluationSummary? Type240 { get; set; }
+        public global::Weave.DeletedObjVersion? Type240 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats>? Type241 { get; set; }
+        public global::Weave.EvalResultsEvaluationSummary? Type241 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsScorerStats? Type242 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats>? Type242 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsFilter? Type243 { get; set; }
+        public global::Weave.EvalResultsScorerStats? Type243 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsQueryBody? Type244 { get; set; }
+        public global::Weave.EvalResultsFilter? Type244 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsSortBy>? Type245 { get; set; }
+        public global::Weave.EvalResultsQueryBody? Type245 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsSortBy? Type246 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.EvalResultsSortBy>? Type246 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsFilter>? Type247 { get; set; }
+        public global::Weave.EvalResultsSortBy? Type247 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsQueryBodyFilterLogicOperator? Type248 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.EvalResultsFilter>? Type248 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsQueryRes? Type249 { get; set; }
+        public global::Weave.EvalResultsQueryBodyFilterLogicOperator? Type249 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsRow>? Type250 { get; set; }
+        public global::Weave.EvalResultsQueryRes? Type250 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsRow? Type251 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.EvalResultsRow>? Type251 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsSummaryRes? Type252 { get; set; }
+        public global::Weave.EvalResultsRow? Type252 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsRowEvaluation>? Type253 { get; set; }
+        public global::Weave.EvalResultsSummaryRes? Type253 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsRowEvaluation? Type254 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.EvalResultsRowEvaluation>? Type254 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsTrial>? Type255 { get; set; }
+        public global::Weave.EvalResultsRowEvaluation? Type255 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsTrial? Type256 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.EvalResultsTrial>? Type256 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsScorerStatsValueType2? Type257 { get; set; }
+        public global::Weave.EvalResultsTrial? Type257 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsSortByDirection? Type258 { get; set; }
+        public global::Weave.EvalResultsScorerStatsValueType2? Type258 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvalResultsSortByMode? Type259 { get; set; }
+        public global::Weave.EvalResultsSortByDirection? Type259 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary>? Type260 { get; set; }
+        public global::Weave.EvalResultsSortByMode? Type260 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? Type261 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary>? Type261 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.GenAISpanRef? Type262 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? Type262 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluateModelReq? Type263 { get; set; }
+        public global::Weave.GenAISpanRef? Type263 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluateModelRes? Type264 { get; set; }
+        public global::Weave.EvaluateModelReq? Type264 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationCreateBody? Type265 { get; set; }
+        public global::Weave.EvaluateModelRes? Type265 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationCreateRes? Type266 { get; set; }
+        public global::Weave.EvaluationCreateBody? Type266 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationDeleteRes? Type267 { get; set; }
+        public global::Weave.EvaluationCreateRes? Type267 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationReadRes? Type268 { get; set; }
+        public global::Weave.EvaluationDeleteRes? Type268 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationRunCreateBody? Type269 { get; set; }
+        public global::Weave.EvaluationReadRes? Type269 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationRunCreateRes? Type270 { get; set; }
+        public global::Weave.EvaluationRunCreateBody? Type270 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationRunDeleteRes? Type271 { get; set; }
+        public global::Weave.EvaluationRunCreateRes? Type271 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationRunFinishBody? Type272 { get; set; }
+        public global::Weave.EvaluationRunDeleteRes? Type272 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationRunFinishRes? Type273 { get; set; }
+        public global::Weave.EvaluationRunFinishBody? Type273 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationRunReadRes? Type274 { get; set; }
+        public global::Weave.EvaluationRunFinishRes? Type274 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationStatusComplete? Type275 { get; set; }
+        public global::Weave.EvaluationRunReadRes? Type275 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationStatusFailed? Type276 { get; set; }
+        public global::Weave.EvaluationStatusComplete? Type276 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationStatusNotFound? Type277 { get; set; }
+        public global::Weave.EvaluationStatusFailed? Type277 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationStatusReq? Type278 { get; set; }
+        public global::Weave.EvaluationStatusNotFound? Type278 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationStatusRes? Type279 { get; set; }
+        public global::Weave.EvaluationStatusReq? Type279 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.AnyOf<global::Weave.EvaluationStatusNotFound, global::Weave.EvaluationStatusRunning, global::Weave.EvaluationStatusFailed, global::Weave.EvaluationStatusComplete>? Type280 { get; set; }
+        public global::Weave.EvaluationStatusRes? Type280 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.EvaluationStatusRunning? Type281 { get; set; }
+        public global::Weave.AnyOf<global::Weave.EvaluationStatusNotFound, global::Weave.EvaluationStatusRunning, global::Weave.EvaluationStatusFailed, global::Weave.EvaluationStatusComplete>? Type281 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackAggregateBucket? Type282 { get; set; }
+        public global::Weave.EvaluationStatusRunning? Type282 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackAggregateReq? Type283 { get; set; }
+        public global::Weave.FeedbackAggregateBucket? Type283 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateReqSpanType>? Type284 { get; set; }
+        public global::Weave.FeedbackAggregateReq? Type284 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackAggregateReqSpanType? Type285 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateReqSpanType>? Type285 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateReqGroupByItem>? Type286 { get; set; }
+        public global::Weave.FeedbackAggregateReqSpanType? Type286 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackAggregateReqGroupByItem? Type287 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateReqGroupByItem>? Type287 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackAggregateRes? Type288 { get; set; }
+        public global::Weave.FeedbackAggregateReqGroupByItem? Type288 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateBucket>? Type289 { get; set; }
+        public global::Weave.FeedbackAggregateRes? Type289 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackCreateBatchReq? Type290 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateBucket>? Type290 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.FeedbackCreateReq>? Type291 { get; set; }
+        public global::Weave.FeedbackCreateBatchReq? Type291 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackCreateReq? Type292 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.FeedbackCreateReq>? Type292 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackCreateBatchRes? Type293 { get; set; }
+        public global::Weave.FeedbackCreateReq? Type293 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.FeedbackCreateRes>? Type294 { get; set; }
+        public global::Weave.FeedbackCreateBatchRes? Type294 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackCreateRes? Type295 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.FeedbackCreateRes>? Type295 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackMetricSpec? Type296 { get; set; }
+        public global::Weave.FeedbackCreateRes? Type296 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackMetricSpecValueType? Type297 { get; set; }
+        public global::Weave.FeedbackMetricSpec? Type297 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackPayloadPath? Type298 { get; set; }
+        public global::Weave.FeedbackMetricSpecValueType? Type298 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackPayloadPathValueType? Type299 { get; set; }
+        public global::Weave.FeedbackPayloadPath? Type299 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackPayloadSchemaReq? Type300 { get; set; }
+        public global::Weave.FeedbackPayloadPathValueType? Type300 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackPayloadSchemaRes? Type301 { get; set; }
+        public global::Weave.FeedbackPayloadSchemaReq? Type301 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.FeedbackPayloadPath>? Type302 { get; set; }
+        public global::Weave.FeedbackPayloadSchemaRes? Type302 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackPurgeReq? Type303 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.FeedbackPayloadPath>? Type303 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackPurgeRes? Type304 { get; set; }
+        public global::Weave.FeedbackPurgeReq? Type304 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackQueryReq? Type305 { get; set; }
+        public global::Weave.FeedbackPurgeRes? Type305 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackQueryRes? Type306 { get; set; }
+        public global::Weave.FeedbackQueryReq? Type306 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackReplaceReq? Type307 { get; set; }
+        public global::Weave.FeedbackQueryRes? Type307 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackReplaceRes? Type308 { get; set; }
+        public global::Weave.FeedbackReplaceReq? Type308 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackStatsReq? Type309 { get; set; }
+        public global::Weave.FeedbackReplaceRes? Type309 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.FeedbackMetricSpec>? Type310 { get; set; }
+        public global::Weave.FeedbackStatsReq? Type310 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FeedbackStatsRes? Type311 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.FeedbackMetricSpec>? Type311 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, object>? Type312 { get; set; }
+        public global::Weave.FeedbackStatsRes? Type312 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FileContentReadReq? Type313 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, object>? Type313 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FileCreateRes? Type314 { get; set; }
+        public global::Weave.FileContentReadReq? Type314 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FilesStatsReq? Type315 { get; set; }
+        public global::Weave.FileCreateRes? Type315 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.FilesStatsRes? Type316 { get; set; }
+        public global::Weave.FilesStatsReq? Type316 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.Geolocation? Type317 { get; set; }
+        public global::Weave.FilesStatsRes? Type317 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.GeolocationRes? Type318 { get; set; }
+        public global::Weave.Geolocation? Type318 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.HTTPValidationError? Type319 { get; set; }
+        public global::Weave.GeolocationRes? Type319 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.ValidationError>? Type320 { get; set; }
+        public global::Weave.HTTPValidationError? Type320 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ValidationError? Type321 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.ValidationError>? Type321 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ImageGenerationCreateReq? Type322 { get; set; }
+        public global::Weave.ValidationError? Type322 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ImageGenerationRequestInputs? Type323 { get; set; }
+        public global::Weave.ImageGenerationCreateReq? Type323 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ImageGenerationCreateRes? Type324 { get; set; }
+        public global::Weave.ImageGenerationRequestInputs? Type324 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.Interleaved? Type325 { get; set; }
+        public global::Weave.ImageGenerationCreateRes? Type325 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.InterleavedField? Type326 { get; set; }
+        public global::Weave.Interleaved? Type326 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.LLMModelDetailsLifecycleStage? Type327 { get; set; }
+        public global::Weave.InterleavedField? Type327 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsAvailableInItem>? Type328 { get; set; }
+        public global::Weave.LLMModelDetailsLifecycleStage? Type328 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.LLMModelDetailsAvailableInItem? Type329 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsAvailableInItem>? Type329 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.LLMModelDetailsQuantization? Type330 { get; set; }
+        public global::Weave.LLMModelDetailsAvailableInItem? Type330 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.LLMUsageSchema? Type331 { get; set; }
+        public global::Weave.LLMModelDetailsQuantization? Type331 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.Limit? Type332 { get; set; }
+        public global::Weave.LLMUsageSchema? Type332 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.IList<global::Weave.LiteralOperation>, object>? Type333 { get; set; }
+        public global::Weave.Limit? Type333 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>? Type334 { get; set; }
+        public global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.IList<global::Weave.LiteralOperation>, object>? Type334 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.LiteralOperation>? Type335 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>? Type335 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.Modalities? Type336 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.LiteralOperation>? Type336 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ModelCreateBody? Type337 { get; set; }
+        public global::Weave.Modalities? Type337 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ModelCreateRes? Type338 { get; set; }
+        public global::Weave.ModelCreateBody? Type338 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ModelDeleteRes? Type339 { get; set; }
+        public global::Weave.ModelCreateRes? Type339 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ModelReadRes? Type340 { get; set; }
+        public global::Weave.ModelDeleteRes? Type340 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ModelsDevModel? Type341 { get; set; }
+        public global::Weave.ModelReadRes? Type341 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>>? Type342 { get; set; }
+        public global::Weave.ModelsDevModel? Type342 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>? Type343 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>>? Type343 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ReasoningToggle? Type344 { get; set; }
+        public global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>? Type344 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ReasoningEffortOption? Type345 { get; set; }
+        public global::Weave.ReasoningToggle? Type345 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ReasoningBudgetTokens? Type346 { get; set; }
+        public global::Weave.ReasoningEffortOption? Type346 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ModelsDevModelStatus2? Type347 { get; set; }
+        public global::Weave.ReasoningBudgetTokens? Type347 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>? Type348 { get; set; }
+        public global::Weave.ModelsDevModelStatus2? Type348 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ModelsDevProvider? Type349 { get; set; }
+        public global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>? Type349 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Weave.ModelsDevModel>? Type350 { get; set; }
+        public global::Weave.ModelsDevProvider? Type350 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.NvidiaHardwareOption? Type351 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Weave.ModelsDevModel>? Type351 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.NvidiaServerlessPricing? Type352 { get; set; }
+        public global::Weave.NvidiaHardwareOption? Type352 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.NvidiaHardwareRes? Type353 { get; set; }
+        public global::Weave.NvidiaServerlessPricing? Type353 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.NvidiaHardwareOption>? Type354 { get; set; }
+        public global::Weave.NvidiaHardwareRes? Type354 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjAddTagsRes? Type355 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.NvidiaHardwareOption>? Type355 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjCreateReq? Type356 { get; set; }
+        public global::Weave.ObjAddTagsRes? Type356 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjSchemaForInsert? Type357 { get; set; }
+        public global::Weave.ObjCreateReq? Type357 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjCreateRes? Type358 { get; set; }
+        public global::Weave.ObjSchemaForInsert? Type358 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjDeleteReq? Type359 { get; set; }
+        public global::Weave.ObjCreateRes? Type359 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjDeleteRes? Type360 { get; set; }
+        public global::Weave.ObjDeleteReq? Type360 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjQueryReq? Type361 { get; set; }
+        public global::Weave.ObjDeleteRes? Type361 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjectVersionFilter? Type362 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.DeletedObjVersion>? Type362 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjQueryRes? Type363 { get; set; }
+        public global::Weave.ObjQueryReq? Type363 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.ObjSchema>? Type364 { get; set; }
+        public global::Weave.ObjectVersionFilter? Type364 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjSchema? Type365 { get; set; }
+        public global::Weave.ObjQueryRes? Type365 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjReadReq? Type366 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.ObjSchema>? Type366 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjReadRes? Type367 { get; set; }
+        public global::Weave.ObjSchema? Type367 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjRemoveAliasesBody? Type368 { get; set; }
+        public global::Weave.ObjReadReq? Type368 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjRemoveAliasesRes? Type369 { get; set; }
+        public global::Weave.ObjReadRes? Type369 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjRemoveTagsRes? Type370 { get; set; }
+        public global::Weave.ObjRemoveAliasesBody? Type370 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjSetAliasesBody? Type371 { get; set; }
+        public global::Weave.ObjRemoveAliasesRes? Type371 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjSetAliasesRes? Type372 { get; set; }
+        public global::Weave.ObjRemoveTagsRes? Type372 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ObjTagsBody? Type373 { get; set; }
+        public global::Weave.ObjSetAliasesBody? Type373 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.OpCreateBody? Type374 { get; set; }
+        public global::Weave.ObjSetAliasesRes? Type374 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.OpCreateRes? Type375 { get; set; }
+        public global::Weave.ObjTagsBody? Type375 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.OpDeleteRes? Type376 { get; set; }
+        public global::Weave.OpCreateBody? Type376 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.OpReadRes? Type377 { get; set; }
+        public global::Weave.OpCreateRes? Type377 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.PredictionCreateBody? Type378 { get; set; }
+        public global::Weave.OpDeleteRes? Type378 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.PredictionCreateRes? Type379 { get; set; }
+        public global::Weave.OpReadRes? Type379 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.PredictionDeleteRes? Type380 { get; set; }
+        public global::Weave.PredictionCreateBody? Type380 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.PredictionFinishRes? Type381 { get; set; }
+        public global::Weave.PredictionCreateRes? Type381 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.PredictionReadRes? Type382 { get; set; }
+        public global::Weave.PredictionDeleteRes? Type382 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.Pricing? Type383 { get; set; }
+        public global::Weave.PredictionFinishRes? Type383 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ProjectsInfoReq? Type384 { get; set; }
+        public global::Weave.PredictionReadRes? Type384 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ProjectsInfoRes? Type385 { get; set; }
+        public global::Weave.Pricing? Type385 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue2>? Type386 { get; set; }
+        public global::Weave.ProjectsInfoReq? Type386 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ReasoningEffortOptionValue2? Type387 { get; set; }
+        public global::Weave.ProjectsInfoRes? Type387 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.RefsReadBatchReq? Type388 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue2>? Type388 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.RefsReadBatchRes? Type389 { get; set; }
+        public global::Weave.ReasoningEffortOptionValue2? Type389 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.RescoreReq? Type390 { get; set; }
+        public global::Weave.RefsReadBatchReq? Type390 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.RescoreRes? Type391 { get; set; }
+        public global::Weave.RefsReadBatchRes? Type391 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.RouterOpenRouterModel? Type392 { get; set; }
+        public global::Weave.RescoreReq? Type392 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.RouterOpenRouterModelQuantization? Type393 { get; set; }
+        public global::Weave.RescoreRes? Type393 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.RouterOpenRouterModelSupportedSamplingParameter>? Type394 { get; set; }
+        public global::Weave.RouterOpenRouterModel? Type394 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.RouterOpenRouterModelSupportedSamplingParameter? Type395 { get; set; }
+        public global::Weave.RouterOpenRouterModelQuantization? Type395 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.RouterOpenRouterModelSupportedFeature>? Type396 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.RouterOpenRouterModelSupportedSamplingParameter>? Type396 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.RouterOpenRouterModelSupportedFeature? Type397 { get; set; }
+        public global::Weave.RouterOpenRouterModelSupportedSamplingParameter? Type397 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.Datacenter>? Type398 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.RouterOpenRouterModelSupportedFeature>? Type398 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.RouterOpenRouterModelsRes? Type399 { get; set; }
+        public global::Weave.RouterOpenRouterModelSupportedFeature? Type399 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.RouterOpenRouterModel>? Type400 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.Datacenter>? Type400 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ScoreCreateBody? Type401 { get; set; }
+        public global::Weave.RouterOpenRouterModelsRes? Type401 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ScoreCreateRes? Type402 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.RouterOpenRouterModel>? Type402 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ScoreDeleteRes? Type403 { get; set; }
+        public global::Weave.ScoreCreateBody? Type403 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ScoreReadRes? Type404 { get; set; }
+        public global::Weave.ScoreCreateRes? Type404 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ScorerCreateBody? Type405 { get; set; }
+        public global::Weave.ScoreDeleteRes? Type405 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ScorerCreateRes? Type406 { get; set; }
+        public global::Weave.ScoreReadRes? Type406 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ScorerDeleteRes? Type407 { get; set; }
+        public global::Weave.ScorerCreateBody? Type407 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ScorerReadRes? Type408 { get; set; }
+        public global::Weave.ScorerCreateRes? Type408 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ServerInfoRes? Type409 { get; set; }
+        public global::Weave.ScorerDeleteRes? Type409 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.SortByDirection? Type410 { get; set; }
+        public global::Weave.ScorerReadRes? Type410 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Weave.LLMUsageSchema>? Type411 { get; set; }
+        public global::Weave.ServerInfoRes? Type411 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableAppendSpec? Type412 { get; set; }
+        public global::Weave.SortByDirection? Type412 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableAppendSpecPayload? Type413 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Weave.LLMUsageSchema>? Type413 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableCreateFromDigestsReq? Type414 { get; set; }
+        public global::Weave.TableAppendSpec? Type414 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableCreateFromDigestsRes? Type415 { get; set; }
+        public global::Weave.TableAppendSpecPayload? Type415 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableCreateReq? Type416 { get; set; }
+        public global::Weave.TableCreateFromDigestsReq? Type416 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableSchemaForInsert? Type417 { get; set; }
+        public global::Weave.TableCreateFromDigestsRes? Type417 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableCreateRes? Type418 { get; set; }
+        public global::Weave.TableCreateReq? Type418 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableInsertSpec? Type419 { get; set; }
+        public global::Weave.TableSchemaForInsert? Type419 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableInsertSpecPayload? Type420 { get; set; }
+        public global::Weave.TableCreateRes? Type420 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TablePopSpec? Type421 { get; set; }
+        public global::Weave.TableInsertSpec? Type421 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TablePopSpecPayload? Type422 { get; set; }
+        public global::Weave.TableInsertSpecPayload? Type422 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableQueryReq? Type423 { get; set; }
+        public global::Weave.TablePopSpec? Type423 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableRowFilter? Type424 { get; set; }
+        public global::Weave.TablePopSpecPayload? Type424 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableQueryRes? Type425 { get; set; }
+        public global::Weave.TableQueryReq? Type425 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.TableRowSchema>? Type426 { get; set; }
+        public global::Weave.TableRowFilter? Type426 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableRowSchema? Type427 { get; set; }
+        public global::Weave.TableQueryRes? Type427 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableQueryStatsBatchReq? Type428 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.TableRowSchema>? Type428 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableQueryStatsBatchRes? Type429 { get; set; }
+        public global::Weave.TableRowSchema? Type429 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.TableStatsRow>? Type430 { get; set; }
+        public global::Weave.TableQueryStatsBatchReq? Type430 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableStatsRow? Type431 { get; set; }
+        public global::Weave.TableQueryStatsBatchRes? Type431 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableQueryStatsReq? Type432 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.TableStatsRow>? Type432 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableQueryStatsRes? Type433 { get; set; }
+        public global::Weave.TableStatsRow? Type433 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableUpdateReq? Type434 { get; set; }
+        public global::Weave.TableQueryStatsReq? Type434 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>>? Type435 { get; set; }
+        public global::Weave.TableQueryStatsRes? Type435 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.AnyOf<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>? Type436 { get; set; }
+        public global::Weave.TableUpdateReq? Type436 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TableUpdateRes? Type437 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AnyOf<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>>? Type437 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TagsListRes? Type438 { get; set; }
+        public global::Weave.AnyOf<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>? Type438 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ThreadsQueryFilter? Type439 { get; set; }
+        public global::Weave.TableUpdateRes? Type439 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ThreadsQueryReq? Type440 { get; set; }
+        public global::Weave.TagsListRes? Type440 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TraceStatus? Type441 { get; set; }
+        public global::Weave.ThreadsQueryFilter? Type441 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TraceUsageReq? Type442 { get; set; }
+        public global::Weave.ThreadsQueryReq? Type442 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TraceUsageRes? Type443 { get; set; }
+        public global::Weave.TraceStatus? Type443 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.UsageMetricSpecMetric? Type444 { get; set; }
+        public global::Weave.TraceUsageReq? Type444 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AnyOf<string, int?>>? Type445 { get; set; }
+        public global::Weave.TraceUsageRes? Type445 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.AnyOf<string, int?>? Type446 { get; set; }
+        public global::Weave.UsageMetricSpecMetric? Type446 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Weave.ModelsDevProvider>? Type447 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AnyOf<string, int?>>? Type447 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.ProjectsInfoRes>? Type448 { get; set; }
+        public global::Weave.AnyOf<string, int?>? Type448 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.EvaluationRunReadRes>? Type449 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Weave.ModelsDevProvider>? Type449 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.PredictionReadRes>? Type450 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.ProjectsInfoRes>? Type450 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.ScoreReadRes>? Type451 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.EvaluationRunReadRes>? Type451 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Weave.PredictionReadRes>? Type452 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Weave.ScoreReadRes>? Type453 { get; set; }
 
         /// <summary>
         /// 
@@ -2089,58 +2097,62 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.ObjSchema>? ListType63 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.DeletedObjVersion>? ListType63 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.ReasoningEffortOptionValue2>? ListType64 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.ObjSchema>? ListType64 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModelSupportedSamplingParameter>? ListType65 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.ReasoningEffortOptionValue2>? ListType65 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModelSupportedFeature>? ListType66 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModelSupportedSamplingParameter>? ListType66 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.Datacenter>? ListType67 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModelSupportedFeature>? ListType67 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModel>? ListType68 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.Datacenter>? ListType68 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.TableRowSchema>? ListType69 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModel>? ListType69 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.TableStatsRow>? ListType70 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.TableRowSchema>? ListType70 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>>? ListType71 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.TableStatsRow>? ListType71 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AnyOf<string, int?>>? ListType72 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.TableAppendSpec, global::Weave.TablePopSpec, global::Weave.TableInsertSpec>>? ListType72 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.ProjectsInfoRes>? ListType73 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AnyOf<string, int?>>? ListType73 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.EvaluationRunReadRes>? ListType74 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.ProjectsInfoRes>? ListType74 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.PredictionReadRes>? ListType75 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.EvaluationRunReadRes>? ListType75 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.ScoreReadRes>? ListType76 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.PredictionReadRes>? ListType76 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Weave.ScoreReadRes>? ListType77 { get; set; }
     }
 }
