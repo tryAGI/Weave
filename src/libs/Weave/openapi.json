@@ -12790,6 +12790,41 @@
         ],
         "title": "DatasetReadRes"
       },
+      "DeletedObjVersion": {
+        "properties": {
+          "digest": {
+            "type": "string",
+            "title": "Digest"
+          },
+          "base_object_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Base Object Class"
+          },
+          "leaf_object_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Leaf Object Class"
+          }
+        },
+        "type": "object",
+        "required": [
+          "digest"
+        ],
+        "title": "DeletedObjVersion"
+      },
       "EndedCallSchemaForInsert": {
         "properties": {
           "project_id": {
@@ -17493,6 +17528,21 @@
           "num_deleted": {
             "type": "integer",
             "title": "Num Deleted"
+          },
+          "deleted_versions": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DeletedObjVersion"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Deleted Versions",
+            "description": "Metadata for each deleted object version, with digest aliases resolved to content digests. None when the backing server does not report it."
           }
         },
         "type": "object",
