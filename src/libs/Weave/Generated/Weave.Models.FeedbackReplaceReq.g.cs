@@ -134,6 +134,18 @@ namespace Weave
         public string? SpanStatusCode { get; set; }
 
         /// <summary>
+        /// Conversation the feedback belongs to (from spans.conversation_id)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("span_conversation_id")]
+        public string? SpanConversationId { get; set; }
+
+        /// <summary>
+        /// Turn the feedback belongs to (from spans.trace_id)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("span_trace_id")]
+        public string? SpanTraceId { get; set; }
+
+        /// <summary>
         /// Do not set directly. Server will automatically populate this field.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("wb_user_id")]
@@ -199,6 +211,12 @@ namespace Weave
         /// Status of the scored turn (from spans.status_code)<br/>
         /// Default Value: UNSET
         /// </param>
+        /// <param name="spanConversationId">
+        /// Conversation the feedback belongs to (from spans.conversation_id)
+        /// </param>
+        /// <param name="spanTraceId">
+        /// Turn the feedback belongs to (from spans.trace_id)
+        /// </param>
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
@@ -227,6 +245,8 @@ namespace Weave
             string? spanAgentName,
             string? spanAgentVersion,
             string? spanStatusCode,
+            string? spanConversationId,
+            string? spanTraceId,
             string? wbUserId)
         {
             this.Id = id;
@@ -249,6 +269,8 @@ namespace Weave
             this.SpanAgentName = spanAgentName;
             this.SpanAgentVersion = spanAgentVersion;
             this.SpanStatusCode = spanStatusCode;
+            this.SpanConversationId = spanConversationId;
+            this.SpanTraceId = spanTraceId;
             this.WbUserId = wbUserId;
             this.FeedbackId = feedbackId ?? throw new global::System.ArgumentNullException(nameof(feedbackId));
         }

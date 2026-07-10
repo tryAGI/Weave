@@ -7218,6 +7218,26 @@
         "title": "AgentSearchRes",
         "description": "Response from a full-text search across agent messages."
       },
+      "AgentSignalFilter": {
+        "properties": {
+          "tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Tags"
+          },
+          "ratings": {
+            "items": {
+              "$ref": "#/components/schemas/RatingCondition"
+            },
+            "type": "array",
+            "title": "Ratings"
+          }
+        },
+        "type": "object",
+        "title": "AgentSignalFilter"
+      },
       "AgentSortBy": {
         "properties": {
           "field": {
@@ -7911,6 +7931,83 @@
               }
             ],
             "title": "Agent Version"
+          },
+          "eval_run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Eval Run Id"
+          },
+          "eval_predict_and_score_call_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Eval Predict And Score Call Id"
+          },
+          "eval_kind": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Eval Kind"
+          },
+          "eval_row_digest": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Eval Row Digest"
+          },
+          "eval_example_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Eval Example Id"
+          },
+          "eval_trial_index": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Eval Trial Index"
+          },
+          "eval_evaluation_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Eval Evaluation Name"
           },
           "request_model": {
             "anyOf": [
@@ -9009,6 +9106,16 @@
               }
             ],
             "title": "Started Before"
+          },
+          "signal_filters": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AgentSignalFilter"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "type": "object",
@@ -14765,8 +14872,20 @@
             "description": "Status of the scored turn (from spans.status_code)",
             "default": "UNSET",
             "examples": [
-              "SUCCESS"
+              "OK"
             ]
+          },
+          "span_conversation_id": {
+            "type": "string",
+            "title": "Span Conversation Id",
+            "description": "Conversation the feedback belongs to (from spans.conversation_id)",
+            "default": ""
+          },
+          "span_trace_id": {
+            "type": "string",
+            "title": "Span Trace Id",
+            "description": "Turn the feedback belongs to (from spans.trace_id)",
+            "default": ""
           },
           "wb_user_id": {
             "anyOf": [
@@ -15342,8 +15461,20 @@
             "description": "Status of the scored turn (from spans.status_code)",
             "default": "UNSET",
             "examples": [
-              "SUCCESS"
+              "OK"
             ]
+          },
+          "span_conversation_id": {
+            "type": "string",
+            "title": "Span Conversation Id",
+            "description": "Conversation the feedback belongs to (from spans.conversation_id)",
+            "default": ""
+          },
+          "span_trace_id": {
+            "type": "string",
+            "title": "Span Trace Id",
+            "description": "Turn the feedback belongs to (from spans.trace_id)",
+            "default": ""
           },
           "wb_user_id": {
             "anyOf": [
@@ -18689,6 +18820,36 @@
           "$expr"
         ],
         "title": "Query"
+      },
+      "RatingCondition": {
+        "properties": {
+          "scorer_key": {
+            "type": "string",
+            "title": "Scorer Key"
+          },
+          "op": {
+            "type": "string",
+            "enum": [
+              "gte",
+              "gt",
+              "lte",
+              "lt",
+              "eq"
+            ],
+            "title": "Op"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "scorer_key",
+          "op",
+          "value"
+        ],
+        "title": "RatingCondition"
       },
       "ReasoningBudgetTokens": {
         "properties": {
