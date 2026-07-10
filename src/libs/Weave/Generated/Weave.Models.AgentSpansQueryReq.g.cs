@@ -97,6 +97,12 @@ namespace Weave
         public global::System.DateTime? StartedBefore { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("signal_filters")]
+        public global::Weave.AgentSignalFilter? SignalFilters { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -127,6 +133,7 @@ namespace Weave
         /// </param>
         /// <param name="startedAfter"></param>
         /// <param name="startedBefore"></param>
+        /// <param name="signalFilters"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -144,7 +151,8 @@ namespace Weave
             int? limit,
             int? offset,
             global::System.DateTime? startedAfter,
-            global::System.DateTime? startedBefore)
+            global::System.DateTime? startedBefore,
+            global::Weave.AgentSignalFilter? signalFilters)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Query = query;
@@ -160,6 +168,7 @@ namespace Weave
             this.Offset = offset;
             this.StartedAfter = startedAfter;
             this.StartedBefore = startedBefore;
+            this.SignalFilters = signalFilters;
         }
 
         /// <summary>

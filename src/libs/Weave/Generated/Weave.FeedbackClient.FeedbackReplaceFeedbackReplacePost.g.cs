@@ -514,6 +514,12 @@ namespace Weave
         /// Status of the scored turn (from spans.status_code)<br/>
         /// Default Value: UNSET
         /// </param>
+        /// <param name="spanConversationId">
+        /// Conversation the feedback belongs to (from spans.conversation_id)
+        /// </param>
+        /// <param name="spanTraceId">
+        /// Turn the feedback belongs to (from spans.trace_id)
+        /// </param>
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
@@ -543,6 +549,8 @@ namespace Weave
             string? spanAgentName = default,
             string? spanAgentVersion = default,
             string? spanStatusCode = default,
+            string? spanConversationId = default,
+            string? spanTraceId = default,
             string? wbUserId = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -569,6 +577,8 @@ namespace Weave
                 SpanAgentName = spanAgentName,
                 SpanAgentVersion = spanAgentVersion,
                 SpanStatusCode = spanStatusCode,
+                SpanConversationId = spanConversationId,
+                SpanTraceId = spanTraceId,
                 WbUserId = wbUserId,
                 FeedbackId = feedbackId,
             };

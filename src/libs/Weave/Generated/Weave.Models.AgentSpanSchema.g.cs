@@ -110,6 +110,48 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("eval_run_id")]
+        public string? EvalRunId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("eval_predict_and_score_call_id")]
+        public string? EvalPredictAndScoreCallId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("eval_kind")]
+        public string? EvalKind { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("eval_row_digest")]
+        public string? EvalRowDigest { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("eval_example_id")]
+        public string? EvalExampleId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("eval_trial_index")]
+        public int? EvalTrialIndex { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("eval_evaluation_name")]
+        public string? EvalEvaluationName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_model")]
         public string? RequestModel { get; set; }
 
@@ -456,6 +498,13 @@ namespace Weave
         /// <param name="agentId"></param>
         /// <param name="agentDescription"></param>
         /// <param name="agentVersion"></param>
+        /// <param name="evalRunId"></param>
+        /// <param name="evalPredictAndScoreCallId"></param>
+        /// <param name="evalKind"></param>
+        /// <param name="evalRowDigest"></param>
+        /// <param name="evalExampleId"></param>
+        /// <param name="evalTrialIndex"></param>
+        /// <param name="evalEvaluationName"></param>
         /// <param name="requestModel"></param>
         /// <param name="responseModel"></param>
         /// <param name="responseId"></param>
@@ -530,6 +579,13 @@ namespace Weave
             string? agentId,
             string? agentDescription,
             string? agentVersion,
+            string? evalRunId,
+            string? evalPredictAndScoreCallId,
+            string? evalKind,
+            string? evalRowDigest,
+            string? evalExampleId,
+            int? evalTrialIndex,
+            string? evalEvaluationName,
             string? requestModel,
             string? responseModel,
             string? responseId,
@@ -601,6 +657,13 @@ namespace Weave
             this.AgentId = agentId;
             this.AgentDescription = agentDescription;
             this.AgentVersion = agentVersion;
+            this.EvalRunId = evalRunId;
+            this.EvalPredictAndScoreCallId = evalPredictAndScoreCallId;
+            this.EvalKind = evalKind;
+            this.EvalRowDigest = evalRowDigest;
+            this.EvalExampleId = evalExampleId;
+            this.EvalTrialIndex = evalTrialIndex;
+            this.EvalEvaluationName = evalEvaluationName;
             this.RequestModel = requestModel;
             this.ResponseModel = responseModel;
             this.ResponseId = responseId;
