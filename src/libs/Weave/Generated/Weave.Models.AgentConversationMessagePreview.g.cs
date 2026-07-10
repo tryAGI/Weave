@@ -15,7 +15,9 @@ namespace Weave
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        public string? Role { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentConversationMessagePreviewRoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Weave.AgentConversationMessagePreviewRole Role { get; set; }
 
         /// <summary>
         /// 
@@ -38,7 +40,7 @@ namespace Weave
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AgentConversationMessagePreview(
-            string? role,
+            global::Weave.AgentConversationMessagePreviewRole role,
             string? text)
         {
             this.Role = role;
