@@ -26,9 +26,9 @@ namespace Weave
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentSearchMatchedMessageRoleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.AgentSearchMatchedMessageRole?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Weave.AgentSearchMatchedMessageRole Role { get; set; }
+        public required global::Weave.AnyOf<global::Weave.AgentSearchMatchedMessageRole?, string> Role { get; set; }
 
         /// <summary>
         /// 
@@ -72,7 +72,7 @@ namespace Weave
         public AgentSearchMatchedMessage(
             string spanId,
             string traceId,
-            global::Weave.AgentSearchMatchedMessageRole role,
+            global::Weave.AnyOf<global::Weave.AgentSearchMatchedMessageRole?, string> role,
             string contentPreview,
             string contentDigest,
             global::System.DateTime startedAt)
