@@ -83,6 +83,9 @@ namespace Weave
         /// <param name="spanTraceId">
         /// Turn the feedback belongs to (from spans.trace_id)
         /// </param>
+        /// <param name="scorerTraceId">
+        /// Trace of the scorer (judge) invocation that produced this feedback (spans.trace_id of the judge call). Distinct from span_trace_id, which is the scored turn. Lets signals price the invocation off the judge span without joining the calls model.
+        /// </param>
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
@@ -112,6 +115,7 @@ namespace Weave
             string? spanStatusCode = default,
             string? spanConversationId = default,
             string? spanTraceId = default,
+            string? scorerTraceId = default,
             string? wbUserId = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
