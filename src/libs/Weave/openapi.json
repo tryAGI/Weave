@@ -14894,6 +14894,12 @@
             "description": "Turn the feedback belongs to (from spans.trace_id)",
             "default": ""
           },
+          "scorer_trace_id": {
+            "type": "string",
+            "title": "Scorer Trace Id",
+            "description": "Trace of the scorer (judge) invocation that produced this feedback (spans.trace_id of the judge call). Distinct from span_trace_id, which is the scored turn. Lets signals price the invocation off the judge span without joining the calls model.",
+            "default": ""
+          },
           "wb_user_id": {
             "anyOf": [
               {
@@ -15481,6 +15487,12 @@
             "type": "string",
             "title": "Span Trace Id",
             "description": "Turn the feedback belongs to (from spans.trace_id)",
+            "default": ""
+          },
+          "scorer_trace_id": {
+            "type": "string",
+            "title": "Scorer Trace Id",
+            "description": "Trace of the scorer (judge) invocation that produced this feedback (spans.trace_id of the judge call). Distinct from span_trace_id, which is the scored turn. Lets signals price the invocation off the judge span without joining the calls model.",
             "default": ""
           },
           "wb_user_id": {
