@@ -489,6 +489,7 @@ namespace Weave
         /// </param>
         /// <param name="bucketBy"></param>
         /// <param name="groupFilters"></param>
+        /// <param name="signalFilters"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -504,6 +505,7 @@ namespace Weave
             int? groupLimit = default,
             global::Weave.BucketByVariant1? bucketBy = default,
             global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupFilter>? groupFilters = default,
+            global::Weave.AgentSignalFilter? signalFilters = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -520,6 +522,7 @@ namespace Weave
                 GroupLimit = groupLimit,
                 BucketBy = bucketBy,
                 GroupFilters = groupFilters,
+                SignalFilters = signalFilters,
             };
 
             return await GenaiSpansStatsAgentsSpansStatsPostAsync(
