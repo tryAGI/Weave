@@ -77,6 +77,12 @@ namespace Weave
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupFilter>? GroupFilters { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("signal_filters")]
+        public global::Weave.AgentSignalFilter? SignalFilters { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -100,6 +106,7 @@ namespace Weave
         /// </param>
         /// <param name="bucketBy"></param>
         /// <param name="groupFilters"></param>
+        /// <param name="signalFilters"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -114,7 +121,8 @@ namespace Weave
             global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsMetricSpec>? metrics,
             int? groupLimit,
             global::Weave.BucketByVariant1? bucketBy,
-            global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupFilter>? groupFilters)
+            global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupFilter>? groupFilters,
+            global::Weave.AgentSignalFilter? signalFilters)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Query = query;
@@ -127,6 +135,7 @@ namespace Weave
             this.GroupLimit = groupLimit;
             this.BucketBy = bucketBy;
             this.GroupFilters = groupFilters;
+            this.SignalFilters = signalFilters;
         }
 
         /// <summary>
