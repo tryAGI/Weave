@@ -35,6 +35,18 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_input_token_cost")]
+        public double? CacheReadInputTokenCost { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_input_token_cost")]
+        public double? CacheCreationInputTokenCost { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt_token_cost_unit")]
         public string? PromptTokenCostUnit { get; set; }
 
@@ -69,6 +81,8 @@ namespace Weave
         /// <param name="llmId"></param>
         /// <param name="promptTokenCost"></param>
         /// <param name="completionTokenCost"></param>
+        /// <param name="cacheReadInputTokenCost"></param>
+        /// <param name="cacheCreationInputTokenCost"></param>
         /// <param name="promptTokenCostUnit"></param>
         /// <param name="completionTokenCostUnit"></param>
         /// <param name="effectiveDate"></param>
@@ -81,6 +95,8 @@ namespace Weave
             string? llmId,
             double? promptTokenCost,
             double? completionTokenCost,
+            double? cacheReadInputTokenCost,
+            double? cacheCreationInputTokenCost,
             string? promptTokenCostUnit,
             string? completionTokenCostUnit,
             global::System.DateTime? effectiveDate,
@@ -90,6 +106,8 @@ namespace Weave
             this.LlmId = llmId;
             this.PromptTokenCost = promptTokenCost;
             this.CompletionTokenCost = completionTokenCost;
+            this.CacheReadInputTokenCost = cacheReadInputTokenCost;
+            this.CacheCreationInputTokenCost = cacheCreationInputTokenCost;
             this.PromptTokenCostUnit = promptTokenCostUnit;
             this.CompletionTokenCostUnit = completionTokenCostUnit;
             this.EffectiveDate = effectiveDate;
