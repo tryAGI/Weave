@@ -16,6 +16,13 @@ namespace Weave
         public required global::System.Collections.Generic.IList<object> Result { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_count")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalCount { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -25,13 +32,16 @@ namespace Weave
         /// Initializes a new instance of the <see cref="FeedbackQueryRes" /> class.
         /// </summary>
         /// <param name="result"></param>
+        /// <param name="totalCount"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public FeedbackQueryRes(
-            global::System.Collections.Generic.IList<object> result)
+            global::System.Collections.Generic.IList<object> result,
+            int totalCount)
         {
             this.Result = result ?? throw new global::System.ArgumentNullException(nameof(result));
+            this.TotalCount = totalCount;
         }
 
         /// <summary>
