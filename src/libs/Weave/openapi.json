@@ -15286,11 +15286,17 @@
             },
             "type": "array",
             "title": "Result"
+          },
+          "total_count": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Total Count"
           }
         },
         "type": "object",
         "required": [
-          "result"
+          "result",
+          "total_count"
         ],
         "title": "FeedbackQueryRes"
       },
