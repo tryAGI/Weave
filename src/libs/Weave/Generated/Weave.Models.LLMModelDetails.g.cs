@@ -145,6 +145,25 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningSupport")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningSupportJsonConverter))]
+        public global::Weave.LLMModelDetailsReasoningSupport? ReasoningSupport { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningEfforts")]
+        public global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsReasoningEffort>? ReasoningEfforts { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningArgument")]
+        public string? ReasoningArgument { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parameterCountTotal")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int ParameterCountTotal { get; set; }
@@ -297,6 +316,9 @@ namespace Weave
         /// <param name="likesHuggingFace"></param>
         /// <param name="downloadsHuggingFace"></param>
         /// <param name="license"></param>
+        /// <param name="reasoningSupport"></param>
+        /// <param name="reasoningEfforts"></param>
+        /// <param name="reasoningArgument"></param>
         /// <param name="parameterCountActive"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -336,6 +358,9 @@ namespace Weave
             int likesHuggingFace,
             int downloadsHuggingFace,
             string license,
+            global::Weave.LLMModelDetailsReasoningSupport? reasoningSupport,
+            global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsReasoningEffort>? reasoningEfforts,
+            string? reasoningArgument,
             int? parameterCountActive)
         {
             this.Provider = provider ?? throw new global::System.ArgumentNullException(nameof(provider));
@@ -357,6 +382,9 @@ namespace Weave
             this.FeatureToolCalling = featureToolCalling;
             this.FeatureLoRA = featureLoRA;
             this.FeatureTrainableServerlessRL = featureTrainableServerlessRL;
+            this.ReasoningSupport = reasoningSupport;
+            this.ReasoningEfforts = reasoningEfforts;
+            this.ReasoningArgument = reasoningArgument;
             this.ParameterCountTotal = parameterCountTotal;
             this.ParameterCountActive = parameterCountActive;
             this.ContextWindow = contextWindow;
