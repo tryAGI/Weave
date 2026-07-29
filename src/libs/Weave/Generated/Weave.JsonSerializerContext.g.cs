@@ -189,6 +189,14 @@ namespace Weave
 
             typeof(global::Weave.JsonConverters.LLMModelDetailsAvailableInItemNullableJsonConverter),
 
+            typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningSupportJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningSupportNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningEffortJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningEffortNullableJsonConverter),
+
             typeof(global::Weave.JsonConverters.LLMModelDetailsQuantizationJsonConverter),
 
             typeof(global::Weave.JsonConverters.LLMModelDetailsQuantizationNullableJsonConverter),
@@ -652,6 +660,9 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsLifecycleStage), TypeInfoPropertyName = "LLMModelDetailsLifecycleStage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsAvailableInItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsAvailableInItem), TypeInfoPropertyName = "LLMModelDetailsAvailableInItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsReasoningSupport), TypeInfoPropertyName = "LLMModelDetailsReasoningSupport2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsReasoningEffort>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsReasoningEffort), TypeInfoPropertyName = "LLMModelDetailsReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsQuantization), TypeInfoPropertyName = "LLMModelDetailsQuantization2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMUsageSchema))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.Limit))]
@@ -800,9 +811,6 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsMetricSpecAggregation?), TypeInfoPropertyName = "NullableAgentSpanStatsMetricSpecAggregation2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsReqBucketByVariant1DiscriminatorType?), TypeInfoPropertyName = "NullableAgentSpanStatsReqBucketByVariant1DiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsResBucketType?), TypeInfoPropertyName = "NullableAgentSpanStatsResBucketType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanValueRefSource?), TypeInfoPropertyName = "NullableAgentSpanValueRefSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AggregationType?), TypeInfoPropertyName = "NullableAggregationType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnnotationQueueItemSchemaAnnotationState?), TypeInfoPropertyName = "NullableAnnotationQueueItemSchemaAnnotationState2")]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -990,6 +998,14 @@ namespace Weave
 
             typeof(global::Weave.JsonConverters.LLMModelDetailsAvailableInItemNullableJsonConverter),
 
+            typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningSupportJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningSupportNullableJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningEffortJsonConverter),
+
+            typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningEffortNullableJsonConverter),
+
             typeof(global::Weave.JsonConverters.LLMModelDetailsQuantizationJsonConverter),
 
             typeof(global::Weave.JsonConverters.LLMModelDetailsQuantizationNullableJsonConverter),
@@ -1115,6 +1131,9 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_d43b345b0979c630")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_99b0d44c15940a51")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_f078db389a57a856")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanValueRefSource?), TypeInfoPropertyName = "NullableAgentSpanValueRefSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AggregationType?), TypeInfoPropertyName = "NullableAggregationType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnnotationQueueItemSchemaAnnotationState?), TypeInfoPropertyName = "NullableAnnotationQueueItemSchemaAnnotationState2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnnotationQueueItemsFilterAnnotationStatesVariant1Item?), TypeInfoPropertyName = "NullableAnnotationQueueItemsFilterAnnotationStatesVariant1Item2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.CallBatchStartMode, global::Weave.CallBatchEndMode>?), TypeInfoPropertyName = "NullableAnyOfCallBatchStartModeCallBatchEndMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.CallStartRes, global::Weave.CallEndRes>?), TypeInfoPropertyName = "NullableAnyOfCallStartResCallEndRes2")]
@@ -1131,6 +1150,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.InterleavedField?), TypeInfoPropertyName = "NullableInterleavedField2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsLifecycleStage?), TypeInfoPropertyName = "NullableLLMModelDetailsLifecycleStage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsAvailableInItem?), TypeInfoPropertyName = "NullableLLMModelDetailsAvailableInItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsReasoningSupport?), TypeInfoPropertyName = "NullableLLMModelDetailsReasoningSupport2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsReasoningEffort?), TypeInfoPropertyName = "NullableLLMModelDetailsReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsQuantization?), TypeInfoPropertyName = "NullableLLMModelDetailsQuantization2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.IList<global::Weave.LiteralOperation>, object>?), TypeInfoPropertyName = "NullableAnyOfStringInt32DoubleBooleanDictionaryStringLiteralOperationIListLiteralOperationObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>?), TypeInfoPropertyName = "NullableAnyOfReasoningToggleReasoningEffortOptionReasoningBudgetTokens2")]
@@ -1204,6 +1225,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackMetricSpec>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.ValidationError>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.LLMModelDetailsAvailableInItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.LLMModelDetailsReasoningEffort>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.List<global::Weave.LiteralOperation>, object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.LiteralOperation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>>))]
@@ -1353,6 +1375,10 @@ namespace Weave
             options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsLifecycleStageNullableJsonConverter());
             options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsAvailableInItemJsonConverter());
             options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsAvailableInItemNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsReasoningSupportJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsReasoningSupportNullableJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsReasoningEffortJsonConverter());
+            options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsReasoningEffortNullableJsonConverter());
             options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsQuantizationJsonConverter());
             options.Converters.Add(new global::Weave.JsonConverters.LLMModelDetailsQuantizationNullableJsonConverter());
             options.Converters.Add(new global::Weave.JsonConverters.ModelsDevModelStatus2JsonConverter());

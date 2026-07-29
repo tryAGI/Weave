@@ -9699,7 +9699,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -9778,7 +9777,6 @@
             "description": "Do not set directly. Server will automatically populate this field."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -9835,7 +9833,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -10146,7 +10143,6 @@
             "default": false
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -10338,7 +10334,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -10427,7 +10422,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -10459,7 +10453,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -10614,7 +10607,6 @@
             "$ref": "#/components/schemas/EndedCallSchemaForInsert"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "end"
@@ -10659,7 +10651,6 @@
             "default": []
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "metric"
@@ -10714,7 +10705,6 @@
             "default": false
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -10975,7 +10965,6 @@
             "$ref": "#/components/schemas/StartedCallSchemaForInsert"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "start"
@@ -11084,7 +11073,6 @@
             "default": "UTC"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -11182,7 +11170,6 @@
             "description": "Do not set directly. Server will automatically populate this field."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -11221,7 +11208,6 @@
             "description": "Do not set directly. Server will automatically populate this field."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -11397,7 +11383,6 @@
             "title": "Wb Run Ids"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "title": "CallsFilter"
       },
@@ -11577,7 +11562,6 @@
             "default": true
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -11655,7 +11639,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -11726,7 +11709,6 @@
             "description": "Do not set directly. Server will automatically populate this field."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -11792,7 +11774,6 @@
             "default": 10000
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -12384,7 +12365,6 @@
             "description": "The provider of the LLM, e.g. 'openai' or 'mistral'. If not provided, the provider_id will be set to 'default'"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "prompt_token_cost",
@@ -12421,7 +12401,6 @@
             "description": "Do not set directly. Server will automatically populate this field."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -12468,7 +12447,6 @@
             "$ref": "#/components/schemas/Query"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -12716,7 +12694,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -13321,7 +13298,6 @@
             "description": "Filter expression. Supported field prefixes: scores.<name>, inputs.<path>, outputs.<path>."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "query"
@@ -13474,7 +13450,6 @@
             "default": 0
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "title": "EvalResultsQueryBody"
       },
@@ -13699,7 +13674,6 @@
             "default": "value"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "field",
@@ -13845,7 +13819,6 @@
             "description": "Do not set directly. Server will automatically populate this field."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -14308,7 +14281,6 @@
             "title": "Output"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "output"
@@ -14335,7 +14307,6 @@
             "title": "Error"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "title": "EvaluationStatusFailed"
       },
@@ -14348,7 +14319,6 @@
             "default": "not_found"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "title": "EvaluationStatusNotFound"
       },
@@ -14363,7 +14333,6 @@
             "title": "Call Id"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -14414,7 +14383,6 @@
             "title": "Total Rows"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "completed_rows",
@@ -14616,7 +14584,6 @@
             "description": "Allowed: ['scorer_id', 'span_agent_name', 'span_agent_version', 'span_status_code']."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -14676,7 +14643,6 @@
             "title": "Batch"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "batch"
@@ -14969,7 +14935,6 @@
             "description": "Do not set directly. Server will automatically populate this field."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -15044,7 +15009,6 @@
             "description": "Percentile values to compute (0–100), e.g. [5, 50, 95]. Only applicable for numeric value_type fields; ignored for boolean/categorical."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "json_path"
@@ -15071,7 +15035,6 @@
             "default": "numeric"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "json_path"
@@ -15137,7 +15100,6 @@
             "default": 2000
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -15174,7 +15136,6 @@
             "$ref": "#/components/schemas/Query"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -15270,7 +15231,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -15574,7 +15534,6 @@
             "title": "Feedback Id"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -15691,7 +15650,6 @@
             "description": "Metrics to aggregate from payload_dump."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -15780,7 +15738,6 @@
             "title": "Digest"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -15808,7 +15765,6 @@
             "title": "Project Id"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -16579,6 +16535,37 @@
           "featureTrainableServerlessRL": {
             "type": "boolean",
             "title": "Featuretrainableserverlessrl"
+          },
+          "reasoningSupport": {
+            "type": "string",
+            "enum": [
+              "unsupported",
+              "default-off",
+              "adaptive",
+              "default-on",
+              "always-on"
+            ],
+            "title": "Reasoningsupport"
+          },
+          "reasoningEfforts": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "none",
+                "minimal",
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            },
+            "type": "array",
+            "title": "Reasoningefforts"
+          },
+          "reasoningArgument": {
+            "type": "string",
+            "title": "Reasoningargument"
           },
           "parameterCountTotal": {
             "type": "integer",
@@ -17709,7 +17696,6 @@
             "$ref": "#/components/schemas/ObjSchemaForInsert"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "obj"
@@ -17766,7 +17752,6 @@
             "description": "List of digests to delete. If not provided, all digests for the object will be deleted."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -17924,7 +17909,6 @@
             "default": false
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -17988,7 +17972,6 @@
             "default": false
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -18031,7 +18014,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -18283,7 +18265,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -18321,7 +18302,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -18487,7 +18467,6 @@
             "description": "Filter objects that have any of the specified aliases"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "title": "ObjectVersionFilter"
       },
@@ -18866,7 +18845,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_ids"
@@ -19069,7 +19047,6 @@
             "title": "Refs"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "refs"
@@ -19635,7 +19612,6 @@
             "title": "Direction"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "field",
@@ -19867,7 +19843,6 @@
             "description": "Client-computed table digest for server-side validation."
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -19894,7 +19869,6 @@
             "$ref": "#/components/schemas/TableSchemaForInsert"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "table"
@@ -20069,7 +20043,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -20137,7 +20110,6 @@
             "default": false
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -20176,7 +20148,6 @@
             "description": "The digest of the table to query"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -20221,7 +20192,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "title": "TableRowFilter"
       },
@@ -20344,7 +20314,6 @@
             "title": "Updates"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id",
@@ -20447,7 +20416,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "title": "ThreadsQueryFilter"
       },
@@ -20520,7 +20488,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -20579,7 +20546,6 @@
             "default": 10000
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "project_id"
@@ -20649,7 +20615,6 @@
             "default": []
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "metric"
