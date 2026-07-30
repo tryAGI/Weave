@@ -68,6 +68,11 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        public CustomRuntimesClient CustomRuntimes { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public DatasetsClient Datasets { get; }
 
         /// <summary>
