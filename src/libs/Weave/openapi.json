@@ -8092,6 +8092,28 @@
             ],
             "title": "Eval Evaluation Name"
           },
+          "parent_call_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parent Call Id"
+          },
+          "parent_call_trace_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parent Call Trace Id"
+          },
           "request_model": {
             "anyOf": [
               {
@@ -10575,7 +10597,7 @@
           },
           "file": {
             "type": "string",
-            "format": "binary",
+            "contentMediaType": "application/octet-stream",
             "title": "File"
           },
           "expected_digest": {
@@ -16688,6 +16710,10 @@
             "type": "string",
             "title": "Labelopenrouter"
           },
+          "openRouterPermaslug": {
+            "type": "string",
+            "title": "Openrouterpermaslug"
+          },
           "status": {
             "type": "string",
             "title": "Status"
@@ -20862,6 +20888,13 @@
           "type": {
             "type": "string",
             "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
           }
         },
         "type": "object",

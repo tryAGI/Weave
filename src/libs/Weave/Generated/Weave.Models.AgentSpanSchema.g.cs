@@ -152,6 +152,18 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parent_call_id")]
+        public string? ParentCallId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parent_call_trace_id")]
+        public string? ParentCallTraceId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_model")]
         public string? RequestModel { get; set; }
 
@@ -505,6 +517,8 @@ namespace Weave
         /// <param name="evalExampleId"></param>
         /// <param name="evalTrialIndex"></param>
         /// <param name="evalEvaluationName"></param>
+        /// <param name="parentCallId"></param>
+        /// <param name="parentCallTraceId"></param>
         /// <param name="requestModel"></param>
         /// <param name="responseModel"></param>
         /// <param name="responseId"></param>
@@ -586,6 +600,8 @@ namespace Weave
             string? evalExampleId,
             int? evalTrialIndex,
             string? evalEvaluationName,
+            string? parentCallId,
+            string? parentCallTraceId,
             string? requestModel,
             string? responseModel,
             string? responseId,
@@ -664,6 +680,8 @@ namespace Weave
             this.EvalExampleId = evalExampleId;
             this.EvalTrialIndex = evalTrialIndex;
             this.EvalEvaluationName = evalEvaluationName;
+            this.ParentCallId = parentCallId;
+            this.ParentCallTraceId = parentCallTraceId;
             this.RequestModel = requestModel;
             this.ResponseModel = responseModel;
             this.ResponseId = responseId;

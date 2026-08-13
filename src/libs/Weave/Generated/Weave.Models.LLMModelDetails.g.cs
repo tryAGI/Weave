@@ -53,6 +53,12 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("openRouterPermaslug")]
+        public string? OpenRouterPermaslug { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Status { get; set; }
@@ -316,6 +322,7 @@ namespace Weave
         /// <param name="likesHuggingFace"></param>
         /// <param name="downloadsHuggingFace"></param>
         /// <param name="license"></param>
+        /// <param name="openRouterPermaslug"></param>
         /// <param name="reasoningSupport"></param>
         /// <param name="reasoningEfforts"></param>
         /// <param name="reasoningArgument"></param>
@@ -358,6 +365,7 @@ namespace Weave
             int likesHuggingFace,
             int downloadsHuggingFace,
             string license,
+            string? openRouterPermaslug,
             global::Weave.LLMModelDetailsReasoningSupport? reasoningSupport,
             global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsReasoningEffort>? reasoningEfforts,
             string? reasoningArgument,
@@ -369,6 +377,7 @@ namespace Weave
             this.IdHuggingFace = idHuggingFace ?? throw new global::System.ArgumentNullException(nameof(idHuggingFace));
             this.Label = label ?? throw new global::System.ArgumentNullException(nameof(label));
             this.LabelOpenRouter = labelOpenRouter ?? throw new global::System.ArgumentNullException(nameof(labelOpenRouter));
+            this.OpenRouterPermaslug = openRouterPermaslug;
             this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
             this.LifecycleStage = lifecycleStage;
             this.AvailableIn = availableIn ?? throw new global::System.ArgumentNullException(nameof(availableIn));
