@@ -42,11 +42,6 @@ namespace Weave
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessModelListV2EntityProjectModelsGetResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
         /// Model List<br/>
         /// List model objects.
@@ -62,47 +57,13 @@ namespace Weave
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<string> ModelListV2EntityProjectModelsGetAsync(
+        public async global::System.Collections.Generic.IAsyncEnumerable<global::Weave.ModelReadRes> ModelListV2EntityProjectModelsGetAsync(
             string entity,
             string project,
             int? limit = default,
             int? offset = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __response = await ModelListV2EntityProjectModelsGetAsResponseAsync(
-                entity: entity,
-                project: project,
-                limit: limit,
-                offset: offset,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken
-            ).ConfigureAwait(false);
-
-            return __response.Body;
-        }
-        /// <summary>
-        /// Model List<br/>
-        /// List model objects.
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <param name="project"></param>
-        /// <param name="limit">
-        /// Maximum number of models to return
-        /// </param>
-        /// <param name="offset">
-        /// Number of models to skip
-        /// </param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::Weave.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Weave.AutoSDKHttpResponse<string>> ModelListV2EntityProjectModelsGetAsResponseAsync(
-            string entity,
-            string project,
-            int? limit = default,
-            int? offset = default,
-            global::Weave.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
+            [global::System.Runtime.CompilerServices.EnumeratorCancellation] global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
@@ -223,7 +184,7 @@ namespace Weave
                     {
                         __response = await HttpClient.SendAsync(
                 request: __httpRequest,
-                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseHeadersRead,
                 cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
@@ -365,126 +326,65 @@ namespace Weave
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Validation Error
-                            if ((int)__response.StatusCode == 422)
+
+                            try
                             {
-                                string? __content_422 = null;
-                                global::System.Exception? __exception_422 = null;
-                                global::Weave.HTTPValidationError? __value_422 = null;
+                                __response.EnsureSuccessStatusCode();
+                            }
+                            catch (global::System.Net.Http.HttpRequestException __ex)
+                            {
+                                string? __content = null;
                                 try
                                 {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_422 = global::Weave.HTTPValidationError.FromJson(__content_422, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_422 = global::Weave.HTTPValidationError.FromJson(__content_422, JsonSerializerContext);
-                                    }
+                                    __content = await __response.Content.ReadAsStringAsync(
+                #if NET5_0_OR_GREATER
+                                        __effectiveCancellationToken
+                #endif
+                                    ).ConfigureAwait(false);
                                 }
-                                catch (global::System.Exception __ex)
+                                catch (global::System.Exception)
                                 {
-                                    __exception_422 = __ex;
                                 }
 
-
-                                throw global::Weave.ApiException<global::Weave.HTTPValidationError>.Create(
+                                throw global::Weave.ApiException.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_422,
-                                    responseBody: __content_422,
-                                    responseObject: __value_422,
+                                    message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __ex,
+                                    responseBody: __content,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
                                         h => h.Value));
                             }
 
-                            if (__effectiveReadResponseAsString)
+                            using var __stream = await __response.Content.ReadAsStreamAsync(
+                #if NET5_0_OR_GREATER
+                                __effectiveCancellationToken
+                #endif
+                            ).ConfigureAwait(false);
+
+                            using var __reader = new global::System.IO.StreamReader(__stream);
+
+                            while (!__reader.EndOfStream && !__effectiveCancellationToken.IsCancellationRequested)
                             {
-                                var __content = await __response.Content.ReadAsStringAsync(
-                #if NET5_0_OR_GREATER
-                                    __effectiveCancellationToken
-                #endif
-                                ).ConfigureAwait(false);
-
-                                ProcessResponseContent(
-                                    client: HttpClient,
-                                    response: __response,
-                                    content: ref __content);
-                                ProcessModelListV2EntityProjectModelsGetResponseContent(
-                                    httpClient: HttpClient,
-                                    httpResponseMessage: __response,
-                                    content: ref __content);
-
-                                try
+                                var __content = await __reader.ReadLineAsync().ConfigureAwait(false) ?? string.Empty;
+                                if (global::System.String.IsNullOrWhiteSpace(__content))
                                 {
-                                    __response.EnsureSuccessStatusCode();
+                                    continue;
+                                }
 
-                                    return new global::Weave.AutoSDKHttpResponse<string>(
-                                        statusCode: __response.StatusCode,
-                                        headers: global::Weave.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __content);
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    throw global::Weave.ApiException.Create(
-                                        statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
-                                        innerException: __ex,
-                                        responseBody: __content,
-                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                            __response.Headers,
-                                            h => h.Key,
-                                            h => h.Value));
-                                }
-                            }
-                            else
-                            {
-                                try
-                                {
-                                    __response.EnsureSuccessStatusCode();
-                                    var __content = await __response.Content.ReadAsStringAsync(
-                #if NET5_0_OR_GREATER
-                                        __effectiveCancellationToken
-                #endif
-                                    ).ConfigureAwait(false);
+                                var __streamedResponse = global::Weave.ModelReadRes.FromJson(__content, JsonSerializerContext) ??
+                                                       throw global::Weave.ApiException.Create(
+                                                           statusCode: __response.StatusCode,
+                                                           message: $"Response deserialization failed for \"{__content}\" ",
+                                                           innerException: null,
+                                                           responseBody: __content,
+                                                           responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                                               __response.Headers,
+                                                               h => h.Key,
+                                                               h => h.Value));
 
-                                    return new global::Weave.AutoSDKHttpResponse<string>(
-                                        statusCode: __response.StatusCode,
-                                        headers: global::Weave.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __content);
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    string? __content = null;
-                                    try
-                                    {
-                                        __content = await __response.Content.ReadAsStringAsync(
-                #if NET5_0_OR_GREATER
-                                            __effectiveCancellationToken
-                #endif
-                                        ).ConfigureAwait(false);
-                                    }
-                                    catch (global::System.Exception)
-                                    {
-                                    }
-
-                                    throw global::Weave.ApiException.Create(
-                                        statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
-                                        innerException: __ex,
-                                        responseBody: __content,
-                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                            __response.Headers,
-                                            h => h.Key,
-                                            h => h.Value));
-                                }
+                                yield return __streamedResponse;
                             }
 
                 }

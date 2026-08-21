@@ -2505,10 +2505,12 @@
         },
         "responses": {
           "200": {
-            "description": "Successful Response",
+            "description": "Stream of data in JSONL format",
             "content": {
-              "application/json": {
-                "schema": {}
+              "application/x-ndjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadSchema"
+                }
               }
             }
           },
@@ -3446,10 +3448,12 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful Response",
+            "description": "Stream of data in JSONL format",
             "content": {
-              "application/json": {
-                "schema": {}
+              "application/x-ndjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/OpReadRes"
+                }
               }
             }
           },
@@ -3756,10 +3760,12 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful Response",
+            "description": "Stream of data in JSONL format",
             "content": {
-              "application/json": {
-                "schema": {}
+              "application/x-ndjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/DatasetReadRes"
+                }
               }
             }
           },
@@ -4094,10 +4100,12 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful Response",
+            "description": "Stream of data in JSONL format",
             "content": {
-              "application/json": {
-                "schema": {}
+              "application/x-ndjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScorerReadRes"
+                }
               }
             }
           },
@@ -4356,10 +4364,12 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful Response",
+            "description": "Stream of data in JSONL format",
             "content": {
-              "application/json": {
-                "schema": {}
+              "application/x-ndjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvaluationReadRes"
+                }
               }
             }
           },
@@ -4654,10 +4664,12 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful Response",
+            "description": "Stream of data in JSONL format",
             "content": {
-              "application/json": {
-                "schema": {}
+              "application/x-ndjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelReadRes"
+                }
               }
             }
           },
@@ -5019,10 +5031,7 @@
             "content": {
               "application/jsonl": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/EvaluationRunReadRes"
-                  }
+                  "$ref": "#/components/schemas/EvaluationRunReadRes"
                 }
               }
             }
@@ -5384,10 +5393,7 @@
             "content": {
               "application/jsonl": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PredictionReadRes"
-                  }
+                  "$ref": "#/components/schemas/PredictionReadRes"
                 }
               }
             }
@@ -5739,10 +5745,7 @@
             "content": {
               "application/jsonl": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ScoreReadRes"
-                  }
+                  "$ref": "#/components/schemas/ScoreReadRes"
                 }
               }
             }
@@ -9356,6 +9359,41 @@
             ],
             "title": "Provider"
           },
+          "started_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Started At"
+          },
+          "ended_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ended At"
+          },
+          "wb_user_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wb User Id"
+          },
           "total_duration_ms": {
             "anyOf": [
               {
@@ -9378,6 +9416,31 @@
               }
             ],
             "title": "Total Cost Usd"
+          },
+          "total_input_tokens": {
+            "type": "integer",
+            "title": "Total Input Tokens",
+            "default": 0
+          },
+          "total_output_tokens": {
+            "type": "integer",
+            "title": "Total Output Tokens",
+            "default": 0
+          },
+          "total_reasoning_tokens": {
+            "type": "integer",
+            "title": "Total Reasoning Tokens",
+            "default": 0
+          },
+          "total_cache_creation_input_tokens": {
+            "type": "integer",
+            "title": "Total Cache Creation Input Tokens",
+            "default": 0
+          },
+          "total_cache_read_input_tokens": {
+            "type": "integer",
+            "title": "Total Cache Read Input Tokens",
+            "default": 0
           },
           "messages": {
             "items": {
@@ -20601,6 +20664,91 @@
           "tags"
         ],
         "title": "TagsListRes"
+      },
+      "ThreadSchema": {
+        "properties": {
+          "thread_id": {
+            "type": "string",
+            "title": "Thread Id"
+          },
+          "turn_count": {
+            "type": "integer",
+            "title": "Turn Count",
+            "description": "Number of turn calls in this thread"
+          },
+          "start_time": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Start Time",
+            "description": "Earliest start time of turn calls in this thread"
+          },
+          "last_updated": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Last Updated",
+            "description": "Latest end time of turn calls in this thread"
+          },
+          "first_turn_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "First Turn Id",
+            "description": "Turn ID of the first turn in this thread (earliest start_time)"
+          },
+          "last_turn_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Turn Id",
+            "description": "Turn ID of the latest turn in this thread (latest end_time)"
+          },
+          "p50_turn_duration_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "P50 Turn Duration Ms",
+            "description": "50th percentile (median) of turn durations in milliseconds within this thread"
+          },
+          "p99_turn_duration_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "P99 Turn Duration Ms",
+            "description": "99th percentile of turn durations in milliseconds within this thread"
+          }
+        },
+        "type": "object",
+        "required": [
+          "thread_id",
+          "turn_count",
+          "start_time",
+          "last_updated",
+          "first_turn_id",
+          "last_turn_id",
+          "p50_turn_duration_ms",
+          "p99_turn_duration_ms"
+        ],
+        "title": "ThreadSchema"
       },
       "ThreadsQueryFilter": {
         "properties": {

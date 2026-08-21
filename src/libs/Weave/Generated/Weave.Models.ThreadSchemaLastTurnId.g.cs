@@ -4,9 +4,9 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    /// Turn ID of the latest turn in this thread (latest end_time)
     /// </summary>
-    public sealed partial class EvaluationListV2EntityProjectEvaluationsGetResponse
+    public sealed partial class ThreadSchemaLastTurnId
     {
 
         /// <summary>

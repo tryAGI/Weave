@@ -4,9 +4,9 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    /// Turn ID of the first turn in this thread (earliest start_time)
     /// </summary>
-    public sealed partial class ModelListV2EntityProjectModelsGetResponse
+    public sealed partial class ThreadSchemaFirstTurnId
     {
 
         /// <summary>

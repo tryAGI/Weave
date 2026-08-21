@@ -6,7 +6,7 @@ namespace Weave
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class ScorerListV2EntityProjectScorersGetResponse
+    public sealed partial class AgentTraceChatResStartedAt
     {
 
         /// <summary>
