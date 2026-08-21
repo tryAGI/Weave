@@ -6,7 +6,7 @@ namespace Weave
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class DatasetListV2EntityProjectDatasetsGetResponse
+    public sealed partial class AgentTraceChatResEndedAt
     {
 
         /// <summary>

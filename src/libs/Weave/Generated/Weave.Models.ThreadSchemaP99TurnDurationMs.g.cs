@@ -4,9 +4,9 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    /// 99th percentile of turn durations in milliseconds within this thread
     /// </summary>
-    public sealed partial class OpListV2EntityProjectOpsGetResponse
+    public sealed partial class ThreadSchemaP99TurnDurationMs
     {
 
         /// <summary>

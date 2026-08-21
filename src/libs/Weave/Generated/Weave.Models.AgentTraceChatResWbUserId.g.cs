@@ -6,7 +6,7 @@ namespace Weave
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class ThreadsQueryStreamThreadsStreamQueryPostResponse
+    public sealed partial class AgentTraceChatResWbUserId
     {
 
         /// <summary>

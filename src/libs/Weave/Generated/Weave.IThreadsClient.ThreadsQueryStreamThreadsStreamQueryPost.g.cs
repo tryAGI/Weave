@@ -11,19 +11,7 @@ namespace Weave
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
-        global::System.Threading.Tasks.Task<string> ThreadsQueryStreamThreadsStreamQueryPostAsync(
-
-            global::Weave.ThreadsQueryReq request,
-            global::Weave.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default);
-        /// <summary>
-        /// Threads Query Stream
-        /// </summary>
-        /// <param name="request"></param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::Weave.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Weave.AutoSDKHttpResponse<string>> ThreadsQueryStreamThreadsStreamQueryPostAsResponseAsync(
+        global::System.Collections.Generic.IAsyncEnumerable<global::Weave.ThreadSchema> ThreadsQueryStreamThreadsStreamQueryPostAsync(
 
             global::Weave.ThreadsQueryReq request,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
@@ -49,7 +37,7 @@ namespace Weave
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<string> ThreadsQueryStreamThreadsStreamQueryPostAsync(
+        global::System.Collections.Generic.IAsyncEnumerable<global::Weave.ThreadSchema> ThreadsQueryStreamThreadsStreamQueryPostAsync(
             string projectId,
             global::Weave.ThreadsQueryFilter? filter = default,
             int? limit = default,

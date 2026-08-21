@@ -1856,55 +1856,47 @@ namespace Weave
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ThreadsQueryFilter? Type457 { get; set; }
+        public global::Weave.ThreadSchema? Type457 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.ThreadsQueryReq? Type458 { get; set; }
+        public global::Weave.ThreadsQueryFilter? Type458 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TraceStatus? Type459 { get; set; }
+        public global::Weave.ThreadsQueryReq? Type459 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TraceUsageReq? Type460 { get; set; }
+        public global::Weave.TraceStatus? Type460 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.TraceUsageRes? Type461 { get; set; }
+        public global::Weave.TraceUsageReq? Type461 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.UsageMetricSpecMetric? Type462 { get; set; }
+        public global::Weave.TraceUsageRes? Type462 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AnyOf<string, int?>>? Type463 { get; set; }
+        public global::Weave.UsageMetricSpecMetric? Type463 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Weave.AnyOf<string, int?>? Type464 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AnyOf<string, int?>>? Type464 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Weave.ModelsDevProvider>? Type465 { get; set; }
+        public global::Weave.AnyOf<string, int?>? Type465 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.ProjectsInfoRes>? Type466 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Weave.ModelsDevProvider>? Type466 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.EvaluationRunReadRes>? Type467 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.PredictionReadRes>? Type468 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.ScoreReadRes>? Type469 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.ProjectsInfoRes>? Type467 { get; set; }
 
         /// <summary>
         /// 
@@ -2222,17 +2214,5 @@ namespace Weave
         /// 
         /// </summary>
         public global::System.Collections.Generic.List<global::Weave.ProjectsInfoRes>? ListType78 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.EvaluationRunReadRes>? ListType79 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.PredictionReadRes>? ListType80 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.ScoreReadRes>? ListType81 { get; set; }
     }
 }

@@ -47,6 +47,24 @@ namespace Weave
         public string? Provider { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("started_at")]
+        public global::System.DateTime? StartedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ended_at")]
+        public global::System.DateTime? EndedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("wb_user_id")]
+        public string? WbUserId { get; set; }
+
+        /// <summary>
         /// Wall-clock duration of the trace root span in milliseconds. This is not a sum of child span durations.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_duration_ms")]
@@ -57,6 +75,36 @@ namespace Weave
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_cost_usd")]
         public double? TotalCostUsd { get; set; }
+
+        /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_input_tokens")]
+        public int? TotalInputTokens { get; set; }
+
+        /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_output_tokens")]
+        public int? TotalOutputTokens { get; set; }
+
+        /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_reasoning_tokens")]
+        public int? TotalReasoningTokens { get; set; }
+
+        /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_cache_creation_input_tokens")]
+        public int? TotalCacheCreationInputTokens { get; set; }
+
+        /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_cache_read_input_tokens")]
+        public int? TotalCacheReadInputTokens { get; set; }
 
         /// <summary>
         /// 
@@ -85,10 +133,28 @@ namespace Weave
         /// <param name="agentVersion"></param>
         /// <param name="statusCode"></param>
         /// <param name="provider"></param>
+        /// <param name="startedAt"></param>
+        /// <param name="endedAt"></param>
+        /// <param name="wbUserId"></param>
         /// <param name="totalDurationMs">
         /// Wall-clock duration of the trace root span in milliseconds. This is not a sum of child span durations.
         /// </param>
         /// <param name="totalCostUsd"></param>
+        /// <param name="totalInputTokens">
+        /// Default Value: 0
+        /// </param>
+        /// <param name="totalOutputTokens">
+        /// Default Value: 0
+        /// </param>
+        /// <param name="totalReasoningTokens">
+        /// Default Value: 0
+        /// </param>
+        /// <param name="totalCacheCreationInputTokens">
+        /// Default Value: 0
+        /// </param>
+        /// <param name="totalCacheReadInputTokens">
+        /// Default Value: 0
+        /// </param>
         /// <param name="messages"></param>
         /// <param name="feedback"></param>
 #if NET7_0_OR_GREATER
@@ -101,8 +167,16 @@ namespace Weave
             string? agentVersion,
             global::Weave.AgentTraceChatResStatusCode2? statusCode,
             string? provider,
+            global::System.DateTime? startedAt,
+            global::System.DateTime? endedAt,
+            string? wbUserId,
             int? totalDurationMs,
             double? totalCostUsd,
+            int? totalInputTokens,
+            int? totalOutputTokens,
+            int? totalReasoningTokens,
+            int? totalCacheCreationInputTokens,
+            int? totalCacheReadInputTokens,
             global::System.Collections.Generic.IList<global::Weave.AgentChatMessage>? messages,
             global::System.Collections.Generic.IList<object>? feedback)
         {
@@ -112,8 +186,16 @@ namespace Weave
             this.AgentVersion = agentVersion;
             this.StatusCode = statusCode;
             this.Provider = provider;
+            this.StartedAt = startedAt;
+            this.EndedAt = endedAt;
+            this.WbUserId = wbUserId;
             this.TotalDurationMs = totalDurationMs;
             this.TotalCostUsd = totalCostUsd;
+            this.TotalInputTokens = totalInputTokens;
+            this.TotalOutputTokens = totalOutputTokens;
+            this.TotalReasoningTokens = totalReasoningTokens;
+            this.TotalCacheCreationInputTokens = totalCacheCreationInputTokens;
+            this.TotalCacheReadInputTokens = totalCacheReadInputTokens;
             this.Messages = messages;
             this.Feedback = feedback;
         }
