@@ -28,12 +28,16 @@ namespace Weave
         partial void PrepareEvaluationListV2EntityProjectEvaluationsGetArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string entity,
-            ref string project);
+            ref string project,
+            int? limit,
+            int? offset);
         partial void PrepareEvaluationListV2EntityProjectEvaluationsGetRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string entity,
-            string project);
+            string project,
+            int? limit,
+            int? offset);
         partial void ProcessEvaluationListV2EntityProjectEvaluationsGetResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -44,12 +48,20 @@ namespace Weave
         /// </summary>
         /// <param name="entity"></param>
         /// <param name="project"></param>
+        /// <param name="limit">
+        /// Maximum number of evaluations to return
+        /// </param>
+        /// <param name="offset">
+        /// Number of evaluations to skip
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Weave.ApiException"></exception>
         public async global::System.Collections.Generic.IAsyncEnumerable<global::Weave.EvaluationReadRes> EvaluationListV2EntityProjectEvaluationsGetAsync(
             string entity,
             string project,
+            int? limit = default,
+            int? offset = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             [global::System.Runtime.CompilerServices.EnumeratorCancellation] global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -58,7 +70,9 @@ namespace Weave
             PrepareEvaluationListV2EntityProjectEvaluationsGetArguments(
                 httpClient: HttpClient,
                 entity: ref entity,
-                project: ref project);
+                project: ref project,
+                limit: limit,
+                offset: offset);
 
 
             var __authorizations = global::Weave.EndPointSecurityResolver.ResolveAuthorizations(
@@ -86,6 +100,10 @@ namespace Weave
                             var __pathBuilder = new global::Weave.PathBuilder(
                                 path: $"/v2/{entity}/{project}/evaluations",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("limit", limit?.ToString())
+                                .AddOptionalParameter("offset", offset?.ToString())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Weave.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -127,7 +145,9 @@ namespace Weave
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     entity: entity!,
-                    project: project!);
+                    project: project!,
+                    limit: limit,
+                    offset: offset);
 
                 return __httpRequest;
             }
