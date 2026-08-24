@@ -4096,6 +4096,42 @@
               "type": "string",
               "title": "Project"
             }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Maximum number of scorers to return",
+              "title": "Limit"
+            },
+            "description": "Maximum number of scorers to return"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Number of scorers to skip",
+              "title": "Offset"
+            },
+            "description": "Number of scorers to skip"
           }
         ],
         "responses": {
@@ -4360,6 +4396,42 @@
               "type": "string",
               "title": "Project"
             }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Maximum number of evaluations to return",
+              "title": "Limit"
+            },
+            "description": "Maximum number of evaluations to return"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Number of evaluations to skip",
+              "title": "Offset"
+            },
+            "description": "Number of evaluations to skip"
           }
         ],
         "responses": {
