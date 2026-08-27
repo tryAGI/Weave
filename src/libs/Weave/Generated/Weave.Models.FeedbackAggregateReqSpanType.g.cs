@@ -4,16 +4,16 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FeedbackAggregateReqSpanType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentConversation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentTurn,
     }

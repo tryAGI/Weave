@@ -4,32 +4,32 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentChatMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentHandoff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentStart,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantMessage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContextCompacted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserMessage,
     }

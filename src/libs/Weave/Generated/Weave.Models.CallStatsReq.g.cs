@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class CallStatsReq
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -47,7 +47,7 @@ namespace Weave
         public global::System.Collections.Generic.IList<global::Weave.CallMetricSpec>? CallMetrics { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filter")]
         public global::Weave.CallsFilter? Filter { get; set; }

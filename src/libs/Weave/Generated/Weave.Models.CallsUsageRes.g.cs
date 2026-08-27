@@ -9,13 +9,13 @@ namespace Weave
     public sealed partial class CallsUsageRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("call_usage")]
         public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.Dictionary<string, global::Weave.LLMAggregatedUsage>>? CallUsage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unfinished_call_ids")]
         public global::System.Collections.Generic.IList<string>? UnfinishedCallIds { get; set; }

@@ -9,14 +9,14 @@ namespace Weave
     public sealed partial class AgentSpanStatsMetricSpec
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("alias")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Alias { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentSpanStatsMetricSpecValueTypeJsonConverter))]
@@ -24,13 +24,13 @@ namespace Weave
         public required global::Weave.AgentSpanStatsMetricSpecValueType ValueType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aggregations")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsMetricSpecAggregation>? Aggregations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("percentiles")]
         public global::System.Collections.Generic.IList<double>? Percentiles { get; set; }

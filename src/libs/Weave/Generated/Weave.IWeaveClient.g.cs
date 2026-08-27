@@ -40,133 +40,133 @@ namespace Weave
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AgentsClient Agents { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnnotationQueuesClient AnnotationQueues { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CallsClient Calls { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CostsClient Costs { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CustomRuntimesClient CustomRuntimes { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetsClient Datasets { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvalResultsClient EvalResults { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvaluationRunsClient EvaluationRuns { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvaluationsClient Evaluations { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeedbackClient Feedback { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FilesClient Files { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ImagesClient Images { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InferenceClient Inference { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelsClient Models { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ObjectsClient Objects { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OpenTelemetryClient OpenTelemetry { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OpsClient Ops { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PredictionsClient Predictions { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RefsClient Refs { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RegistryClient Registry { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScorersClient Scorers { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoresClient Scores { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ServiceClient Service { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TablesClient Tables { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ThreadsClient Threads { get; }
 

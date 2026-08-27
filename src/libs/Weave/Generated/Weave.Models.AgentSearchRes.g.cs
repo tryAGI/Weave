@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AgentSearchRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("results")]
         [global::System.Text.Json.Serialization.JsonRequired]

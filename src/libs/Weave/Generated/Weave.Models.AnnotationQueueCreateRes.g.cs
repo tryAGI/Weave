@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AnnotationQueueCreateRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

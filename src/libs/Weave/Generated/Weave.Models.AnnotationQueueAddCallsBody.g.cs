@@ -9,14 +9,14 @@ namespace Weave
     public sealed partial class AnnotationQueueAddCallsBody
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("call_ids")]
         [global::System.Text.Json.Serialization.JsonRequired]

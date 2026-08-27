@@ -20,7 +20,7 @@ namespace Weave.JsonConverters
                     {
                         return global::Weave.RouterOpenRouterModelSupportedSamplingParameterExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

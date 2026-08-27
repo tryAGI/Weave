@@ -9,15 +9,15 @@ namespace Weave
     public enum CallMetricSpecMetric
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CallCount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ErrorCount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LatencyMs,
     }

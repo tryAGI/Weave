@@ -45,25 +45,25 @@ namespace Weave
         public int? CacheCreationInputTokens { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt_tokens_total_cost")]
         public double? PromptTokensTotalCost { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completion_tokens_total_cost")]
         public double? CompletionTokensTotalCost { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_input_tokens_total_cost")]
         public double? CacheReadInputTokensTotalCost { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_input_tokens_total_cost")]
         public double? CacheCreationInputTokensTotalCost { get; set; }

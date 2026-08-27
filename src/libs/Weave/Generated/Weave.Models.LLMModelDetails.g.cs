@@ -4,67 +4,67 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class LLMModelDetails
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Provider { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("idPlayground")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string IdPlayground { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("idHuggingFace")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string IdHuggingFace { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("label")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Label { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labelOpenRouter")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string LabelOpenRouter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("openRouterPermaslug")]
         public string? OpenRouterPermaslug { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lifecycleStage")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.LLMModelDetailsLifecycleStageJsonConverter))]
@@ -72,123 +72,123 @@ namespace Weave
         public required global::Weave.LLMModelDetailsLifecycleStage LifecycleStage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("availableIn")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsAvailableInItem> AvailableIn { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("launchedQuarter")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string LaunchedQuarter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("descriptionShort")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DescriptionShort { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("descriptionMedium")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DescriptionMedium { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("launchDate")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string LaunchDate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("featureReasoning")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool FeatureReasoning { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("featureJsonMode")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool FeatureJsonMode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("featureStructuredOutput")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool FeatureStructuredOutput { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("featureToolCalling")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool FeatureToolCalling { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("featureLoRA")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool FeatureLoRA { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("featureTrainableServerlessRL")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool FeatureTrainableServerlessRL { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reasoningSupport")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.LLMModelDetailsReasoningSupportJsonConverter))]
         public global::Weave.LLMModelDetailsReasoningSupport? ReasoningSupport { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reasoningEfforts")]
         public global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsReasoningEffort>? ReasoningEfforts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reasoningArgument")]
         public string? ReasoningArgument { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parameterCountTotal")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int ParameterCountTotal { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parameterCountActive")]
         public int? ParameterCountActive { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contextWindow")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int ContextWindow { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("quantization")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.LLMModelDetailsQuantizationJsonConverter))]
@@ -196,84 +196,84 @@ namespace Weave
         public required global::Weave.LLMModelDetailsQuantization Quantization { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("priceCentsPerBillionTokensInput")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int PriceCentsPerBillionTokensInput { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("priceCentsPerBillionTokensCached")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int PriceCentsPerBillionTokensCached { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("priceCentsPerBillionTokensOutput")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int PriceCentsPerBillionTokensOutput { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isAvailableOpenRouter")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsAvailableOpenRouter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiStyle")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ApiStyle { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modalities")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> Modalities { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modalitiesInput")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> ModalitiesInput { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modalitiesOutput")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> ModalitiesOutput { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> Tags { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("likesHuggingFace")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int LikesHuggingFace { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("downloadsHuggingFace")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int DownloadsHuggingFace { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("license")]
         [global::System.Text.Json.Serialization.JsonRequired]

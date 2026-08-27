@@ -4,18 +4,18 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SummaryInsertMap
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage")]
         public global::System.Collections.Generic.Dictionary<string, global::Weave.LLMUsageSchema>? Usage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status_counts")]
         public global::System.Collections.Generic.Dictionary<string, int>? StatusCounts { get; set; }

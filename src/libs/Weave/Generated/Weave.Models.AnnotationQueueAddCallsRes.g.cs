@@ -9,14 +9,14 @@ namespace Weave
     public sealed partial class AnnotationQueueAddCallsRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("added_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int AddedCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duplicates")]
         [global::System.Text.Json.Serialization.JsonRequired]

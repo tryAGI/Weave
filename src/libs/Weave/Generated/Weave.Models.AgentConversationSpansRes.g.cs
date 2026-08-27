@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AgentConversationSpansRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conversations")]
         public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpans>? Conversations { get; set; }

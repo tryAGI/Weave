@@ -12,44 +12,44 @@ namespace Weave
     public sealed partial class AgentSpansQueryReq
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("query")]
         public global::Weave.Query? Query { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("group_by")]
         public global::System.Collections.Generic.IList<global::Weave.AgentGroupByRef>? GroupBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("measures")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanMeasureSpec>? Measures { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("group_filters")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupFilter>? GroupFilters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("group_distributions")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionSpec>? GroupDistributions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_attr_columns")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanValueRef>? CustomAttrColumns { get; set; }
@@ -67,7 +67,7 @@ namespace Weave
         public bool? IncludeCosts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sort_by")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? SortBy { get; set; }
@@ -85,19 +85,19 @@ namespace Weave
         public int? Offset { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("started_after")]
         public global::System.DateTime? StartedAfter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("started_before")]
         public global::System.DateTime? StartedBefore { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("signal_filters")]
         public global::Weave.AgentSignalFilter? SignalFilters { get; set; }

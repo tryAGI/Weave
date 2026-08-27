@@ -4,24 +4,24 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentCustomAttrSchemaItemValueType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Float,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Int,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         String,
     }

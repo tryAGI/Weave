@@ -4,20 +4,20 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ModelsDevModelStatus2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Alpha,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Beta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deprecated,
     }

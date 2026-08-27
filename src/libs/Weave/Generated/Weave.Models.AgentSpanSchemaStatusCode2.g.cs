@@ -4,20 +4,20 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentSpanSchemaStatusCode2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ok,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unset,
     }

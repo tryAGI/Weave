@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AgentSpanGroupDistributionSpec
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("alias")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class EvalResultsSummaryRes
     {
@@ -15,7 +15,7 @@ namespace Weave
         public int? RowCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluations")]
         public global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary>? Evaluations { get; set; }

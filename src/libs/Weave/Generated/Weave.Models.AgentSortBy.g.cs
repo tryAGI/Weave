@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AgentSortBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("field")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -9,11 +9,11 @@ namespace Weave
     public enum InterleavedField
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ReasoningContent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ReasoningDetails,
     }

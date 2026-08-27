@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CallBatchEndMode
     {
@@ -15,7 +15,7 @@ namespace Weave
         public string? Mode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("req")]
         [global::System.Text.Json.Serialization.JsonRequired]

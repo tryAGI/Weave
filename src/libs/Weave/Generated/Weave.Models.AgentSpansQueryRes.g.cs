@@ -11,13 +11,13 @@ namespace Weave
     public sealed partial class AgentSpansQueryRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spans")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanSchema>? Spans { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("groups")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupRow>? Groups { get; set; }

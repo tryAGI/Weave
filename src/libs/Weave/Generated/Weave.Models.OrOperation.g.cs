@@ -18,7 +18,7 @@ namespace Weave
     public sealed partial class OrOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("$or")]
         [global::System.Text.Json.Serialization.JsonRequired]

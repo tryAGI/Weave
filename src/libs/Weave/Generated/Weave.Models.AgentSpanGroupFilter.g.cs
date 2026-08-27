@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AgentSpanGroupFilter
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("group_by")]
         public global::System.Collections.Generic.IList<global::Weave.AgentGroupByRef>? GroupBy { get; set; }
@@ -22,14 +22,14 @@ namespace Weave
         public required global::Weave.AgentSpanMeasureSpec Measure { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("min")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>))]
         public global::Weave.AnyOf<double?, global::System.DateTime?, object>? Min { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("max")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>))]

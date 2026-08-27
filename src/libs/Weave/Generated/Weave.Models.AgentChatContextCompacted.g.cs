@@ -9,19 +9,19 @@ namespace Weave
     public sealed partial class AgentChatContextCompacted
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("compaction_summary")]
         public string? CompactionSummary { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("compaction_items_before")]
         public int? CompactionItemsBefore { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("compaction_items_after")]
         public int? CompactionItemsAfter { get; set; }

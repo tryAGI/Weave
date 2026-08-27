@@ -9,20 +9,20 @@ namespace Weave
     public sealed partial class AgentConversationSpans
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conversation_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ConversationId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spans")]
         public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpan>? Spans { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spans_feedback")]
         public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanFeedback>? SpansFeedback { get; set; }

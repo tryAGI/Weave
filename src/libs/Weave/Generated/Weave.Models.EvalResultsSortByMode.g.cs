@@ -10,11 +10,11 @@ namespace Weave
     public enum EvalResultsSortByMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Difference,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Value,
     }

@@ -11,7 +11,7 @@ namespace Weave
     public sealed partial class WeaveClient : global::Weave.IWeaveClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://trace.wandb.ai/";
 
@@ -38,7 +38,7 @@ namespace Weave
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Weave.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -48,7 +48,7 @@ namespace Weave
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AgentsClient Agents => new AgentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -57,7 +57,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnnotationQueuesClient AnnotationQueues => new AnnotationQueuesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -66,7 +66,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CallsClient Calls => new CallsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -75,7 +75,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CostsClient Costs => new CostsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -84,7 +84,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CustomRuntimesClient CustomRuntimes => new CustomRuntimesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -93,7 +93,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -102,7 +102,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvalResultsClient EvalResults => new EvalResultsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -111,7 +111,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvaluationRunsClient EvaluationRuns => new EvaluationRunsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -120,7 +120,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EvaluationsClient Evaluations => new EvaluationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -129,7 +129,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeedbackClient Feedback => new FeedbackClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -138,7 +138,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FilesClient Files => new FilesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -147,7 +147,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ImagesClient Images => new ImagesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -156,7 +156,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InferenceClient Inference => new InferenceClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -165,7 +165,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelsClient Models => new ModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -174,7 +174,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ObjectsClient Objects => new ObjectsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -183,7 +183,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OpenTelemetryClient OpenTelemetry => new OpenTelemetryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -192,7 +192,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OpsClient Ops => new OpsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -201,7 +201,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PredictionsClient Predictions => new PredictionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -210,7 +210,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RefsClient Refs => new RefsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -219,7 +219,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RegistryClient Registry => new RegistryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -228,7 +228,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScorersClient Scorers => new ScorersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -237,7 +237,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoresClient Scores => new ScoresClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -246,7 +246,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ServiceClient Service => new ServiceClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -255,7 +255,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TablesClient Tables => new TablesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -264,7 +264,7 @@ namespace Weave
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ThreadsClient Threads => new ThreadsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

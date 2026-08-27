@@ -10,15 +10,15 @@ namespace Weave
     public enum FeedbackPayloadPathValueType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Categorical,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Numeric,
     }

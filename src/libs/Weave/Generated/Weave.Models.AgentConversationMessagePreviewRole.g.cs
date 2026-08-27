@@ -4,16 +4,16 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentConversationMessagePreviewRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantMessage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserMessage,
     }

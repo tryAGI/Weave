@@ -4,19 +4,19 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class EvalResultsRowEvaluation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluation_call_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EvaluationCallId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trials")]
         public global::System.Collections.Generic.IList<global::Weave.EvalResultsTrial>? Trials { get; set; }

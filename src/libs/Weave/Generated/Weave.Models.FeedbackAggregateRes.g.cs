@@ -29,7 +29,7 @@ namespace Weave
         public required int BeforeMs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("buckets")]
         public global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateBucket>? Buckets { get; set; }

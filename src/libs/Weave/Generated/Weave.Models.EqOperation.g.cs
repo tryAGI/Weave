@@ -15,7 +15,7 @@ namespace Weave
     public sealed partial class EqOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("$eq")]
         [global::System.Text.Json.Serialization.JsonRequired]
