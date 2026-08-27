@@ -9,14 +9,14 @@ namespace Weave
     public sealed partial class AgentSpanGroupDistributionItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("alias")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Alias { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentSpanGroupDistributionItemSourceJsonConverter))]
@@ -24,14 +24,14 @@ namespace Weave
         public required global::Weave.AgentSpanGroupDistributionItemSource Source { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("key")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Key { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentSpanGroupDistributionItemValueTypeJsonConverter))]
@@ -63,13 +63,13 @@ namespace Weave
         public int? OtherCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bins")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionBin>? Bins { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("values")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionValue>? Values { get; set; }

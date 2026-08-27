@@ -4,19 +4,19 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class FeedbackQueryRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("result")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<object> Result { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_count")]
         [global::System.Text.Json.Serialization.JsonRequired]

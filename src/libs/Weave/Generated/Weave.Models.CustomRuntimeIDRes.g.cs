@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CustomRuntimeIDRes
     {
@@ -23,7 +23,7 @@ namespace Weave
         public int? MaxTokens { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("playground_id")]
         [global::System.Text.Json.Serialization.JsonRequired]

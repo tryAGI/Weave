@@ -17,7 +17,7 @@ namespace Weave
     public sealed partial class GetFieldOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("$getField")]
         [global::System.Text.Json.Serialization.JsonRequired]

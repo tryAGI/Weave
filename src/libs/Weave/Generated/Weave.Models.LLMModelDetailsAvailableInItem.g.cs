@@ -4,16 +4,16 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum LLMModelDetailsAvailableInItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CwProd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CwQa,
     }

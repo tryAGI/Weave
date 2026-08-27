@@ -9,35 +9,35 @@ namespace Weave
     public sealed partial class AgentSearchConversationResult
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conversation_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ConversationId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conversation_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ConversationName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agent_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AgentName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("matched_messages")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Weave.AgentSearchMatchedMessage> MatchedMessages { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_activity")]
         [global::System.Text.Json.Serialization.JsonRequired]

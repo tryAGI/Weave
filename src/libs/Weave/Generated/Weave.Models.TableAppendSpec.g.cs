@@ -4,12 +4,12 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TableAppendSpec
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("append")]
         [global::System.Text.Json.Serialization.JsonRequired]

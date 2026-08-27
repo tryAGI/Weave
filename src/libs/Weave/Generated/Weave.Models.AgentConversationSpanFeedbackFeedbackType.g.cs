@@ -4,16 +4,16 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentConversationSpanFeedbackFeedbackType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WandbAgentMonitor,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WandbAgentUserFeedback,
     }

@@ -9,20 +9,20 @@ namespace Weave
     public sealed partial class AgentsQueryReq
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filters")]
         public global::Weave.AgentsQueryFilters? Filters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sort_by")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? SortBy { get; set; }

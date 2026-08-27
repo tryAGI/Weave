@@ -20,7 +20,7 @@ namespace Weave.JsonConverters
                     {
                         return global::Weave.AgentGroupByRefSourceExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

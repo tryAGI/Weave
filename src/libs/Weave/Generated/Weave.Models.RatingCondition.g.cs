@@ -4,19 +4,19 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RatingCondition
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scorer_key")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ScorerKey { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("op")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.RatingConditionOpJsonConverter))]
@@ -24,7 +24,7 @@ namespace Weave
         public required global::Weave.RatingConditionOp Op { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonRequired]

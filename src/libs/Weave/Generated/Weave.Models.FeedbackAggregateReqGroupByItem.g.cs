@@ -4,24 +4,24 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FeedbackAggregateReqGroupByItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScorerId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanAgentName,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanAgentVersion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanStatusCode,
     }

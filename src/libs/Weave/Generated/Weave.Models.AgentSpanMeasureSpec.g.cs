@@ -9,14 +9,14 @@ namespace Weave
     public sealed partial class AgentSpanMeasureSpec
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("alias")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Alias { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aggregation")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentSpanMeasureSpecAggregationJsonConverter))]
@@ -24,19 +24,19 @@ namespace Weave
         public required global::Weave.AgentSpanMeasureSpecAggregation Aggregation { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         public global::Weave.AgentSpanValueRef? Value { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value_type")]
         public global::Weave.AgentSpanMeasureSpecValueType2? ValueType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filter")]
         public global::Weave.Query? Filter { get; set; }

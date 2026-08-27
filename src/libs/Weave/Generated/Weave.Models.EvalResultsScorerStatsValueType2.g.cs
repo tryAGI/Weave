@@ -4,20 +4,20 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EvalResultsScorerStatsValueType2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Binary,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Continuous,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

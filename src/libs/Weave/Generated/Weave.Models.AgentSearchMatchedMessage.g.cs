@@ -9,21 +9,21 @@ namespace Weave
     public sealed partial class AgentSearchMatchedMessage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("span_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SpanId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trace_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string TraceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.AgentSearchMatchedMessageRole?, string>))]
@@ -31,21 +31,21 @@ namespace Weave
         public required global::Weave.AnyOf<global::Weave.AgentSearchMatchedMessageRole?, string> Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content_preview")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ContentPreview { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content_digest")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ContentDigest { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("started_at")]
         [global::System.Text.Json.Serialization.JsonRequired]

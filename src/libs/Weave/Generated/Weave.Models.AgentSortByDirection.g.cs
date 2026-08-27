@@ -9,11 +9,11 @@ namespace Weave
     public enum AgentSortByDirection
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

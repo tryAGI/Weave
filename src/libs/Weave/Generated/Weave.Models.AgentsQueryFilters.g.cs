@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AgentsQueryFilters
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agent_name")]
         public string? AgentName { get; set; }

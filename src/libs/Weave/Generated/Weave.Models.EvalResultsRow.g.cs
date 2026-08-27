@@ -4,25 +4,25 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class EvalResultsRow
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("row_digest")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string RowDigest { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("raw_data_row")]
         public object? RawDataRow { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluations")]
         public global::System.Collections.Generic.IList<global::Weave.EvalResultsRowEvaluation>? Evaluations { get; set; }

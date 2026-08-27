@@ -4,19 +4,19 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SortBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("field")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Field { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("direction")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.SortByDirectionJsonConverter))]

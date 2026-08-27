@@ -4,28 +4,28 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum LLMModelDetailsReasoningSupport
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Adaptive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AlwaysOn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DefaultOff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DefaultOn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unsupported,
     }

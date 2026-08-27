@@ -4,12 +4,12 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RefsReadBatchRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vals")]
         [global::System.Text.Json.Serialization.JsonRequired]

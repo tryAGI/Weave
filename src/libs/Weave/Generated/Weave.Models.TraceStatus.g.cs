@@ -4,24 +4,24 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TraceStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DescendantError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Running,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Success,
     }

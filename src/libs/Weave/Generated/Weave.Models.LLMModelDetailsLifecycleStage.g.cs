@@ -4,24 +4,24 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum LLMModelDetailsLifecycleStage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deprecated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Experimental,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GeneralAvailability,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Retired,
     }

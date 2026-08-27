@@ -4,32 +4,32 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentSpanSchemaSpanKind2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Client,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Consumer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Internal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Producer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Server,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unspecified,
     }

@@ -17,7 +17,7 @@ namespace Weave
     public sealed partial class NotOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("$not")]
         [global::System.Text.Json.Serialization.JsonRequired]

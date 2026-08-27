@@ -9,27 +9,27 @@ namespace Weave
     public enum AgentGroupByRefSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Column,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsBool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsFloat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsInt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsString,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Field,
     }

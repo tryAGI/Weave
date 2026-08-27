@@ -4,28 +4,28 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RouterOpenRouterModelSupportedFeature
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JsonMode,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reasoning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StructuredOutputs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tools,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebSearch,
     }

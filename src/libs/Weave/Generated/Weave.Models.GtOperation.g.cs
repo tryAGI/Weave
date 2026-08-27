@@ -15,7 +15,7 @@ namespace Weave
     public sealed partial class GtOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("$gt")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -20,7 +20,7 @@ namespace Weave.JsonConverters
                     {
                         return global::Weave.EvalResultsSortByDirectionExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

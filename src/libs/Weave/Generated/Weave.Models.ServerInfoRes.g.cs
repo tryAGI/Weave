@@ -4,19 +4,19 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ServerInfoRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("min_required_weave_python_version")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string MinRequiredWeavePythonVersion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trace_server_version")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -16,7 +16,7 @@ namespace Weave
         public global::Weave.AgentSpanValueRefSource? Source { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("key")]
         [global::System.Text.Json.Serialization.JsonRequired]

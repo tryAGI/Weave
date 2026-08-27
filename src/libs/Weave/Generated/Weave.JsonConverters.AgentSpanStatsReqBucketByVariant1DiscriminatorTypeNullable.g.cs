@@ -20,7 +20,7 @@ namespace Weave.JsonConverters
                     {
                         return global::Weave.AgentSpanStatsReqBucketByVariant1DiscriminatorTypeExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

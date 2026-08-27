@@ -9,35 +9,35 @@ namespace Weave
     public enum UsageMetricSpecMetric
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CacheCreationInputTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CacheReadInputTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InputCost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InputTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OutputCost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OutputTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TotalCost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TotalTokens,
     }

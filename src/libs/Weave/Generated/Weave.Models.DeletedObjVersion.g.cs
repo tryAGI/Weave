@@ -4,25 +4,25 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DeletedObjVersion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("digest")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Digest { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("base_object_class")]
         public string? BaseObjectClass { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("leaf_object_class")]
         public string? LeafObjectClass { get; set; }

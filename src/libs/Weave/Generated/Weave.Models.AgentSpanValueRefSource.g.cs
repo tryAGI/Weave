@@ -9,27 +9,27 @@ namespace Weave
     public enum AgentSpanValueRefSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsBool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsFloat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsInt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsString,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Derived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Field,
     }

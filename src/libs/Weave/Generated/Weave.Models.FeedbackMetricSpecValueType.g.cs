@@ -14,7 +14,7 @@ namespace Weave
         /// </summary>
         Boolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Categorical,
         /// <summary>

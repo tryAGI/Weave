@@ -5,12 +5,12 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct BucketByVariant1 : global::System.IEquatable<BucketByVariant1>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Weave.AgentSpanStatsReqBucketByVariant1DiscriminatorType? Type { get; }
 
@@ -24,7 +24,7 @@ namespace Weave
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Time))]
@@ -32,7 +32,7 @@ namespace Weave
         public bool IsTime => Time != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTime(
 #if NET6_0_OR_GREATER
@@ -45,7 +45,7 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Weave.AgentSpanStatsTimeBucketSpec PickTime() => IsTime
             ? Time!
@@ -61,7 +61,7 @@ namespace Weave
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Number))]
@@ -69,7 +69,7 @@ namespace Weave
         public bool IsNumber => Number != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickNumber(
 #if NET6_0_OR_GREATER
@@ -82,23 +82,23 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Weave.AgentSpanStatsNumericBucketSpec PickNumber() => IsNumber
             ? Number!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Number' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator BucketByVariant1(global::Weave.AgentSpanStatsTimeBucketSpec value) => new BucketByVariant1((global::Weave.AgentSpanStatsTimeBucketSpec?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Weave.AgentSpanStatsTimeBucketSpec?(BucketByVariant1 @this) => @this.Time;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BucketByVariant1(global::Weave.AgentSpanStatsTimeBucketSpec? value)
         {
@@ -106,22 +106,22 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static BucketByVariant1 FromTime(global::Weave.AgentSpanStatsTimeBucketSpec? value) => new BucketByVariant1(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator BucketByVariant1(global::Weave.AgentSpanStatsNumericBucketSpec value) => new BucketByVariant1((global::Weave.AgentSpanStatsNumericBucketSpec?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Weave.AgentSpanStatsNumericBucketSpec?(BucketByVariant1 @this) => @this.Number;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BucketByVariant1(global::Weave.AgentSpanStatsNumericBucketSpec? value)
         {
@@ -129,12 +129,12 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static BucketByVariant1 FromNumber(global::Weave.AgentSpanStatsNumericBucketSpec? value) => new BucketByVariant1(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BucketByVariant1(
             global::Weave.AgentSpanStatsReqBucketByVariant1DiscriminatorType? type,
@@ -149,23 +149,23 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Number as object ??
-            Time as object 
+            Time as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Time?.ToString() ??
-            Number?.ToString() 
+            Number?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -173,7 +173,7 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Weave.AgentSpanStatsTimeBucketSpec, TResult>? time = null,
@@ -198,7 +198,7 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Weave.AgentSpanStatsTimeBucketSpec>? time = null,
@@ -222,7 +222,7 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Weave.AgentSpanStatsTimeBucketSpec>? time = null,
@@ -245,7 +245,7 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -266,18 +266,18 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(BucketByVariant1 other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Weave.AgentSpanStatsTimeBucketSpec?>.Default.Equals(Time, other.Time) &&
-                global::System.Collections.Generic.EqualityComparer<global::Weave.AgentSpanStatsNumericBucketSpec?>.Default.Equals(Number, other.Number) 
+                global::System.Collections.Generic.EqualityComparer<global::Weave.AgentSpanStatsNumericBucketSpec?>.Default.Equals(Number, other.Number)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(BucketByVariant1 obj1, BucketByVariant1 obj2)
         {
@@ -285,7 +285,7 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(BucketByVariant1 obj1, BucketByVariant1 obj2)
         {
@@ -293,7 +293,7 @@ namespace Weave
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -9,75 +9,75 @@ namespace Weave
     public sealed partial class AgentSchema
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agent_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AgentName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("invocation_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int InvocationCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("span_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int SpanCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_input_tokens")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int TotalInputTokens { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_output_tokens")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int TotalOutputTokens { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_duration_ms")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int TotalDurationMs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int ErrorCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("first_seen")]
         public global::System.DateTime? FirstSeen { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_seen")]
         public global::System.DateTime? LastSeen { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_cost_usd")]
         public double? TotalCostUsd { get; set; }

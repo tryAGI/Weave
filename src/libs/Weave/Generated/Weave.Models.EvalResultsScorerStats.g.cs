@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class EvalResultsScorerStats
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scorer_key")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -40,7 +40,7 @@ namespace Weave
         public int? NumericCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numeric_mean")]
         public double? NumericMean { get; set; }
@@ -58,13 +58,13 @@ namespace Weave
         public int? PassKnownCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pass_rate")]
         public double? PassRate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pass_signal_coverage")]
         public double? PassSignalCoverage { get; set; }

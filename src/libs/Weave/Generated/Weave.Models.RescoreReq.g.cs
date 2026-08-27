@@ -23,7 +23,7 @@ namespace Weave
         public required global::System.Collections.Generic.IList<string> ScorerRefs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         [global::System.Text.Json.Serialization.JsonRequired]

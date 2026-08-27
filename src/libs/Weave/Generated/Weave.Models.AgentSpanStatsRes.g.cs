@@ -9,27 +9,27 @@ namespace Weave
     public sealed partial class AgentSpanStatsRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("start")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime Start { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("end")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime End { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("granularity")]
         public int? Granularity { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -43,13 +43,13 @@ namespace Weave
         public global::Weave.AgentSpanStatsResBucketType? BucketType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("columns")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn>? Columns { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rows")]
         public global::System.Collections.Generic.IList<object>? Rows { get; set; }

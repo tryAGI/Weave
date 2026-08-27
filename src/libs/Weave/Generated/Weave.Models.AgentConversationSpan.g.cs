@@ -14,28 +14,28 @@ namespace Weave
     public sealed partial class AgentConversationSpan
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("operation_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string OperationName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trace_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string TraceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("span_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SpanId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentConversationSpanStatusJsonConverter))]
@@ -43,7 +43,7 @@ namespace Weave
         public required global::Weave.AgentConversationSpanStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duration_ms")]
         [global::System.Text.Json.Serialization.JsonRequired]

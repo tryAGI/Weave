@@ -4,28 +4,28 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ConvertSpecTo
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Double,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Exists,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Int,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         String,
     }

@@ -4,40 +4,40 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RouterOpenRouterModelSupportedSamplingParameter
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FrequencyPenalty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PresencePenalty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RepetitionPenalty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Seed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stop,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Temperature,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TopK,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TopP,
     }

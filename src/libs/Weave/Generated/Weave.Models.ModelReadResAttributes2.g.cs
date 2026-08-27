@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ModelReadResAttributes2
     {

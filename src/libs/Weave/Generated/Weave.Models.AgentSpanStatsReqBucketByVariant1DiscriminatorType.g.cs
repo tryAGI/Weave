@@ -4,16 +4,16 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentSpanStatsReqBucketByVariant1DiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Number,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Time,
     }

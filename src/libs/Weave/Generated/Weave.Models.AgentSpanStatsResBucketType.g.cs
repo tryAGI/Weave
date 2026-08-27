@@ -9,11 +9,11 @@ namespace Weave
     public enum AgentSpanStatsResBucketType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Number,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Time,
     }

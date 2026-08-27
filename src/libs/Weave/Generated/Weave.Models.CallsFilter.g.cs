@@ -4,72 +4,72 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CallsFilter
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("op_names")]
         public global::System.Collections.Generic.IList<string>? OpNames { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("input_refs")]
         public global::System.Collections.Generic.IList<string>? InputRefs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output_refs")]
         public global::System.Collections.Generic.IList<string>? OutputRefs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parent_ids")]
         public global::System.Collections.Generic.IList<string>? ParentIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trace_ids")]
         public global::System.Collections.Generic.IList<string>? TraceIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("call_ids")]
         public global::System.Collections.Generic.IList<string>? CallIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("thread_ids")]
         public global::System.Collections.Generic.IList<string>? ThreadIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("turn_ids")]
         public global::System.Collections.Generic.IList<string>? TurnIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trace_roots_only")]
         public bool? TraceRootsOnly { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("wb_user_ids")]
         public global::System.Collections.Generic.IList<string>? WbUserIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("wb_run_ids")]
         public global::System.Collections.Generic.IList<string>? WbRunIds { get; set; }

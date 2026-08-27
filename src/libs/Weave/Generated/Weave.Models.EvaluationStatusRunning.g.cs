@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class EvaluationStatusRunning
     {
@@ -15,14 +15,14 @@ namespace Weave
         public string? Code { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completed_rows")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int CompletedRows { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_rows")]
         [global::System.Text.Json.Serialization.JsonRequired]

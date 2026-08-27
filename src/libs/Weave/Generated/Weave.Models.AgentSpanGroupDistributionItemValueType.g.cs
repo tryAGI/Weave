@@ -4,24 +4,24 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentSpanGroupDistributionItemValueType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Float,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Int,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         String,
     }

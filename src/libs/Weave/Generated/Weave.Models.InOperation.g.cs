@@ -19,7 +19,7 @@ namespace Weave
     public sealed partial class InOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("$in")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,24 +4,24 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentCustomAttrSchemaItemSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsBool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsFloat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsInt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomAttrsString,
     }

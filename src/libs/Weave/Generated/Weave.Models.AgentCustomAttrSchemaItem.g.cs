@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AgentCustomAttrSchemaItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentCustomAttrSchemaItemSourceJsonConverter))]
@@ -17,14 +17,14 @@ namespace Weave
         public required global::Weave.AgentCustomAttrSchemaItemSource Source { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("key")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Key { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentCustomAttrSchemaItemValueTypeJsonConverter))]
@@ -32,7 +32,7 @@ namespace Weave
         public required global::Weave.AgentCustomAttrSchemaItemValueType ValueType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("span_count")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AnnotationQueueItemsQueryBody
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -28,13 +28,13 @@ namespace Weave
         public global::System.Collections.Generic.IList<global::Weave.SortBy>? SortBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("limit")]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("offset")]
         public int? Offset { get; set; }

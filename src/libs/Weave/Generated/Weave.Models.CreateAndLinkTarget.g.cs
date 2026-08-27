@@ -4,26 +4,26 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateAndLinkTarget
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("portfolio_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PortfolioName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EntityName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_name")]
         [global::System.Text.Json.Serialization.JsonRequired]

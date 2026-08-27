@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AgentCustomAttrsSchemaRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attributes")]
         public global::System.Collections.Generic.IList<global::Weave.AgentCustomAttrSchemaItem>? Attributes { get; set; }

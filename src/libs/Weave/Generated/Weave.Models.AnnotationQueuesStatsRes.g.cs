@@ -9,7 +9,7 @@ namespace Weave
     public sealed partial class AnnotationQueuesStatsRes
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stats")]
         [global::System.Text.Json.Serialization.JsonRequired]

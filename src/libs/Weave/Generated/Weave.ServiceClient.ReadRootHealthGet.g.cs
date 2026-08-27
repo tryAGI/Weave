@@ -124,7 +124,7 @@ namespace Weave
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Weave.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

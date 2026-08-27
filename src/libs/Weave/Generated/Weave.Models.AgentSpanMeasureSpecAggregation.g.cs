@@ -4,40 +4,40 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentSpanMeasureSpecAggregation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Avg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Count,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CountDistinct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CountFalse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CountTrue,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Max,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Min,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sum,
     }

@@ -9,21 +9,21 @@ namespace Weave
     public sealed partial class AgentVersionsQueryReq
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agent_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AgentName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sort_by")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? SortBy { get; set; }

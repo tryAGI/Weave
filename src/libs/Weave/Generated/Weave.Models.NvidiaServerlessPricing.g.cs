@@ -4,19 +4,19 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class NvidiaServerlessPricing
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cents_per_million_input_tokens")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double CentsPerMillionInputTokens { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cents_per_million_output_tokens")]
         [global::System.Text.Json.Serialization.JsonRequired]

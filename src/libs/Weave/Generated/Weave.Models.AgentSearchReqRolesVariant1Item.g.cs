@@ -4,32 +4,32 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentSearchReqRolesVariant1Item
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         System,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolResult,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

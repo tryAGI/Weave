@@ -15,7 +15,7 @@ namespace Weave
     public sealed partial class LteOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("$lte")]
         [global::System.Text.Json.Serialization.JsonRequired]

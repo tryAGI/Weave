@@ -12,7 +12,7 @@ namespace Weave
     public sealed partial class AgentConversationMessagePreview
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentConversationMessagePreviewRoleJsonConverter))]
@@ -20,7 +20,7 @@ namespace Weave
         public required global::Weave.AgentConversationMessagePreviewRole Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text")]
         public string? Text { get; set; }

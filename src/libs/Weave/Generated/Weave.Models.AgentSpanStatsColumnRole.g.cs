@@ -4,24 +4,24 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentSpanStatsColumnRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bucket,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Group,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Metric,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Time,
     }

@@ -18,7 +18,7 @@ namespace Weave
     public sealed partial class AndOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("$and")]
         [global::System.Text.Json.Serialization.JsonRequired]

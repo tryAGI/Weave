@@ -4,20 +4,20 @@
 namespace Weave
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentChatAgentStartStatus2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ok,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unset,
     }

@@ -9,33 +9,33 @@ namespace Weave
     public sealed partial class AgentSpanStatsReq
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("query")]
         public global::Weave.Query? Query { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("start")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime Start { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("end")]
         public global::System.DateTime? End { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("granularity")]
         public int? Granularity { get; set; }
@@ -47,13 +47,13 @@ namespace Weave
         public string? Timezone { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("group_by")]
         public global::System.Collections.Generic.IList<global::Weave.AgentGroupByRef>? GroupBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metrics")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsMetricSpec>? Metrics { get; set; }
@@ -65,19 +65,19 @@ namespace Weave
         public int? GroupLimit { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bucket_by")]
         public global::Weave.BucketByVariant1? BucketBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("group_filters")]
         public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupFilter>? GroupFilters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("signal_filters")]
         public global::Weave.AgentSignalFilter? SignalFilters { get; set; }
