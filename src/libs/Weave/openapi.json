@@ -6285,6 +6285,169 @@
         "title": "AgentChatContextCompacted",
         "description": "Payload for a context-window compaction event."
       },
+      "AgentChatFeedback": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "feedback_type": {
+            "type": "string",
+            "title": "Feedback Type"
+          },
+          "weave_ref": {
+            "type": "string",
+            "title": "Weave Ref"
+          },
+          "payload": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Payload"
+          },
+          "creator": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Creator"
+          },
+          "created_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created At"
+          },
+          "wb_user_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wb User Id"
+          },
+          "runnable_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Runnable Ref"
+          },
+          "call_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Call Ref"
+          },
+          "trigger_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Trigger Ref"
+          },
+          "annotation_ref": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Annotation Ref"
+          },
+          "scorer_tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Scorer Tags"
+          },
+          "scorer_tag_reasons": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Scorer Tag Reasons"
+          },
+          "scorer_tag_confidences": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Scorer Tag Confidences"
+          },
+          "scorer_ratings": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Scorer Ratings"
+          },
+          "scorer_rating_reasons": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Scorer Rating Reasons"
+          },
+          "scorer_rating_confidences": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Scorer Rating Confidences"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "feedback_type",
+          "weave_ref",
+          "payload",
+          "creator",
+          "created_at",
+          "wb_user_id",
+          "runnable_ref",
+          "call_ref",
+          "trigger_ref",
+          "annotation_ref",
+          "scorer_tags",
+          "scorer_tag_reasons",
+          "scorer_tag_confidences",
+          "scorer_ratings",
+          "scorer_rating_reasons",
+          "scorer_rating_confidences"
+        ],
+        "title": "AgentChatFeedback",
+        "description": "Feedback row from the agent chat `include_feedback` projection.\n\nField names match FEEDBACK_QUERY_FIELDS. This is not the feedback\ntable row and not FeedbackCreateReq: project_id and span_* are not\nselected."
+      },
       "AgentChatMessage": {
         "properties": {
           "type": {
@@ -6424,8 +6587,7 @@
             "anyOf": [
               {
                 "items": {
-                  "additionalProperties": true,
-                  "type": "object"
+                  "$ref": "#/components/schemas/AgentChatFeedback"
                 },
                 "type": "array"
               },
@@ -6646,8 +6808,7 @@
             "anyOf": [
               {
                 "items": {
-                  "additionalProperties": true,
-                  "type": "object"
+                  "$ref": "#/components/schemas/AgentChatFeedback"
                 },
                 "type": "array"
               },
@@ -9713,8 +9874,7 @@
             "anyOf": [
               {
                 "items": {
-                  "additionalProperties": true,
-                  "type": "object"
+                  "$ref": "#/components/schemas/AgentChatFeedback"
                 },
                 "type": "array"
               },

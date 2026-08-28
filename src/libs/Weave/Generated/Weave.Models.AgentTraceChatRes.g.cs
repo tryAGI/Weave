@@ -122,7 +122,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback")]
-        public global::System.Collections.Generic.IList<object>? Feedback { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentChatFeedback>? Feedback { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -184,7 +184,7 @@ namespace Weave
             string? wbUserId,
             int? totalDurationMs,
             double? totalCostUsd,
-            global::System.Collections.Generic.IList<object>? feedback)
+            global::System.Collections.Generic.IList<global::Weave.AgentChatFeedback>? feedback)
         {
             this.TraceId = traceId ?? throw new global::System.ArgumentNullException(nameof(traceId));
             this.RootSpanName = rootSpanName;
