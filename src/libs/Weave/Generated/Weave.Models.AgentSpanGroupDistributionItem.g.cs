@@ -42,37 +42,43 @@ namespace Weave
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_count")]
-        public int? TotalCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalCount { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("present_count")]
-        public int? PresentCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int PresentCount { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("missing_count")]
-        public int? MissingCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int MissingCount { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("other_count")]
-        public int? OtherCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int OtherCount { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bins")]
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionBin>? Bins { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionBin> Bins { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("values")]
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionValue>? Values { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionValue> Values { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -109,12 +115,12 @@ namespace Weave
             global::Weave.AgentSpanGroupDistributionItemSource source,
             string key,
             global::Weave.AgentSpanGroupDistributionItemValueType valueType,
-            int? totalCount,
-            int? presentCount,
-            int? missingCount,
-            int? otherCount,
-            global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionBin>? bins,
-            global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionValue>? values)
+            int totalCount,
+            int presentCount,
+            int missingCount,
+            int otherCount,
+            global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionBin> bins,
+            global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionValue> values)
         {
             this.Alias = alias ?? throw new global::System.ArgumentNullException(nameof(alias));
             this.Source = source;
@@ -124,8 +130,8 @@ namespace Weave
             this.PresentCount = presentCount;
             this.MissingCount = missingCount;
             this.OtherCount = otherCount;
-            this.Bins = bins;
-            this.Values = values;
+            this.Bins = bins ?? throw new global::System.ArgumentNullException(nameof(bins));
+            this.Values = values ?? throw new global::System.ArgumentNullException(nameof(values));
         }
 
         /// <summary>

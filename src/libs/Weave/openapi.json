@@ -6084,6 +6084,12 @@
           }
         },
         "type": "object",
+        "required": [
+          "model",
+          "system_instructions",
+          "tool_definitions",
+          "status"
+        ],
         "title": "AgentChatAgentStart",
         "description": "Payload for an agent lifecycle boundary."
       },
@@ -6218,7 +6224,18 @@
         },
         "type": "object",
         "required": [
-          "text"
+          "text",
+          "model",
+          "reasoning_content",
+          "reasoning_tokens",
+          "input_tokens",
+          "output_tokens",
+          "input_cost_usd",
+          "output_cost_usd",
+          "total_cost_usd",
+          "duration_ms",
+          "status",
+          "content_refs"
         ],
         "title": "AgentChatAssistantMessage",
         "description": "Payload for assistant text emitted by an agent or LLM span."
@@ -6260,6 +6277,11 @@
           }
         },
         "type": "object",
+        "required": [
+          "compaction_summary",
+          "compaction_items_before",
+          "compaction_items_after"
+        ],
         "title": "AgentChatContextCompacted",
         "description": "Payload for a context-window compaction event."
       },
@@ -6416,7 +6438,19 @@
         },
         "type": "object",
         "required": [
-          "type"
+          "type",
+          "span_id",
+          "agent_name",
+          "agent_version",
+          "status_code",
+          "started_at",
+          "user_message",
+          "assistant_message",
+          "tool_call",
+          "agent_start",
+          "agent_handoff",
+          "context_compacted",
+          "feedback"
         ],
         "title": "AgentChatMessage",
         "description": "A single element in the structured agent trajectory / chat view.\n\nCommon event fields live at the top level. Type-specific fields are\ngrouped under the payload matching `type`, and exactly one payload must be\nset. This keeps subtype nullability explicit while preserving a single\nordered timeline model for callers."
@@ -6492,6 +6526,14 @@
           }
         },
         "type": "object",
+        "required": [
+          "tool_name",
+          "tool_arguments",
+          "tool_result",
+          "duration_ms",
+          "status",
+          "content_refs"
+        ],
         "title": "AgentChatToolCall",
         "description": "Payload for a tool call timeline event."
       },
@@ -6511,7 +6553,8 @@
         },
         "type": "object",
         "required": [
-          "text"
+          "text",
+          "content_refs"
         ],
         "title": "AgentChatUserMessage",
         "description": "Payload for a user prompt in the chat timeline."
@@ -6617,7 +6660,14 @@
         },
         "type": "object",
         "required": [
-          "conversation_id"
+          "conversation_id",
+          "turns",
+          "total_turns",
+          "has_more",
+          "limit",
+          "offset",
+          "total_cost_usd",
+          "feedback"
         ],
         "title": "AgentConversationChatRes",
         "description": "Multi-turn chat view: an ordered list of per-turn chat responses.\n\nEach entry in `turns` corresponds to one trace_id, which Weave treats as\none conversation turn. This is not necessarily one `invoke_agent` span:\na turn can contain zero, one, or many agent invocations. The frontend can\nrender turn-number dividers between entries and still reuse\n`AgentTraceChatRes` rendering for each individual turn."
@@ -6640,7 +6690,8 @@
         },
         "type": "object",
         "required": [
-          "role"
+          "role",
+          "text"
         ],
         "title": "AgentConversationMessagePreview",
         "description": "A truncated first/last message snippet for a grouped conversation row.\n\n`role` is the chat-timeline message type (e.g. \"user_message\",\n\"assistant_message\") so clients can style it consistently with the full\nchat view; `text` is the trimmed, length-capped preview content."
@@ -6732,7 +6783,9 @@
         "type": "object",
         "required": [
           "trace_id",
-          "feedback_type"
+          "feedback_type",
+          "tags",
+          "ratings"
         ],
         "title": "AgentConversationSpanFeedback",
         "description": "Tags and ratings applied to a conversation's turn (or the conversation).\n\nPositioned client-side by matching `trace_id` (turn) against the spans;\n`trace_id` is None for conversation-level feedback."
@@ -6773,7 +6826,9 @@
         "type": "object",
         "required": [
           "name",
-          "value"
+          "value",
+          "reason",
+          "confidence"
         ],
         "title": "AgentConversationSpanRating",
         "description": "One numeric rating (a scorer score) applied to a turn or conversation."
@@ -6801,7 +6856,9 @@
         },
         "type": "object",
         "required": [
-          "conversation_id"
+          "conversation_id",
+          "spans",
+          "spans_feedback"
         ],
         "title": "AgentConversationSpans",
         "description": "One conversation's span sequence and its feedback markers."
@@ -6863,6 +6920,9 @@
           }
         },
         "type": "object",
+        "required": [
+          "conversations"
+        ],
         "title": "AgentConversationSpansRes",
         "description": "Span sequences + feedback markers, one entry per requested conversation."
       },
@@ -6994,6 +7054,12 @@
           }
         },
         "type": "object",
+        "required": [
+          "attributes",
+          "limit",
+          "offset",
+          "has_more"
+        ],
         "title": "AgentCustomAttrsSchemaRes",
         "description": "Typed custom attribute keys available for spans query/group/stats APIs."
       },
@@ -7116,7 +7182,8 @@
           "total_duration_ms",
           "error_count",
           "first_seen",
-          "last_seen"
+          "last_seen",
+          "total_cost_usd"
         ],
         "title": "AgentSchema",
         "description": "Aggregated per-agent stats from the agents table."
@@ -7371,7 +7438,8 @@
         },
         "type": "object",
         "required": [
-          "results"
+          "results",
+          "total_conversations"
         ],
         "title": "AgentSearchRes",
         "description": "Response from a full-text search across agent messages."
@@ -7518,7 +7586,13 @@
           "alias",
           "source",
           "key",
-          "value_type"
+          "value_type",
+          "total_count",
+          "present_count",
+          "missing_count",
+          "other_count",
+          "bins",
+          "values"
         ],
         "title": "AgentSpanGroupDistributionItem",
         "description": "Distribution data for one span-group/custom-attribute pair."
@@ -7848,6 +7922,33 @@
           }
         },
         "type": "object",
+        "required": [
+          "group_keys",
+          "span_count",
+          "invocation_count",
+          "conversation_count",
+          "total_input_tokens",
+          "total_cache_creation_input_tokens",
+          "total_cache_read_input_tokens",
+          "total_output_tokens",
+          "total_reasoning_tokens",
+          "total_duration_ms",
+          "error_count",
+          "total_cost_usd",
+          "total_input_cost_usd",
+          "total_output_cost_usd",
+          "agent_names",
+          "agent_versions",
+          "provider_names",
+          "request_models",
+          "conversation_names",
+          "first_seen",
+          "last_seen",
+          "first_message",
+          "last_message",
+          "metrics",
+          "distributions"
+        ],
         "title": "AgentSpanGroupRow",
         "description": "A single row in a grouped spans query response.\n\n`group_keys` maps each group_by ref's alias to its value for this row.\nThe remaining fields are a fixed aggregate bundle computed per group."
       },
@@ -8740,7 +8841,83 @@
         "required": [
           "project_id",
           "trace_id",
-          "span_id"
+          "span_id",
+          "parent_span_id",
+          "span_name",
+          "span_kind",
+          "started_at",
+          "ended_at",
+          "status_code",
+          "status_message",
+          "operation_name",
+          "provider_name",
+          "agent_name",
+          "agent_id",
+          "agent_description",
+          "agent_version",
+          "eval_run_id",
+          "eval_predict_and_score_call_id",
+          "eval_kind",
+          "eval_row_digest",
+          "eval_example_id",
+          "eval_trial_index",
+          "eval_evaluation_name",
+          "parent_call_id",
+          "parent_call_trace_id",
+          "request_model",
+          "response_model",
+          "response_id",
+          "input_tokens",
+          "output_tokens",
+          "reasoning_tokens",
+          "cache_creation_input_tokens",
+          "cache_read_input_tokens",
+          "input_cost_usd",
+          "output_cost_usd",
+          "cache_read_cost_usd",
+          "cache_creation_cost_usd",
+          "total_cost_usd",
+          "reasoning_content",
+          "conversation_id",
+          "conversation_name",
+          "tool_name",
+          "tool_type",
+          "tool_call_id",
+          "tool_description",
+          "tool_definitions",
+          "finish_reasons",
+          "error_type",
+          "request_temperature",
+          "request_max_tokens",
+          "request_top_p",
+          "request_frequency_penalty",
+          "request_presence_penalty",
+          "request_seed",
+          "request_stop_sequences",
+          "request_choice_count",
+          "output_type",
+          "input_messages",
+          "output_messages",
+          "system_instructions",
+          "tool_call_arguments",
+          "tool_call_result",
+          "compaction_summary",
+          "compaction_items_before",
+          "compaction_items_after",
+          "content_refs",
+          "artifact_refs",
+          "object_refs",
+          "custom_attrs_string",
+          "custom_attrs_int",
+          "custom_attrs_float",
+          "custom_attrs_bool",
+          "server_address",
+          "server_port",
+          "wb_user_id",
+          "wb_run_id",
+          "wb_run_step",
+          "wb_run_step_end",
+          "raw_span_dump"
         ],
         "title": "AgentSpanSchema",
         "description": "A normalized agent span returned by query APIs."
@@ -8798,7 +8975,9 @@
         "required": [
           "name",
           "role",
-          "value_type"
+          "value_type",
+          "metric",
+          "aggregation"
         ],
         "title": "AgentSpanStatsColumn",
         "description": "Metadata describing one column in an agent span stats result row."
@@ -9132,7 +9311,11 @@
         "required": [
           "start",
           "end",
-          "timezone"
+          "granularity",
+          "timezone",
+          "bucket_type",
+          "columns",
+          "rows"
         ],
         "title": "AgentSpanStatsRes",
         "description": "Response containing chart-ready agent span stats rows."
@@ -9338,6 +9521,11 @@
           }
         },
         "type": "object",
+        "required": [
+          "spans",
+          "groups",
+          "total_count"
+        ],
         "title": "AgentSpansQueryRes",
         "description": "Response from a spans query.\n\nExactly one of `spans` or `groups` will be populated, based on\nwhether the request specified `group_by`."
       },
@@ -9539,7 +9727,24 @@
         },
         "type": "object",
         "required": [
-          "trace_id"
+          "trace_id",
+          "root_span_name",
+          "agent_name",
+          "agent_version",
+          "status_code",
+          "provider",
+          "started_at",
+          "ended_at",
+          "wb_user_id",
+          "total_duration_ms",
+          "total_cost_usd",
+          "total_input_tokens",
+          "total_output_tokens",
+          "total_reasoning_tokens",
+          "total_cache_creation_input_tokens",
+          "total_cache_read_input_tokens",
+          "messages",
+          "feedback"
         ],
         "title": "AgentTraceChatRes",
         "description": "Structured chat view: a linear sequence of messages representing\nthe agent trajectory for a single trace."
@@ -9630,6 +9835,7 @@
           "error_count",
           "first_seen",
           "last_seen",
+          "total_cost_usd",
           "agent_version"
         ],
         "title": "AgentVersionSchema",
@@ -9703,7 +9909,8 @@
         },
         "type": "object",
         "required": [
-          "versions"
+          "versions",
+          "total_count"
         ],
         "title": "AgentVersionsQueryRes",
         "description": "Response containing agent version stats."
@@ -9799,7 +10006,8 @@
         },
         "type": "object",
         "required": [
-          "agents"
+          "agents",
+          "total_count"
         ],
         "title": "AgentsQueryRes",
         "description": "Response containing aggregated agent stats."
@@ -17919,10 +18127,12 @@
         },
         "type": "object",
         "required": [
-          "content"
+          "role",
+          "content",
+          "finish_reason"
         ],
         "title": "NormalizedMessage",
-        "description": "A single message normalized from any provider format.\n\nMaps to ClickHouse ``Tuple(role String, content String, finish_reason String)``.\n\n- role: message role (user, assistant, tool, system)\n- content: plain text for simple messages, or JSON-serialized parts\n  array for multimodal/structured messages\n- finish_reason: per-message finish reason (output messages only)"
+        "description": "A single message normalized from any provider format.\n\nMaps to ClickHouse ``Tuple(role String, content String, finish_reason String)``.\n\n- role: message role (user, assistant, tool, system)\n- content: plain text for simple messages, or JSON-serialized parts\n  array for multimodal/structured messages\n- finish_reason: per-message finish reason (output messages only)\n\nSerialization JSON Schema marks defaulted fields required. In the public\nOpenAPI document this class appears only as an AgentSpanSchema message\nelement. Ingest validation is unchanged."
       },
       "NotOperation": {
         "properties": {

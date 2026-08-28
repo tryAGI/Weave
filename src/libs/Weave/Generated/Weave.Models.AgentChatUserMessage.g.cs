@@ -19,7 +19,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content_refs")]
-        public global::System.Collections.Generic.IList<string>? ContentRefs { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> ContentRefs { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,10 +38,10 @@ namespace Weave
 #endif
         public AgentChatUserMessage(
             string text,
-            global::System.Collections.Generic.IList<string>? contentRefs)
+            global::System.Collections.Generic.IList<string> contentRefs)
         {
             this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
-            this.ContentRefs = contentRefs;
+            this.ContentRefs = contentRefs ?? throw new global::System.ArgumentNullException(nameof(contentRefs));
         }
 
         /// <summary>

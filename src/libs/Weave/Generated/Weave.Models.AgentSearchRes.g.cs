@@ -19,7 +19,8 @@ namespace Weave
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_conversations")]
-        public int? TotalConversations { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalConversations { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -39,7 +40,7 @@ namespace Weave
 #endif
         public AgentSearchRes(
             global::System.Collections.Generic.IList<global::Weave.AgentSearchConversationResult> results,
-            int? totalConversations)
+            int totalConversations)
         {
             this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
             this.TotalConversations = totalConversations;

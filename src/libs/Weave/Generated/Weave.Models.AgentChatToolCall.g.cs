@@ -42,7 +42,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content_refs")]
-        public global::System.Collections.Generic.IList<string>? ContentRefs { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> ContentRefs { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -53,29 +54,29 @@ namespace Weave
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentChatToolCall" /> class.
         /// </summary>
+        /// <param name="contentRefs"></param>
         /// <param name="toolName"></param>
         /// <param name="toolArguments"></param>
         /// <param name="toolResult"></param>
         /// <param name="durationMs"></param>
         /// <param name="status"></param>
-        /// <param name="contentRefs"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AgentChatToolCall(
+            global::System.Collections.Generic.IList<string> contentRefs,
             string? toolName,
             string? toolArguments,
             string? toolResult,
             int? durationMs,
-            global::Weave.AgentChatToolCallStatus2? status,
-            global::System.Collections.Generic.IList<string>? contentRefs)
+            global::Weave.AgentChatToolCallStatus2? status)
         {
             this.ToolName = toolName;
             this.ToolArguments = toolArguments;
             this.ToolResult = toolResult;
             this.DurationMs = durationMs;
             this.Status = status;
-            this.ContentRefs = contentRefs;
+            this.ContentRefs = contentRefs ?? throw new global::System.ArgumentNullException(nameof(contentRefs));
         }
 
         /// <summary>

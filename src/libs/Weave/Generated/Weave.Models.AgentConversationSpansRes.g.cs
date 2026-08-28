@@ -12,7 +12,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conversations")]
-        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpans>? Conversations { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.AgentConversationSpans> Conversations { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -28,9 +29,9 @@ namespace Weave
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AgentConversationSpansRes(
-            global::System.Collections.Generic.IList<global::Weave.AgentConversationSpans>? conversations)
+            global::System.Collections.Generic.IList<global::Weave.AgentConversationSpans> conversations)
         {
-            this.Conversations = conversations;
+            this.Conversations = conversations ?? throw new global::System.ArgumentNullException(nameof(conversations));
         }
 
         /// <summary>

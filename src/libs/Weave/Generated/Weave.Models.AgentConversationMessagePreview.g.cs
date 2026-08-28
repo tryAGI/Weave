@@ -23,7 +23,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text")]
-        public string? Text { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Text { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -41,10 +42,10 @@ namespace Weave
 #endif
         public AgentConversationMessagePreview(
             global::Weave.AgentConversationMessagePreviewRole role,
-            string? text)
+            string text)
         {
             this.Role = role;
-            this.Text = text;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
         }
 
         /// <summary>

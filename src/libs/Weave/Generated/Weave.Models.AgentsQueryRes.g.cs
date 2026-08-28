@@ -19,7 +19,8 @@ namespace Weave
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_count")]
-        public int? TotalCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalCount { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -39,7 +40,7 @@ namespace Weave
 #endif
         public AgentsQueryRes(
             global::System.Collections.Generic.IList<global::Weave.AgentSchema> agents,
-            int? totalCount)
+            int totalCount)
         {
             this.Agents = agents ?? throw new global::System.ArgumentNullException(nameof(agents));
             this.TotalCount = totalCount;
