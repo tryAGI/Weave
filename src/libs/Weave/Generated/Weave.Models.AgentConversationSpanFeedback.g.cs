@@ -28,13 +28,15 @@ namespace Weave
         /// Arbitrary descriptive tags applied to this feedback.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
-        public global::System.Collections.Generic.IList<string>? Tags { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> Tags { get; set; }
 
         /// <summary>
         /// Numeric scorer ratings applied to this feedback.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ratings")]
-        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanRating>? Ratings { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanRating> Ratings { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -46,28 +48,28 @@ namespace Weave
         /// Initializes a new instance of the <see cref="AgentConversationSpanFeedback" /> class.
         /// </summary>
         /// <param name="feedbackType"></param>
-        /// <param name="traceId">
-        /// The turn this feedback is anchored to; None for conversation-level.
-        /// </param>
         /// <param name="tags">
         /// Arbitrary descriptive tags applied to this feedback.
         /// </param>
         /// <param name="ratings">
         /// Numeric scorer ratings applied to this feedback.
         /// </param>
+        /// <param name="traceId">
+        /// The turn this feedback is anchored to; None for conversation-level.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AgentConversationSpanFeedback(
             global::Weave.AgentConversationSpanFeedbackFeedbackType feedbackType,
-            string? traceId,
-            global::System.Collections.Generic.IList<string>? tags,
-            global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanRating>? ratings)
+            global::System.Collections.Generic.IList<string> tags,
+            global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanRating> ratings,
+            string? traceId)
         {
             this.TraceId = traceId;
             this.FeedbackType = feedbackType;
-            this.Tags = tags;
-            this.Ratings = ratings;
+            this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
+            this.Ratings = ratings ?? throw new global::System.ArgumentNullException(nameof(ratings));
         }
 
         /// <summary>

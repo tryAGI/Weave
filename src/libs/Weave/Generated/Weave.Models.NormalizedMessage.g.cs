@@ -9,7 +9,10 @@ namespace Weave
     /// - role: message role (user, assistant, tool, system)<br/>
     /// - content: plain text for simple messages, or JSON-serialized parts<br/>
     ///   array for multimodal/structured messages<br/>
-    /// - finish_reason: per-message finish reason (output messages only)
+    /// - finish_reason: per-message finish reason (output messages only)<br/>
+    /// Serialization JSON Schema marks defaulted fields required. In the public<br/>
+    /// OpenAPI document this class appears only as an AgentSpanSchema message<br/>
+    /// element. Ingest validation is unchanged.
     /// </summary>
     public sealed partial class NormalizedMessage
     {
@@ -17,7 +20,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        public string? Role { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Role { get; set; }
 
         /// <summary>
         ///
@@ -30,7 +34,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("finish_reason")]
-        public string? FinishReason { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string FinishReason { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -41,20 +46,20 @@ namespace Weave
         /// <summary>
         /// Initializes a new instance of the <see cref="NormalizedMessage" /> class.
         /// </summary>
-        /// <param name="content"></param>
         /// <param name="role"></param>
+        /// <param name="content"></param>
         /// <param name="finishReason"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public NormalizedMessage(
+            string role,
             string content,
-            string? role,
-            string? finishReason)
+            string finishReason)
         {
-            this.Role = role;
+            this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
             this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
-            this.FinishReason = finishReason;
+            this.FinishReason = finishReason ?? throw new global::System.ArgumentNullException(nameof(finishReason));
         }
 
         /// <summary>

@@ -12,25 +12,29 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attributes")]
-        public global::System.Collections.Generic.IList<global::Weave.AgentCustomAttrSchemaItem>? Attributes { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.AgentCustomAttrSchemaItem> Attributes { get; set; }
 
         /// <summary>
         /// Default Value: 200
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("limit")]
-        public int? Limit { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int Limit { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("offset")]
-        public int? Offset { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int Offset { get; set; }
 
         /// <summary>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_more")]
-        public bool? HasMore { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool HasMore { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -55,12 +59,12 @@ namespace Weave
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AgentCustomAttrsSchemaRes(
-            global::System.Collections.Generic.IList<global::Weave.AgentCustomAttrSchemaItem>? attributes,
-            int? limit,
-            int? offset,
-            bool? hasMore)
+            global::System.Collections.Generic.IList<global::Weave.AgentCustomAttrSchemaItem> attributes,
+            int limit,
+            int offset,
+            bool hasMore)
         {
-            this.Attributes = attributes;
+            this.Attributes = attributes ?? throw new global::System.ArgumentNullException(nameof(attributes));
             this.Limit = limit;
             this.Offset = offset;
             this.HasMore = hasMore;

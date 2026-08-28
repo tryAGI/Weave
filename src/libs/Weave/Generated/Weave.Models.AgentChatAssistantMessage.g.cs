@@ -79,7 +79,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content_refs")]
-        public global::System.Collections.Generic.IList<string>? ContentRefs { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> ContentRefs { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -91,6 +92,7 @@ namespace Weave
         /// Initializes a new instance of the <see cref="AgentChatAssistantMessage" /> class.
         /// </summary>
         /// <param name="text"></param>
+        /// <param name="contentRefs"></param>
         /// <param name="model"></param>
         /// <param name="reasoningContent"></param>
         /// <param name="reasoningTokens"></param>
@@ -101,12 +103,12 @@ namespace Weave
         /// <param name="totalCostUsd"></param>
         /// <param name="durationMs"></param>
         /// <param name="status"></param>
-        /// <param name="contentRefs"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AgentChatAssistantMessage(
             string text,
+            global::System.Collections.Generic.IList<string> contentRefs,
             string? model,
             string? reasoningContent,
             int? reasoningTokens,
@@ -116,8 +118,7 @@ namespace Weave
             double? outputCostUsd,
             double? totalCostUsd,
             int? durationMs,
-            global::Weave.AgentChatAssistantMessageStatus2? status,
-            global::System.Collections.Generic.IList<string>? contentRefs)
+            global::Weave.AgentChatAssistantMessageStatus2? status)
         {
             this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Model = model;
@@ -130,7 +131,7 @@ namespace Weave
             this.TotalCostUsd = totalCostUsd;
             this.DurationMs = durationMs;
             this.Status = status;
-            this.ContentRefs = contentRefs;
+            this.ContentRefs = contentRefs ?? throw new global::System.ArgumentNullException(nameof(contentRefs));
         }
 
         /// <summary>

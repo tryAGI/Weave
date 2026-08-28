@@ -19,13 +19,15 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spans")]
-        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpan>? Spans { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.AgentConversationSpan> Spans { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spans_feedback")]
-        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanFeedback>? SpansFeedback { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanFeedback> SpansFeedback { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -44,12 +46,12 @@ namespace Weave
 #endif
         public AgentConversationSpans(
             string conversationId,
-            global::System.Collections.Generic.IList<global::Weave.AgentConversationSpan>? spans,
-            global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanFeedback>? spansFeedback)
+            global::System.Collections.Generic.IList<global::Weave.AgentConversationSpan> spans,
+            global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanFeedback> spansFeedback)
         {
             this.ConversationId = conversationId ?? throw new global::System.ArgumentNullException(nameof(conversationId));
-            this.Spans = spans;
-            this.SpansFeedback = spansFeedback;
+            this.Spans = spans ?? throw new global::System.ArgumentNullException(nameof(spans));
+            this.SpansFeedback = spansFeedback ?? throw new global::System.ArgumentNullException(nameof(spansFeedback));
         }
 
         /// <summary>

@@ -24,31 +24,36 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("turns")]
-        public global::System.Collections.Generic.IList<global::Weave.AgentTraceChatRes>? Turns { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.AgentTraceChatRes> Turns { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_turns")]
-        public int? TotalTurns { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalTurns { get; set; }
 
         /// <summary>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_more")]
-        public bool? HasMore { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool HasMore { get; set; }
 
         /// <summary>
         /// Default Value: 50
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("limit")]
-        public int? Limit { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int Limit { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("offset")]
-        public int? Offset { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int Offset { get; set; }
 
         /// <summary>
         ///
@@ -92,16 +97,16 @@ namespace Weave
 #endif
         public AgentConversationChatRes(
             string conversationId,
-            global::System.Collections.Generic.IList<global::Weave.AgentTraceChatRes>? turns,
-            int? totalTurns,
-            bool? hasMore,
-            int? limit,
-            int? offset,
+            global::System.Collections.Generic.IList<global::Weave.AgentTraceChatRes> turns,
+            int totalTurns,
+            bool hasMore,
+            int limit,
+            int offset,
             double? totalCostUsd,
             global::System.Collections.Generic.IList<object>? feedback)
         {
             this.ConversationId = conversationId ?? throw new global::System.ArgumentNullException(nameof(conversationId));
-            this.Turns = turns;
+            this.Turns = turns ?? throw new global::System.ArgumentNullException(nameof(turns));
             this.TotalTurns = totalTurns;
             this.HasMore = hasMore;
             this.Limit = limit;

@@ -14,67 +14,78 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("group_keys")]
-        public object? GroupKeys { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required object GroupKeys { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("span_count")]
-        public int? SpanCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int SpanCount { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("invocation_count")]
-        public int? InvocationCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int InvocationCount { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conversation_count")]
-        public int? ConversationCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int ConversationCount { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_input_tokens")]
-        public int? TotalInputTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalInputTokens { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_cache_creation_input_tokens")]
-        public int? TotalCacheCreationInputTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalCacheCreationInputTokens { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_cache_read_input_tokens")]
-        public int? TotalCacheReadInputTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalCacheReadInputTokens { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_output_tokens")]
-        public int? TotalOutputTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalOutputTokens { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_reasoning_tokens")]
-        public int? TotalReasoningTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalReasoningTokens { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_duration_ms")]
-        public int? TotalDurationMs { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalDurationMs { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error_count")]
-        public int? ErrorCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int ErrorCount { get; set; }
 
         /// <summary>
         ///
@@ -98,31 +109,36 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agent_names")]
-        public global::System.Collections.Generic.IList<string>? AgentNames { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> AgentNames { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agent_versions")]
-        public global::System.Collections.Generic.IList<string>? AgentVersions { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> AgentVersions { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider_names")]
-        public global::System.Collections.Generic.IList<string>? ProviderNames { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> ProviderNames { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_models")]
-        public global::System.Collections.Generic.IList<string>? RequestModels { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> RequestModels { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conversation_names")]
-        public global::System.Collections.Generic.IList<string>? ConversationNames { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> ConversationNames { get; set; }
 
         /// <summary>
         ///
@@ -152,13 +168,15 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metrics")]
-        public object? Metrics { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required object Metrics { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("distributions")]
-        public global::System.Collections.Generic.Dictionary<string, global::Weave.AgentSpanGroupDistributionItem>? Distributions { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.Dictionary<string, global::Weave.AgentSpanGroupDistributionItem> Distributions { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -200,51 +218,51 @@ namespace Weave
         /// <param name="errorCount">
         /// Default Value: 0
         /// </param>
-        /// <param name="totalCostUsd"></param>
-        /// <param name="totalInputCostUsd"></param>
-        /// <param name="totalOutputCostUsd"></param>
         /// <param name="agentNames"></param>
         /// <param name="agentVersions"></param>
         /// <param name="providerNames"></param>
         /// <param name="requestModels"></param>
         /// <param name="conversationNames"></param>
+        /// <param name="metrics"></param>
+        /// <param name="distributions"></param>
+        /// <param name="totalCostUsd"></param>
+        /// <param name="totalInputCostUsd"></param>
+        /// <param name="totalOutputCostUsd"></param>
         /// <param name="firstSeen"></param>
         /// <param name="lastSeen"></param>
         /// <param name="firstMessage"></param>
         /// <param name="lastMessage"></param>
-        /// <param name="metrics"></param>
-        /// <param name="distributions"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AgentSpanGroupRow(
-            object? groupKeys,
-            int? spanCount,
-            int? invocationCount,
-            int? conversationCount,
-            int? totalInputTokens,
-            int? totalCacheCreationInputTokens,
-            int? totalCacheReadInputTokens,
-            int? totalOutputTokens,
-            int? totalReasoningTokens,
-            int? totalDurationMs,
-            int? errorCount,
+            object groupKeys,
+            int spanCount,
+            int invocationCount,
+            int conversationCount,
+            int totalInputTokens,
+            int totalCacheCreationInputTokens,
+            int totalCacheReadInputTokens,
+            int totalOutputTokens,
+            int totalReasoningTokens,
+            int totalDurationMs,
+            int errorCount,
+            global::System.Collections.Generic.IList<string> agentNames,
+            global::System.Collections.Generic.IList<string> agentVersions,
+            global::System.Collections.Generic.IList<string> providerNames,
+            global::System.Collections.Generic.IList<string> requestModels,
+            global::System.Collections.Generic.IList<string> conversationNames,
+            object metrics,
+            global::System.Collections.Generic.Dictionary<string, global::Weave.AgentSpanGroupDistributionItem> distributions,
             double? totalCostUsd,
             double? totalInputCostUsd,
             double? totalOutputCostUsd,
-            global::System.Collections.Generic.IList<string>? agentNames,
-            global::System.Collections.Generic.IList<string>? agentVersions,
-            global::System.Collections.Generic.IList<string>? providerNames,
-            global::System.Collections.Generic.IList<string>? requestModels,
-            global::System.Collections.Generic.IList<string>? conversationNames,
             global::System.DateTime? firstSeen,
             global::System.DateTime? lastSeen,
             global::Weave.AgentConversationMessagePreview? firstMessage,
-            global::Weave.AgentConversationMessagePreview? lastMessage,
-            object? metrics,
-            global::System.Collections.Generic.Dictionary<string, global::Weave.AgentSpanGroupDistributionItem>? distributions)
+            global::Weave.AgentConversationMessagePreview? lastMessage)
         {
-            this.GroupKeys = groupKeys;
+            this.GroupKeys = groupKeys ?? throw new global::System.ArgumentNullException(nameof(groupKeys));
             this.SpanCount = spanCount;
             this.InvocationCount = invocationCount;
             this.ConversationCount = conversationCount;
@@ -258,17 +276,17 @@ namespace Weave
             this.TotalCostUsd = totalCostUsd;
             this.TotalInputCostUsd = totalInputCostUsd;
             this.TotalOutputCostUsd = totalOutputCostUsd;
-            this.AgentNames = agentNames;
-            this.AgentVersions = agentVersions;
-            this.ProviderNames = providerNames;
-            this.RequestModels = requestModels;
-            this.ConversationNames = conversationNames;
+            this.AgentNames = agentNames ?? throw new global::System.ArgumentNullException(nameof(agentNames));
+            this.AgentVersions = agentVersions ?? throw new global::System.ArgumentNullException(nameof(agentVersions));
+            this.ProviderNames = providerNames ?? throw new global::System.ArgumentNullException(nameof(providerNames));
+            this.RequestModels = requestModels ?? throw new global::System.ArgumentNullException(nameof(requestModels));
+            this.ConversationNames = conversationNames ?? throw new global::System.ArgumentNullException(nameof(conversationNames));
             this.FirstSeen = firstSeen;
             this.LastSeen = lastSeen;
             this.FirstMessage = firstMessage;
             this.LastMessage = lastMessage;
-            this.Metrics = metrics;
-            this.Distributions = distributions;
+            this.Metrics = metrics ?? throw new global::System.ArgumentNullException(nameof(metrics));
+            this.Distributions = distributions ?? throw new global::System.ArgumentNullException(nameof(distributions));
         }
 
         /// <summary>

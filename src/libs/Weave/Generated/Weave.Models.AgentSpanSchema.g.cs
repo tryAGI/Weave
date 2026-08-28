@@ -291,7 +291,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("finish_reasons")]
-        public global::System.Collections.Generic.IList<string>? FinishReasons { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> FinishReasons { get; set; }
 
         /// <summary>
         ///
@@ -339,7 +340,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_stop_sequences")]
-        public global::System.Collections.Generic.IList<string>? RequestStopSequences { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> RequestStopSequences { get; set; }
 
         /// <summary>
         ///
@@ -357,19 +359,22 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("input_messages")]
-        public global::System.Collections.Generic.IList<global::Weave.NormalizedMessage>? InputMessages { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.NormalizedMessage> InputMessages { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output_messages")]
-        public global::System.Collections.Generic.IList<global::Weave.NormalizedMessage>? OutputMessages { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.NormalizedMessage> OutputMessages { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("system_instructions")]
-        public global::System.Collections.Generic.IList<string>? SystemInstructions { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> SystemInstructions { get; set; }
 
         /// <summary>
         ///
@@ -405,43 +410,50 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content_refs")]
-        public global::System.Collections.Generic.IList<string>? ContentRefs { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> ContentRefs { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("artifact_refs")]
-        public global::System.Collections.Generic.IList<string>? ArtifactRefs { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> ArtifactRefs { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("object_refs")]
-        public global::System.Collections.Generic.IList<string>? ObjectRefs { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> ObjectRefs { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_attrs_string")]
-        public global::System.Collections.Generic.Dictionary<string, string>? CustomAttrsString { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.Dictionary<string, string> CustomAttrsString { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_attrs_int")]
-        public global::System.Collections.Generic.Dictionary<string, int>? CustomAttrsInt { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.Dictionary<string, int> CustomAttrsInt { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_attrs_float")]
-        public global::System.Collections.Generic.Dictionary<string, double>? CustomAttrsFloat { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.Dictionary<string, double> CustomAttrsFloat { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_attrs_bool")]
-        public global::System.Collections.Generic.Dictionary<string, bool>? CustomAttrsBool { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.Dictionary<string, bool> CustomAttrsBool { get; set; }
 
         /// <summary>
         ///
@@ -497,6 +509,18 @@ namespace Weave
         /// <param name="projectId"></param>
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
+        /// <param name="finishReasons"></param>
+        /// <param name="requestStopSequences"></param>
+        /// <param name="inputMessages"></param>
+        /// <param name="outputMessages"></param>
+        /// <param name="systemInstructions"></param>
+        /// <param name="contentRefs"></param>
+        /// <param name="artifactRefs"></param>
+        /// <param name="objectRefs"></param>
+        /// <param name="customAttrsString"></param>
+        /// <param name="customAttrsInt"></param>
+        /// <param name="customAttrsFloat"></param>
+        /// <param name="customAttrsBool"></param>
         /// <param name="parentSpanId"></param>
         /// <param name="spanName"></param>
         /// <param name="spanKind"></param>
@@ -540,7 +564,6 @@ namespace Weave
         /// <param name="toolCallId"></param>
         /// <param name="toolDescription"></param>
         /// <param name="toolDefinitions"></param>
-        /// <param name="finishReasons"></param>
         /// <param name="errorType"></param>
         /// <param name="requestTemperature"></param>
         /// <param name="requestMaxTokens"></param>
@@ -548,24 +571,13 @@ namespace Weave
         /// <param name="requestFrequencyPenalty"></param>
         /// <param name="requestPresencePenalty"></param>
         /// <param name="requestSeed"></param>
-        /// <param name="requestStopSequences"></param>
         /// <param name="requestChoiceCount"></param>
         /// <param name="outputType"></param>
-        /// <param name="inputMessages"></param>
-        /// <param name="outputMessages"></param>
-        /// <param name="systemInstructions"></param>
         /// <param name="toolCallArguments"></param>
         /// <param name="toolCallResult"></param>
         /// <param name="compactionSummary"></param>
         /// <param name="compactionItemsBefore"></param>
         /// <param name="compactionItemsAfter"></param>
-        /// <param name="contentRefs"></param>
-        /// <param name="artifactRefs"></param>
-        /// <param name="objectRefs"></param>
-        /// <param name="customAttrsString"></param>
-        /// <param name="customAttrsInt"></param>
-        /// <param name="customAttrsFloat"></param>
-        /// <param name="customAttrsBool"></param>
         /// <param name="serverAddress"></param>
         /// <param name="serverPort"></param>
         /// <param name="wbUserId"></param>
@@ -580,6 +592,18 @@ namespace Weave
             string projectId,
             string traceId,
             string spanId,
+            global::System.Collections.Generic.IList<string> finishReasons,
+            global::System.Collections.Generic.IList<string> requestStopSequences,
+            global::System.Collections.Generic.IList<global::Weave.NormalizedMessage> inputMessages,
+            global::System.Collections.Generic.IList<global::Weave.NormalizedMessage> outputMessages,
+            global::System.Collections.Generic.IList<string> systemInstructions,
+            global::System.Collections.Generic.IList<string> contentRefs,
+            global::System.Collections.Generic.IList<string> artifactRefs,
+            global::System.Collections.Generic.IList<string> objectRefs,
+            global::System.Collections.Generic.Dictionary<string, string> customAttrsString,
+            global::System.Collections.Generic.Dictionary<string, int> customAttrsInt,
+            global::System.Collections.Generic.Dictionary<string, double> customAttrsFloat,
+            global::System.Collections.Generic.Dictionary<string, bool> customAttrsBool,
             string? parentSpanId,
             string? spanName,
             global::Weave.AgentSpanSchemaSpanKind2? spanKind,
@@ -623,7 +647,6 @@ namespace Weave
             string? toolCallId,
             string? toolDescription,
             string? toolDefinitions,
-            global::System.Collections.Generic.IList<string>? finishReasons,
             string? errorType,
             double? requestTemperature,
             int? requestMaxTokens,
@@ -631,24 +654,13 @@ namespace Weave
             double? requestFrequencyPenalty,
             double? requestPresencePenalty,
             int? requestSeed,
-            global::System.Collections.Generic.IList<string>? requestStopSequences,
             int? requestChoiceCount,
             string? outputType,
-            global::System.Collections.Generic.IList<global::Weave.NormalizedMessage>? inputMessages,
-            global::System.Collections.Generic.IList<global::Weave.NormalizedMessage>? outputMessages,
-            global::System.Collections.Generic.IList<string>? systemInstructions,
             string? toolCallArguments,
             string? toolCallResult,
             string? compactionSummary,
             int? compactionItemsBefore,
             int? compactionItemsAfter,
-            global::System.Collections.Generic.IList<string>? contentRefs,
-            global::System.Collections.Generic.IList<string>? artifactRefs,
-            global::System.Collections.Generic.IList<string>? objectRefs,
-            global::System.Collections.Generic.Dictionary<string, string>? customAttrsString,
-            global::System.Collections.Generic.Dictionary<string, int>? customAttrsInt,
-            global::System.Collections.Generic.Dictionary<string, double>? customAttrsFloat,
-            global::System.Collections.Generic.Dictionary<string, bool>? customAttrsBool,
             string? serverAddress,
             int? serverPort,
             string? wbUserId,
@@ -703,7 +715,7 @@ namespace Weave
             this.ToolCallId = toolCallId;
             this.ToolDescription = toolDescription;
             this.ToolDefinitions = toolDefinitions;
-            this.FinishReasons = finishReasons;
+            this.FinishReasons = finishReasons ?? throw new global::System.ArgumentNullException(nameof(finishReasons));
             this.ErrorType = errorType;
             this.RequestTemperature = requestTemperature;
             this.RequestMaxTokens = requestMaxTokens;
@@ -711,24 +723,24 @@ namespace Weave
             this.RequestFrequencyPenalty = requestFrequencyPenalty;
             this.RequestPresencePenalty = requestPresencePenalty;
             this.RequestSeed = requestSeed;
-            this.RequestStopSequences = requestStopSequences;
+            this.RequestStopSequences = requestStopSequences ?? throw new global::System.ArgumentNullException(nameof(requestStopSequences));
             this.RequestChoiceCount = requestChoiceCount;
             this.OutputType = outputType;
-            this.InputMessages = inputMessages;
-            this.OutputMessages = outputMessages;
-            this.SystemInstructions = systemInstructions;
+            this.InputMessages = inputMessages ?? throw new global::System.ArgumentNullException(nameof(inputMessages));
+            this.OutputMessages = outputMessages ?? throw new global::System.ArgumentNullException(nameof(outputMessages));
+            this.SystemInstructions = systemInstructions ?? throw new global::System.ArgumentNullException(nameof(systemInstructions));
             this.ToolCallArguments = toolCallArguments;
             this.ToolCallResult = toolCallResult;
             this.CompactionSummary = compactionSummary;
             this.CompactionItemsBefore = compactionItemsBefore;
             this.CompactionItemsAfter = compactionItemsAfter;
-            this.ContentRefs = contentRefs;
-            this.ArtifactRefs = artifactRefs;
-            this.ObjectRefs = objectRefs;
-            this.CustomAttrsString = customAttrsString;
-            this.CustomAttrsInt = customAttrsInt;
-            this.CustomAttrsFloat = customAttrsFloat;
-            this.CustomAttrsBool = customAttrsBool;
+            this.ContentRefs = contentRefs ?? throw new global::System.ArgumentNullException(nameof(contentRefs));
+            this.ArtifactRefs = artifactRefs ?? throw new global::System.ArgumentNullException(nameof(artifactRefs));
+            this.ObjectRefs = objectRefs ?? throw new global::System.ArgumentNullException(nameof(objectRefs));
+            this.CustomAttrsString = customAttrsString ?? throw new global::System.ArgumentNullException(nameof(customAttrsString));
+            this.CustomAttrsInt = customAttrsInt ?? throw new global::System.ArgumentNullException(nameof(customAttrsInt));
+            this.CustomAttrsFloat = customAttrsFloat ?? throw new global::System.ArgumentNullException(nameof(customAttrsFloat));
+            this.CustomAttrsBool = customAttrsBool ?? throw new global::System.ArgumentNullException(nameof(customAttrsBool));
             this.ServerAddress = serverAddress;
             this.ServerPort = serverPort;
             this.WbUserId = wbUserId;

@@ -38,21 +38,25 @@ namespace Weave
         /// <summary>
         /// Default Value: time
         /// </summary>
+        /// <default>global::Weave.AgentSpanStatsResBucketType.Time</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("bucket_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AgentSpanStatsResBucketTypeJsonConverter))]
-        public global::Weave.AgentSpanStatsResBucketType? BucketType { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Weave.AgentSpanStatsResBucketType BucketType { get; set; } = global::Weave.AgentSpanStatsResBucketType.Time;
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("columns")]
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn>? Columns { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn> Columns { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rows")]
-        public global::System.Collections.Generic.IList<object>? Rows { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<object> Rows { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -66,12 +70,12 @@ namespace Weave
         /// <param name="start"></param>
         /// <param name="end"></param>
         /// <param name="timezone"></param>
-        /// <param name="granularity"></param>
         /// <param name="bucketType">
         /// Default Value: time
         /// </param>
         /// <param name="columns"></param>
         /// <param name="rows"></param>
+        /// <param name="granularity"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -79,18 +83,18 @@ namespace Weave
             global::System.DateTime start,
             global::System.DateTime end,
             string timezone,
-            int? granularity,
-            global::Weave.AgentSpanStatsResBucketType? bucketType,
-            global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn>? columns,
-            global::System.Collections.Generic.IList<object>? rows)
+            global::Weave.AgentSpanStatsResBucketType bucketType,
+            global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn> columns,
+            global::System.Collections.Generic.IList<object> rows,
+            int? granularity)
         {
             this.Start = start;
             this.End = end;
             this.Granularity = granularity;
             this.Timezone = timezone ?? throw new global::System.ArgumentNullException(nameof(timezone));
             this.BucketType = bucketType;
-            this.Columns = columns;
-            this.Rows = rows;
+            this.Columns = columns ?? throw new global::System.ArgumentNullException(nameof(columns));
+            this.Rows = rows ?? throw new global::System.ArgumentNullException(nameof(rows));
         }
 
         /// <summary>
