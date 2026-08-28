@@ -90,7 +90,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback")]
-        public global::System.Collections.Generic.IList<object>? Feedback { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentChatFeedback>? Feedback { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -130,7 +130,7 @@ namespace Weave
             global::Weave.AgentChatAgentStart? agentStart,
             global::Weave.AgentChatAgentHandoff? agentHandoff,
             global::Weave.AgentChatContextCompacted? contextCompacted,
-            global::System.Collections.Generic.IList<object>? feedback)
+            global::System.Collections.Generic.IList<global::Weave.AgentChatFeedback>? feedback)
         {
             this.Type = type;
             this.SpanId = spanId;
