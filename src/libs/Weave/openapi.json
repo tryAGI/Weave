@@ -12404,6 +12404,10 @@
           }
         },
         "type": "object",
+        "required": [
+          "call_usage",
+          "unfinished_call_ids"
+        ],
         "title": "CallsUsageRes",
         "description": "Response with aggregated usage metrics per root call."
       },
@@ -17184,8 +17188,20 @@
           }
         },
         "type": "object",
+        "required": [
+          "requests",
+          "prompt_tokens",
+          "completion_tokens",
+          "total_tokens",
+          "cache_read_input_tokens",
+          "cache_creation_input_tokens",
+          "prompt_tokens_total_cost",
+          "completion_tokens_total_cost",
+          "cache_read_input_tokens_total_cost",
+          "cache_creation_input_tokens_total_cost"
+        ],
         "title": "LLMAggregatedUsage",
-        "description": "Aggregated usage metrics for a specific LLM."
+        "description": "Aggregated usage metrics for a specific LLM.\n\nConstructor defaults stay for Python callers. Serialization JSON Schema\nmarks those fields required so OpenAPI matches the JSON FastAPI sends."
       },
       "LLMModelDetails": {
         "properties": {
@@ -21407,6 +21423,10 @@
           }
         },
         "type": "object",
+        "required": [
+          "call_usage",
+          "unfinished_call_ids"
+        ],
         "title": "TraceUsageRes",
         "description": "Response with per-call usage metrics (each includes descendant contributions)."
       },
