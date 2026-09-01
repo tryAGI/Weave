@@ -4,7 +4,9 @@
 namespace Weave
 {
     /// <summary>
-    /// Aggregated usage metrics for a specific LLM.
+    /// Aggregated usage metrics for a specific LLM.<br/>
+    /// Constructor defaults stay for Python callers. Serialization JSON Schema<br/>
+    /// marks those fields required so OpenAPI matches the JSON FastAPI sends.
     /// </summary>
     public sealed partial class LLMAggregatedUsage
     {
@@ -12,37 +14,43 @@ namespace Weave
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requests")]
-        public int? Requests { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int Requests { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt_tokens")]
-        public int? PromptTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int PromptTokens { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completion_tokens")]
-        public int? CompletionTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int CompletionTokens { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_tokens")]
-        public int? TotalTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TotalTokens { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_input_tokens")]
-        public int? CacheReadInputTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int CacheReadInputTokens { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_input_tokens")]
-        public int? CacheCreationInputTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int CacheCreationInputTokens { get; set; }
 
         /// <summary>
         ///
@@ -103,12 +111,12 @@ namespace Weave
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public LLMAggregatedUsage(
-            int? requests,
-            int? promptTokens,
-            int? completionTokens,
-            int? totalTokens,
-            int? cacheReadInputTokens,
-            int? cacheCreationInputTokens,
+            int requests,
+            int promptTokens,
+            int completionTokens,
+            int totalTokens,
+            int cacheReadInputTokens,
+            int cacheCreationInputTokens,
             double? promptTokensTotalCost,
             double? completionTokensTotalCost,
             double? cacheReadInputTokensTotalCost,

@@ -12,13 +12,15 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("call_usage")]
-        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.Dictionary<string, global::Weave.LLMAggregatedUsage>>? CallUsage { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.Dictionary<string, global::Weave.LLMAggregatedUsage>> CallUsage { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unfinished_call_ids")]
-        public global::System.Collections.Generic.IList<string>? UnfinishedCallIds { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> UnfinishedCallIds { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -35,11 +37,11 @@ namespace Weave
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CallsUsageRes(
-            global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.Dictionary<string, global::Weave.LLMAggregatedUsage>>? callUsage,
-            global::System.Collections.Generic.IList<string>? unfinishedCallIds)
+            global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.Dictionary<string, global::Weave.LLMAggregatedUsage>> callUsage,
+            global::System.Collections.Generic.IList<string> unfinishedCallIds)
         {
-            this.CallUsage = callUsage;
-            this.UnfinishedCallIds = unfinishedCallIds;
+            this.CallUsage = callUsage ?? throw new global::System.ArgumentNullException(nameof(callUsage));
+            this.UnfinishedCallIds = unfinishedCallIds ?? throw new global::System.ArgumentNullException(nameof(unfinishedCallIds));
         }
 
         /// <summary>
