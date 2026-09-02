@@ -2589,10 +2589,12 @@
         },
         "responses": {
           "200": {
-            "description": "Successful Response",
+            "description": "Stream of data in JSONL format",
             "content": {
-              "application/json": {
-                "schema": {}
+              "application/x-ndjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnnotationQueueSchema"
+                }
               }
             }
           },
