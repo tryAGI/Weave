@@ -63,6 +63,11 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
+        public CompletionsClient Completions { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
         public CostsClient Costs { get; }
 
         /// <summary>
