@@ -36,7 +36,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        public global::Weave.AgentChatToolCallStatus2? Status { get; set; }
+        public global::Weave.AgentChatToolCallStatus? Status { get; set; }
 
         /// <summary>
         ///
@@ -69,7 +69,7 @@ namespace Weave
             string? toolArguments,
             string? toolResult,
             int? durationMs,
-            global::Weave.AgentChatToolCallStatus2? status)
+            global::Weave.AgentChatToolCallStatus? status)
         {
             this.ToolName = toolName;
             this.ToolArguments = toolArguments;

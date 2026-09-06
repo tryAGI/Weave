@@ -45,7 +45,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("span_kind")]
-        public global::Weave.AgentSpanSchemaSpanKind2? SpanKind { get; set; }
+        public global::Weave.AgentSpanSchemaSpanKind? SpanKind { get; set; }
 
         /// <summary>
         ///
@@ -63,7 +63,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status_code")]
-        public global::Weave.AgentSpanSchemaStatusCode2? StatusCode { get; set; }
+        public global::Weave.AgentSpanSchemaStatusCode? StatusCode { get; set; }
 
         /// <summary>
         ///
@@ -606,10 +606,10 @@ namespace Weave
             global::System.Collections.Generic.Dictionary<string, bool> customAttrsBool,
             string? parentSpanId,
             string? spanName,
-            global::Weave.AgentSpanSchemaSpanKind2? spanKind,
+            global::Weave.AgentSpanSchemaSpanKind? spanKind,
             global::System.DateTime? startedAt,
             global::System.DateTime? endedAt,
-            global::Weave.AgentSpanSchemaStatusCode2? statusCode,
+            global::Weave.AgentSpanSchemaStatusCode? statusCode,
             string? statusMessage,
             string? operationName,
             string? providerName,

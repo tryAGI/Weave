@@ -38,7 +38,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status_code")]
-        public global::Weave.AgentTraceChatResStatusCode2? StatusCode { get; set; }
+        public global::Weave.AgentTraceChatResStatusCode? StatusCode { get; set; }
 
         /// <summary>
         ///
@@ -177,7 +177,7 @@ namespace Weave
             string? rootSpanName,
             string? agentName,
             string? agentVersion,
-            global::Weave.AgentTraceChatResStatusCode2? statusCode,
+            global::Weave.AgentTraceChatResStatusCode? statusCode,
             string? provider,
             global::System.DateTime? startedAt,
             global::System.DateTime? endedAt,

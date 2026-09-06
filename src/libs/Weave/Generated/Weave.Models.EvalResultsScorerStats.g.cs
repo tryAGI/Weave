@@ -25,7 +25,7 @@ namespace Weave
         /// Type of the leaf value: binary (bool), continuous (number), or text (string).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value_type")]
-        public global::Weave.EvalResultsScorerStatsValueType2? ValueType { get; set; }
+        public global::Weave.EvalResultsScorerStatsValueType? ValueType { get; set; }
 
         /// <summary>
         /// Default Value: 0
@@ -106,7 +106,7 @@ namespace Weave
         public EvalResultsScorerStats(
             string scorerKey,
             string? path,
-            global::Weave.EvalResultsScorerStatsValueType2? valueType,
+            global::Weave.EvalResultsScorerStatsValueType? valueType,
             int? trialCount,
             int? numericCount,
             double? numericMean,

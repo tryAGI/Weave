@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// Additional attributes to be stored with the model
+    ///
     /// </summary>
     public sealed partial class ModelCreateBodyAttributes
     {

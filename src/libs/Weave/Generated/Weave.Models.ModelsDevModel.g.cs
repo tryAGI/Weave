@@ -98,7 +98,7 @@ namespace Weave
         /// Lifecycle status of the model.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        public global::Weave.ModelsDevModelStatus2? Status { get; set; }
+        public global::Weave.ModelsDevModelStatus? Status { get; set; }
 
         /// <summary>
         /// Reasoning interleaving support.
@@ -205,7 +205,7 @@ namespace Weave
             bool? structuredOutput,
             bool? temperature,
             string? knowledge,
-            global::Weave.ModelsDevModelStatus2? status,
+            global::Weave.ModelsDevModelStatus? status,
             global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>? interleaved,
             global::Weave.Cost? cost,
             global::Weave.Limit? limit,

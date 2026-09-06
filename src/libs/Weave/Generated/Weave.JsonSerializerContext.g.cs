@@ -33,11 +33,11 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAgentStart))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAgentStartStatus2), TypeInfoPropertyName = "AgentChatAgentStartStatus22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAgentStartStatus), TypeInfoPropertyName = "AgentChatAgentStartStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAssistantMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAssistantMessageStatus2), TypeInfoPropertyName = "AgentChatAssistantMessageStatus22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAssistantMessageStatus), TypeInfoPropertyName = "AgentChatAssistantMessageStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatContextCompacted))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatFeedback))]
@@ -45,11 +45,11 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, double>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessageType), TypeInfoPropertyName = "AgentChatMessageType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessageStatusCode2), TypeInfoPropertyName = "AgentChatMessageStatusCode22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessageStatusCode), TypeInfoPropertyName = "AgentChatMessageStatusCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatUserMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatToolCall))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentChatFeedback>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatToolCallStatus2), TypeInfoPropertyName = "AgentChatToolCallStatus22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatToolCallStatus), TypeInfoPropertyName = "AgentChatToolCallStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentConversationChatReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentConversationChatRes))]
@@ -112,10 +112,10 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::System.DateTime?, string, int?, double?, bool?, object>), TypeInfoPropertyName = "AnyOfDateTimeStringInt32DoubleBooleanObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Weave.AgentSpanGroupDistributionItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanMeasureSpecAggregation), TypeInfoPropertyName = "AgentSpanMeasureSpecAggregation2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanMeasureSpecValueType2), TypeInfoPropertyName = "AgentSpanMeasureSpecValueType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanMeasureSpecValueType), TypeInfoPropertyName = "AgentSpanMeasureSpecValueType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanSchema))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanSchemaSpanKind2), TypeInfoPropertyName = "AgentSpanSchemaSpanKind22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanSchemaStatusCode2), TypeInfoPropertyName = "AgentSpanSchemaStatusCode22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanSchemaSpanKind), TypeInfoPropertyName = "AgentSpanSchemaSpanKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanSchemaStatusCode), TypeInfoPropertyName = "AgentSpanSchemaStatusCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.NormalizedMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.NormalizedMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int>))]
@@ -150,7 +150,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanSchema>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupRow>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentTraceChatReq))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentTraceChatResStatusCode2), TypeInfoPropertyName = "AgentTraceChatResStatusCode22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentTraceChatResStatusCode), TypeInfoPropertyName = "AgentTraceChatResStatusCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentChatMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentVersionSchema))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentVersionsQueryReq))]
@@ -307,7 +307,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsRowEvaluation))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvalResultsTrial>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsTrial))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsScorerStatsValueType2), TypeInfoPropertyName = "EvalResultsScorerStatsValueType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsScorerStatsValueType), TypeInfoPropertyName = "EvalResultsScorerStatsValueType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortByDirection), TypeInfoPropertyName = "EvalResultsSortByDirection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortByMode), TypeInfoPropertyName = "EvalResultsSortByMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary>))]
@@ -399,7 +399,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningToggle))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningEffortOption))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningBudgetTokens))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ModelsDevModelStatus2), TypeInfoPropertyName = "ModelsDevModelStatus22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ModelsDevModelStatus), TypeInfoPropertyName = "ModelsDevModelStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>), TypeInfoPropertyName = "AnyOfBooleanInterleavedObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ModelsDevProvider))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Weave.ModelsDevModel>))]
@@ -440,8 +440,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectsInfoReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectsInfoRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RatingConditionOp), TypeInfoPropertyName = "RatingConditionOp2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningEffortOptionValue2), TypeInfoPropertyName = "ReasoningEffortOptionValue22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue?>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningEffortOptionValue), TypeInfoPropertyName = "ReasoningEffortOptionValue2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RefsReadBatchReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RefsReadBatchRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RescoreReq))]
@@ -504,11 +504,11 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, int?>), TypeInfoPropertyName = "AnyOfStringInt322")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Weave.ModelsDevProvider>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.ProjectsInfoRes>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAgentStartStatus2?), TypeInfoPropertyName = "NullableAgentChatAgentStartStatus22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAssistantMessageStatus2?), TypeInfoPropertyName = "NullableAgentChatAssistantMessageStatus22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAgentStartStatus?), TypeInfoPropertyName = "NullableAgentChatAgentStartStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatAssistantMessageStatus?), TypeInfoPropertyName = "NullableAgentChatAssistantMessageStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessageType?), TypeInfoPropertyName = "NullableAgentChatMessageType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessageStatusCode2?), TypeInfoPropertyName = "NullableAgentChatMessageStatusCode22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatToolCallStatus2?), TypeInfoPropertyName = "NullableAgentChatToolCallStatus22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatMessageStatusCode?), TypeInfoPropertyName = "NullableAgentChatMessageStatusCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentChatToolCallStatus?), TypeInfoPropertyName = "NullableAgentChatToolCallStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentConversationMessagePreviewRole?), TypeInfoPropertyName = "NullableAgentConversationMessagePreviewRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentConversationSpanStatus?), TypeInfoPropertyName = "NullableAgentConversationSpanStatus2")]
@@ -549,9 +549,9 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, int?, double?, bool?, object>?), TypeInfoPropertyName = "NullableAnyOfStringInt32DoubleBooleanObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::System.DateTime?, string, int?, double?, bool?, object>?), TypeInfoPropertyName = "NullableAnyOfDateTimeStringInt32DoubleBooleanObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanMeasureSpecAggregation?), TypeInfoPropertyName = "NullableAgentSpanMeasureSpecAggregation2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanMeasureSpecValueType2?), TypeInfoPropertyName = "NullableAgentSpanMeasureSpecValueType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanSchemaSpanKind2?), TypeInfoPropertyName = "NullableAgentSpanSchemaSpanKind22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanSchemaStatusCode2?), TypeInfoPropertyName = "NullableAgentSpanSchemaStatusCode22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanMeasureSpecValueType?), TypeInfoPropertyName = "NullableAgentSpanMeasureSpecValueType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanSchemaSpanKind?), TypeInfoPropertyName = "NullableAgentSpanSchemaSpanKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanSchemaStatusCode?), TypeInfoPropertyName = "NullableAgentSpanSchemaStatusCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsColumnRole?), TypeInfoPropertyName = "NullableAgentSpanStatsColumnRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsColumnValueType?), TypeInfoPropertyName = "NullableAgentSpanStatsColumnValueType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsMetricSpecValueType?), TypeInfoPropertyName = "NullableAgentSpanStatsMetricSpecValueType2")]
@@ -559,7 +559,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsReqBucketByVariant1DiscriminatorType?), TypeInfoPropertyName = "NullableAgentSpanStatsReqBucketByVariant1DiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsResBucketType?), TypeInfoPropertyName = "NullableAgentSpanStatsResBucketType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanValueRefSource?), TypeInfoPropertyName = "NullableAgentSpanValueRefSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentTraceChatResStatusCode2?), TypeInfoPropertyName = "NullableAgentTraceChatResStatusCode22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentTraceChatResStatusCode?), TypeInfoPropertyName = "NullableAgentTraceChatResStatusCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AggregationType?), TypeInfoPropertyName = "NullableAggregationType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnnotationQueueItemSchemaAnnotationState?), TypeInfoPropertyName = "NullableAnnotationQueueItemSchemaAnnotationState2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnnotationQueueItemsFilterAnnotationStatesVariant1Item?), TypeInfoPropertyName = "NullableAnnotationQueueItemsFilterAnnotationStatesVariant1Item2")]
@@ -571,7 +571,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, object, object>?), TypeInfoPropertyName = "NullableAnyOfStringObjectObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ConvertSpecTo?), TypeInfoPropertyName = "NullableConvertSpecTo2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsQueryBodyFilterLogicOperator?), TypeInfoPropertyName = "NullableEvalResultsQueryBodyFilterLogicOperator2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsScorerStatsValueType2?), TypeInfoPropertyName = "NullableEvalResultsScorerStatsValueType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsScorerStatsValueType?), TypeInfoPropertyName = "NullableEvalResultsScorerStatsValueType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortByDirection?), TypeInfoPropertyName = "NullableEvalResultsSortByDirection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortByMode?), TypeInfoPropertyName = "NullableEvalResultsSortByMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.EvaluationStatusNotFound, global::Weave.EvaluationStatusRunning, global::Weave.EvaluationStatusFailed, global::Weave.EvaluationStatusComplete>?), TypeInfoPropertyName = "NullableAnyOfEvaluationStatusNotFoundEvaluationStatusRunningEvaluationStatusFailedEvaluationStatusComplete2")]
@@ -587,10 +587,10 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsQuantization?), TypeInfoPropertyName = "NullableLLMModelDetailsQuantization2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.IList<global::Weave.LiteralOperation>, object>?), TypeInfoPropertyName = "NullableAnyOfStringInt32DoubleBooleanDictionaryStringLiteralOperationIListLiteralOperationObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>?), TypeInfoPropertyName = "NullableAnyOfReasoningToggleReasoningEffortOptionReasoningBudgetTokens2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ModelsDevModelStatus2?), TypeInfoPropertyName = "NullableModelsDevModelStatus22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ModelsDevModelStatus?), TypeInfoPropertyName = "NullableModelsDevModelStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>?), TypeInfoPropertyName = "NullableAnyOfBooleanInterleavedObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RatingConditionOp?), TypeInfoPropertyName = "NullableRatingConditionOp2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningEffortOptionValue2?), TypeInfoPropertyName = "NullableReasoningEffortOptionValue22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningEffortOptionValue?), TypeInfoPropertyName = "NullableReasoningEffortOptionValue2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RouterOpenRouterModelQuantization?), TypeInfoPropertyName = "NullableRouterOpenRouterModelQuantization2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RouterOpenRouterModelSupportedSamplingParameter?), TypeInfoPropertyName = "NullableRouterOpenRouterModelSupportedSamplingParameter2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RouterOpenRouterModelSupportedFeature?), TypeInfoPropertyName = "NullableRouterOpenRouterModelSupportedFeature2")]
@@ -669,7 +669,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.NvidiaHardwareOption>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.DeletedObjVersion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.ObjSchema>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.ReasoningEffortOptionValue2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.ReasoningEffortOptionValue?>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModelSupportedSamplingParameter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.RouterOpenRouterModelSupportedFeature>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.Datacenter>))]
@@ -774,25 +774,25 @@ namespace Weave
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::Weave.AgentChatAgentStartStatus2)
+                    typeToConvert == typeof(global::Weave.AgentChatAgentStartStatus)
 
-                    || typeToConvert == typeof(global::Weave.AgentChatAgentStartStatus2?)
+                    || typeToConvert == typeof(global::Weave.AgentChatAgentStartStatus?)
 
-                    || typeToConvert == typeof(global::Weave.AgentChatAssistantMessageStatus2)
+                    || typeToConvert == typeof(global::Weave.AgentChatAssistantMessageStatus)
 
-                    || typeToConvert == typeof(global::Weave.AgentChatAssistantMessageStatus2?)
+                    || typeToConvert == typeof(global::Weave.AgentChatAssistantMessageStatus?)
 
                     || typeToConvert == typeof(global::Weave.AgentChatMessageType)
 
                     || typeToConvert == typeof(global::Weave.AgentChatMessageType?)
 
-                    || typeToConvert == typeof(global::Weave.AgentChatMessageStatusCode2)
+                    || typeToConvert == typeof(global::Weave.AgentChatMessageStatusCode)
 
-                    || typeToConvert == typeof(global::Weave.AgentChatMessageStatusCode2?)
+                    || typeToConvert == typeof(global::Weave.AgentChatMessageStatusCode?)
 
-                    || typeToConvert == typeof(global::Weave.AgentChatToolCallStatus2)
+                    || typeToConvert == typeof(global::Weave.AgentChatToolCallStatus)
 
-                    || typeToConvert == typeof(global::Weave.AgentChatToolCallStatus2?)
+                    || typeToConvert == typeof(global::Weave.AgentChatToolCallStatus?)
 
                     || typeToConvert == typeof(global::Weave.AgentConversationMessagePreviewRole)
 
@@ -842,17 +842,17 @@ namespace Weave
 
                     || typeToConvert == typeof(global::Weave.AgentSpanMeasureSpecAggregation?)
 
-                    || typeToConvert == typeof(global::Weave.AgentSpanMeasureSpecValueType2)
+                    || typeToConvert == typeof(global::Weave.AgentSpanMeasureSpecValueType)
 
-                    || typeToConvert == typeof(global::Weave.AgentSpanMeasureSpecValueType2?)
+                    || typeToConvert == typeof(global::Weave.AgentSpanMeasureSpecValueType?)
 
-                    || typeToConvert == typeof(global::Weave.AgentSpanSchemaSpanKind2)
+                    || typeToConvert == typeof(global::Weave.AgentSpanSchemaSpanKind)
 
-                    || typeToConvert == typeof(global::Weave.AgentSpanSchemaSpanKind2?)
+                    || typeToConvert == typeof(global::Weave.AgentSpanSchemaSpanKind?)
 
-                    || typeToConvert == typeof(global::Weave.AgentSpanSchemaStatusCode2)
+                    || typeToConvert == typeof(global::Weave.AgentSpanSchemaStatusCode)
 
-                    || typeToConvert == typeof(global::Weave.AgentSpanSchemaStatusCode2?)
+                    || typeToConvert == typeof(global::Weave.AgentSpanSchemaStatusCode?)
 
                     || typeToConvert == typeof(global::Weave.AgentSpanStatsColumnRole)
 
@@ -882,9 +882,9 @@ namespace Weave
 
                     || typeToConvert == typeof(global::Weave.AgentSpanValueRefSource?)
 
-                    || typeToConvert == typeof(global::Weave.AgentTraceChatResStatusCode2)
+                    || typeToConvert == typeof(global::Weave.AgentTraceChatResStatusCode)
 
-                    || typeToConvert == typeof(global::Weave.AgentTraceChatResStatusCode2?)
+                    || typeToConvert == typeof(global::Weave.AgentTraceChatResStatusCode?)
 
                     || typeToConvert == typeof(global::Weave.AggregationType)
 
@@ -910,9 +910,9 @@ namespace Weave
 
                     || typeToConvert == typeof(global::Weave.EvalResultsQueryBodyFilterLogicOperator?)
 
-                    || typeToConvert == typeof(global::Weave.EvalResultsScorerStatsValueType2)
+                    || typeToConvert == typeof(global::Weave.EvalResultsScorerStatsValueType)
 
-                    || typeToConvert == typeof(global::Weave.EvalResultsScorerStatsValueType2?)
+                    || typeToConvert == typeof(global::Weave.EvalResultsScorerStatsValueType?)
 
                     || typeToConvert == typeof(global::Weave.EvalResultsSortByDirection)
 
@@ -962,17 +962,17 @@ namespace Weave
 
                     || typeToConvert == typeof(global::Weave.LLMModelDetailsQuantization?)
 
-                    || typeToConvert == typeof(global::Weave.ModelsDevModelStatus2)
+                    || typeToConvert == typeof(global::Weave.ModelsDevModelStatus)
 
-                    || typeToConvert == typeof(global::Weave.ModelsDevModelStatus2?)
+                    || typeToConvert == typeof(global::Weave.ModelsDevModelStatus?)
 
                     || typeToConvert == typeof(global::Weave.RatingConditionOp)
 
                     || typeToConvert == typeof(global::Weave.RatingConditionOp?)
 
-                    || typeToConvert == typeof(global::Weave.ReasoningEffortOptionValue2)
+                    || typeToConvert == typeof(global::Weave.ReasoningEffortOptionValue)
 
-                    || typeToConvert == typeof(global::Weave.ReasoningEffortOptionValue2?)
+                    || typeToConvert == typeof(global::Weave.ReasoningEffortOptionValue?)
 
                     || typeToConvert == typeof(global::Weave.RouterOpenRouterModelQuantization)
 
@@ -1003,24 +1003,24 @@ namespace Weave
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
-                if (typeToConvert == typeof(global::Weave.AgentChatAgentStartStatus2))
+                if (typeToConvert == typeof(global::Weave.AgentChatAgentStartStatus))
                 {
-                    return new global::Weave.JsonConverters.AgentChatAgentStartStatus2JsonConverter();
+                    return new global::Weave.JsonConverters.AgentChatAgentStartStatusJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentChatAgentStartStatus2?))
+                if (typeToConvert == typeof(global::Weave.AgentChatAgentStartStatus?))
                 {
-                    return new global::Weave.JsonConverters.AgentChatAgentStartStatus2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.AgentChatAgentStartStatusNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentChatAssistantMessageStatus2))
+                if (typeToConvert == typeof(global::Weave.AgentChatAssistantMessageStatus))
                 {
-                    return new global::Weave.JsonConverters.AgentChatAssistantMessageStatus2JsonConverter();
+                    return new global::Weave.JsonConverters.AgentChatAssistantMessageStatusJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentChatAssistantMessageStatus2?))
+                if (typeToConvert == typeof(global::Weave.AgentChatAssistantMessageStatus?))
                 {
-                    return new global::Weave.JsonConverters.AgentChatAssistantMessageStatus2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.AgentChatAssistantMessageStatusNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.AgentChatMessageType))
@@ -1033,24 +1033,24 @@ namespace Weave
                     return new global::Weave.JsonConverters.AgentChatMessageTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentChatMessageStatusCode2))
+                if (typeToConvert == typeof(global::Weave.AgentChatMessageStatusCode))
                 {
-                    return new global::Weave.JsonConverters.AgentChatMessageStatusCode2JsonConverter();
+                    return new global::Weave.JsonConverters.AgentChatMessageStatusCodeJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentChatMessageStatusCode2?))
+                if (typeToConvert == typeof(global::Weave.AgentChatMessageStatusCode?))
                 {
-                    return new global::Weave.JsonConverters.AgentChatMessageStatusCode2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.AgentChatMessageStatusCodeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentChatToolCallStatus2))
+                if (typeToConvert == typeof(global::Weave.AgentChatToolCallStatus))
                 {
-                    return new global::Weave.JsonConverters.AgentChatToolCallStatus2JsonConverter();
+                    return new global::Weave.JsonConverters.AgentChatToolCallStatusJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentChatToolCallStatus2?))
+                if (typeToConvert == typeof(global::Weave.AgentChatToolCallStatus?))
                 {
-                    return new global::Weave.JsonConverters.AgentChatToolCallStatus2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.AgentChatToolCallStatusNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.AgentConversationMessagePreviewRole))
@@ -1173,34 +1173,34 @@ namespace Weave
                     return new global::Weave.JsonConverters.AgentSpanMeasureSpecAggregationNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentSpanMeasureSpecValueType2))
+                if (typeToConvert == typeof(global::Weave.AgentSpanMeasureSpecValueType))
                 {
-                    return new global::Weave.JsonConverters.AgentSpanMeasureSpecValueType2JsonConverter();
+                    return new global::Weave.JsonConverters.AgentSpanMeasureSpecValueTypeJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentSpanMeasureSpecValueType2?))
+                if (typeToConvert == typeof(global::Weave.AgentSpanMeasureSpecValueType?))
                 {
-                    return new global::Weave.JsonConverters.AgentSpanMeasureSpecValueType2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.AgentSpanMeasureSpecValueTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentSpanSchemaSpanKind2))
+                if (typeToConvert == typeof(global::Weave.AgentSpanSchemaSpanKind))
                 {
-                    return new global::Weave.JsonConverters.AgentSpanSchemaSpanKind2JsonConverter();
+                    return new global::Weave.JsonConverters.AgentSpanSchemaSpanKindJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentSpanSchemaSpanKind2?))
+                if (typeToConvert == typeof(global::Weave.AgentSpanSchemaSpanKind?))
                 {
-                    return new global::Weave.JsonConverters.AgentSpanSchemaSpanKind2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.AgentSpanSchemaSpanKindNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentSpanSchemaStatusCode2))
+                if (typeToConvert == typeof(global::Weave.AgentSpanSchemaStatusCode))
                 {
-                    return new global::Weave.JsonConverters.AgentSpanSchemaStatusCode2JsonConverter();
+                    return new global::Weave.JsonConverters.AgentSpanSchemaStatusCodeJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentSpanSchemaStatusCode2?))
+                if (typeToConvert == typeof(global::Weave.AgentSpanSchemaStatusCode?))
                 {
-                    return new global::Weave.JsonConverters.AgentSpanSchemaStatusCode2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.AgentSpanSchemaStatusCodeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.AgentSpanStatsColumnRole))
@@ -1273,14 +1273,14 @@ namespace Weave
                     return new global::Weave.JsonConverters.AgentSpanValueRefSourceNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentTraceChatResStatusCode2))
+                if (typeToConvert == typeof(global::Weave.AgentTraceChatResStatusCode))
                 {
-                    return new global::Weave.JsonConverters.AgentTraceChatResStatusCode2JsonConverter();
+                    return new global::Weave.JsonConverters.AgentTraceChatResStatusCodeJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.AgentTraceChatResStatusCode2?))
+                if (typeToConvert == typeof(global::Weave.AgentTraceChatResStatusCode?))
                 {
-                    return new global::Weave.JsonConverters.AgentTraceChatResStatusCode2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.AgentTraceChatResStatusCodeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.AggregationType))
@@ -1343,14 +1343,14 @@ namespace Weave
                     return new global::Weave.JsonConverters.EvalResultsQueryBodyFilterLogicOperatorNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.EvalResultsScorerStatsValueType2))
+                if (typeToConvert == typeof(global::Weave.EvalResultsScorerStatsValueType))
                 {
-                    return new global::Weave.JsonConverters.EvalResultsScorerStatsValueType2JsonConverter();
+                    return new global::Weave.JsonConverters.EvalResultsScorerStatsValueTypeJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.EvalResultsScorerStatsValueType2?))
+                if (typeToConvert == typeof(global::Weave.EvalResultsScorerStatsValueType?))
                 {
-                    return new global::Weave.JsonConverters.EvalResultsScorerStatsValueType2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.EvalResultsScorerStatsValueTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.EvalResultsSortByDirection))
@@ -1473,14 +1473,14 @@ namespace Weave
                     return new global::Weave.JsonConverters.LLMModelDetailsQuantizationNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.ModelsDevModelStatus2))
+                if (typeToConvert == typeof(global::Weave.ModelsDevModelStatus))
                 {
-                    return new global::Weave.JsonConverters.ModelsDevModelStatus2JsonConverter();
+                    return new global::Weave.JsonConverters.ModelsDevModelStatusJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.ModelsDevModelStatus2?))
+                if (typeToConvert == typeof(global::Weave.ModelsDevModelStatus?))
                 {
-                    return new global::Weave.JsonConverters.ModelsDevModelStatus2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.ModelsDevModelStatusNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.RatingConditionOp))
@@ -1493,14 +1493,14 @@ namespace Weave
                     return new global::Weave.JsonConverters.RatingConditionOpNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.ReasoningEffortOptionValue2))
+                if (typeToConvert == typeof(global::Weave.ReasoningEffortOptionValue))
                 {
-                    return new global::Weave.JsonConverters.ReasoningEffortOptionValue2JsonConverter();
+                    return new global::Weave.JsonConverters.ReasoningEffortOptionValueJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Weave.ReasoningEffortOptionValue2?))
+                if (typeToConvert == typeof(global::Weave.ReasoningEffortOptionValue?))
                 {
-                    return new global::Weave.JsonConverters.ReasoningEffortOptionValue2NullableJsonConverter();
+                    return new global::Weave.JsonConverters.ReasoningEffortOptionValueNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.RouterOpenRouterModelQuantization))

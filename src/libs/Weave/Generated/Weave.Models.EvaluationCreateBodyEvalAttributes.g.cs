@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// Optional attributes for the evaluation
+    ///
     /// </summary>
     public sealed partial class EvaluationCreateBodyEvalAttributes
     {

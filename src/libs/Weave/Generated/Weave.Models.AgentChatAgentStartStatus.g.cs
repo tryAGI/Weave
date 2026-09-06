@@ -6,14 +6,52 @@ namespace Weave
     /// <summary>
     ///
     /// </summary>
-    public sealed partial class AgentChatAgentStartStatus
+    public enum AgentChatAgentStartStatus
     {
-
         /// <summary>
-        /// Additional properties that are not explicitly defined in the schema
+        ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonExtensionData]
-        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+        Error,
+        /// <summary>
+        ///
+        /// </summary>
+        Ok,
+        /// <summary>
+        ///
+        /// </summary>
+        Unset,
+    }
 
+    /// <summary>
+    /// Enum extensions to do fast conversions without the reflection.
+    /// </summary>
+    public static class AgentChatAgentStartStatusExtensions
+    {
+        /// <summary>
+        /// Converts an enum to a string.
+        /// </summary>
+        public static string ToValueString(this AgentChatAgentStartStatus value)
+        {
+            return value switch
+            {
+                AgentChatAgentStartStatus.Error => "ERROR",
+                AgentChatAgentStartStatus.Ok => "OK",
+                AgentChatAgentStartStatus.Unset => "UNSET",
+                _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
+            };
+        }
+        /// <summary>
+        /// Converts an string to a enum.
+        /// </summary>
+        public static AgentChatAgentStartStatus? ToEnum(string value)
+        {
+            return value switch
+            {
+                "ERROR" => AgentChatAgentStartStatus.Error,
+                "OK" => AgentChatAgentStartStatus.Ok,
+                "UNSET" => AgentChatAgentStartStatus.Unset,
+                _ => null,
+            };
+        }
     }
 }

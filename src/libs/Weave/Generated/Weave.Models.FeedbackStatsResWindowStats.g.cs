@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// Aggregations over the full query window, keyed by metric slug (e.g. 'output_score'). Each value maps agg name to result.
+    ///
     /// </summary>
     public sealed partial class FeedbackStatsResWindowStats
     {
