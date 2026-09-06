@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// Optional summary dictionary for the evaluation run
+    ///
     /// </summary>
     public sealed partial class EvaluationRunFinishBodySummary
     {

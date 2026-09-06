@@ -30,7 +30,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        public global::Weave.AgentChatAgentStartStatus2? Status { get; set; }
+        public global::Weave.AgentChatAgentStartStatus? Status { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -52,7 +52,7 @@ namespace Weave
             string? model,
             string? systemInstructions,
             string? toolDefinitions,
-            global::Weave.AgentChatAgentStartStatus2? status)
+            global::Weave.AgentChatAgentStartStatus? status)
         {
             this.Model = model;
             this.SystemInstructions = systemInstructions;

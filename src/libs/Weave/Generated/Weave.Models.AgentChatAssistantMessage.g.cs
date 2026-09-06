@@ -73,7 +73,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        public global::Weave.AgentChatAssistantMessageStatus2? Status { get; set; }
+        public global::Weave.AgentChatAssistantMessageStatus? Status { get; set; }
 
         /// <summary>
         ///
@@ -118,7 +118,7 @@ namespace Weave
             double? outputCostUsd,
             double? totalCostUsd,
             int? durationMs,
-            global::Weave.AgentChatAssistantMessageStatus2? status)
+            global::Weave.AgentChatAssistantMessageStatus? status)
         {
             this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Model = model;

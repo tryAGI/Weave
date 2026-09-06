@@ -4,7 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// Summary data for the evaluation run
+    ///
     /// </summary>
     public sealed partial class EvaluationRunReadResSummary
     {

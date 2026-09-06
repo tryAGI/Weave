@@ -42,7 +42,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status_code")]
-        public global::Weave.AgentChatMessageStatusCode2? StatusCode { get; set; }
+        public global::Weave.AgentChatMessageStatusCode? StatusCode { get; set; }
 
         /// <summary>
         ///
@@ -122,7 +122,7 @@ namespace Weave
             string? spanId,
             string? agentName,
             string? agentVersion,
-            global::Weave.AgentChatMessageStatusCode2? statusCode,
+            global::Weave.AgentChatMessageStatusCode? statusCode,
             global::System.DateTime? startedAt,
             global::Weave.AgentChatUserMessage? userMessage,
             global::Weave.AgentChatAssistantMessage? assistantMessage,

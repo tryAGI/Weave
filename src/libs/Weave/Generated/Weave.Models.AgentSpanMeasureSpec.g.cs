@@ -33,7 +33,7 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value_type")]
-        public global::Weave.AgentSpanMeasureSpecValueType2? ValueType { get; set; }
+        public global::Weave.AgentSpanMeasureSpecValueType? ValueType { get; set; }
 
         /// <summary>
         ///
@@ -62,7 +62,7 @@ namespace Weave
             string alias,
             global::Weave.AgentSpanMeasureSpecAggregation aggregation,
             global::Weave.AgentSpanValueRef? value,
-            global::Weave.AgentSpanMeasureSpecValueType2? valueType,
+            global::Weave.AgentSpanMeasureSpecValueType? valueType,
             global::Weave.Query? filter)
         {
             this.Alias = alias ?? throw new global::System.ArgumentNullException(nameof(alias));

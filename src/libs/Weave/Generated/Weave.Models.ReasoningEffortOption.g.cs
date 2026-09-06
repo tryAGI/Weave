@@ -19,7 +19,7 @@ namespace Weave
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("values")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue2> Values { get; set; }
+        public required global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue?> Values { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -40,7 +40,7 @@ namespace Weave
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ReasoningEffortOption(
-            global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue2> values,
+            global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue?> values,
             string? type)
         {
             this.Type = type;

@@ -49,7 +49,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentChatAgentStartStatus2? Type4 { get; set; }
+        public global::Weave.AgentChatAgentStartStatus? Type4 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -65,7 +65,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentChatAssistantMessageStatus2? Type8 { get; set; }
+        public global::Weave.AgentChatAssistantMessageStatus? Type8 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -101,7 +101,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentChatMessageStatusCode2? Type17 { get; set; }
+        public global::Weave.AgentChatMessageStatusCode? Type17 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -117,7 +117,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentChatToolCallStatus2? Type21 { get; set; }
+        public global::Weave.AgentChatToolCallStatus? Type21 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -369,7 +369,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanMeasureSpecValueType2? Type84 { get; set; }
+        public global::Weave.AgentSpanMeasureSpecValueType? Type84 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -377,11 +377,11 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanSchemaSpanKind2? Type86 { get; set; }
+        public global::Weave.AgentSpanSchemaSpanKind? Type86 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanSchemaStatusCode2? Type87 { get; set; }
+        public global::Weave.AgentSpanSchemaStatusCode? Type87 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -521,7 +521,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentTraceChatResStatusCode2? Type122 { get; set; }
+        public global::Weave.AgentTraceChatResStatusCode? Type122 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -1149,7 +1149,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.EvalResultsScorerStatsValueType2? Type279 { get; set; }
+        public global::Weave.EvalResultsScorerStatsValueType? Type279 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -1521,7 +1521,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.ModelsDevModelStatus2? Type372 { get; set; }
+        public global::Weave.ModelsDevModelStatus? Type372 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -1685,11 +1685,11 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue2>? Type413 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.ReasoningEffortOptionValue?>? Type413 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.ReasoningEffortOptionValue2? Type414 { get; set; }
+        public global::Weave.ReasoningEffortOptionValue? Type414 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -2226,7 +2226,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.ReasoningEffortOptionValue2>? ListType71 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.ReasoningEffortOptionValue?>? ListType71 { get; set; }
         /// <summary>
         ///
         /// </summary>
