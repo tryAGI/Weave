@@ -78,6 +78,11 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
+        public DatasetSourcesClient DatasetSources { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
         public DatasetsClient Datasets { get; }
 
         /// <summary>
@@ -139,6 +144,11 @@ namespace Weave
         ///
         /// </summary>
         public PredictionsClient Predictions { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public ProjectClient Project { get; }
 
         /// <summary>
         ///

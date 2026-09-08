@@ -960,6 +960,47 @@
         "x-exclude": true
       }
     },
+    "/completions/create_stream": {
+      "post": {
+        "tags": [
+          "Completions"
+        ],
+        "summary": "Completions Create Stream",
+        "operationId": "completions_create_stream_completions_create_stream_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompletionsCreateReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Stream of data in JSONL format",
+            "content": {
+              "application/x-ndjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompletionsCreateStreamChunk"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/calls/query_stats": {
       "post": {
         "tags": [
@@ -1983,6 +2024,47 @@
         }
       }
     },
+    "/files/resolve_url": {
+      "post": {
+        "tags": [
+          "Files"
+        ],
+        "summary": "Files Resolve Url",
+        "operationId": "files_resolve_url_files_resolve_url_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilesResolveUrlReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReferenceResolveRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/files/query_stats": {
       "post": {
         "tags": [
@@ -2465,6 +2547,170 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/FeedbackPayloadSchemaRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/project/ingest_sampling_settings/read": {
+      "post": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Project Ingest Sampling Settings Read",
+        "operationId": "project_ingest_sampling_settings_read_project_ingest_sampling_settings_read_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectIngestSamplingSettingsReadReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectIngestSamplingSettingsReadRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/project/stats": {
+      "post": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Project Stats",
+        "operationId": "project_stats_project_stats_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectStatsReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectStatsRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/project/ttl_settings/read": {
+      "post": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Project Ttl Settings Read",
+        "operationId": "project_ttl_settings_read_project_ttl_settings_read_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectTTLSettingsReadReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectTTLSettingsReadRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/project/ttl_settings/update": {
+      "post": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Project Ttl Settings Update",
+        "operationId": "project_ttl_settings_update_project_ttl_settings_update_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectTTLSettingsUpdateReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectTTLSettingsUpdateRes"
                 }
               }
             }
@@ -2998,6 +3244,132 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AnnotatorQueueItemsProgressUpdateRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataset_sources/link": {
+      "post": {
+        "tags": [
+          "Dataset Sources"
+        ],
+        "summary": "Dataset Sources Link",
+        "description": "Link source calls/spans to dataset rows (batch, idempotent).",
+        "operationId": "dataset_sources_link_dataset_sources_link_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DatasetSourcesLinkReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DatasetSourcesLinkRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataset_sources/query": {
+      "post": {
+        "tags": [
+          "Dataset Sources"
+        ],
+        "summary": "Dataset Sources Query",
+        "description": "Forward provenance lookup: dataset (+ optional row digests) -> sources.",
+        "operationId": "dataset_sources_query_dataset_sources_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DatasetSourcesQueryReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DatasetSourcesQueryRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataset_sources/source_datasets_query": {
+      "post": {
+        "tags": [
+          "Dataset Sources"
+        ],
+        "summary": "Source Datasets Query",
+        "description": "Reverse provenance lookup: sources -> datasets they appear in.",
+        "operationId": "source_datasets_query_dataset_sources_source_datasets_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SourceDatasetsQueryReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SourceDatasetsQueryRes"
                 }
               }
             }
@@ -13162,6 +13534,86 @@
         ],
         "title": "CompletionsCreateRes"
       },
+      "CompletionsCreateStreamChunk": {
+        "properties": {
+          "_meta": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CompletionsCreateStreamMeta"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "title": "CompletionsCreateStreamChunk",
+        "description": "One NDJSON line of the completions stream.\n\nA tracked call opens with the identifiers, a failure produces `error`, and\nevery other line is a provider chunk passed through as it arrived, which is\nwhy anything else is allowed."
+      },
+      "CompletionsCreateStreamMeta": {
+        "properties": {
+          "weave_call_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weave Call Id"
+          },
+          "span_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Span Id"
+          },
+          "trace_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Trace Id"
+          },
+          "conversation_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Conversation Id"
+          }
+        },
+        "type": "object",
+        "title": "CompletionsCreateStreamMeta",
+        "description": "Identifiers of the call the stream is recorded into."
+      },
       "ContainsOperation": {
         "properties": {
           "$contains": {
@@ -14239,6 +14691,331 @@
           "rows"
         ],
         "title": "DatasetReadRes"
+      },
+      "DatasetSourceLinkPayload": {
+        "properties": {
+          "row_digest": {
+            "type": "string",
+            "title": "Row Digest"
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/SourceRef"
+            },
+            "type": "array",
+            "title": "Sources"
+          },
+          "link_metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Link Metadata"
+          }
+        },
+        "type": "object",
+        "required": [
+          "row_digest",
+          "sources"
+        ],
+        "title": "DatasetSourceLinkPayload",
+        "description": "A single dataset row and the sources to link to it."
+      },
+      "DatasetSourceLinkSchema": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "row_digest": {
+            "type": "string",
+            "title": "Row Digest"
+          },
+          "source_kind": {
+            "$ref": "#/components/schemas/SourceKind"
+          },
+          "source_id": {
+            "type": "string",
+            "title": "Source Id"
+          },
+          "source_trace_id": {
+            "type": "string",
+            "title": "Source Trace Id"
+          },
+          "source_started_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Source Started At"
+          },
+          "source_display_name": {
+            "type": "string",
+            "title": "Source Display Name"
+          },
+          "link_metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Link Metadata"
+          },
+          "added_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Added By"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          },
+          "deleted_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Deleted At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "row_digest",
+          "source_kind",
+          "source_id",
+          "source_trace_id",
+          "source_started_at",
+          "source_display_name",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "DatasetSourceLinkSchema",
+        "description": "Schema for a single dataset source link row."
+      },
+      "DatasetSourcesLinkReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id",
+            "examples": [
+              "entity/project"
+            ]
+          },
+          "dataset_object_id": {
+            "type": "string",
+            "title": "Dataset Object Id"
+          },
+          "dataset_digest": {
+            "type": "string",
+            "title": "Dataset Digest"
+          },
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/DatasetSourceLinkPayload"
+            },
+            "type": "array",
+            "title": "Links"
+          },
+          "include_created_status": {
+            "type": "boolean",
+            "title": "Include Created Status",
+            "default": false
+          },
+          "wb_user_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wb User Id",
+            "description": "Do not set directly. Server will automatically populate this field."
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id",
+          "dataset_object_id",
+          "dataset_digest",
+          "links"
+        ],
+        "title": "DatasetSourcesLinkReq",
+        "description": "Request to link dataset rows to their provenance sources."
+      },
+      "DatasetSourcesLinkRes": {
+        "properties": {
+          "entries": {
+            "items": {
+              "$ref": "#/components/schemas/DatasetSourcesLinkResEntry"
+            },
+            "type": "array",
+            "title": "Entries"
+          }
+        },
+        "type": "object",
+        "required": [
+          "entries"
+        ],
+        "title": "DatasetSourcesLinkRes",
+        "description": "Response from linking dataset rows to sources.\n\nOne entry per flattened (row_digest, source) tuple, in input order."
+      },
+      "DatasetSourcesLinkResEntry": {
+        "properties": {
+          "link_id": {
+            "type": "string",
+            "title": "Link Id"
+          },
+          "created": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created"
+          }
+        },
+        "type": "object",
+        "required": [
+          "link_id"
+        ],
+        "title": "DatasetSourcesLinkResEntry",
+        "description": "Result for a single flattened (row_digest, source) link."
+      },
+      "DatasetSourcesQueryReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id",
+            "examples": [
+              "entity/project"
+            ]
+          },
+          "dataset_object_id": {
+            "type": "string",
+            "title": "Dataset Object Id"
+          },
+          "row_digests": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Row Digests"
+          },
+          "source_kinds": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/SourceKind"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Kinds"
+          },
+          "include_deleted": {
+            "type": "boolean",
+            "title": "Include Deleted",
+            "default": false
+          },
+          "limit": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Limit"
+          },
+          "offset": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Offset"
+          },
+          "wb_user_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wb User Id",
+            "description": "Do not set directly. Server will automatically populate this field."
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id",
+          "dataset_object_id"
+        ],
+        "title": "DatasetSourcesQueryReq",
+        "description": "Forward query: dataset -> sources."
+      },
+      "DatasetSourcesQueryRes": {
+        "properties": {
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/DatasetSourceLinkSchema"
+            },
+            "type": "array",
+            "title": "Links"
+          }
+        },
+        "type": "object",
+        "required": [
+          "links"
+        ],
+        "title": "DatasetSourcesQueryRes",
+        "description": "Response from the forward dataset -> sources query."
       },
       "DeletedObjVersion": {
         "properties": {
@@ -17060,6 +17837,27 @@
           "digest"
         ],
         "title": "FileCreateRes"
+      },
+      "FilesResolveUrlReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "uris": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Uris"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id",
+          "uris"
+        ],
+        "title": "FilesResolveUrlReq"
       },
       "FilesStatsReq": {
         "properties": {
@@ -20149,6 +20947,213 @@
         "title": "Pricing",
         "description": "All pricing values are in USD per 1 token.\n\nPricing fields are in string format to avoid floating point precision issues."
       },
+      "ProjectIngestSamplingSettingsReadReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id"
+        ],
+        "title": "ProjectIngestSamplingSettingsReadReq"
+      },
+      "ProjectIngestSamplingSettingsReadRes": {
+        "properties": {
+          "sample_rate": {
+            "type": "number",
+            "title": "Sample Rate"
+          },
+          "dry_run": {
+            "type": "boolean",
+            "title": "Dry Run"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sample_rate",
+          "dry_run"
+        ],
+        "title": "ProjectIngestSamplingSettingsReadRes"
+      },
+      "ProjectStatsReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "include_trace_storage_size": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Include Trace Storage Size",
+            "default": true
+          },
+          "include_object_storage_size": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Include Object Storage Size",
+            "default": true
+          },
+          "include_table_storage_size": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Include Table Storage Size",
+            "default": true
+          },
+          "include_file_storage_size": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Include File Storage Size",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id"
+        ],
+        "title": "ProjectStatsReq"
+      },
+      "ProjectStatsRes": {
+        "properties": {
+          "trace_storage_size_bytes": {
+            "type": "integer",
+            "title": "Trace Storage Size Bytes"
+          },
+          "objects_storage_size_bytes": {
+            "type": "integer",
+            "title": "Objects Storage Size Bytes"
+          },
+          "tables_storage_size_bytes": {
+            "type": "integer",
+            "title": "Tables Storage Size Bytes"
+          },
+          "files_storage_size_bytes": {
+            "type": "integer",
+            "title": "Files Storage Size Bytes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "trace_storage_size_bytes",
+          "objects_storage_size_bytes",
+          "tables_storage_size_bytes",
+          "files_storage_size_bytes"
+        ],
+        "title": "ProjectStatsRes"
+      },
+      "ProjectTTLSettingsReadReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id"
+        ],
+        "title": "ProjectTTLSettingsReadReq"
+      },
+      "ProjectTTLSettingsReadRes": {
+        "properties": {
+          "retention_days": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retention Days",
+            "description": "None = no TTL (infinite retention)"
+          }
+        },
+        "type": "object",
+        "title": "ProjectTTLSettingsReadRes"
+      },
+      "ProjectTTLSettingsUpdateReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "retention_days": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retention Days",
+            "description": "None disables TTL; must be None or >= 1"
+          },
+          "wb_user_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wb User Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id"
+        ],
+        "title": "ProjectTTLSettingsUpdateReq"
+      },
+      "ProjectTTLSettingsUpdateRes": {
+        "properties": {
+          "retention_days": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retention Days"
+          }
+        },
+        "type": "object",
+        "required": [
+          "retention_days"
+        ],
+        "title": "ProjectTTLSettingsUpdateRes"
+      },
       "ProjectsInfoReq": {
         "properties": {
           "project_ids": {
@@ -20357,6 +21362,33 @@
         "type": "object",
         "title": "ReasoningToggle",
         "description": "Reasoning can be turned on or off."
+      },
+      "ReferenceResolveRes": {
+        "properties": {
+          "download_urls": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Download Urls"
+          },
+          "expires_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expires At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "download_urls"
+        ],
+        "title": "ReferenceResolveRes"
       },
       "RefsReadBatchReq": {
         "properties": {
@@ -20939,6 +21971,149 @@
           "direction"
         ],
         "title": "SortBy"
+      },
+      "SourceDatasetMembership": {
+        "properties": {
+          "source_kind": {
+            "$ref": "#/components/schemas/SourceKind"
+          },
+          "source_id": {
+            "type": "string",
+            "title": "Source Id"
+          },
+          "source_trace_id": {
+            "type": "string",
+            "title": "Source Trace Id"
+          },
+          "dataset_object_id": {
+            "type": "string",
+            "title": "Dataset Object Id"
+          },
+          "row_digests": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Row Digests"
+          },
+          "row_digests_truncated": {
+            "type": "boolean",
+            "title": "Row Digests Truncated"
+          },
+          "row_digests_total_count": {
+            "type": "integer",
+            "title": "Row Digests Total Count"
+          },
+          "first_seen_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "First Seen At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "source_kind",
+          "source_id",
+          "source_trace_id",
+          "dataset_object_id",
+          "row_digests",
+          "row_digests_truncated",
+          "row_digests_total_count",
+          "first_seen_at"
+        ],
+        "title": "SourceDatasetMembership",
+        "description": "Membership of a single (source, dataset) pair in the reverse query."
+      },
+      "SourceDatasetsQueryReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id",
+            "examples": [
+              "entity/project"
+            ]
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/SourceRef"
+            },
+            "type": "array",
+            "title": "Sources"
+          },
+          "include_deleted": {
+            "type": "boolean",
+            "title": "Include Deleted",
+            "default": false
+          },
+          "wb_user_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wb User Id",
+            "description": "Do not set directly. Server will automatically populate this field."
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id",
+          "sources"
+        ],
+        "title": "SourceDatasetsQueryReq",
+        "description": "Reverse query: sources -> datasets."
+      },
+      "SourceDatasetsQueryRes": {
+        "properties": {
+          "memberships": {
+            "items": {
+              "$ref": "#/components/schemas/SourceDatasetMembership"
+            },
+            "type": "array",
+            "title": "Memberships"
+          }
+        },
+        "type": "object",
+        "required": [
+          "memberships"
+        ],
+        "title": "SourceDatasetsQueryRes",
+        "description": "Response from the reverse sources -> datasets query."
+      },
+      "SourceKind": {
+        "type": "string",
+        "enum": [
+          "call",
+          "span",
+          "conversation"
+        ],
+        "title": "SourceKind"
+      },
+      "SourceRef": {
+        "properties": {
+          "source_kind": {
+            "$ref": "#/components/schemas/SourceKind"
+          },
+          "source_id": {
+            "type": "string",
+            "title": "Source Id"
+          },
+          "source_trace_id": {
+            "type": "string",
+            "title": "Source Trace Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "source_kind",
+          "source_id",
+          "source_trace_id"
+        ],
+        "title": "SourceRef",
+        "description": "Reference to a provenance source (a call, an agent span, or a\nconversation)."
       },
       "StartedCallSchemaForInsert": {
         "properties": {
