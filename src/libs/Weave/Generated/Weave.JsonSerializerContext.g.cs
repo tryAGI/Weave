@@ -456,6 +456,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.Pricing))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectIngestSamplingSettingsReadReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectIngestSamplingSettingsReadRes))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectSensitiveDataSettingsReadRes))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.SensitiveDataPolicy), TypeInfoPropertyName = "SensitiveDataPolicy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectStatsReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectStatsRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ProjectTTLSettingsReadReq))]
@@ -512,8 +514,6 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableQueryRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.TableRowSchema>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableRowSchema))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableQueryStatsBatchReq))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableQueryStatsBatchRes))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -537,6 +537,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_d43b345b0979c630")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_99b0d44c15940a51")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_f078db389a57a856")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableQueryStatsBatchReq))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableQueryStatsBatchRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.TableStatsRow>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableStatsRow))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableQueryStatsReq))]
@@ -620,6 +622,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>?), TypeInfoPropertyName = "NullableAnyOfReasoningToggleReasoningEffortOptionReasoningBudgetTokens2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ModelsDevModelStatus?), TypeInfoPropertyName = "NullableModelsDevModelStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>?), TypeInfoPropertyName = "NullableAnyOfBooleanInterleavedObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.SensitiveDataPolicy?), TypeInfoPropertyName = "NullableSensitiveDataPolicy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RatingConditionOp?), TypeInfoPropertyName = "NullableRatingConditionOp2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningEffortOptionValue?), TypeInfoPropertyName = "NullableReasoningEffortOptionValue2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RouterOpenRouterModelQuantization?), TypeInfoPropertyName = "NullableRouterOpenRouterModelQuantization2")]
@@ -1022,6 +1025,10 @@ namespace Weave
                     || typeToConvert == typeof(global::Weave.RouterOpenRouterModelSupportedFeature)
 
                     || typeToConvert == typeof(global::Weave.RouterOpenRouterModelSupportedFeature?)
+
+                    || typeToConvert == typeof(global::Weave.SensitiveDataPolicy)
+
+                    || typeToConvert == typeof(global::Weave.SensitiveDataPolicy?)
 
                     || typeToConvert == typeof(global::Weave.SortByDirection)
 
@@ -1572,6 +1579,16 @@ namespace Weave
                 if (typeToConvert == typeof(global::Weave.RouterOpenRouterModelSupportedFeature?))
                 {
                     return new global::Weave.JsonConverters.RouterOpenRouterModelSupportedFeatureNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Weave.SensitiveDataPolicy))
+                {
+                    return new global::Weave.JsonConverters.SensitiveDataPolicyJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Weave.SensitiveDataPolicy?))
+                {
+                    return new global::Weave.JsonConverters.SensitiveDataPolicyNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.SortByDirection))

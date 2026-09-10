@@ -2564,6 +2564,49 @@
         }
       }
     },
+    "/project/sensitive_data_settings": {
+      "get": {
+        "tags": [
+          "project"
+        ],
+        "summary": "Project Sensitive Data Settings Read",
+        "description": "Read the owning organization's sensitive-data policy for a project.",
+        "operationId": "project_sensitive_data_settings_read_project_sensitive_data_settings_get",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Project Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectSensitiveDataSettingsReadRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/project/ingest_sampling_settings/read": {
       "post": {
         "tags": [
@@ -20978,6 +21021,18 @@
         ],
         "title": "ProjectIngestSamplingSettingsReadRes"
       },
+      "ProjectSensitiveDataSettingsReadRes": {
+        "properties": {
+          "policy": {
+            "$ref": "#/components/schemas/SensitiveDataPolicy"
+          }
+        },
+        "type": "object",
+        "required": [
+          "policy"
+        ],
+        "title": "ProjectSensitiveDataSettingsReadRes"
+      },
       "ProjectStatsReq": {
         "properties": {
           "project_id": {
@@ -21874,6 +21929,14 @@
           "score_op"
         ],
         "title": "ScorerReadRes"
+      },
+      "SensitiveDataPolicy": {
+        "type": "string",
+        "enum": [
+          "off",
+          "pii-v1"
+        ],
+        "title": "SensitiveDataPolicy"
       },
       "ServerInfoRes": {
         "properties": {
