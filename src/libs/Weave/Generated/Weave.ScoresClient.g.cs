@@ -34,7 +34,7 @@ namespace Weave
         /// <inheritdoc/>
         public global::Weave.AutoSDKClientOptions Options { get; }
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Weave.SourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Weave.ScoresSourceGenerationContext.Default);
 
         /// <summary>
         ///
