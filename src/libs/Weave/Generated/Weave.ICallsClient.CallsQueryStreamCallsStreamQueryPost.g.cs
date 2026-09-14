@@ -46,6 +46,10 @@ namespace Weave
         /// <param name="filter"></param>
         /// <param name="limit"></param>
         /// <param name="offset"></param>
+        /// <param name="latestOnly">
+        /// If true, collapse multiple physical versions of each call before applying filters. This provides current logical-row semantics for calls_complete reads while ReplacingMergeTree merges are pending.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="sortBy"></param>
         /// <param name="query"></param>
         /// <param name="includeCosts">
@@ -85,6 +89,7 @@ namespace Weave
             global::Weave.CallsFilter? filter = default,
             int? limit = default,
             int? offset = default,
+            bool? latestOnly = default,
             global::System.Collections.Generic.IList<global::Weave.SortBy>? sortBy = default,
             global::Weave.Query? query = default,
             bool? includeCosts = default,

@@ -34,6 +34,13 @@ namespace Weave
         public int? Offset { get; set; }
 
         /// <summary>
+        /// If true, collapse multiple physical versions of each call before applying filters. This provides current logical-row semantics for calls_complete reads while ReplacingMergeTree merges are pending.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latest_only")]
+        public bool? LatestOnly { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sort_by")]
@@ -112,6 +119,10 @@ namespace Weave
         /// <param name="filter"></param>
         /// <param name="limit"></param>
         /// <param name="offset"></param>
+        /// <param name="latestOnly">
+        /// If true, collapse multiple physical versions of each call before applying filters. This provides current logical-row semantics for calls_complete reads while ReplacingMergeTree merges are pending.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="sortBy"></param>
         /// <param name="query"></param>
         /// <param name="includeCosts">
@@ -150,6 +161,7 @@ namespace Weave
             global::Weave.CallsFilter? filter,
             int? limit,
             int? offset,
+            bool? latestOnly,
             global::System.Collections.Generic.IList<global::Weave.SortBy>? sortBy,
             global::Weave.Query? query,
             bool? includeCosts,
@@ -165,6 +177,7 @@ namespace Weave
             this.Filter = filter;
             this.Limit = limit;
             this.Offset = offset;
+            this.LatestOnly = latestOnly;
             this.SortBy = sortBy;
             this.Query = query;
             this.IncludeCosts = includeCosts;
