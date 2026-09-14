@@ -12488,6 +12488,12 @@
             ],
             "title": "Offset"
           },
+          "latest_only": {
+            "type": "boolean",
+            "title": "Latest Only",
+            "description": "If true, collapse multiple physical versions of each call before applying filters. This provides current logical-row semantics for calls_complete reads while ReplacingMergeTree merges are pending.",
+            "default": false
+          },
           "sort_by": {
             "anyOf": [
               {
