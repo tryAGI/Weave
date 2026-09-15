@@ -32,7 +32,8 @@ namespace Weave
         /// Non-fatal warnings (e.g. failed to resolve dataset row refs).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("warnings")]
-        public global::System.Collections.Generic.IList<string>? Warnings { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> Warnings { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -45,23 +46,23 @@ namespace Weave
         /// </summary>
         /// <param name="rows"></param>
         /// <param name="totalRows"></param>
-        /// <param name="summary"></param>
         /// <param name="warnings">
         /// Non-fatal warnings (e.g. failed to resolve dataset row refs).
         /// </param>
+        /// <param name="summary"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EvalResultsQueryRes(
             global::System.Collections.Generic.IList<global::Weave.EvalResultsRow> rows,
             int totalRows,
-            global::Weave.EvalResultsSummaryRes? summary,
-            global::System.Collections.Generic.IList<string>? warnings)
+            global::System.Collections.Generic.IList<string> warnings,
+            global::Weave.EvalResultsSummaryRes? summary)
         {
             this.Rows = rows ?? throw new global::System.ArgumentNullException(nameof(rows));
             this.TotalRows = totalRows;
             this.Summary = summary;
-            this.Warnings = warnings;
+            this.Warnings = warnings ?? throw new global::System.ArgumentNullException(nameof(warnings));
         }
 
         /// <summary>

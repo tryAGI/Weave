@@ -12,13 +12,15 @@ namespace Weave
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("row_count")]
-        public int? RowCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int RowCount { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluations")]
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary>? Evaluations { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary> Evaluations { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,11 +39,11 @@ namespace Weave
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EvalResultsSummaryRes(
-            int? rowCount,
-            global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary>? evaluations)
+            int rowCount,
+            global::System.Collections.Generic.IList<global::Weave.EvalResultsEvaluationSummary> evaluations)
         {
             this.RowCount = rowCount;
-            this.Evaluations = evaluations;
+            this.Evaluations = evaluations ?? throw new global::System.ArgumentNullException(nameof(evaluations));
         }
 
         /// <summary>

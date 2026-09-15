@@ -11,8 +11,9 @@ namespace Weave
         /// <summary>
         /// Default Value: running
         /// </summary>
+        /// <default>"running"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("code")]
-        public string? Code { get; set; }
+        public string Code { get; set; } = "running";
 
         /// <summary>
         ///
@@ -48,7 +49,7 @@ namespace Weave
         public EvaluationStatusRunning(
             int completedRows,
             int totalRows,
-            string? code)
+            string code = "running")
         {
             this.Code = code;
             this.CompletedRows = completedRows;

@@ -20,7 +20,8 @@ namespace Weave
         /// Default Value: 4096
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("max_tokens")]
-        public int? MaxTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int MaxTokens { get; set; }
 
         /// <summary>
         ///
@@ -41,18 +42,18 @@ namespace Weave
         /// <param name="id">
         /// Value sent in the OpenAI-compatible request model field
         /// </param>
-        /// <param name="playgroundId"></param>
         /// <param name="maxTokens">
         /// Maximum tokens supported by this runtime ID<br/>
         /// Default Value: 4096
         /// </param>
+        /// <param name="playgroundId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CustomRuntimeIDRes(
             string id,
-            string playgroundId,
-            int? maxTokens)
+            int maxTokens,
+            string playgroundId)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.MaxTokens = maxTokens;

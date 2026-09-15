@@ -25,7 +25,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluations")]
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsRowEvaluation>? Evaluations { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.EvalResultsRowEvaluation> Evaluations { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,19 +38,19 @@ namespace Weave
         /// Initializes a new instance of the <see cref="EvalResultsRow" /> class.
         /// </summary>
         /// <param name="rowDigest"></param>
-        /// <param name="rawDataRow"></param>
         /// <param name="evaluations"></param>
+        /// <param name="rawDataRow"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EvalResultsRow(
             string rowDigest,
-            object? rawDataRow,
-            global::System.Collections.Generic.IList<global::Weave.EvalResultsRowEvaluation>? evaluations)
+            global::System.Collections.Generic.IList<global::Weave.EvalResultsRowEvaluation> evaluations,
+            object? rawDataRow)
         {
             this.RowDigest = rowDigest ?? throw new global::System.ArgumentNullException(nameof(rowDigest));
             this.RawDataRow = rawDataRow;
-            this.Evaluations = evaluations;
+            this.Evaluations = evaluations ?? throw new global::System.ArgumentNullException(nameof(evaluations));
         }
 
         /// <summary>

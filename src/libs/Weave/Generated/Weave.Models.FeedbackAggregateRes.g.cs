@@ -32,7 +32,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("buckets")]
-        public global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateBucket>? Buckets { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateBucket> Buckets { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -49,23 +50,23 @@ namespace Weave
         /// <param name="beforeMs">
         /// Resolved exclusive upper bound, unix epoch ms (UTC).
         /// </param>
+        /// <param name="buckets"></param>
         /// <param name="timeBucketSeconds">
         /// Time bucket size used (seconds). None when unbucketed.
         /// </param>
-        /// <param name="buckets"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public FeedbackAggregateRes(
             int afterMs,
             int beforeMs,
-            int? timeBucketSeconds,
-            global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateBucket>? buckets)
+            global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateBucket> buckets,
+            int? timeBucketSeconds)
         {
             this.TimeBucketSeconds = timeBucketSeconds;
             this.AfterMs = afterMs;
             this.BeforeMs = beforeMs;
-            this.Buckets = buckets;
+            this.Buckets = buckets ?? throw new global::System.ArgumentNullException(nameof(buckets));
         }
 
         /// <summary>

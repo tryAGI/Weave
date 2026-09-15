@@ -31,13 +31,15 @@ namespace Weave
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trial_count")]
-        public int? TrialCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TrialCount { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("numeric_count")]
-        public int? NumericCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int NumericCount { get; set; }
 
         /// <summary>
         ///
@@ -49,13 +51,15 @@ namespace Weave
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pass_true_count")]
-        public int? PassTrueCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int PassTrueCount { get; set; }
 
         /// <summary>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pass_known_count")]
-        public int? PassKnownCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int PassKnownCount { get; set; }
 
         /// <summary>
         ///
@@ -79,25 +83,25 @@ namespace Weave
         /// Initializes a new instance of the <see cref="EvalResultsScorerStats" /> class.
         /// </summary>
         /// <param name="scorerKey"></param>
-        /// <param name="path">
-        /// Dot-joined subpath for nested dimensions, e.g. 'passed' for token_distance.passed. None for root-level scalar scorers.
-        /// </param>
-        /// <param name="valueType">
-        /// Type of the leaf value: binary (bool), continuous (number), or text (string).
-        /// </param>
         /// <param name="trialCount">
         /// Default Value: 0
         /// </param>
         /// <param name="numericCount">
         /// Default Value: 0
         /// </param>
-        /// <param name="numericMean"></param>
         /// <param name="passTrueCount">
         /// Default Value: 0
         /// </param>
         /// <param name="passKnownCount">
         /// Default Value: 0
         /// </param>
+        /// <param name="path">
+        /// Dot-joined subpath for nested dimensions, e.g. 'passed' for token_distance.passed. None for root-level scalar scorers.
+        /// </param>
+        /// <param name="valueType">
+        /// Type of the leaf value: binary (bool), continuous (number), or text (string).
+        /// </param>
+        /// <param name="numericMean"></param>
         /// <param name="passRate"></param>
         /// <param name="passSignalCoverage"></param>
 #if NET7_0_OR_GREATER
@@ -105,13 +109,13 @@ namespace Weave
 #endif
         public EvalResultsScorerStats(
             string scorerKey,
+            int trialCount,
+            int numericCount,
+            int passTrueCount,
+            int passKnownCount,
             string? path,
             global::Weave.EvalResultsScorerStatsValueType? valueType,
-            int? trialCount,
-            int? numericCount,
             double? numericMean,
-            int? passTrueCount,
-            int? passKnownCount,
             double? passRate,
             double? passSignalCoverage)
         {
