@@ -11,8 +11,9 @@ namespace Weave
         /// <summary>
         /// Default Value: failed
         /// </summary>
+        /// <default>"failed"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("code")]
-        public string? Code { get; set; }
+        public string Code { get; set; } = "failed";
 
         /// <summary>
         ///
@@ -29,16 +30,16 @@ namespace Weave
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationStatusFailed" /> class.
         /// </summary>
+        /// <param name="error"></param>
         /// <param name="code">
         /// Default Value: failed
         /// </param>
-        /// <param name="error"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EvaluationStatusFailed(
-            string? code,
-            string? error)
+            string? error,
+            string code = "failed")
         {
             this.Code = code;
             this.Error = error;

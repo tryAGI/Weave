@@ -40,6 +40,10 @@ namespace Weave
         ///
         /// </summary>
         Int8,
+        /// <summary>
+        ///
+        /// </summary>
+        Nvfp4,
     }
 
     /// <summary>
@@ -62,6 +66,7 @@ namespace Weave
                 RouterOpenRouterModelQuantization.Fp8 => "fp8",
                 RouterOpenRouterModelQuantization.Int4 => "int4",
                 RouterOpenRouterModelQuantization.Int8 => "int8",
+                RouterOpenRouterModelQuantization.Nvfp4 => "nvfp4",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -80,6 +85,7 @@ namespace Weave
                 "fp8" => RouterOpenRouterModelQuantization.Fp8,
                 "int4" => RouterOpenRouterModelQuantization.Int4,
                 "int8" => RouterOpenRouterModelQuantization.Int8,
+                "nvfp4" => RouterOpenRouterModelQuantization.Nvfp4,
                 _ => null,
             };
         }

@@ -11,8 +11,9 @@ namespace Weave
         /// <summary>
         /// Default Value: complete
         /// </summary>
+        /// <default>"complete"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("code")]
-        public string? Code { get; set; }
+        public string Code { get; set; } = "complete";
 
         /// <summary>
         ///
@@ -39,7 +40,7 @@ namespace Weave
 #endif
         public EvaluationStatusComplete(
             object output,
-            string? code)
+            string code = "complete")
         {
             this.Code = code;
             this.Output = output ?? throw new global::System.ArgumentNullException(nameof(output));
@@ -50,6 +51,18 @@ namespace Weave
         /// </summary>
         public EvaluationStatusComplete()
         {
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="EvaluationStatusComplete"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static EvaluationStatusComplete FromOutput(object output)
+        {
+            return new EvaluationStatusComplete
+            {
+                Output = output,
+            };
         }
 
     }

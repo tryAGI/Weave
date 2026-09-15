@@ -14585,6 +14585,7 @@
         "type": "object",
         "required": [
           "id",
+          "max_tokens",
           "playground_id"
         ],
         "title": "CustomRuntimeIDRes"
@@ -14860,8 +14861,11 @@
           "source_trace_id",
           "source_started_at",
           "source_display_name",
+          "link_metadata",
+          "added_by",
           "created_at",
-          "updated_at"
+          "updated_at",
+          "deleted_at"
         ],
         "title": "DatasetSourceLinkSchema",
         "description": "Schema for a single dataset source link row."
@@ -14955,7 +14959,8 @@
         },
         "type": "object",
         "required": [
-          "link_id"
+          "link_id",
+          "created"
         ],
         "title": "DatasetSourcesLinkResEntry",
         "description": "Result for a single flattened (row_digest, source) link."
@@ -15404,7 +15409,16 @@
         },
         "type": "object",
         "required": [
-          "evaluation_call_id"
+          "evaluation_call_id",
+          "trial_count",
+          "scorer_stats",
+          "predict_total_tokens",
+          "predict_total_cost",
+          "evaluation_ref",
+          "model_ref",
+          "display_name",
+          "trace_id",
+          "started_at"
         ],
         "title": "EvalResultsEvaluationSummary"
       },
@@ -15617,7 +15631,9 @@
         "type": "object",
         "required": [
           "rows",
-          "total_rows"
+          "total_rows",
+          "summary",
+          "warnings"
         ],
         "title": "EvalResultsQueryRes"
       },
@@ -15646,7 +15662,9 @@
         },
         "type": "object",
         "required": [
-          "row_digest"
+          "row_digest",
+          "raw_data_row",
+          "evaluations"
         ],
         "title": "EvalResultsRow"
       },
@@ -15666,7 +15684,8 @@
         },
         "type": "object",
         "required": [
-          "evaluation_call_id"
+          "evaluation_call_id",
+          "trials"
         ],
         "title": "EvalResultsRowEvaluation"
       },
@@ -15761,7 +15780,16 @@
         },
         "type": "object",
         "required": [
-          "scorer_key"
+          "scorer_key",
+          "path",
+          "value_type",
+          "trial_count",
+          "numeric_count",
+          "numeric_mean",
+          "pass_true_count",
+          "pass_known_count",
+          "pass_rate",
+          "pass_signal_coverage"
         ],
         "title": "EvalResultsScorerStats",
         "description": "Stats for a single flattened score dimension (scorer_key or scorer_key.path.to.leaf)."
@@ -15827,6 +15855,10 @@
           }
         },
         "type": "object",
+        "required": [
+          "row_count",
+          "evaluations"
+        ],
         "title": "EvalResultsSummaryRes"
       },
       "EvalResultsTrial": {
@@ -15917,7 +15949,15 @@
         },
         "type": "object",
         "required": [
-          "predict_and_score_call_id"
+          "predict_and_score_call_id",
+          "predict_call_id",
+          "model_output",
+          "scores",
+          "model_latency_seconds",
+          "total_tokens",
+          "total_cost",
+          "scorer_call_ids",
+          "genai_span_ref"
         ],
         "title": "EvalResultsTrial"
       },
@@ -16412,6 +16452,7 @@
         },
         "type": "object",
         "required": [
+          "code",
           "output"
         ],
         "title": "EvaluationStatusComplete"
@@ -16437,6 +16478,10 @@
           }
         },
         "type": "object",
+        "required": [
+          "code",
+          "error"
+        ],
         "title": "EvaluationStatusFailed"
       },
       "EvaluationStatusNotFound": {
@@ -16449,6 +16494,9 @@
           }
         },
         "type": "object",
+        "required": [
+          "code"
+        ],
         "title": "EvaluationStatusNotFound"
       },
       "EvaluationStatusReq": {
@@ -16514,6 +16562,7 @@
         },
         "type": "object",
         "required": [
+          "code",
           "completed_rows",
           "total_rows"
         ],
@@ -16578,8 +16627,13 @@
         },
         "type": "object",
         "required": [
+          "time_bucket_start_ms",
+          "group",
           "total_count",
-          "scored_count"
+          "scored_count",
+          "tag_counts",
+          "rating_counts",
+          "rating_sums"
         ],
         "title": "FeedbackAggregateBucket",
         "description": "One (time bucket, group) row of aggregated scorer feedback."
@@ -16756,8 +16810,10 @@
         },
         "type": "object",
         "required": [
+          "time_bucket_seconds",
           "after_ms",
-          "before_ms"
+          "before_ms",
+          "buckets"
         ],
         "title": "FeedbackAggregateRes",
         "description": "Sparse time-series of aggregated scorer feedback (empty buckets omitted)."
@@ -18349,7 +18405,8 @@
         },
         "type": "object",
         "required": [
-          "response"
+          "response",
+          "weave_call_id"
         ],
         "title": "ImageGenerationCreateRes"
       },
@@ -21157,6 +21214,9 @@
           }
         },
         "type": "object",
+        "required": [
+          "retention_days"
+        ],
         "title": "ProjectTTLSettingsReadRes"
       },
       "ProjectTTLSettingsUpdateReq": {
@@ -21447,7 +21507,8 @@
         },
         "type": "object",
         "required": [
-          "download_urls"
+          "download_urls",
+          "expires_at"
         ],
         "title": "ReferenceResolveRes"
       },
@@ -21582,6 +21643,7 @@
               "int4",
               "int8",
               "fp4",
+              "nvfp4",
               "fp6",
               "fp8",
               "fp16",

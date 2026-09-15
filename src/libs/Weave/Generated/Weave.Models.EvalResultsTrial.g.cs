@@ -31,7 +31,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
-        public object? Scores { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required object Scores { get; set; }
 
         /// <summary>
         ///
@@ -55,7 +56,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scorer_call_ids")]
-        public global::System.Collections.Generic.Dictionary<string, string>? ScorerCallIds { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.Dictionary<string, string> ScorerCallIds { get; set; }
 
         /// <summary>
         ///
@@ -73,36 +75,36 @@ namespace Weave
         /// Initializes a new instance of the <see cref="EvalResultsTrial" /> class.
         /// </summary>
         /// <param name="predictAndScoreCallId"></param>
+        /// <param name="scores"></param>
+        /// <param name="scorerCallIds"></param>
         /// <param name="predictCallId"></param>
         /// <param name="modelOutput"></param>
-        /// <param name="scores"></param>
         /// <param name="modelLatencySeconds"></param>
         /// <param name="totalTokens"></param>
         /// <param name="totalCost"></param>
-        /// <param name="scorerCallIds"></param>
         /// <param name="genaiSpanRef"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EvalResultsTrial(
             string predictAndScoreCallId,
+            object scores,
+            global::System.Collections.Generic.Dictionary<string, string> scorerCallIds,
             string? predictCallId,
             object? modelOutput,
-            object? scores,
             double? modelLatencySeconds,
             int? totalTokens,
             double? totalCost,
-            global::System.Collections.Generic.Dictionary<string, string>? scorerCallIds,
             global::System.Collections.Generic.IList<global::Weave.GenAISpanRef>? genaiSpanRef)
         {
             this.PredictAndScoreCallId = predictAndScoreCallId ?? throw new global::System.ArgumentNullException(nameof(predictAndScoreCallId));
             this.PredictCallId = predictCallId;
             this.ModelOutput = modelOutput;
-            this.Scores = scores;
+            this.Scores = scores ?? throw new global::System.ArgumentNullException(nameof(scores));
             this.ModelLatencySeconds = modelLatencySeconds;
             this.TotalTokens = totalTokens;
             this.TotalCost = totalCost;
-            this.ScorerCallIds = scorerCallIds;
+            this.ScorerCallIds = scorerCallIds ?? throw new global::System.ArgumentNullException(nameof(scorerCallIds));
             this.GenaiSpanRef = genaiSpanRef;
         }
 

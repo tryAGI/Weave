@@ -11,8 +11,9 @@ namespace Weave
         /// <summary>
         /// Default Value: not_found
         /// </summary>
+        /// <default>"not_found"</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("code")]
-        public string? Code { get; set; }
+        public string Code { get; set; } = "not_found";
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -30,7 +31,7 @@ namespace Weave
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EvaluationStatusNotFound(
-            string? code)
+            string code = "not_found")
         {
             this.Code = code;
         }

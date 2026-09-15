@@ -19,13 +19,15 @@ namespace Weave
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trial_count")]
-        public int? TrialCount { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TrialCount { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scorer_stats")]
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats>? ScorerStats { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats> ScorerStats { get; set; }
 
         /// <summary>
         /// Sum of per-trial predict-only token usage for this evaluation (the model's predict() tokens only, excluding LLM-as-a-judge scorer usage); None when no trial reports usage.
@@ -99,8 +101,8 @@ namespace Weave
 #endif
         public EvalResultsEvaluationSummary(
             string evaluationCallId,
-            int? trialCount,
-            global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats>? scorerStats,
+            int trialCount,
+            global::System.Collections.Generic.IList<global::Weave.EvalResultsScorerStats> scorerStats,
             int? predictTotalTokens,
             double? predictTotalCost,
             string? evaluationRef,
@@ -111,7 +113,7 @@ namespace Weave
         {
             this.EvaluationCallId = evaluationCallId ?? throw new global::System.ArgumentNullException(nameof(evaluationCallId));
             this.TrialCount = trialCount;
-            this.ScorerStats = scorerStats;
+            this.ScorerStats = scorerStats ?? throw new global::System.ArgumentNullException(nameof(scorerStats));
             this.PredictTotalTokens = predictTotalTokens;
             this.PredictTotalCost = predictTotalCost;
             this.EvaluationRef = evaluationRef;

@@ -19,7 +19,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trials")]
-        public global::System.Collections.Generic.IList<global::Weave.EvalResultsTrial>? Trials { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Weave.EvalResultsTrial> Trials { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,10 +38,10 @@ namespace Weave
 #endif
         public EvalResultsRowEvaluation(
             string evaluationCallId,
-            global::System.Collections.Generic.IList<global::Weave.EvalResultsTrial>? trials)
+            global::System.Collections.Generic.IList<global::Weave.EvalResultsTrial> trials)
         {
             this.EvaluationCallId = evaluationCallId ?? throw new global::System.ArgumentNullException(nameof(evaluationCallId));
-            this.Trials = trials;
+            this.Trials = trials ?? throw new global::System.ArgumentNullException(nameof(trials));
         }
 
         /// <summary>
