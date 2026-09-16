@@ -40,6 +40,10 @@ namespace Weave
         ///
         /// </summary>
         Int8,
+        /// <summary>
+        ///
+        /// </summary>
+        Nvfp4,
     }
 
     /// <summary>
@@ -62,6 +66,7 @@ namespace Weave
                 LLMModelDetailsQuantization.Fp8 => "fp8",
                 LLMModelDetailsQuantization.Int4 => "int4",
                 LLMModelDetailsQuantization.Int8 => "int8",
+                LLMModelDetailsQuantization.Nvfp4 => "nvfp4",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -80,6 +85,7 @@ namespace Weave
                 "fp8" => LLMModelDetailsQuantization.Fp8,
                 "int4" => LLMModelDetailsQuantization.Int4,
                 "int8" => LLMModelDetailsQuantization.Int8,
+                "nvfp4" => LLMModelDetailsQuantization.Nvfp4,
                 _ => null,
             };
         }
