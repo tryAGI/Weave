@@ -7720,6 +7720,46 @@
         "title": "AgentGroupByRef",
         "description": "Reference to a field or map-key that spans should be grouped by.\n\n`source=\"field\"` targets a semantic span field (`agent.name`) or direct\nspan column (`agent_name`), allowlisted server-side. `source=\"column\"` is\naccepted for existing callers.\nThe other sources target keys inside the typed custom attribute Map columns,\nwhich accept arbitrary user-defined keys."
       },
+      "AgentInsightFilter": {
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "intent_category",
+              "intent_sentiment",
+              "failure_category",
+              "failure_severity",
+              "intent_topic_id",
+              "failure_topic_id"
+            ],
+            "title": "Field"
+          },
+          "values": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 1000,
+            "minItems": 1,
+            "title": "Values",
+            "description": "Values to match. intent_sentiment accepts only frustrated, dissatisfied, neutral, satisfied, delighted; failure_severity accepts only info, major, or minor."
+          },
+          "exclude": {
+            "type": "boolean",
+            "title": "Exclude",
+            "description": "Exclude conversations matching any value in this filter.",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "field",
+          "values"
+        ],
+        "title": "AgentInsightFilter",
+        "description": "Conversation filter backed by extracted Insights data in ClickHouse.\n\nValues within one filter are ORed, while multiple filters are ANDed. Topic\nfilters use stable topic IDs that span successful clustering runs."
+      },
       "AgentSchema": {
         "properties": {
           "project_id": {
@@ -9842,6 +9882,13 @@
                 "type": "null"
               }
             ]
+          },
+          "insight_filters": {
+            "items": {
+              "$ref": "#/components/schemas/AgentInsightFilter"
+            },
+            "type": "array",
+            "title": "Insight Filters"
           }
         },
         "type": "object",
@@ -10108,6 +10155,13 @@
                 "type": "null"
               }
             ]
+          },
+          "insight_filters": {
+            "items": {
+              "$ref": "#/components/schemas/AgentInsightFilter"
+            },
+            "type": "array",
+            "title": "Insight Filters"
           }
         },
         "type": "object",

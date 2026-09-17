@@ -103,6 +103,12 @@ namespace Weave
         public global::Weave.AgentSignalFilter? SignalFilters { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("insight_filters")]
+        public global::System.Collections.Generic.IList<global::Weave.AgentInsightFilter>? InsightFilters { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -134,6 +140,7 @@ namespace Weave
         /// <param name="startedAfter"></param>
         /// <param name="startedBefore"></param>
         /// <param name="signalFilters"></param>
+        /// <param name="insightFilters"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -152,7 +159,8 @@ namespace Weave
             int? offset,
             global::System.DateTime? startedAfter,
             global::System.DateTime? startedBefore,
-            global::Weave.AgentSignalFilter? signalFilters)
+            global::Weave.AgentSignalFilter? signalFilters,
+            global::System.Collections.Generic.IList<global::Weave.AgentInsightFilter>? insightFilters)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Query = query;
@@ -169,6 +177,7 @@ namespace Weave
             this.StartedAfter = startedAfter;
             this.StartedBefore = startedBefore;
             this.SignalFilters = signalFilters;
+            this.InsightFilters = insightFilters;
         }
 
         /// <summary>
