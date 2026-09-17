@@ -78,6 +78,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentCustomAttrSchemaItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentGroupByRef))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentGroupByRefSource), TypeInfoPropertyName = "AgentGroupByRefSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentInsightFilter))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentInsightFilterField), TypeInfoPropertyName = "AgentInsightFilterField2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSchema))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSearchConversationResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSearchMatchedMessage>))]
@@ -136,6 +138,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsReqBucketByVariant1Discriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsReqBucketByVariant1DiscriminatorType), TypeInfoPropertyName = "AgentSpanStatsReqBucketByVariant1DiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupFilter>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentInsightFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanStatsResBucketType), TypeInfoPropertyName = "AgentSpanStatsResBucketType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn>))]
@@ -198,6 +201,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentCustomAttrSchemaItemSource?), TypeInfoPropertyName = "NullableAgentCustomAttrSchemaItemSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentCustomAttrSchemaItemValueType?), TypeInfoPropertyName = "NullableAgentCustomAttrSchemaItemValueType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentGroupByRefSource?), TypeInfoPropertyName = "NullableAgentGroupByRefSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentInsightFilterField?), TypeInfoPropertyName = "NullableAgentInsightFilterField2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AgentSearchMatchedMessageRole?, string>?), TypeInfoPropertyName = "NullableAnyOfAgentSearchMatchedMessageRoleString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSearchMatchedMessageRole?), TypeInfoPropertyName = "NullableAgentSearchMatchedMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSearchReqRolesVariant1Item?), TypeInfoPropertyName = "NullableAgentSearchReqRolesVariant1Item2")]
@@ -243,6 +247,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<double>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentSpanStatsMetricSpec>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentSpanGroupFilter>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentInsightFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentSpanStatsColumn>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentSpanMeasureSpec>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AgentSpanGroupDistributionSpec>))]
@@ -399,6 +404,10 @@ namespace Weave
                     || typeToConvert == typeof(global::Weave.AgentGroupByRefSource)
 
                     || typeToConvert == typeof(global::Weave.AgentGroupByRefSource?)
+
+                    || typeToConvert == typeof(global::Weave.AgentInsightFilterField)
+
+                    || typeToConvert == typeof(global::Weave.AgentInsightFilterField?)
 
                     || typeToConvert == typeof(global::Weave.AgentSearchMatchedMessageRole)
 
@@ -589,6 +598,16 @@ namespace Weave
                 if (typeToConvert == typeof(global::Weave.AgentGroupByRefSource?))
                 {
                     return new global::Weave.JsonConverters.AgentGroupByRefSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Weave.AgentInsightFilterField))
+                {
+                    return new global::Weave.JsonConverters.AgentInsightFilterFieldJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Weave.AgentInsightFilterField?))
+                {
+                    return new global::Weave.JsonConverters.AgentInsightFilterFieldNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.AgentSearchMatchedMessageRole))
