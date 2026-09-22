@@ -47,6 +47,18 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error_type")]
+        public string? ErrorType { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status_message")]
+        public string? StatusMessage { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("started_at")]
         public global::System.DateTime? StartedAt { get; set; }
 
@@ -106,6 +118,8 @@ namespace Weave
         /// <param name="agentName"></param>
         /// <param name="agentVersion"></param>
         /// <param name="statusCode"></param>
+        /// <param name="errorType"></param>
+        /// <param name="statusMessage"></param>
         /// <param name="startedAt"></param>
         /// <param name="userMessage"></param>
         /// <param name="assistantMessage"></param>
@@ -123,6 +137,8 @@ namespace Weave
             string? agentName,
             string? agentVersion,
             global::Weave.AgentChatMessageStatusCode? statusCode,
+            string? errorType,
+            string? statusMessage,
             global::System.DateTime? startedAt,
             global::Weave.AgentChatUserMessage? userMessage,
             global::Weave.AgentChatAssistantMessage? assistantMessage,
@@ -137,6 +153,8 @@ namespace Weave
             this.AgentName = agentName;
             this.AgentVersion = agentVersion;
             this.StatusCode = statusCode;
+            this.ErrorType = errorType;
+            this.StatusMessage = statusMessage;
             this.StartedAt = startedAt;
             this.UserMessage = userMessage;
             this.AssistantMessage = assistantMessage;

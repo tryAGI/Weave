@@ -6969,6 +6969,28 @@
             ],
             "title": "Status Code"
           },
+          "error_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error Type"
+          },
+          "status_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Message"
+          },
           "started_at": {
             "anyOf": [
               {
@@ -7063,6 +7085,8 @@
           "agent_name",
           "agent_version",
           "status_code",
+          "error_type",
+          "status_message",
           "started_at",
           "user_message",
           "assistant_message",
