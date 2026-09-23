@@ -13161,6 +13161,16 @@
           "inputs": {
             "$ref": "#/components/schemas/CompletionsCreateRequestInputs"
           },
+          "inference_route": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/DedicatedInferenceRoute"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "wb_user_id": {
             "anyOf": [
               {
@@ -15148,6 +15158,31 @@
         ],
         "title": "DatasetSourcesQueryRes",
         "description": "Response from the forward dataset -> sources query."
+      },
+      "DedicatedInferenceRoute": {
+        "properties": {
+          "connection_type": {
+            "type": "string",
+            "const": "dedicated",
+            "title": "Connection Type"
+          },
+          "connection": {
+            "type": "string",
+            "title": "Connection"
+          },
+          "base_url": {
+            "type": "string",
+            "title": "Base Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "connection_type",
+          "connection",
+          "base_url"
+        ],
+        "title": "DedicatedInferenceRoute",
+        "description": "Server-side routing information for a dedicated inference deployment."
       },
       "DeletedObjVersion": {
         "properties": {
