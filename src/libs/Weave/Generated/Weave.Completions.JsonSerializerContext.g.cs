@@ -26,6 +26,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.CompletionsCreateReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.CompletionsCreateRequestInputs))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.DedicatedInferenceRoute))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<double?, string, object>), TypeInfoPropertyName = "AnyOfDoubleStringObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>, object>), TypeInfoPropertyName = "AnyOfStringIListObjectObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, object, object>), TypeInfoPropertyName = "AnyOfStringObjectObject2")]

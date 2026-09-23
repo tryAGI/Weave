@@ -381,6 +381,7 @@ namespace Weave
         /// </summary>
         /// <param name="projectId"></param>
         /// <param name="inputs"></param>
+        /// <param name="inferenceRoute"></param>
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
@@ -409,6 +410,7 @@ namespace Weave
         public async global::System.Collections.Generic.IAsyncEnumerable<global::Weave.CompletionsCreateStreamChunk> CompletionsCreateStreamCompletionsCreateStreamPostAsync(
             string projectId,
             global::Weave.CompletionsCreateRequestInputs inputs,
+            global::Weave.DedicatedInferenceRoute? inferenceRoute = default,
             string? wbUserId = default,
             bool? trackLlmCall = default,
             string? traceId = default,
@@ -423,6 +425,7 @@ namespace Weave
             {
                 ProjectId = projectId,
                 Inputs = inputs,
+                InferenceRoute = inferenceRoute,
                 WbUserId = wbUserId,
                 TrackLlmCall = trackLlmCall,
                 TraceId = traceId,

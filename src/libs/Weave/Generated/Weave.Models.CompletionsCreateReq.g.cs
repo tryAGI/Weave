@@ -23,6 +23,12 @@ namespace Weave
         public required global::Weave.CompletionsCreateRequestInputs Inputs { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("inference_route")]
+        public global::Weave.DedicatedInferenceRoute? InferenceRoute { get; set; }
+
+        /// <summary>
         /// Do not set directly. Server will automatically populate this field.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("wb_user_id")]
@@ -76,6 +82,7 @@ namespace Weave
         /// </summary>
         /// <param name="projectId"></param>
         /// <param name="inputs"></param>
+        /// <param name="inferenceRoute"></param>
         /// <param name="wbUserId">
         /// Do not set directly. Server will automatically populate this field.
         /// </param>
@@ -104,6 +111,7 @@ namespace Weave
         public CompletionsCreateReq(
             string projectId,
             global::Weave.CompletionsCreateRequestInputs inputs,
+            global::Weave.DedicatedInferenceRoute? inferenceRoute,
             string? wbUserId,
             bool? trackLlmCall,
             string? traceId,
@@ -114,6 +122,7 @@ namespace Weave
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Inputs = inputs ?? throw new global::System.ArgumentNullException(nameof(inputs));
+            this.InferenceRoute = inferenceRoute;
             this.WbUserId = wbUserId;
             this.TrackLlmCall = trackLlmCall;
             this.TraceId = traceId;
