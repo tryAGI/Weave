@@ -158,7 +158,7 @@ namespace Weave
                 PrepareNvidiaHardwareInferenceNvidiaV2HardwareGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    model: model!);
+                    model: model);
 
                 return __httpRequest;
             }
@@ -180,7 +180,7 @@ namespace Weave
                                 pathTemplate: "\"/inference/nvidia/v2/hardware\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -214,7 +214,7 @@ namespace Weave
                                 pathTemplate: "\"/inference/nvidia/v2/hardware\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -255,7 +255,7 @@ namespace Weave
                                 pathTemplate: "\"/inference/nvidia/v2/hardware\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -303,7 +303,7 @@ namespace Weave
                                 pathTemplate: "\"/inference/nvidia/v2/hardware\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -325,7 +325,7 @@ namespace Weave
                                 pathTemplate: "\"/inference/nvidia/v2/hardware\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

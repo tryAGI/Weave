@@ -47,8 +47,8 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsTimeBucketSpec PickTime() => IsTime
-            ? Time!
+        public global::Weave.AgentSpanStatsTimeBucketSpec PickTime() => Time is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Time' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsNumericBucketSpec PickNumber() => IsNumber
-            ? Number!
+        public global::Weave.AgentSpanStatsNumericBucketSpec PickNumber() => Number is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Number' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -185,13 +185,13 @@ namespace Weave
                 Validate();
             }
 
-            if (IsTime && time != null)
+            if (Time is { } __value0 && time != null)
             {
-                return time(Time!);
+                return time(__value0);
             }
-            else if (IsNumber && number != null)
+            else if (Number is { } __value1 && number != null)
             {
-                return number(Number!);
+                return number(__value1);
             }
 
             return default(TResult);
@@ -211,13 +211,13 @@ namespace Weave
                 Validate();
             }
 
-            if (IsTime)
+            if (Time is { } __value0)
             {
-                time?.Invoke(Time!);
+                time?.Invoke(__value0);
             }
-            else if (IsNumber)
+            else if (Number is { } __value1)
             {
-                number?.Invoke(Number!);
+                number?.Invoke(__value1);
             }
         }
 
@@ -234,13 +234,13 @@ namespace Weave
                 Validate();
             }
 
-            if (IsTime)
+            if (Time is { } __value0)
             {
-                time?.Invoke(Time!);
+                time?.Invoke(__value0);
             }
-            else if (IsNumber)
+            else if (Number is { } __value1)
             {
-                number?.Invoke(Number!);
+                number?.Invoke(__value1);
             }
         }
 
