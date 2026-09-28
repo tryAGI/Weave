@@ -233,7 +233,7 @@ namespace Weave
                 throw new global::System.ArgumentNullException(nameof(request));
             }
 
-            if (!refresh && TryGetCached(request.CacheKey, out var cachedPrompt))
+            if (!refresh && TryGetCached(request.CacheKey, out var cachedPrompt) && cachedPrompt is not null)
             {
                 return cachedPrompt;
             }
@@ -361,7 +361,7 @@ namespace Weave
 
         private bool TryGetCached(
             string cacheKey,
-            out AutoSDKPromptTemplate prompt)
+            out AutoSDKPromptTemplate? prompt)
         {
             lock (_cacheGate)
             {
@@ -375,7 +375,7 @@ namespace Weave
                 _cache.Remove(cacheKey);
             }
 
-            prompt = null!;
+            prompt = null;
             return false;
         }
 
