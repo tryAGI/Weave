@@ -59,13 +59,13 @@ namespace Weave.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Weave.AgentSpanStatsTimeBucketSpec), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Weave.AgentSpanStatsTimeBucketSpec?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Weave.AgentSpanStatsTimeBucketSpec).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Time!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickTime(), typeInfo);
             }
             else if (value.IsNumber)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Weave.AgentSpanStatsNumericBucketSpec), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Weave.AgentSpanStatsNumericBucketSpec?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Weave.AgentSpanStatsNumericBucketSpec).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Number!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickNumber(), typeInfo);
             }
         }
     }
