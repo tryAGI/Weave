@@ -483,7 +483,7 @@ namespace Weave
         /// Default Value: false
         /// </param>
         /// <param name="limit">
-        /// Maximum number of calls to process across all traces. Acts as a safety limit to prevent unbounded memory usage.<br/>
+        /// Maximum calls per aggregation batch. Larger batches are split by trace; a single trace exceeding this limit returns an error, never partial usage.<br/>
         /// Default Value: 10000
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

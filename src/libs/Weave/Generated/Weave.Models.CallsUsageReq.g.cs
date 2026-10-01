@@ -4,12 +4,7 @@
 namespace Weave
 {
     /// <summary>
-    /// Request to compute aggregated usage for multiple root calls.<br/>
-    /// This endpoint returns usage metrics for each requested root call, where each<br/>
-    /// root's metrics include the sum of its own usage plus all descendants' usage.<br/>
-    /// Note: All matching calls are loaded into memory for aggregation. For very large<br/>
-    /// result sets (&gt;10k calls), consider batching root call IDs or using narrower<br/>
-    /// filters at the application layer.
+    /// Request complete descendant usage for calls in bounded trace batches.
     /// </summary>
     public sealed partial class CallsUsageReq
     {
@@ -35,7 +30,7 @@ namespace Weave
         public bool? IncludeCosts { get; set; }
 
         /// <summary>
-        /// Maximum number of calls to process across all traces. Acts as a safety limit to prevent unbounded memory usage.<br/>
+        /// Maximum calls per aggregation batch. Larger batches are split by trace; a single trace exceeding this limit returns an error, never partial usage.<br/>
         /// Default Value: 10000
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("limit")]
@@ -59,7 +54,7 @@ namespace Weave
         /// Default Value: false
         /// </param>
         /// <param name="limit">
-        /// Maximum number of calls to process across all traces. Acts as a safety limit to prevent unbounded memory usage.<br/>
+        /// Maximum calls per aggregation batch. Larger batches are split by trace; a single trace exceeding this limit returns an error, never partial usage.<br/>
         /// Default Value: 10000
         /// </param>
 #if NET7_0_OR_GREATER
