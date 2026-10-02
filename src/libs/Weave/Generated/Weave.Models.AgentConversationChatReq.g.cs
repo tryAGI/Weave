@@ -43,6 +43,13 @@ namespace Weave
         public bool? IncludeFeedback { get; set; }
 
         /// <summary>
+        /// Include tool calls requested in model outputs, even when no execution span was recorded. Requests without execution evidence have no status, duration, or result. Defaults to false.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_model_tool_calls")]
+        public bool? IncludeModelToolCalls { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -64,6 +71,10 @@ namespace Weave
         /// <param name="includeFeedback">
         /// Default Value: false
         /// </param>
+        /// <param name="includeModelToolCalls">
+        /// Include tool calls requested in model outputs, even when no execution span was recorded. Requests without execution evidence have no status, duration, or result. Defaults to false.<br/>
+        /// Default Value: false
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -72,13 +83,15 @@ namespace Weave
             string conversationId,
             int? limit,
             int? offset,
-            bool? includeFeedback)
+            bool? includeFeedback,
+            bool? includeModelToolCalls)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.ConversationId = conversationId ?? throw new global::System.ArgumentNullException(nameof(conversationId));
             this.Limit = limit;
             this.Offset = offset;
             this.IncludeFeedback = includeFeedback;
+            this.IncludeModelToolCalls = includeModelToolCalls;
         }
 
         /// <summary>

@@ -44,6 +44,10 @@ namespace Weave
         /// <param name="includeFeedback">
         /// Default Value: false
         /// </param>
+        /// <param name="includeModelToolCalls">
+        /// Include tool calls requested in model outputs, even when no execution span was recorded. Requests without execution evidence have no status, duration, or result. Defaults to false.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -53,6 +57,7 @@ namespace Weave
             int? limit = default,
             int? offset = default,
             bool? includeFeedback = default,
+            bool? includeModelToolCalls = default,
             global::Weave.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
