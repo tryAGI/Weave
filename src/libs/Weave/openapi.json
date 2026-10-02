@@ -7232,6 +7232,12 @@
             "type": "boolean",
             "title": "Include Feedback",
             "default": false
+          },
+          "include_model_tool_calls": {
+            "type": "boolean",
+            "title": "Include Model Tool Calls",
+            "description": "Include tool calls requested in model outputs, even when no execution span was recorded. Requests without execution evidence have no status, duration, or result. Defaults to false.",
+            "default": false
           }
         },
         "type": "object",
@@ -10239,6 +10245,12 @@
           "include_feedback": {
             "type": "boolean",
             "title": "Include Feedback",
+            "default": false
+          },
+          "include_model_tool_calls": {
+            "type": "boolean",
+            "title": "Include Model Tool Calls",
+            "description": "Include tool calls requested in model outputs, even when no execution span was recorded. Requests without execution evidence have no status, duration, or result. Defaults to false.",
             "default": false
           }
         },
