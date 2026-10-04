@@ -25,8 +25,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timeout")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, string, object>))]
-        public global::Weave.AnyOf<double?, string, object>? Timeout { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, string>))]
+        public global::Weave.AnyOf<double?, string>? Timeout { get; set; }
 
         /// <summary>
         ///
@@ -50,8 +50,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("stop")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<object>, object>))]
-        public global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>, object>? Stop { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<object>>))]
+        public global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>>? Stop { get; set; }
 
         /// <summary>
         ///
@@ -123,8 +123,8 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tool_choice")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<string, object, object>))]
-        public global::Weave.AnyOf<string, object, object>? ToolChoice { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<string, object>))]
+        public global::Weave.AnyOf<string, object>? ToolChoice { get; set; }
 
         /// <summary>
         ///
@@ -245,11 +245,11 @@ namespace Weave
         public CompletionsCreateRequestInputs(
             string model,
             global::System.Collections.Generic.IList<object>? messages,
-            global::Weave.AnyOf<double?, string, object>? timeout,
+            global::Weave.AnyOf<double?, string>? timeout,
             double? temperature,
             double? topP,
             int? n,
-            global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>, object>? stop,
+            global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>>? stop,
             int? maxCompletionTokens,
             int? maxTokens,
             global::System.Collections.Generic.IList<object>? modalities,
@@ -261,7 +261,7 @@ namespace Weave
             object? responseFormat,
             int? seed,
             global::System.Collections.Generic.IList<object>? tools,
-            global::Weave.AnyOf<string, object, object>? toolChoice,
+            global::Weave.AnyOf<string, object>? toolChoice,
             bool? logprobs,
             int? topLogprobs,
             bool? parallelToolCalls,

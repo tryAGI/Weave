@@ -104,8 +104,8 @@ namespace Weave
         /// Reasoning interleaving support.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interleaved")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<bool?, global::Weave.Interleaved, object>))]
-        public global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>? Interleaved { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<bool?, global::Weave.Interleaved>))]
+        public global::Weave.AnyOf<bool?, global::Weave.Interleaved>? Interleaved { get; set; }
 
         /// <summary>
         /// Pricing information.
@@ -206,7 +206,7 @@ namespace Weave
             bool? temperature,
             string? knowledge,
             global::Weave.ModelsDevModelStatus? status,
-            global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>? interleaved,
+            global::Weave.AnyOf<bool?, global::Weave.Interleaved>? interleaved,
             global::Weave.Cost? cost,
             global::Weave.Limit? limit,
             global::Weave.Modalities? modalities)

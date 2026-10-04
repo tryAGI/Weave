@@ -25,15 +25,15 @@ namespace Weave
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("min")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>))]
-        public global::Weave.AnyOf<double?, global::System.DateTime?, object>? Min { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?>))]
+        public global::Weave.AnyOf<double?, global::System.DateTime?>? Min { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("max")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>))]
-        public global::Weave.AnyOf<double?, global::System.DateTime?, object>? Max { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?>))]
+        public global::Weave.AnyOf<double?, global::System.DateTime?>? Max { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -56,8 +56,8 @@ namespace Weave
         public AgentSpanGroupFilter(
             global::Weave.AgentSpanMeasureSpec measure,
             global::System.Collections.Generic.IList<global::Weave.AgentGroupByRef>? groupBy,
-            global::Weave.AnyOf<double?, global::System.DateTime?, object>? min,
-            global::Weave.AnyOf<double?, global::System.DateTime?, object>? max)
+            global::Weave.AnyOf<double?, global::System.DateTime?>? min,
+            global::Weave.AnyOf<double?, global::System.DateTime?>? max)
         {
             this.GroupBy = groupBy;
             this.Measure = measure ?? throw new global::System.ArgumentNullException(nameof(measure));
