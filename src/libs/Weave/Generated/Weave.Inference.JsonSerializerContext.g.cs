@@ -45,7 +45,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningEffortOption))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningBudgetTokens))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ModelsDevModelStatus), TypeInfoPropertyName = "ModelsDevModelStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>), TypeInfoPropertyName = "AnyOfBooleanInterleavedObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<bool?, global::Weave.Interleaved>), TypeInfoPropertyName = "AnyOfBooleanInterleaved2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ModelsDevProvider))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Weave.ModelsDevModel>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.NvidiaHardwareOption))]
@@ -76,7 +76,7 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.LLMModelDetailsQuantization?), TypeInfoPropertyName = "NullableLLMModelDetailsQuantization2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>?), TypeInfoPropertyName = "NullableAnyOfReasoningToggleReasoningEffortOptionReasoningBudgetTokens2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ModelsDevModelStatus?), TypeInfoPropertyName = "NullableModelsDevModelStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>?), TypeInfoPropertyName = "NullableAnyOfBooleanInterleavedObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<bool?, global::Weave.Interleaved>?), TypeInfoPropertyName = "NullableAnyOfBooleanInterleaved2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ReasoningEffortOptionValue?), TypeInfoPropertyName = "NullableReasoningEffortOptionValue2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RouterOpenRouterModelQuantization?), TypeInfoPropertyName = "NullableRouterOpenRouterModelQuantization2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.RouterOpenRouterModelSupportedSamplingParameter?), TypeInfoPropertyName = "NullableRouterOpenRouterModelSupportedSamplingParameter2")]
@@ -142,16 +142,16 @@ namespace Weave
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?, double?, bool?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, string, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<object>, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, object, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?, double?, bool?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, string>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<object>>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, object>());
             options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::Weave.ReasoningToggle, global::Weave.ReasoningEffortOption, global::Weave.ReasoningBudgetTokens>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<bool?, global::Weave.Interleaved, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<bool?, global::Weave.Interleaved>());
             options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?>());
             options.Converters.Add(new global::Weave.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());

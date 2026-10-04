@@ -353,7 +353,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<double?, global::System.DateTime?, object>? Type80 { get; set; }
+        public global::Weave.AnyOf<double?, global::System.DateTime?>? Type80 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -361,11 +361,11 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<string, int?, double?, bool?, object>? Type82 { get; set; }
+        public global::Weave.AnyOf<string, int?, double?, bool?>? Type82 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<global::System.DateTime?, string, int?, double?, bool?, object>? Type83 { get; set; }
+        public global::Weave.AnyOf<global::System.DateTime?, string, int?, double?, bool?>? Type83 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -961,15 +961,15 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<double?, string, object>? Type232 { get; set; }
+        public global::Weave.AnyOf<double?, string>? Type232 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>, object>? Type233 { get; set; }
+        public global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>>? Type233 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<string, object, object>? Type234 { get; set; }
+        public global::Weave.AnyOf<string, object>? Type234 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -1549,7 +1549,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.IList<global::Weave.LiteralOperation>, object>? Type379 { get; set; }
+        public global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.IList<global::Weave.LiteralOperation>>? Type379 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -1609,7 +1609,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<bool?, global::Weave.Interleaved, object>? Type394 { get; set; }
+        public global::Weave.AnyOf<bool?, global::Weave.Interleaved>? Type394 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -2258,7 +2258,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<string, global::System.Collections.Generic.List<object>, object>? ListType43 { get; set; }
+        public global::Weave.AnyOf<string, global::System.Collections.Generic.List<object>>? ListType43 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -2370,7 +2370,7 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.List<global::Weave.LiteralOperation>, object>? ListType71 { get; set; }
+        public global::Weave.AnyOf<string, int?, double?, bool?, global::System.Collections.Generic.Dictionary<string, global::Weave.LiteralOperation>, global::System.Collections.Generic.List<global::Weave.LiteralOperation>>? ListType71 { get; set; }
         /// <summary>
         ///
         /// </summary>

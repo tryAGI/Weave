@@ -22,9 +22,9 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.CompletionsCreateReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.CompletionsCreateRequestInputs))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.DedicatedInferenceRoute))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<double?, string, object>), TypeInfoPropertyName = "AnyOfDoubleStringObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>, object>), TypeInfoPropertyName = "AnyOfStringIListObjectObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, object, object>), TypeInfoPropertyName = "AnyOfStringObjectObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<double?, string>), TypeInfoPropertyName = "AnyOfDoubleString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>>), TypeInfoPropertyName = "AnyOfStringIListObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, object>), TypeInfoPropertyName = "AnyOfStringObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.CompletionsCreateRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.CompletionsCreateStreamChunk))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.CompletionsCreateStreamMeta))]
@@ -34,11 +34,11 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AnyOf<string, int?>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, int?>), TypeInfoPropertyName = "AnyOfStringInt322")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<double?, string, object>?), TypeInfoPropertyName = "NullableAnyOfDoubleStringObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>, object>?), TypeInfoPropertyName = "NullableAnyOfStringIListObjectObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, object, object>?), TypeInfoPropertyName = "NullableAnyOfStringObjectObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<double?, string>?), TypeInfoPropertyName = "NullableAnyOfDoubleString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, global::System.Collections.Generic.IList<object>>?), TypeInfoPropertyName = "NullableAnyOfStringIListObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, object>?), TypeInfoPropertyName = "NullableAnyOfStringObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, int?>?), TypeInfoPropertyName = "NullableAnyOfStringInt322")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, global::System.Collections.Generic.List<object>, object>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<string, global::System.Collections.Generic.List<object>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.ValidationError>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<string, int?>>))]
     internal sealed partial class CompletionsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
@@ -88,14 +88,14 @@ namespace Weave
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?, double?, bool?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, string, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<object>, object>());
-            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, object, object>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, global::System.DateTime?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?, double?, bool?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string, int?, double?, bool?>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<double?, string>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<object>>());
+            options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, object>());
             options.Converters.Add(new global::Weave.JsonConverters.AnyOfJsonConverter<string, int?>());
             options.Converters.Add(new global::Weave.JsonConverters.UnixTimestampJsonConverter());
         }
