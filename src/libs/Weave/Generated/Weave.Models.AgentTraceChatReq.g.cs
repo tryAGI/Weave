@@ -29,7 +29,7 @@ namespace Weave
         public bool? IncludeFeedback { get; set; }
 
         /// <summary>
-        /// Include tool calls requested in model outputs, even when no execution span was recorded. Requests without execution evidence have no status, duration, or result. Defaults to false.<br/>
+        /// Include tool calls requested in model outputs, even when no execution span was recorded, and place each execution span after the model span that requested it. Requests without execution evidence have no status, duration, or result. Defaults to false.<br/>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("include_model_tool_calls")]
@@ -50,7 +50,7 @@ namespace Weave
         /// Default Value: false
         /// </param>
         /// <param name="includeModelToolCalls">
-        /// Include tool calls requested in model outputs, even when no execution span was recorded. Requests without execution evidence have no status, duration, or result. Defaults to false.<br/>
+        /// Include tool calls requested in model outputs, even when no execution span was recorded, and place each execution span after the model span that requested it. Requests without execution evidence have no status, duration, or result. Defaults to false.<br/>
         /// Default Value: false
         /// </param>
 #if NET7_0_OR_GREATER

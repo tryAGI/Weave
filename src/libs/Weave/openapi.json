@@ -7236,7 +7236,7 @@
           "include_model_tool_calls": {
             "type": "boolean",
             "title": "Include Model Tool Calls",
-            "description": "Include tool calls requested in model outputs, even when no execution span was recorded. Requests without execution evidence have no status, duration, or result. Defaults to false.",
+            "description": "Include tool calls requested in model outputs, even when no execution span was recorded, and place each execution span after the model span that requested it. Requests without execution evidence have no status, duration, or result. Defaults to false.",
             "default": false
           }
         },
@@ -10250,7 +10250,7 @@
           "include_model_tool_calls": {
             "type": "boolean",
             "title": "Include Model Tool Calls",
-            "description": "Include tool calls requested in model outputs, even when no execution span was recorded. Requests without execution evidence have no status, duration, or result. Defaults to false.",
+            "description": "Include tool calls requested in model outputs, even when no execution span was recorded, and place each execution span after the model span that requested it. Requests without execution evidence have no status, duration, or result. Defaults to false.",
             "default": false
           }
         },
