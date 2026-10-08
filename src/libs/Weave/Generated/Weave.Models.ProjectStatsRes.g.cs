@@ -16,6 +16,12 @@ namespace Weave
         public required long TraceStorageSizeBytes { get; set; }
 
         /// <summary>
+        /// Default Value: 0
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("spans_storage_size_bytes")]
+        public long? SpansStorageSizeBytes { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("objects_storage_size_bytes")]
@@ -49,6 +55,9 @@ namespace Weave
         /// <param name="objectsStorageSizeBytes"></param>
         /// <param name="tablesStorageSizeBytes"></param>
         /// <param name="filesStorageSizeBytes"></param>
+        /// <param name="spansStorageSizeBytes">
+        /// Default Value: 0
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -56,9 +65,11 @@ namespace Weave
             long traceStorageSizeBytes,
             long objectsStorageSizeBytes,
             long tablesStorageSizeBytes,
-            long filesStorageSizeBytes)
+            long filesStorageSizeBytes,
+            long? spansStorageSizeBytes)
         {
             this.TraceStorageSizeBytes = traceStorageSizeBytes;
+            this.SpansStorageSizeBytes = spansStorageSizeBytes;
             this.ObjectsStorageSizeBytes = objectsStorageSizeBytes;
             this.TablesStorageSizeBytes = tablesStorageSizeBytes;
             this.FilesStorageSizeBytes = filesStorageSizeBytes;
