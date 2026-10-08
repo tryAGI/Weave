@@ -21289,6 +21289,11 @@
             "type": "integer",
             "title": "Trace Storage Size Bytes"
           },
+          "spans_storage_size_bytes": {
+            "type": "integer",
+            "title": "Spans Storage Size Bytes",
+            "default": 0
+          },
           "objects_storage_size_bytes": {
             "type": "integer",
             "title": "Objects Storage Size Bytes"
