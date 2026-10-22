@@ -110,6 +110,24 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("main_agent_id")]
+        public string? MainAgentId { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("main_agent_name")]
+        public string? MainAgentName { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("workflow_name")]
+        public string? WorkflowName { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("eval_run_id")]
         public string? EvalRunId { get; set; }
 
@@ -178,6 +196,12 @@ namespace Weave
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("response_id")]
         public string? ResponseId { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("response_time_to_first_chunk")]
+        public double? ResponseTimeToFirstChunk { get; set; }
 
         /// <summary>
         ///
@@ -534,6 +558,9 @@ namespace Weave
         /// <param name="agentId"></param>
         /// <param name="agentDescription"></param>
         /// <param name="agentVersion"></param>
+        /// <param name="mainAgentId"></param>
+        /// <param name="mainAgentName"></param>
+        /// <param name="workflowName"></param>
         /// <param name="evalRunId"></param>
         /// <param name="evalPredictAndScoreCallId"></param>
         /// <param name="evalKind"></param>
@@ -546,6 +573,7 @@ namespace Weave
         /// <param name="requestModel"></param>
         /// <param name="responseModel"></param>
         /// <param name="responseId"></param>
+        /// <param name="responseTimeToFirstChunk"></param>
         /// <param name="inputTokens"></param>
         /// <param name="outputTokens"></param>
         /// <param name="reasoningTokens"></param>
@@ -617,6 +645,9 @@ namespace Weave
             string? agentId,
             string? agentDescription,
             string? agentVersion,
+            string? mainAgentId,
+            string? mainAgentName,
+            string? workflowName,
             string? evalRunId,
             string? evalPredictAndScoreCallId,
             string? evalKind,
@@ -629,6 +660,7 @@ namespace Weave
             string? requestModel,
             string? responseModel,
             string? responseId,
+            double? responseTimeToFirstChunk,
             int? inputTokens,
             int? outputTokens,
             int? reasoningTokens,
@@ -685,6 +717,9 @@ namespace Weave
             this.AgentId = agentId;
             this.AgentDescription = agentDescription;
             this.AgentVersion = agentVersion;
+            this.MainAgentId = mainAgentId;
+            this.MainAgentName = mainAgentName;
+            this.WorkflowName = workflowName;
             this.EvalRunId = evalRunId;
             this.EvalPredictAndScoreCallId = evalPredictAndScoreCallId;
             this.EvalKind = evalKind;
@@ -697,6 +732,7 @@ namespace Weave
             this.RequestModel = requestModel;
             this.ResponseModel = responseModel;
             this.ResponseId = responseId;
+            this.ResponseTimeToFirstChunk = responseTimeToFirstChunk;
             this.InputTokens = inputTokens;
             this.OutputTokens = outputTokens;
             this.ReasoningTokens = reasoningTokens;
