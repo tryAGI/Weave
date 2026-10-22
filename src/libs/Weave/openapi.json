@@ -8880,6 +8880,39 @@
             ],
             "title": "Agent Version"
           },
+          "main_agent_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Main Agent Id"
+          },
+          "main_agent_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Main Agent Name"
+          },
+          "workflow_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Workflow Name"
+          },
           "eval_run_id": {
             "anyOf": [
               {
@@ -9011,6 +9044,17 @@
               }
             ],
             "title": "Response Id"
+          },
+          "response_time_to_first_chunk": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Time To First Chunk"
           },
           "input_tokens": {
             "anyOf": [
@@ -9544,6 +9588,9 @@
           "agent_id",
           "agent_description",
           "agent_version",
+          "main_agent_id",
+          "main_agent_name",
+          "workflow_name",
           "eval_run_id",
           "eval_predict_and_score_call_id",
           "eval_kind",
@@ -9556,6 +9603,7 @@
           "request_model",
           "response_model",
           "response_id",
+          "response_time_to_first_chunk",
           "input_tokens",
           "output_tokens",
           "reasoning_tokens",
