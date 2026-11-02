@@ -58,6 +58,11 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
+        public BulkExportClient BulkExport { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
         public CallsClient Calls { get; }
 
         /// <summary>
