@@ -348,6 +348,18 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvaluationStatusRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.EvaluationStatusNotFound, global::Weave.EvaluationStatusRunning, global::Weave.EvaluationStatusFailed, global::Weave.EvaluationStatusComplete>), TypeInfoPropertyName = "AnyOfEvaluationStatusNotFoundEvaluationStatusRunningEvaluationStatusFailedEvaluationStatusComplete2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvaluationStatusRunning))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ExportAuthorizationErrorResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ExportBody))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.ExportBodyTarget>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ExportBodyTarget), TypeInfoPropertyName = "ExportBodyTarget2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ExportErrorResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.JobFailure))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ExportStartedResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ExportStatusResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ExportStatusResponseState), TypeInfoPropertyName = "ExportStatusResponseState2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.JobArtifact>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.JobArtifact))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackAggregateBucket))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackAggregateReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.FeedbackAggregateReqSpanType>))]
@@ -497,18 +509,6 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.SourceDatasetsQueryReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.SourceDatasetsQueryRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.SourceDatasetMembership>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Weave.LLMUsageSchema>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableAppendSpec))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableAppendSpecPayload))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableCreateFromDigestsReq))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableCreateFromDigestsRes))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableCreateReq))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableSchemaForInsert))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableCreateRes))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableInsertSpec))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableInsertSpecPayload))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TablePopSpec))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TablePopSpecPayload))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -530,6 +530,18 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_d43b345b0979c630")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_99b0d44c15940a51")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_f078db389a57a856")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Weave.LLMUsageSchema>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableAppendSpec))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableAppendSpecPayload))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableCreateFromDigestsReq))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableCreateFromDigestsRes))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableCreateReq))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableSchemaForInsert))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableCreateRes))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableInsertSpec))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableInsertSpecPayload))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TablePopSpec))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TablePopSpecPayload))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableQueryReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableRowFilter))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableQueryRes))]
@@ -611,6 +623,9 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortByDirection?), TypeInfoPropertyName = "NullableEvalResultsSortByDirection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.EvalResultsSortByMode?), TypeInfoPropertyName = "NullableEvalResultsSortByMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.EvaluationStatusNotFound, global::Weave.EvaluationStatusRunning, global::Weave.EvaluationStatusFailed, global::Weave.EvaluationStatusComplete>?), TypeInfoPropertyName = "NullableAnyOfEvaluationStatusNotFoundEvaluationStatusRunningEvaluationStatusFailedEvaluationStatusComplete2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ExportBodyTarget?), TypeInfoPropertyName = "NullableExportBodyTarget2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.ExportStatusResponseState?), TypeInfoPropertyName = "NullableExportStatusResponseState2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackAggregateReqSpanType?), TypeInfoPropertyName = "NullableFeedbackAggregateReqSpanType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackAggregateReqGroupByItem?), TypeInfoPropertyName = "NullableFeedbackAggregateReqGroupByItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.FeedbackMetricSpecValueType?), TypeInfoPropertyName = "NullableFeedbackMetricSpecValueType2")]
@@ -696,6 +711,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsTrial>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.EvalResultsEvaluationSummary>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.GenAISpanRef>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.ExportBodyTarget>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.JobArtifact>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackAggregateReqSpanType>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackAggregateReqGroupByItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.FeedbackAggregateBucket>))]
@@ -972,6 +989,14 @@ namespace Weave
                     || typeToConvert == typeof(global::Weave.EvalResultsSortByMode)
 
                     || typeToConvert == typeof(global::Weave.EvalResultsSortByMode?)
+
+                    || typeToConvert == typeof(global::Weave.ExportBodyTarget)
+
+                    || typeToConvert == typeof(global::Weave.ExportBodyTarget?)
+
+                    || typeToConvert == typeof(global::Weave.ExportStatusResponseState)
+
+                    || typeToConvert == typeof(global::Weave.ExportStatusResponseState?)
 
                     || typeToConvert == typeof(global::Weave.FeedbackAggregateReqSpanType)
 
@@ -1440,6 +1465,26 @@ namespace Weave
                 if (typeToConvert == typeof(global::Weave.EvalResultsSortByMode?))
                 {
                     return new global::Weave.JsonConverters.EvalResultsSortByModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Weave.ExportBodyTarget))
+                {
+                    return new global::Weave.JsonConverters.ExportBodyTargetJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Weave.ExportBodyTarget?))
+                {
+                    return new global::Weave.JsonConverters.ExportBodyTargetNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Weave.ExportStatusResponseState))
+                {
+                    return new global::Weave.JsonConverters.ExportStatusResponseStateJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Weave.ExportStatusResponseState?))
+                {
+                    return new global::Weave.JsonConverters.ExportStatusResponseStateNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Weave.FeedbackAggregateReqSpanType))
