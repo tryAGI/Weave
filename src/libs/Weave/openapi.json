@@ -159,6 +159,48 @@
         }
       }
     },
+    "/agents/spans/exists": {
+      "post": {
+        "tags": [
+          "Agents"
+        ],
+        "summary": "Genai Spans Exists",
+        "description": "Check whether a project has any matching agent spans.",
+        "operationId": "genai_spans_exists_agents_spans_exists_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AgentSpansExistsReq"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AgentSpansExistsRes"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/agents/spans/query": {
       "post": {
         "tags": [
@@ -10357,6 +10399,67 @@
         ],
         "title": "AgentSpanValueRef",
         "description": "Reference to a span field or typed custom attribute map value."
+      },
+      "AgentSpansExistsReq": {
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "title": "Project Id"
+          },
+          "query": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Query"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "started_after": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Started After"
+          },
+          "started_before": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Started Before"
+          }
+        },
+        "type": "object",
+        "required": [
+          "project_id"
+        ],
+        "title": "AgentSpansExistsReq",
+        "description": "Check whether any span matches project-scoped, attributed filters."
+      },
+      "AgentSpansExistsRes": {
+        "properties": {
+          "exists": {
+            "type": "boolean",
+            "title": "Exists"
+          }
+        },
+        "type": "object",
+        "required": [
+          "exists"
+        ],
+        "title": "AgentSpansExistsRes"
       },
       "AgentSpansQueryReq": {
         "properties": {

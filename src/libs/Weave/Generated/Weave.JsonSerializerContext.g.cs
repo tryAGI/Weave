@@ -140,6 +140,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanValueRefSource), TypeInfoPropertyName = "AgentSpanValueRefSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpansExistsReq))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpansExistsRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpansQueryReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanMeasureSpec>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionSpec>))]
@@ -507,8 +509,6 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.SortByDirection), TypeInfoPropertyName = "SortByDirection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.SourceDatasetMembership))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.SourceDatasetsQueryReq))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.SourceDatasetsQueryRes))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.SourceDatasetMembership>))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -530,6 +530,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>), TypeInfoPropertyName = "ContainsOperation_d43b345b0979c630")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>>), TypeInfoPropertyName = "ContainsOperation_99b0d44c15940a51")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AnyOf<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>?, global::System.Collections.Generic.List<global::Weave.AnyOf<global::Weave.LiteralOperation, global::Weave.GetFieldOperator, global::Weave.ConvertOperation, global::Weave.SizeOperation, global::Weave.AndOperation, global::Weave.OrOperation, global::Weave.NotOperation, global::Weave.EqOperation, global::Weave.GtOperation, global::Weave.LtOperation, global::Weave.GteOperation, global::Weave.LteOperation, global::Weave.InOperation, global::Weave.ContainsOperation>>>), TypeInfoPropertyName = "ContainsOperation_f078db389a57a856")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.SourceDatasetsQueryRes))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.SourceDatasetMembership>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Weave.LLMUsageSchema>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableAppendSpec))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.TableAppendSpecPayload))]

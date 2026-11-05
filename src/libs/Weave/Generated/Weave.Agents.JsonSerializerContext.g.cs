@@ -140,6 +140,8 @@ namespace Weave
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpanValueRefSource), TypeInfoPropertyName = "AgentSpanValueRefSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpansExistsReq))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpansExistsRes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Weave.AgentSpansQueryReq))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanMeasureSpec>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionSpec>))]
