@@ -355,13 +355,13 @@ namespace Weave
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::Weave.ExportErrorResponse.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::Weave.ExportErrorResponse.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -372,7 +372,7 @@ namespace Weave
 
                                 throw global::Weave.ApiException<global::Weave.ExportErrorResponse>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_400 is { Length: > 0 } ? __content_400 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
                                     responseBody: __content_400,
                                     responseObject: __value_400,
@@ -392,13 +392,13 @@ namespace Weave
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_409 = global::Weave.ExportErrorResponse.FromJson(__content_409, JsonSerializerContext);
+                                        __value_409 = __content_409 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_409, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_409 = global::Weave.ExportErrorResponse.FromJson(__content_409, JsonSerializerContext);
+                                        __value_409 = __content_409 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_409, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -409,7 +409,7 @@ namespace Weave
 
                                 throw global::Weave.ApiException<global::Weave.ExportErrorResponse>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_409 is { Length: > 0 } ? __content_409 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_409,
                                     responseBody: __content_409,
                                     responseObject: __value_409,
@@ -429,13 +429,13 @@ namespace Weave
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_501 = global::Weave.ExportErrorResponse.FromJson(__content_501, JsonSerializerContext);
+                                        __value_501 = __content_501 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_501, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_501 = global::Weave.ExportErrorResponse.FromJson(__content_501, JsonSerializerContext);
+                                        __value_501 = __content_501 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_501, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -446,7 +446,7 @@ namespace Weave
 
                                 throw global::Weave.ApiException<global::Weave.ExportErrorResponse>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_501 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_501 is { Length: > 0 } ? __content_501 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_501,
                                     responseBody: __content_501,
                                     responseObject: __value_501,
@@ -466,13 +466,13 @@ namespace Weave
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_503 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_503 = global::Weave.ExportErrorResponse.FromJson(__content_503, JsonSerializerContext);
+                                        __value_503 = __content_503 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_503, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_503 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_503 = global::Weave.ExportErrorResponse.FromJson(__content_503, JsonSerializerContext);
+                                        __value_503 = __content_503 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_503, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -483,7 +483,7 @@ namespace Weave
 
                                 throw global::Weave.ApiException<global::Weave.ExportErrorResponse>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_503 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_503 is { Length: > 0 } ? __content_503 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_503,
                                     responseBody: __content_503,
                                     responseObject: __value_503,
@@ -503,13 +503,13 @@ namespace Weave
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = global::Weave.ExportAuthorizationErrorResponse.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : global::Weave.ExportAuthorizationErrorResponse.FromJson(__content_401, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = global::Weave.ExportAuthorizationErrorResponse.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : global::Weave.ExportAuthorizationErrorResponse.FromJson(__content_401, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -520,7 +520,7 @@ namespace Weave
 
                                 throw global::Weave.ApiException<global::Weave.ExportAuthorizationErrorResponse>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_401 is { Length: > 0 } ? __content_401 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
                                     responseBody: __content_401,
                                     responseObject: __value_401,
@@ -540,13 +540,13 @@ namespace Weave
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_403 = global::Weave.ExportAuthorizationErrorResponse.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = __content_403 is not { Length: > 0 } ? null : global::Weave.ExportAuthorizationErrorResponse.FromJson(__content_403, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_403 = global::Weave.ExportAuthorizationErrorResponse.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = __content_403 is not { Length: > 0 } ? null : global::Weave.ExportAuthorizationErrorResponse.FromJson(__content_403, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -557,7 +557,7 @@ namespace Weave
 
                                 throw global::Weave.ApiException<global::Weave.ExportAuthorizationErrorResponse>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_403 is { Length: > 0 } ? __content_403 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_403,
                                     responseBody: __content_403,
                                     responseObject: __value_403,
@@ -577,13 +577,13 @@ namespace Weave
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Weave.ExportErrorResponse.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = __content_404 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_404, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_404 = global::Weave.ExportErrorResponse.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = __content_404 is not { Length: > 0 } ? null : global::Weave.ExportErrorResponse.FromJson(__content_404, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -594,7 +594,7 @@ namespace Weave
 
                                 throw global::Weave.ApiException<global::Weave.ExportErrorResponse>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_404 is { Length: > 0 } ? __content_404 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
                                     responseBody: __content_404,
                                     responseObject: __value_404,
@@ -614,13 +614,13 @@ namespace Weave
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_422 = global::Weave.HTTPValidationError.FromJson(__content_422, JsonSerializerContext);
+                                        __value_422 = __content_422 is not { Length: > 0 } ? null : global::Weave.HTTPValidationError.FromJson(__content_422, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_422 = global::Weave.HTTPValidationError.FromJson(__content_422, JsonSerializerContext);
+                                        __value_422 = __content_422 is not { Length: > 0 } ? null : global::Weave.HTTPValidationError.FromJson(__content_422, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -631,7 +631,7 @@ namespace Weave
 
                                 throw global::Weave.ApiException<global::Weave.HTTPValidationError>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_422 is { Length: > 0 } ? __content_422 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_422,
                                     responseBody: __content_422,
                                     responseObject: __value_422,
@@ -674,7 +674,7 @@ namespace Weave
                                 {
                                     throw global::Weave.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -719,7 +719,7 @@ namespace Weave
 
                                     throw global::Weave.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
