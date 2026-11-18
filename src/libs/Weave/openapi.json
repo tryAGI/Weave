@@ -19401,7 +19401,14 @@
             "title": "Labelopenrouter"
           },
           "openRouterPermaslug": {
-            "type": "string",
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "title": "Openrouterpermaslug"
           },
           "status": {
@@ -19511,6 +19518,10 @@
           "contextWindow": {
             "type": "integer",
             "title": "Contextwindow"
+          },
+          "trainingSequenceLimit": {
+            "type": "integer",
+            "title": "Trainingsequencelimit"
           },
           "quantization": {
             "type": "string",

@@ -190,6 +190,12 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trainingSequenceLimit")]
+        public int? TrainingSequenceLimit { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("quantization")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Weave.JsonConverters.LLMModelDetailsQuantizationJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -327,6 +333,7 @@ namespace Weave
         /// <param name="reasoningEfforts"></param>
         /// <param name="reasoningArgument"></param>
         /// <param name="parameterCountActive"></param>
+        /// <param name="trainingSequenceLimit"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -369,7 +376,8 @@ namespace Weave
             global::Weave.LLMModelDetailsReasoningSupport? reasoningSupport,
             global::System.Collections.Generic.IList<global::Weave.LLMModelDetailsReasoningEffort>? reasoningEfforts,
             string? reasoningArgument,
-            int? parameterCountActive)
+            int? parameterCountActive,
+            int? trainingSequenceLimit)
         {
             this.Provider = provider ?? throw new global::System.ArgumentNullException(nameof(provider));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -397,6 +405,7 @@ namespace Weave
             this.ParameterCountTotal = parameterCountTotal;
             this.ParameterCountActive = parameterCountActive;
             this.ContextWindow = contextWindow;
+            this.TrainingSequenceLimit = trainingSequenceLimit;
             this.Quantization = quantization;
             this.PriceCentsPerBillionTokensInput = priceCentsPerBillionTokensInput;
             this.PriceCentsPerBillionTokensCached = priceCentsPerBillionTokensCached;
