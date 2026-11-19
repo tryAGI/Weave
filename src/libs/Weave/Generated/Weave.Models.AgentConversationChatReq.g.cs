@@ -23,6 +23,12 @@ namespace Weave
         public required string ConversationId { get; set; }
 
         /// <summary>
+        /// Controls how turns are sorted and paginated. Only `started_at` is supported. When omitted, the endpoint selects the most recent `limit` turns and returns them in ascending `started_at` order.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sort_by")]
+        public global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? SortBy { get; set; }
+
+        /// <summary>
         /// Maximum number of conversation turns to return.<br/>
         /// Default Value: 50
         /// </summary>
@@ -30,7 +36,7 @@ namespace Weave
         public int? Limit { get; set; }
 
         /// <summary>
-        /// Number of most-recent turns to skip. Results are returned in chronological order within the selected page.<br/>
+        /// Number of turns to skip in the requested sort order. When `sort_by` is omitted, results are returned in chronological order within the selected page.<br/>
         /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("offset")]
@@ -60,12 +66,15 @@ namespace Weave
         /// </summary>
         /// <param name="projectId"></param>
         /// <param name="conversationId"></param>
+        /// <param name="sortBy">
+        /// Controls how turns are sorted and paginated. Only `started_at` is supported. When omitted, the endpoint selects the most recent `limit` turns and returns them in ascending `started_at` order.
+        /// </param>
         /// <param name="limit">
         /// Maximum number of conversation turns to return.<br/>
         /// Default Value: 50
         /// </param>
         /// <param name="offset">
-        /// Number of most-recent turns to skip. Results are returned in chronological order within the selected page.<br/>
+        /// Number of turns to skip in the requested sort order. When `sort_by` is omitted, results are returned in chronological order within the selected page.<br/>
         /// Default Value: 0
         /// </param>
         /// <param name="includeFeedback">
@@ -81,6 +90,7 @@ namespace Weave
         public AgentConversationChatReq(
             string projectId,
             string conversationId,
+            global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? sortBy,
             int? limit,
             int? offset,
             bool? includeFeedback,
@@ -88,6 +98,7 @@ namespace Weave
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.ConversationId = conversationId ?? throw new global::System.ArgumentNullException(nameof(conversationId));
+            this.SortBy = sortBy;
             this.Limit = limit;
             this.Offset = offset;
             this.IncludeFeedback = includeFeedback;

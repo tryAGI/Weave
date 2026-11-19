@@ -7507,6 +7507,22 @@
             "type": "string",
             "title": "Conversation Id"
           },
+          "sort_by": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/AgentSortBy"
+                },
+                "type": "array",
+                "maxItems": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort By",
+            "description": "Controls how turns are sorted and paginated. Only `started_at` is supported. When omitted, the endpoint selects the most recent `limit` turns and returns them in ascending `started_at` order."
+          },
           "limit": {
             "type": "integer",
             "maximum": 50.0,
@@ -7519,7 +7535,7 @@
             "type": "integer",
             "minimum": 0.0,
             "title": "Offset",
-            "description": "Number of most-recent turns to skip. Results are returned in chronological order within the selected page.",
+            "description": "Number of turns to skip in the requested sort order. When `sort_by` is omitted, results are returned in chronological order within the selected page.",
             "default": 0
           },
           "include_feedback": {

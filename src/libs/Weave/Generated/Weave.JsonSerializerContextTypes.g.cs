@@ -130,403 +130,403 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public bool? Type23 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? Type23 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationChatRes? Type24 { get; set; }
+        public global::Weave.AgentSortBy? Type24 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentTraceChatRes>? Type25 { get; set; }
+        public bool? Type25 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentTraceChatRes? Type26 { get; set; }
+        public global::Weave.AgentConversationChatRes? Type26 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationMessagePreview? Type27 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentTraceChatRes>? Type27 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationMessagePreviewRole? Type28 { get; set; }
+        public global::Weave.AgentTraceChatRes? Type28 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationSpan? Type29 { get; set; }
+        public global::Weave.AgentConversationMessagePreview? Type29 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationSpanStatus? Type30 { get; set; }
+        public global::Weave.AgentConversationMessagePreviewRole? Type30 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationSpanFeedback? Type31 { get; set; }
+        public global::Weave.AgentConversationSpan? Type31 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationSpanFeedbackFeedbackType? Type32 { get; set; }
+        public global::Weave.AgentConversationSpanStatus? Type32 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanRating>? Type33 { get; set; }
+        public global::Weave.AgentConversationSpanFeedback? Type33 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationSpanRating? Type34 { get; set; }
+        public global::Weave.AgentConversationSpanFeedbackFeedbackType? Type34 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationSpans? Type35 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanRating>? Type35 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpan>? Type36 { get; set; }
+        public global::Weave.AgentConversationSpanRating? Type36 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanFeedback>? Type37 { get; set; }
+        public global::Weave.AgentConversationSpans? Type37 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationSpansReq? Type38 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpan>? Type38 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentConversationSpansRes? Type39 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpanFeedback>? Type39 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpans>? Type40 { get; set; }
+        public global::Weave.AgentConversationSpansReq? Type40 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentCustomAttrSchemaItem? Type41 { get; set; }
+        public global::Weave.AgentConversationSpansRes? Type41 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentCustomAttrSchemaItemSource? Type42 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentConversationSpans>? Type42 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentCustomAttrSchemaItemValueType? Type43 { get; set; }
+        public global::Weave.AgentCustomAttrSchemaItem? Type43 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentCustomAttrsSchemaReq? Type44 { get; set; }
+        public global::Weave.AgentCustomAttrSchemaItemSource? Type44 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.Query? Type45 { get; set; }
+        public global::Weave.AgentCustomAttrSchemaItemValueType? Type45 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentCustomAttrsSchemaRes? Type46 { get; set; }
+        public global::Weave.AgentCustomAttrsSchemaReq? Type46 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentCustomAttrSchemaItem>? Type47 { get; set; }
+        public global::Weave.Query? Type47 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentGroupByRef? Type48 { get; set; }
+        public global::Weave.AgentCustomAttrsSchemaRes? Type48 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentGroupByRefSource? Type49 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentCustomAttrSchemaItem>? Type49 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentInsightFilter? Type50 { get; set; }
+        public global::Weave.AgentGroupByRef? Type50 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentInsightFilterField? Type51 { get; set; }
+        public global::Weave.AgentGroupByRefSource? Type51 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSchema? Type52 { get; set; }
+        public global::Weave.AgentInsightFilter? Type52 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSearchConversationResult? Type53 { get; set; }
+        public global::Weave.AgentInsightFilterField? Type53 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSearchMatchedMessage>? Type54 { get; set; }
+        public global::Weave.AgentSchema? Type54 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSearchMatchedMessage? Type55 { get; set; }
+        public global::Weave.AgentSearchConversationResult? Type55 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<global::Weave.AgentSearchMatchedMessageRole?, string>? Type56 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSearchMatchedMessage>? Type56 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSearchMatchedMessageRole? Type57 { get; set; }
+        public global::Weave.AgentSearchMatchedMessage? Type57 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSearchReq? Type58 { get; set; }
+        public global::Weave.AnyOf<global::Weave.AgentSearchMatchedMessageRole?, string>? Type58 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSearchReqRolesVariant1Item>? Type59 { get; set; }
+        public global::Weave.AgentSearchMatchedMessageRole? Type59 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSearchReqRolesVariant1Item? Type60 { get; set; }
+        public global::Weave.AgentSearchReq? Type60 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSearchRes? Type61 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSearchReqRolesVariant1Item>? Type61 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSearchConversationResult>? Type62 { get; set; }
+        public global::Weave.AgentSearchReqRolesVariant1Item? Type62 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSignalFilter? Type63 { get; set; }
+        public global::Weave.AgentSearchRes? Type63 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.RatingCondition>? Type64 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSearchConversationResult>? Type64 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.RatingCondition? Type65 { get; set; }
+        public global::Weave.AgentSignalFilter? Type65 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSortBy? Type66 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.RatingCondition>? Type66 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSortByDirection? Type67 { get; set; }
+        public global::Weave.RatingCondition? Type67 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanGroupDistributionBin? Type68 { get; set; }
+        public global::Weave.AgentSortByDirection? Type68 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanGroupDistributionItem? Type69 { get; set; }
+        public global::Weave.AgentSpanGroupDistributionBin? Type69 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanGroupDistributionItemSource? Type70 { get; set; }
+        public global::Weave.AgentSpanGroupDistributionItem? Type70 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanGroupDistributionItemValueType? Type71 { get; set; }
+        public global::Weave.AgentSpanGroupDistributionItemSource? Type71 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionBin>? Type72 { get; set; }
+        public global::Weave.AgentSpanGroupDistributionItemValueType? Type72 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionValue>? Type73 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionBin>? Type73 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanGroupDistributionValue? Type74 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionValue>? Type74 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanGroupDistributionSpec? Type75 { get; set; }
+        public global::Weave.AgentSpanGroupDistributionValue? Type75 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanValueRef? Type76 { get; set; }
+        public global::Weave.AgentSpanGroupDistributionSpec? Type76 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanGroupFilter? Type77 { get; set; }
+        public global::Weave.AgentSpanValueRef? Type77 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentGroupByRef>? Type78 { get; set; }
+        public global::Weave.AgentSpanGroupFilter? Type78 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanMeasureSpec? Type79 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentGroupByRef>? Type79 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<double?, global::System.DateTime?>? Type80 { get; set; }
+        public global::Weave.AgentSpanMeasureSpec? Type80 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanGroupRow? Type81 { get; set; }
+        public global::Weave.AnyOf<double?, global::System.DateTime?>? Type81 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<string, int?, double?, bool?>? Type82 { get; set; }
+        public global::Weave.AgentSpanGroupRow? Type82 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AnyOf<global::System.DateTime?, string, int?, double?, bool?>? Type83 { get; set; }
+        public global::Weave.AnyOf<string, int?, double?, bool?>? Type83 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Weave.AgentSpanGroupDistributionItem>? Type84 { get; set; }
+        public global::Weave.AnyOf<global::System.DateTime?, string, int?, double?, bool?>? Type84 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanMeasureSpecAggregation? Type85 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Weave.AgentSpanGroupDistributionItem>? Type85 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanMeasureSpecValueType? Type86 { get; set; }
+        public global::Weave.AgentSpanMeasureSpecAggregation? Type86 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanSchema? Type87 { get; set; }
+        public global::Weave.AgentSpanMeasureSpecValueType? Type87 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanSchemaSpanKind? Type88 { get; set; }
+        public global::Weave.AgentSpanSchema? Type88 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanSchemaStatusCode? Type89 { get; set; }
+        public global::Weave.AgentSpanSchemaSpanKind? Type89 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.NormalizedMessage>? Type90 { get; set; }
+        public global::Weave.AgentSpanSchemaStatusCode? Type90 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.NormalizedMessage? Type91 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.NormalizedMessage>? Type91 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, int>? Type92 { get; set; }
+        public global::Weave.NormalizedMessage? Type92 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, bool>? Type93 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, int>? Type93 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsColumn? Type94 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, bool>? Type94 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsColumnRole? Type95 { get; set; }
+        public global::Weave.AgentSpanStatsColumn? Type95 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsColumnValueType? Type96 { get; set; }
+        public global::Weave.AgentSpanStatsColumnRole? Type96 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsMetricSpec? Type97 { get; set; }
+        public global::Weave.AgentSpanStatsColumnValueType? Type97 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsMetricSpecValueType? Type98 { get; set; }
+        public global::Weave.AgentSpanStatsMetricSpec? Type98 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsMetricSpecAggregation>? Type99 { get; set; }
+        public global::Weave.AgentSpanStatsMetricSpecValueType? Type99 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsMetricSpecAggregation? Type100 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsMetricSpecAggregation>? Type100 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<double>? Type101 { get; set; }
+        public global::Weave.AgentSpanStatsMetricSpecAggregation? Type101 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsNumericBucketSpec? Type102 { get; set; }
+        public global::System.Collections.Generic.IList<double>? Type102 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsReq? Type103 { get; set; }
+        public global::Weave.AgentSpanStatsNumericBucketSpec? Type103 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsMetricSpec>? Type104 { get; set; }
+        public global::Weave.AgentSpanStatsReq? Type104 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.BucketByVariant1? Type105 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsMetricSpec>? Type105 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsTimeBucketSpec? Type106 { get; set; }
+        public global::Weave.BucketByVariant1? Type106 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsReqBucketByVariant1Discriminator? Type107 { get; set; }
+        public global::Weave.AgentSpanStatsTimeBucketSpec? Type107 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsReqBucketByVariant1DiscriminatorType? Type108 { get; set; }
+        public global::Weave.AgentSpanStatsReqBucketByVariant1Discriminator? Type108 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupFilter>? Type109 { get; set; }
+        public global::Weave.AgentSpanStatsReqBucketByVariant1DiscriminatorType? Type109 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentInsightFilter>? Type110 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupFilter>? Type110 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsRes? Type111 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentInsightFilter>? Type111 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanStatsResBucketType? Type112 { get; set; }
+        public global::Weave.AgentSpanStatsRes? Type112 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn>? Type113 { get; set; }
+        public global::Weave.AgentSpanStatsResBucketType? Type113 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<object>? Type114 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSpanStatsColumn>? Type114 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpanValueRefSource? Type115 { get; set; }
+        public global::System.Collections.Generic.IList<object>? Type115 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpansExistsReq? Type116 { get; set; }
+        public global::Weave.AgentSpanValueRefSource? Type116 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpansExistsRes? Type117 { get; set; }
+        public global::Weave.AgentSpansExistsReq? Type117 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Weave.AgentSpansQueryReq? Type118 { get; set; }
+        public global::Weave.AgentSpansExistsRes? Type118 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanMeasureSpec>? Type119 { get; set; }
+        public global::Weave.AgentSpansQueryReq? Type119 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionSpec>? Type120 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSpanMeasureSpec>? Type120 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSpanValueRef>? Type121 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSpanGroupDistributionSpec>? Type121 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? Type122 { get; set; }
+        public global::System.Collections.Generic.IList<global::Weave.AgentSpanValueRef>? Type122 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -2155,103 +2155,103 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentTraceChatRes>? ListType2 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSortBy>? ListType2 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentConversationSpanRating>? ListType3 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentTraceChatRes>? ListType3 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentConversationSpan>? ListType4 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentConversationSpanRating>? ListType4 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentConversationSpanFeedback>? ListType5 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentConversationSpan>? ListType5 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentConversationSpans>? ListType6 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentConversationSpanFeedback>? ListType6 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentCustomAttrSchemaItem>? ListType7 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentConversationSpans>? ListType7 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSearchMatchedMessage>? ListType8 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentCustomAttrSchemaItem>? ListType8 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSearchReqRolesVariant1Item>? ListType9 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSearchMatchedMessage>? ListType9 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSearchConversationResult>? ListType10 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSearchReqRolesVariant1Item>? ListType10 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.RatingCondition>? ListType11 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSearchConversationResult>? ListType11 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSpanGroupDistributionBin>? ListType12 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.RatingCondition>? ListType12 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSpanGroupDistributionValue>? ListType13 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSpanGroupDistributionBin>? ListType13 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentGroupByRef>? ListType14 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSpanGroupDistributionValue>? ListType14 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.NormalizedMessage>? ListType15 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentGroupByRef>? ListType15 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSpanStatsMetricSpecAggregation>? ListType16 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.NormalizedMessage>? ListType16 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<double>? ListType17 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSpanStatsMetricSpecAggregation>? ListType17 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSpanStatsMetricSpec>? ListType18 { get; set; }
+        public global::System.Collections.Generic.List<double>? ListType18 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSpanGroupFilter>? ListType19 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSpanStatsMetricSpec>? ListType19 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentInsightFilter>? ListType20 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSpanGroupFilter>? ListType20 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSpanStatsColumn>? ListType21 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentInsightFilter>? ListType21 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<object>? ListType22 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSpanStatsColumn>? ListType22 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSpanMeasureSpec>? ListType23 { get; set; }
+        public global::System.Collections.Generic.List<object>? ListType23 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSpanGroupDistributionSpec>? ListType24 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSpanMeasureSpec>? ListType24 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSpanValueRef>? ListType25 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSpanGroupDistributionSpec>? ListType25 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Weave.AgentSortBy>? ListType26 { get; set; }
+        public global::System.Collections.Generic.List<global::Weave.AgentSpanValueRef>? ListType26 { get; set; }
         /// <summary>
         ///
         /// </summary>

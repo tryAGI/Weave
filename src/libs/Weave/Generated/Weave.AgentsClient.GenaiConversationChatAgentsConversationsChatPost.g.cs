@@ -473,12 +473,15 @@ namespace Weave
         /// </summary>
         /// <param name="projectId"></param>
         /// <param name="conversationId"></param>
+        /// <param name="sortBy">
+        /// Controls how turns are sorted and paginated. Only `started_at` is supported. When omitted, the endpoint selects the most recent `limit` turns and returns them in ascending `started_at` order.
+        /// </param>
         /// <param name="limit">
         /// Maximum number of conversation turns to return.<br/>
         /// Default Value: 50
         /// </param>
         /// <param name="offset">
-        /// Number of most-recent turns to skip. Results are returned in chronological order within the selected page.<br/>
+        /// Number of turns to skip in the requested sort order. When `sort_by` is omitted, results are returned in chronological order within the selected page.<br/>
         /// Default Value: 0
         /// </param>
         /// <param name="includeFeedback">
@@ -494,6 +497,7 @@ namespace Weave
         public async global::System.Threading.Tasks.Task<global::Weave.AgentConversationChatRes> GenaiConversationChatAgentsConversationsChatPostAsync(
             string projectId,
             string conversationId,
+            global::System.Collections.Generic.IList<global::Weave.AgentSortBy>? sortBy = default,
             int? limit = default,
             int? offset = default,
             bool? includeFeedback = default,
@@ -505,6 +509,7 @@ namespace Weave
             {
                 ProjectId = projectId,
                 ConversationId = conversationId,
+                SortBy = sortBy,
                 Limit = limit,
                 Offset = offset,
                 IncludeFeedback = includeFeedback,
