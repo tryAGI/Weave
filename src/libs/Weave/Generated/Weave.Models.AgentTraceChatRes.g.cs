@@ -25,6 +25,12 @@ namespace Weave
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("root_operation_name")]
+        public string? RootOperationName { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agent_name")]
         public string? AgentName { get; set; }
 
@@ -151,6 +157,7 @@ namespace Weave
         /// </param>
         /// <param name="messages"></param>
         /// <param name="rootSpanName"></param>
+        /// <param name="rootOperationName"></param>
         /// <param name="agentName"></param>
         /// <param name="agentVersion"></param>
         /// <param name="statusCode"></param>
@@ -175,6 +182,7 @@ namespace Weave
             int totalCacheReadInputTokens,
             global::System.Collections.Generic.IList<global::Weave.AgentChatMessage> messages,
             string? rootSpanName,
+            string? rootOperationName,
             string? agentName,
             string? agentVersion,
             global::Weave.AgentTraceChatResStatusCode? statusCode,
@@ -188,6 +196,7 @@ namespace Weave
         {
             this.TraceId = traceId ?? throw new global::System.ArgumentNullException(nameof(traceId));
             this.RootSpanName = rootSpanName;
+            this.RootOperationName = rootOperationName;
             this.AgentName = agentName;
             this.AgentVersion = agentVersion;
             this.StatusCode = statusCode;

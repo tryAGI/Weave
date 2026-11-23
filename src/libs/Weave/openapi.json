@@ -10735,6 +10735,17 @@
             ],
             "title": "Root Span Name"
           },
+          "root_operation_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Root Operation Name"
+          },
           "agent_name": {
             "anyOf": [
               {
@@ -10893,6 +10904,7 @@
         "required": [
           "trace_id",
           "root_span_name",
+          "root_operation_name",
           "agent_name",
           "agent_version",
           "status_code",
